@@ -5,84 +5,87 @@ https://github.com/trancee/wasmSID main
 https://github.com/moonbitlang/minimoonbit-public main
 
 # generated list to test mooncakes on mooncakes.io
-CAIMEOX/feat-moon latest 0.2.0
-CAIMEOX/list latest 0.1.0
-CAIMEOX/quickcheck latest 0.6.7
-CAIMEOX/state latest 0.1.0
-CAIMEOX/t latest 0.1.0
-Guest0x0/HAMT latest 0.2.1
-Guest0x0/dregex latest 0.2.5
-Howardzhangdqs/md5 latest 0.9.3
-Lampese/moonbit-chalk latest 0.3.1
-PerfectPan/base64 latest 0.1.1
-Yoorkin/ArgParser latest 0.1.6
-Yoorkin/example/list latest 0.1.4
-Yoorkin/format latest 0.1.5
-Yoorkin/hello latest 0.1.3
-Yoorkin/prettyprinter latest 0.3.5
-Yoorkin/stack latest 0.1.4
-Yoorkin/trie latest 0.2.1
-Yu-zh/either latest 0.1.0
-YumeCross/schema latest 0.2.1
-bob/aegis latest 0.1.0
-bobzhang/sexp latest 0.1.1
-bobzhang/testa latest 0.1.0
-bobzhang/testb latest 0.1.0
-bzy-debug/cowsay latest 0.1.0
-bzy-debug/cowsay_lib latest 0.1.0
-bzy-debug/hello latest 0.1.20240510+81e045f4e
-chawyehsu/punycode latest 0.0.3
-eczn/eczn-utils latest 0.2.0
-enjoecn/easy latest 0.1.0
-enjoecn/gb latest 0.1.1
-extism/moonbit-pdk latest 0.36.0
-fantix/mmhttp latest 0.3.0
-fantix/muts latest 0.5.4
-gmlewis/b2 latest 0.21.0
-gmlewis/base64 latest 0.8.0
-gmlewis/crc32 latest 0.2.0
-gmlewis/json latest 0.15.0
-gmlewis/jsonutil latest 0.24.0
-gmlewis/md5 latest 0.10.0
-gmlewis/moonbit-pdk latest 0.40.0
-gmlewis/sha256 latest 0.9.0
-gmlewis/spin-moonbit-sdk latest 0.39.0
-hackwaly/common latest 0.1.24
-jedisct1/aegis latest 0.2.1
-lijunchen/unstable_io latest 0.1.3
-loneoutpost/core-extra latest 0.0.6
-lucifer1004/mooncake latest 0.1.0
-mizchi/js_io latest 0.1.1
-mizchi/js_regexp latest 0.0.4
-mizchi/json latest 0.4.0
-mizchi/protocol latest 0.0.5
-moonbit-courses/minimoonbit-courses latest 0.1.0
-moonbit-js-ffi/js latest 0.2.0
-moonbitlang/core latest 0.1.20240924+358b443a6
-moonbitlang/std latest 0.1.0
-moonbitlang/wasm4 latest 0.2.1
-moonbitlang/x latest 0.4.9
-myfreess/myers-diff latest 0.1.0
-oboard/mimetype latest 0.1.2
-oboard/mocket latest 0.1.7
-oboard/mooncrypto latest 0.1.8
-oboard/moonetx latest 0.1.5
-oboard/numoon latest 0.3.2
-peter-jerry-ye/advent_of_code latest 0.3.1-fix
-peter-jerry-ye/assertion latest 0.2.1
-peter-jerry-ye/canvas latest 0.4.0
-peter-jerry-ye/json latest 0.4.0
-peter-jerry-ye/memory latest 0.8.3
-peter-jerry-ye/parser-combinator latest 0.9.1
-peter-jerry-ye/utils latest 0.1.0
-peter-jerry-ye/wasi latest 0.16.1
-summer-boythink/moonorm latest 0.1.0
-tiye/cirru-edn latest 0.0.1
-tiye/cirru-parser latest 0.0.6
-tmkx/hello latest 0.0.0
-tonyfettes/torch latest 0.2.0
-wangziling/hello latest 0.0.1
-yamajik/wasi latest 0.1.0
-yangqing/hello latest 0.2.1
-yj-qin/regexp latest 0.3.0
-zxch3n/expect latest 0.3.1
+CAIMEOX/feat-moon 0.2.0
+CAIMEOX/list 0.1.0
+CAIMEOX/quickcheck 0.6.7
+CAIMEOX/state 0.1.0
+CAIMEOX/t 0.1.0
+Guest0x0/HAMT 0.2.1
+Guest0x0/dregex 0.2.5
+Howardzhangdqs/md5 0.9.3
+Lampese/moonbit-chalk 0.3.1
+PerfectPan/base64 0.1.1
+Yoorkin/ArgParser 0.1.6
+Yoorkin/example/list 0.1.4
+Yoorkin/format 0.1.5
+Yoorkin/hello 0.1.3
+Yoorkin/prettyprinter 0.3.5
+Yoorkin/rabbit-tea 0.1.0
+Yoorkin/stack 0.1.4
+Yoorkin/trie 0.2.1
+Yu-zh/either 0.1.0
+YumeCross/schema 0.2.1
+bob/aegis 0.1.0
+bobzhang/sexp 0.1.1
+bobzhang/testa 0.1.0
+bobzhang/testb 0.1.0
+bzy-debug/cowsay 0.1.0
+bzy-debug/cowsay_lib 0.1.0
+bzy-debug/hello 0.1.20240510+81e045f4e
+chawyehsu/punycode 0.0.3
+eczn/eczn-utils 0.2.0
+enjoecn/easy 0.1.0
+enjoecn/gb 0.1.1
+extism/moonbit-pdk 0.36.0
+fantix/mmhttp 0.3.0
+fantix/muts 0.5.4
+gmlewis/b2 0.21.0
+gmlewis/base64 0.8.0
+gmlewis/crc32 0.2.0
+gmlewis/flate 0.2.0
+gmlewis/json 0.15.0
+gmlewis/jsonutil 0.24.0
+gmlewis/md5 0.10.0
+gmlewis/moonbit-pdk 0.40.0
+gmlewis/sha256 0.9.0
+gmlewis/spin-moonbit-sdk 0.39.0
+hackwaly/common 0.1.24
+jedisct1/aegis 0.2.1
+lijunchen/unstable_io 0.1.3
+loneoutpost/core-extra 0.0.6
+lucifer1004/mooncake 0.1.0
+mizchi/js_io 0.1.1
+mizchi/js_regexp 0.0.4
+mizchi/json 0.4.0
+mizchi/protocol 0.0.5
+moonbit-courses/minimoonbit-courses 0.1.0
+moonbit-js-ffi/js 0.2.0
+moonbitlang/core 0.1.20241008+9bf20bff3
+moonbitlang/std 0.1.0
+moonbitlang/wasm4 0.2.2
+moonbitlang/x 0.4.10
+myfreess/myers-diff 0.1.0
+oboard/mimetype 0.1.2
+oboard/mocket 0.1.9
+oboard/mooncrypto 0.1.8
+oboard/moonetx 0.1.5
+oboard/numoon 0.3.2
+peter-jerry-ye/advent_of_code 0.3.1-fix
+peter-jerry-ye/assertion 0.2.1
+peter-jerry-ye/canvas 0.4.0
+peter-jerry-ye/json 0.4.0
+peter-jerry-ye/memory 0.8.3
+peter-jerry-ye/parser-combinator 0.9.1
+peter-jerry-ye/utils 0.1.0
+peter-jerry-ye/wasi 0.16.1
+summer-boythink/moonorm 0.1.0
+tiye/cirru-edn 0.0.1
+tiye/cirru-parser 0.0.6
+tmkx/hello 0.0.0
+tonyfettes/narray 0.1.0
+tonyfettes/torch 0.2.2
+wangziling/hello 0.0.1
+yamajik/wasi 0.1.0
+yangqing/hello 0.2.2
+yj-qin/regexp 0.3.1
+zxch3n/expect 0.3.1
