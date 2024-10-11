@@ -80,7 +80,7 @@ pub fn index_of_pkg(base: &Path, user: &str, pkg: &str) -> PathBuf {
 
 #[derive(Debug, Default)]
 pub struct MooncakesDB {
-    db: BTreeMap<String, Vec<String>>,
+    pub db: BTreeMap<String, Vec<String>>,
 }
 
 #[derive(Debug, thiserror::Error)]
@@ -125,15 +125,6 @@ fn gen_latest_list() {
     for (name, versions) in db.db {
         let latest_version = versions.last().unwrap();
         println!("{} {}", name, latest_version);
-    }
-}
-
-#[test]
-fn gen_latest_list_with_version() {
-    let db = get_all_mooncakes().unwrap();
-    for (name, versions) in db.db {
-        let latest_version = versions.last().unwrap();
-        println!("{} latest {}", name, latest_version);
     }
 }
 
