@@ -60,7 +60,7 @@ mizchi/json 0.4.0
 mizchi/protocol 0.0.5
 moonbit-courses/minimoonbit-courses 0.1.0
 moonbit-js-ffi/js 0.2.0
-moonbitlang/core 0.1.20241008+9bf20bff3
+moonbitlang/core 0.1.20241011+9ea637707
 moonbitlang/std 0.1.0
 moonbitlang/wasm4 0.2.2
 moonbitlang/x 0.4.10
@@ -81,6 +81,7 @@ peter-jerry-ye/wasi 0.16.1
 summer-boythink/moonorm 0.1.0
 tiye/cirru-edn 0.0.1
 tiye/cirru-parser 0.0.6
+tiye/respo 0.0.2
 tmkx/hello 0.0.0
 tonyfettes/narray 0.1.0
 tonyfettes/torch 0.2.2
