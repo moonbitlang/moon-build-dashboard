@@ -81,6 +81,7 @@ peter-jerry-ye/wasi 0.16.1
 summer-boythink/moonorm 0.1.0
 tiye/cirru-edn 0.0.1
 tiye/cirru-parser 0.0.6
+tiye/dom-ffi 0.0.1
 tiye/respo 0.0.2
 tmkx/hello 0.0.0
 tonyfettes/narray 0.1.0
