@@ -42,7 +42,7 @@ fantix/muts 0.5.4
 gmlewis/b2 0.22.0
 gmlewis/base64 0.9.0
 gmlewis/crc32 0.3.0
-gmlewis/flate 0.11.0
+gmlewis/flate 0.13.0
 gmlewis/json 0.15.0
 gmlewis/jsonutil 0.24.0
 gmlewis/md5 0.11.0
@@ -60,7 +60,7 @@ mizchi/json 0.4.0
 mizchi/protocol 0.0.5
 moonbit-courses/minimoonbit-courses 0.1.0
 moonbit-js-ffi/js 0.2.0
-moonbitlang/core 0.1.20241014+2956e63cd
+moonbitlang/core 0.1.20241017+ac70304e4
 moonbitlang/std 0.1.0
 moonbitlang/wasm4 0.2.2
 moonbitlang/x 0.4.10
@@ -81,7 +81,7 @@ peter-jerry-ye/wasi 0.16.1
 summer-boythink/moonorm 0.1.0
 tiye/cirru-edn 0.0.1
 tiye/cirru-parser 0.0.6
-tiye/dom-ffi 0.0.2
+tiye/dom-ffi 0.0.3
 tiye/respo 0.0.4
 tmkx/hello 0.0.0
 tonyfettes/narray 0.1.0
