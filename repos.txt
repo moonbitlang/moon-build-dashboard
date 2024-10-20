@@ -88,7 +88,7 @@ tmkx/hello 0.0.0
 tonyfettes/malloc 0.1.2
 tonyfettes/memory 0.1.1
 tonyfettes/narray 0.1.0
-tonyfettes/torch 0.2.2
+tonyfettes/torch 0.2.4
 wangziling/hello 0.0.1
 yamajik/wasi 0.1.0
 yangqing/hello 0.2.2
