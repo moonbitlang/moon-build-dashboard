@@ -24,7 +24,7 @@ Yoorkin/rabbit-tea 0.2.0
 Yoorkin/stack 0.1.4
 Yoorkin/trie 0.2.1
 Yu-zh/either 0.1.0
-YumeCross/schema 0.2.1
+YumeCross/schema 0.2.2
 bob/aegis 0.1.0
 bobzhang/sexp 0.1.1
 bobzhang/testa 0.1.0
@@ -85,7 +85,7 @@ summer-boythink/moonorm 0.1.0
 tiye/cirru-edn 0.0.1
 tiye/cirru-parser 0.0.6
 tiye/dom-ffi 0.0.3
-tiye/respo 0.0.4
+tiye/respo 0.0.7
 tmkx/hello 0.0.0
 tonyfettes/malloc 0.1.2
 tonyfettes/memory 0.1.1
