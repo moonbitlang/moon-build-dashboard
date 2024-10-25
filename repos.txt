@@ -20,7 +20,7 @@ Yoorkin/example/list 0.1.4
 Yoorkin/format 0.1.5
 Yoorkin/hello 0.1.3
 Yoorkin/prettyprinter 0.3.5
-Yoorkin/rabbit-tea 0.2.0
+Yoorkin/rabbit-tea 0.2.2
 Yoorkin/stack 0.1.4
 Yoorkin/trie 0.2.1
 Yu-zh/either 0.1.0
