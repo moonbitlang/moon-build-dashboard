@@ -20,7 +20,7 @@ Yoorkin/example/list 0.1.4
 Yoorkin/format 0.1.5
 Yoorkin/hello 0.1.3
 Yoorkin/prettyprinter 0.3.5
-Yoorkin/rabbit-tea 0.2.2
+Yoorkin/rabbit-tea 0.2.4
 Yoorkin/stack 0.1.4
 Yoorkin/trie 0.2.1
 Yu-zh/either 0.1.0
@@ -84,9 +84,9 @@ peter-jerry-ye/wasi 0.17.0
 suiyunonghen/linklist 0.1.1
 summer-boythink/moonorm 0.1.0
 tiye/cirru-edn 0.0.1
-tiye/cirru-parser 0.0.6
+tiye/cirru-parser 0.0.7
 tiye/dom-ffi 0.0.4
-tiye/respo 0.0.10
+tiye/respo 0.0.11
 tmkx/hello 0.0.0
 tonyfettes/malloc 0.1.2
 tonyfettes/memory 0.1.1
