@@ -25,7 +25,7 @@ Yoorkin/rabbit-tea 0.2.4
 Yoorkin/stack 0.1.4
 Yoorkin/trie 0.2.1
 Yu-zh/either 0.1.0
-YumeCross/schema 0.4.2
+YumeCross/schema 0.4.3
 bob/aegis 0.1.0
 bobzhang/sexp 0.1.1
 bobzhang/testa 0.1.0
