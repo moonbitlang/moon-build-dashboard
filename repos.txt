@@ -64,7 +64,7 @@ mizchi/json 0.4.0
 mizchi/protocol 0.0.5
 moonbit-courses/minimoonbit-courses 0.1.0
 moonbit-js-ffi/js 0.2.0
-moonbitlang/core 0.1.20241021+e6d54baa1
+moonbitlang/core 0.1.20241104+8ce5d2967
 moonbitlang/std 0.1.0
 moonbitlang/wasm4 0.2.2
 moonbitlang/x 0.4.11
