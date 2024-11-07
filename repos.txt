@@ -43,8 +43,9 @@ fantix/muts 0.5.4
 gmlewis/b2 0.23.0
 gmlewis/base64 0.9.0
 gmlewis/crc32 0.3.0
-gmlewis/flate 0.13.0
-gmlewis/io 0.2.0
+gmlewis/flate 0.16.0
+gmlewis/gzip 0.7.0
+gmlewis/io 0.3.0
 gmlewis/json 0.15.0
 gmlewis/jsonutil 0.24.0
 gmlewis/md5 0.12.0
@@ -71,6 +72,7 @@ moonbitlang/x 0.4.11
 myfreess/myers-diff 0.1.0
 oboard/mimetype 0.1.2
 oboard/mocket 0.1.9
+oboard/moonbit-eval 0.1.1
 oboard/mooncrypto 0.1.8
 oboard/moonetx 0.1.5
 oboard/numoon 0.3.2
