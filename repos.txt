@@ -40,6 +40,7 @@ enjoecn/gb 0.1.1
 extism/moonbit-pdk 0.36.0
 fantix/mmhttp 0.3.0
 fantix/muts 0.5.4
+five-nuts/coreutils 0.1.1
 gmlewis/b2 0.23.0
 gmlewis/base64 0.9.0
 gmlewis/crc32 0.3.0
@@ -84,7 +85,7 @@ peter-jerry-ye/memory 0.8.3
 peter-jerry-ye/parser-combinator 0.9.1
 peter-jerry-ye/utils 0.1.0
 peter-jerry-ye/wasi 0.17.0
-rami3l/cmark 0.1.1
+rami3l/cmark 0.1.2
 suiyunonghen/linklist 0.1.3
 summer-boythink/moonorm 0.1.0
 tiye/cirru-edn 0.0.1
