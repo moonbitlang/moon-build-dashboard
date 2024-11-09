@@ -68,7 +68,7 @@ moonbit-courses/minimoonbit-courses 0.1.0
 moonbit-js-ffi/js 0.2.0
 moonbitlang/core 0.1.20241106+8f17a3fc7
 moonbitlang/std 0.1.0
-moonbitlang/wasm4 0.2.2
+moonbitlang/wasm4 0.2.3
 moonbitlang/x 0.4.11
 myfreess/myers-diff 0.1.0
 oboard/mimetype 0.1.2
@@ -91,6 +91,7 @@ summer-boythink/moonorm 0.1.0
 tiye/cirru-edn 0.0.1
 tiye/cirru-parser 0.0.7
 tiye/dom-ffi 0.0.4
+tiye/lexicon-fractional-index 0.0.2
 tiye/respo 0.0.13
 tmkx/hello 0.0.0
 tonyfettes/malloc 0.1.2
