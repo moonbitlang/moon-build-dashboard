@@ -89,6 +89,8 @@ peter-jerry-ye/utils 0.1.0
 peter-jerry-ye/wasi 0.17.0
 rami3l/cmark 0.1.2
 suiyunonghen/linklist 0.1.4
+suiyunonghen/moonvalue 0.1.0
+suiyunonghen/wasmMemManager 0.1.0
 summer-boythink/moonorm 0.1.0
 tiye/cirru-edn 0.0.1
 tiye/cirru-parser 0.0.7
