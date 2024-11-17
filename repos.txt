@@ -53,6 +53,7 @@ gmlewis/json 0.15.0
 gmlewis/jsonutil 0.24.0
 gmlewis/md5 0.14.0
 gmlewis/moonbit-pdk 0.43.0
+gmlewis/sha1 0.2.0
 gmlewis/sha256 0.12.0
 gmlewis/spin-moonbit-sdk 0.44.0
 gmlewis/zlib 0.10.0
@@ -105,7 +106,7 @@ tonyfettes/narray 0.1.0
 tonyfettes/torch 0.2.5
 wangziling/hello 0.0.1
 wstreet/moontest 0.1.0
-xunyoyo/permutation 0.1.2
+xunyoyo/permutation 0.1.3
 yamajik/wasi 0.1.0
 yangqing/hello 0.2.2
 yj-qin/regexp 0.3.1
