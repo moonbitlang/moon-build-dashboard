@@ -21,7 +21,7 @@ Yoorkin/example/list 0.1.4
 Yoorkin/format 0.1.5
 Yoorkin/hello 0.1.3
 Yoorkin/prettyprinter 0.3.5
-Yoorkin/rabbit-tea 0.2.5
+Yoorkin/rabbit-tea 0.2.7
 Yoorkin/stack 0.1.4
 Yoorkin/trie 0.2.2
 Yu-zh/either 0.1.0
@@ -62,6 +62,7 @@ hackwaly/moonyacc 0.1.3
 jankin_li/Learn_Test1 0.1.0
 jankin_li/new_lib 0.1.0
 jedisct1/aegis 0.2.1
+jumpping/baby 0.1.0
 lijunchen/unstable_io 0.1.3
 loneoutpost/core-extra 0.0.6
 lucifer1004/mooncake 0.1.0
@@ -93,7 +94,7 @@ peter-jerry-ye/utils 0.1.0
 peter-jerry-ye/wasi 0.18.0
 rami3l/cmark 0.1.3
 suiyunonghen/datetime 0.1.2
-suiyunonghen/linklist 0.1.6
+suiyunonghen/linklist 0.1.7
 suiyunonghen/moonvalue 0.1.8
 suiyunonghen/wasmMemManager 0.1.2
 summer-boythink/moonorm 0.1.0
@@ -101,7 +102,7 @@ tiye/cirru-edn 0.0.2
 tiye/cirru-parser 0.0.8
 tiye/dom-ffi 0.0.6
 tiye/lexicon-fractional-index 0.0.2
-tiye/respo 0.0.15
+tiye/respo 0.0.16
 tmkx/hello 0.0.0
 tonyfettes/memory 0.1.4
 tonyfettes/narray 0.1.0
