@@ -98,6 +98,8 @@ pub struct ExecuteResult {
     pub status: Status,
     pub start_time: String,
     pub elapsed: u64,
+    pub stdout: String,
+    pub stderr: String,
 }
 
 #[derive(Debug, Serialize, Deserialize)]

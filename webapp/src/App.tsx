@@ -29,6 +29,8 @@ interface ExecuteResult {
   status: Status;
   start_time: string;
   elapsed: number;
+  stdout: string;
+  stderr: string;
 }
 
 interface BackendState {
@@ -56,9 +58,84 @@ async function get_data(): Promise<MoonBuildDashboard> {
   return parsedData[parsedData.length - 1];
 }
 
+interface ModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  data: ExecuteResult;
+  title: string;
+}
+
+const DetailModal: React.FC<ModalProps> = ({ isOpen, onClose, data, title }) => {
+  if (!isOpen) return null;
+
+  useEffect(() => {
+    const handleEsc = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        onClose();
+      }
+    };
+    window.addEventListener('keydown', handleEsc);
+
+    return () => {
+      window.removeEventListener('keydown', handleEsc);
+    };
+  }, [onClose]);
+
+
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+      <div className="bg-white rounded-lg p-6 max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+        <div className="flex justify-between items-center mb-4">
+          <h3 className="text-xl font-bold">{title}</h3>
+          <button
+            onClick={onClose}
+            className="text-gray-500 hover:text-gray-700"
+          >
+            ✕
+          </button>
+        </div>
+        <div className="space-y-4">
+          <div className="flex space-x-4">
+            <p className="font-semibold">Status: 
+              <span className={data.status === "Success" ? "text-green-600" : "text-red-600"}>
+                {data.status}
+              </span>
+            </p>
+            <p className="font-semibold">Start Time: {data.start_time}</p>
+            <p className="font-semibold">Elapsed: {data.elapsed}ms</p>
+          </div>
+          
+          {/* Stdout */}
+          <div>
+            <div className="text-gray-700 font-semibold mb-2">stdout</div>
+            <div className="bg-gray-900 rounded-lg p-4 font-mono text-sm">
+              <div className="text-gray-300 whitespace-pre-wrap overflow-x-auto">
+                {data.stdout || "no stdout output"}
+              </div>
+            </div>
+          </div>
+          
+          {/* Stderr */}
+          <div>
+            <div className="text-gray-700 font-semibold mb-2">stderr</div>
+            <div className="bg-gray-900 rounded-lg p-4 font-mono text-sm">
+              <div className="text-gray-300 whitespace-pre-wrap overflow-x-auto">
+                {data.stderr || "no stderr output"}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const App = () => {
   const [data, setData] = useState<MoonBuildDashboard | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [selectedData, setSelectedData] = useState<ExecuteResult | null>(null);
+  const [modalTitle, setModalTitle] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const fetchData = async () => {
     try {
@@ -77,29 +154,57 @@ const App = () => {
     fetchData();
   }, []);
 
-  const getStatusStyle = (status: Status): string => {
-    return status === "Success"
-      ? "bg-green-200 text-green-800"
-      : "bg-red-200 text-red-800";
+  const handleResultClick = (result: ExecuteResult, title: string) => {
+    setSelectedData(result);
+    setModalTitle(title);
+    setIsModalOpen(true);
   };
 
-  const getStatusText = (status: Status, elapsed: number | null): string => {
-    return status === "Success" ? `${elapsed ?? '-'}` : "x";
-  };
+  const renderBackendState = (
+    backendState: BackendState, 
+    phase: string, 
+    variant: 'stable' | 'bleeding',
+    stableCBT?: CBT | null
+  ) => {
+    const highlightDifference = (
+      stable: ExecuteResult,
+      bleeding: ExecuteResult
+    ) => stable.status !== bleeding.status ? "bg-yellow-100" : "";
 
-  const renderBackendState = (backendState: BackendState) => (
-    <>
-      <td className={`py-2 px-4 ${getStatusStyle(backendState.wasm.status)} border-r`}>
-        {getStatusText(backendState.wasm.status, backendState.wasm.elapsed)}
-      </td>
-      <td className={`py-2 px-4 ${getStatusStyle(backendState.wasm_gc.status)} border-r`}>
-        {getStatusText(backendState.wasm_gc.status, backendState.wasm_gc.elapsed)}
-      </td>
-      <td className={`py-2 px-4 ${getStatusStyle(backendState.js.status)} border-r`}>
-        {getStatusText(backendState.js.status, backendState.js.elapsed)}
-      </td>
-    </>
-  );
+    const getStatusStyle = (status: Status): string => {
+      return status === "Success"
+        ? "bg-green-200 text-green-800"
+        : "bg-red-200 text-red-800";
+    };
+    
+    const getStatusText = (status: Status, elapsed: number | null): string => {
+      return status === "Success" ? `${elapsed ?? '-'}` : "x";
+    };
+
+    return (
+      <>
+        {["wasm", "wasm_gc", "js"].map((key) => {
+          const result = backendState[key as keyof BackendState];
+          const stableResult = stableCBT?.[phase.toLowerCase() as keyof CBT]?.[key as keyof BackendState];
+          
+          return (
+            <td
+              key={`${variant}-${phase.toLowerCase()}-${key}`}
+              className={`py-2 px-4 border-r cursor-pointer hover:opacity-80 
+                ${getStatusStyle(result.status)}
+                ${variant === 'bleeding' && stableResult ? highlightDifference(stableResult, result) : ''}`}
+              onClick={() => handleResultClick(
+                result,
+                `${variant} - ${phase.toLowerCase()} - ${key}`
+              )}
+            >
+              {getStatusText(result.status, result.elapsed)}
+            </td>
+          );
+        })}
+      </>
+    );
+  };
 
   const renderTableRows = (
     stableData: BuildState[],
@@ -116,14 +221,6 @@ const App = () => {
         const bleedingEntry = bleedingData[index];
         const stableCBT = stableEntry.cbts[versionIndex];
         const bleedingCBT = bleedingEntry?.cbts[versionIndex];
-  
-        const highlightDifference = (
-          stable: ExecuteResult,
-          bleeding: ExecuteResult
-        ) =>
-          stable.status !== bleeding.status
-            ? "bg-yellow-100" // Highlight the difference
-            : "";
   
         return (
           <tr
@@ -176,9 +273,9 @@ const App = () => {
             {/* Stable Data */}
             {stableCBT ? (
               <>
-                {renderBackendState(stableCBT.check)}
-                {renderBackendState(stableCBT.build)}
-                {renderBackendState(stableCBT.test)}
+                {renderBackendState(stableCBT.check, "Check", 'stable')}
+                {renderBackendState(stableCBT.build, "Build", 'stable')}
+                {renderBackendState(stableCBT.test, "Test", 'stable')}
               </>
             ) : (
               <td colSpan={9} className="py-2 px-4 text-center text-gray-500">
@@ -189,69 +286,9 @@ const App = () => {
             {/* Bleeding Data */}
             {bleedingCBT ? (
               <>
-                {/* Check */}
-                {["wasm", "wasm_gc", "js"].map((key) => (
-                  <td
-                    key={`bleeding-check-${key}`}
-                    className={`py-2 px-4 ${
-                      stableCBT && stableCBT.check
-                        ? highlightDifference(
-                            stableCBT.check[key as keyof BackendState],
-                            bleedingCBT.check[key as keyof BackendState]
-                          )
-                        : ""
-                    } border-r ${getStatusStyle(
-                      bleedingCBT.check[key as keyof BackendState].status
-                    )}`}
-                  >
-                    {getStatusText(
-                      bleedingCBT.check[key as keyof BackendState].status,
-                      bleedingCBT.check[key as keyof BackendState].elapsed
-                    )}
-                  </td>
-                ))}
-                {/* Build */}
-                {["wasm", "wasm_gc", "js"].map((key) => (
-                  <td
-                    key={`bleeding-build-${key}`}
-                    className={`py-2 px-4 ${
-                      stableCBT && stableCBT.build
-                        ? highlightDifference(
-                            stableCBT.build[key as keyof BackendState],
-                            bleedingCBT.build[key as keyof BackendState]
-                          )
-                        : ""
-                    } border-r ${getStatusStyle(
-                      bleedingCBT.build[key as keyof BackendState].status
-                    )}`}
-                  >
-                    {getStatusText(
-                      bleedingCBT.build[key as keyof BackendState].status,
-                      bleedingCBT.build[key as keyof BackendState].elapsed
-                    )}
-                  </td>
-                ))}
-                {/* Test */}
-                {["wasm", "wasm_gc", "js"].map((key) => (
-                  <td
-                    key={`bleeding-test-${key}`}
-                    className={`py-2 px-4 ${
-                      stableCBT && stableCBT.test
-                        ? highlightDifference(
-                            stableCBT.test[key as keyof BackendState],
-                            bleedingCBT.test[key as keyof BackendState]
-                          )
-                        : ""
-                    } border-r ${getStatusStyle(
-                      bleedingCBT.test[key as keyof BackendState].status
-                    )}`}
-                  >
-                    {getStatusText(
-                      bleedingCBT.test[key as keyof BackendState].status,
-                      bleedingCBT.test[key as keyof BackendState].elapsed
-                    )}
-                  </td>
-                ))}
+                {renderBackendState(bleedingCBT.check, "Check", 'bleeding', stableCBT)}
+                {renderBackendState(bleedingCBT.build, "Build", 'bleeding', stableCBT)}
+                {renderBackendState(bleedingCBT.test, "Test", 'bleeding', stableCBT)}
               </>
             ) : (
               <td colSpan={9} className="py-2 px-4 text-center text-gray-500">
@@ -264,7 +301,6 @@ const App = () => {
     });
   };
   
-
   return (
     <div className="p-4 bg-gray-100 min-h-screen flex justify-center">
       <div className="w-full">
@@ -315,16 +351,16 @@ const App = () => {
                   <th className="py-1 px-4 text-center text-xs border-r">js</th>
                   <th className="py-1 px-4 text-center text-xs border-r">wasm</th>
                   <th className="py-1 px-4 text-center text-xs border-r">wasm gc</th>
-                  <th className="py-1 px-4 text-center text-xs">js</th>
-                  <th className="py-1 px-4 text-center text-xs border-r">wasm</th>
-                  <th className="py-1 px-4 text-center text-xs border-r">wasm gc</th>
                   <th className="py-1 px-4 text-center text-xs border-r">js</th>
                   <th className="py-1 px-4 text-center text-xs border-r">wasm</th>
                   <th className="py-1 px-4 text-center text-xs border-r">wasm gc</th>
                   <th className="py-1 px-4 text-center text-xs border-r">js</th>
                   <th className="py-1 px-4 text-center text-xs border-r">wasm</th>
                   <th className="py-1 px-4 text-center text-xs border-r">wasm gc</th>
-                  <th className="py-1 px-4 text-center text-xs">JS</th>
+                  <th className="py-1 px-4 text-center text-xs border-r">js</th>
+                  <th className="py-1 px-4 text-center text-xs border-r">wasm</th>
+                  <th className="py-1 px-4 text-center text-xs border-r">wasm gc</th>
+                  <th className="py-1 px-4 text-center text-xs border-r">js</th>
                 </tr>
               </thead>
               <tbody>
@@ -336,6 +372,14 @@ const App = () => {
           <p>Loading...</p>
         )}
       </div>
+      {selectedData && (
+        <DetailModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          data={selectedData}
+          title={modalTitle}
+        />
+      )}
     </div>
   );
 };

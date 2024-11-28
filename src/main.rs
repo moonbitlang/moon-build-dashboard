@@ -34,11 +34,19 @@ pub enum RunMoonError {
     FromUtf8(#[from] std::string::FromUtf8Error),
 }
 
+#[derive(Debug)]
+struct CommandOutput {
+    duration: Duration,
+    stdout: String,
+    stderr: String,
+    success: bool,
+}
+
 fn run_moon(
     workdir: &Path,
     source: &MooncakeSource,
     args: &[&str],
-) -> Result<Duration, RunMoonError> {
+) -> Result<CommandOutput, RunMoonError> {
     let start = Instant::now();
     eprintln!(
         "{}",
@@ -46,16 +54,18 @@ fn run_moon(
             .blue()
             .bold()
     );
-    let mut cmd = std::process::Command::new("moon")
+
+    let output = std::process::Command::new("moon")
         .current_dir(workdir)
         .args(args)
-        .spawn()
+        .output()
         .map_err(|e| RunMoonError::IOError(e))?;
-    let exit = cmd.wait().map_err(|e| RunMoonError::IOError(e))?;
-    if !exit.success() {
-        return Err(RunMoonError::ReturnNonZero(exit));
-    }
+
+    let stdout = String::from_utf8_lossy(&output.stdout).into_owned();
+    let stderr = String::from_utf8_lossy(&output.stderr).into_owned();
+
     let elapsed = start.elapsed();
+
     eprintln!(
         "{}",
         format!(
@@ -66,7 +76,13 @@ fn run_moon(
         .green()
         .bold()
     );
-    Ok(elapsed)
+
+    Ok(CommandOutput {
+        duration: elapsed,
+        stdout,
+        stderr,
+        success: output.status.success(),
+    })
 }
 
 #[derive(Debug, thiserror::Error)]
@@ -181,21 +197,31 @@ fn stat_mooncake(
     let _ = run_moon(workdir, source, &["clean"]);
 
     let r = run_moon(workdir, source, &cmd.args()).map_err(|e| StatMooncakeError::RunMoon(e));
-    let status = if r.is_err() {
-        Status::Failure
-    } else {
-        Status::Success
+    let status = match r.as_ref() {
+        Ok(output) if output.success => Status::Success,
+        _ => Status::Failure,
     };
-    let d = r.ok();
+    let output = r.ok();
     let start_time = Local::now()
         .with_timezone(&FixedOffset::east_opt(8 * 3600).unwrap())
         .format("%Y-%m-%d %H:%M:%S.%3f")
         .to_string();
-    let elapsed = d.map(|d| d.as_millis() as u64).unwrap_or(0);
+    let elapsed = output
+        .as_ref()
+        .map(|d| d.duration.as_millis() as u64)
+        .unwrap_or(0);
     let execute_result = ExecuteResult {
         status,
         start_time,
         elapsed,
+        stdout: output
+            .as_ref()
+            .map(|d| d.stdout.clone())
+            .unwrap_or_default(),
+        stderr: output
+            .as_ref()
+            .map(|d| d.stderr.clone())
+            .unwrap_or_default(),
     };
     Ok(execute_result)
 }
