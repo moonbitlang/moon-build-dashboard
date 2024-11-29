@@ -437,25 +437,22 @@ fn main0() -> anyhow::Result<()> {
     };
     match res {
         Ok(dashboard) => {
-            let fp = std::fs::OpenOptions::new()
-                .create(true)
-                .append(true)
-                .open("webapp/public/data.jsonl")?;
-            let mut writer = std::io::BufWriter::new(fp);
-            writeln!(writer, "{}", serde_json::to_string(&dashboard)?)?;
-            writer.flush()?;
+            let date = Local::now().format("%Y-%m-%d");
+            let filename = format!("webapp/public/{}_data.jsonl.gz", date);
 
             let fp = std::fs::OpenOptions::new()
                 .create(true)
                 .write(true)
-                .truncate(true) // make sure to truncate the file
-                .open("webapp/public/latest_data.jsonl.gz")?;
-
-            // create a gzip encoder
+                .truncate(true)
+                .open(&filename)?;
             let encoder = GzEncoder::new(fp, Compression::default());
             let mut writer = std::io::BufWriter::new(encoder);
             writeln!(writer, "{}", serde_json::to_string(&dashboard)?)?;
             writer.flush()?;
+
+            let latest_filename = "webapp/public/latest_data.jsonl.gz";
+            std::fs::copy(&filename, latest_filename)?;
+
             Ok(())
         }
         Err(e) => Err(anyhow::anyhow!(e)),
@@ -464,4 +461,11 @@ fn main0() -> anyhow::Result<()> {
 
 fn main() -> anyhow::Result<()> {
     main0()
+}
+
+#[test]
+fn test_main() {
+    use chrono::Local;
+    let date = Local::now().format("%Y-%m-%d");
+    println!("{}", date);
 }
