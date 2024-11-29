@@ -51,11 +51,13 @@ interface BuildState {
 }
 
 async function get_data(): Promise<MoonBuildDashboard> {
-  const response = await fetch('/data.jsonl');
+  const response = await fetch('/latest_data.jsonl.gz', {
+    headers: {
+      'Accept-Encoding': 'gzip'
+    }
+  });
   const text = await response.text();
-  const lines = text.split('\n').filter((line) => line.trim() !== '');
-  const parsedData = lines.map((line) => JSON.parse(line));
-  return parsedData[parsedData.length - 1];
+  return JSON.parse(text);
 }
 
 interface ModalProps {

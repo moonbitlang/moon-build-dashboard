@@ -8,6 +8,7 @@ use chrono::{FixedOffset, Local};
 
 use clap::Parser;
 use colored::Colorize;
+use flate2::{write::GzEncoder, Compression};
 use moon_dashboard::{
     cli,
     dashboard::{
@@ -441,6 +442,18 @@ fn main0() -> anyhow::Result<()> {
                 .append(true)
                 .open("webapp/public/data.jsonl")?;
             let mut writer = std::io::BufWriter::new(fp);
+            writeln!(writer, "{}", serde_json::to_string(&dashboard)?)?;
+            writer.flush()?;
+
+            let fp = std::fs::OpenOptions::new()
+                .create(true)
+                .write(true)
+                .truncate(true) // make sure to truncate the file
+                .open("webapp/public/latest_data.jsonl.gz")?;
+
+            // create a gzip encoder
+            let encoder = GzEncoder::new(fp, Compression::default());
+            let mut writer = std::io::BufWriter::new(encoder);
             writeln!(writer, "{}", serde_json::to_string(&dashboard)?)?;
             writer.flush()?;
             Ok(())
