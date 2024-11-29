@@ -449,6 +449,7 @@ fn main0() -> anyhow::Result<()> {
             let mut writer = std::io::BufWriter::new(encoder);
             writeln!(writer, "{}", serde_json::to_string(&dashboard)?)?;
             writer.flush()?;
+            writer.into_inner()?.finish()?;
 
             let latest_filename = "webapp/public/latest_data.jsonl.gz";
             std::fs::copy(&filename, latest_filename)?;
