@@ -56,7 +56,14 @@ async function get_data(): Promise<MoonBuildDashboard> {
       'Accept-Encoding': 'gzip'
     }
   });
-  const text = await response.text();
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+  const blob = await response.blob();
+  const ds = new DecompressionStream('gzip');
+  const decompressedStream = blob.stream().pipeThrough(ds);
+  const decompressedBlob = await new Response(decompressedStream).blob();
+  const text = await decompressedBlob.text();
   return JSON.parse(text);
 }
 
