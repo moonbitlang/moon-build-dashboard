@@ -391,7 +391,7 @@ const App = () => {
         </div>
         {error ? (
           <p className="text-red-500 text-center">{error}</p>
-        ) : platformData.mac ? (
+        ) : platformData.linux ? (
           <div className="overflow-x-auto">
             <table className="min-w-full table-auto bg-white shadow-md rounded-lg overflow-hidden">
               <thead>
@@ -402,14 +402,14 @@ const App = () => {
                   <th colSpan={9} className="py-2 px-4 text-center bg-green-500 text-white border-r">
                     Stable Release
                     <div className="text-xs mt-1 font-normal">
-                      {platformData.mac.stable_toolchain_version.moon_version} / moonc {platformData.mac.stable_toolchain_version.moonc_version}
+                      {platformData.linux.stable_toolchain_version.moon_version} / moonc {platformData.linux.stable_toolchain_version.moonc_version}
                     </div>
                   </th>
                   <th colSpan={9} className="py-2 px-4 text-center bg-red-600 text-white relative overflow-hidden">
                     <span className="absolute inset-0 flex items-center justify-left text-6xl text-yellow-900 opacity-40">⚡️</span>
                     Bleeding Edge Release
                     <div className="text-xs mt-1 font-normal">
-                      {platformData.mac.bleeding_toolchain_version.moon_version} / moonc {platformData.mac.bleeding_toolchain_version.moonc_version}
+                      {platformData.linux.bleeding_toolchain_version.moon_version} / moonc {platformData.linux.bleeding_toolchain_version.moonc_version}
                     </div>
                   </th>
                 </tr>

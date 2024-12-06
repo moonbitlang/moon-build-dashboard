@@ -106,6 +106,21 @@ fn install_unix_release(args: &[&str]) -> Result<(), MoonOpsError> {
         });
     }
 
+    let version_cmd = "moon version --all";
+    let output = std::process::Command::new("moon")
+        .args(["version", "--all"])
+        .output()
+        .map_err(|e| MoonOpsError {
+            cmd: version_cmd.to_string(),
+            kind: MoonOpsErrorKind::IOError(e),
+        })?;
+    if !output.status.success() {
+        return Err(MoonOpsError {
+            cmd: version_cmd.to_string(),
+            kind: MoonOpsErrorKind::ReturnNonZero(output.status),
+        });
+    }
+
     Ok(())
 }
 
@@ -126,6 +141,21 @@ fn install_windows_release(is_bleeding: bool) -> Result<(), MoonOpsError> {
     if !output.status.success() {
         return Err(MoonOpsError {
             cmd: cmd_str.to_string(),
+            kind: MoonOpsErrorKind::ReturnNonZero(output.status),
+        });
+    }
+
+    let version_cmd = "moon version --all";
+    let output = std::process::Command::new("moon")
+        .args(["version", "--all"])
+        .output()
+        .map_err(|e| MoonOpsError {
+            cmd: version_cmd.to_string(),
+            kind: MoonOpsErrorKind::IOError(e),
+        })?;
+    if !output.status.success() {
+        return Err(MoonOpsError {
+            cmd: version_cmd.to_string(),
             kind: MoonOpsErrorKind::ReturnNonZero(output.status),
         });
     }
