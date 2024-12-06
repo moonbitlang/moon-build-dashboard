@@ -70,9 +70,10 @@ fn run_moon(
     eprintln!(
         "{}",
         format!(
-            "moon {}, elapsed: {}ms",
+            "moon {}, elapsed: {}ms, {}",
             args.join(" ").blue().bold(),
-            elapsed.as_millis()
+            elapsed.as_millis(),
+            if output.status.success() { "success" } else { "failed" }
         )
         .green()
         .bold()
