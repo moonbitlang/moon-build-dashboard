@@ -17,8 +17,9 @@ CMoonBack/string-Algorithm 0.1.0
 Guest0x0/HAMT 0.2.1
 Guest0x0/dregex 0.2.5
 Howardzhangdqs/md5 0.9.3
-Kaida-Amethyst/math 0.1.2
+Kaida-Amethyst/math 0.1.4
 Lampese/moonbit-chalk 0.3.2
+PegasusPlusUS/hello 0.1.0
 PerfectPan/base64 0.1.1
 SyoujyoujiNaiki/chungshan 0.2.0
 Yoorkin/ArgParser 0.1.7
