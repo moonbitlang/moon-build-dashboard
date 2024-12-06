@@ -93,10 +93,6 @@ jobs:
         run: |
           pnpm run build
           sed -i '' 's|="/assets|="/moon-build-dashboard/assets|g' ./dist/index.html
-          sed -i '' 's|"/linux/latest_data.jsonl.gz"|"/moon-build-dashboard/linux/latest_data.jsonl.gz"|g' ./dist/assets/*.js
-          sed -i '' 's|"/windows/latest_data.jsonl.gz"|"/moon-build-dashboard/windows/latest_data.jsonl.gz"|g' ./dist/assets/*.js
-          sed -i '' 's|"/mac/latest_data.jsonl.gz"|"/moon-build-dashboard/mac/latest_data.jsonl.gz"|g' ./dist/assets/*.js
-          cd dist && tree
         working-directory: ./webapp
 
       - name: Deploy to GitHub Pages
