@@ -60,9 +60,6 @@ jobs:
           env UPDATE_EXPECT=1 cargo test
           ./target/release/moon_dashboard stat --file repos.txt
 
-      - name: Pull
-        run: git pull
-
       - name: Commit
         run: |
           git config --local user.name "github-actions[bot]"
@@ -72,7 +69,7 @@ jobs:
           git commit -m "Update data for ${{ matrix.os }} at $(date '+%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
 
       - name: Push changes
-        run: git push
+        run: git fetch && git pull --rebase && git push
 
   deploy:
     needs: collect-data
