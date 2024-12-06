@@ -59,7 +59,8 @@ interface PlatformData {
 }
 
 async function get_data(platform: Platform): Promise<MoonBuildDashboard> {
-  const response = await fetch(`/${platform}/latest_data.jsonl.gz`, {
+  const url = `${platform}/latest_data.jsonl.gz`;
+  const response = await fetch(url, {
     headers: {
       'Accept-Encoding': 'gzip'
     }
