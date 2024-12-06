@@ -440,7 +440,7 @@ fn main0() -> anyhow::Result<()> {
     #[cfg(target_os = "linux")]
     let os = "linux";
     #[cfg(target_os = "macos")]
-    let os = "macos";
+    let os = "mac";
     match res {
         Ok(dashboard) => {
             let date = Local::now().format("%Y-%m-%d");

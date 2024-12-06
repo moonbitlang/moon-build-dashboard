@@ -1,2 +1,6 @@
 https://github.com/moonbitlang/core main
 https://github.com/moonbitlang/x main
+# generated list to test mooncakes on mooncakes.io
+A-23187/encoding 0.1.0
+CAIMEOX/feat-moon 0.2.0
+CAIMEOX/list 0.1.0
