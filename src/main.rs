@@ -435,10 +435,16 @@ fn main0() -> anyhow::Result<()> {
     let res = match cli.subcommand {
         cli::MoonBuildDashBoardSubcommands::Stat(cmd) => stat(cmd),
     };
+    #[cfg(target_os = "windows")]
+    let os = "windows";
+    #[cfg(target_os = "linux")]
+    let os = "linux";
+    #[cfg(target_os = "macos")]
+    let os = "macos";
     match res {
         Ok(dashboard) => {
             let date = Local::now().format("%Y-%m-%d");
-            let filename = format!("webapp/public/{}_data.jsonl.gz", date);
+            let filename = format!("webapp/public/{}/{}_data.jsonl.gz", os, date);
 
             let fp = std::fs::OpenOptions::new()
                 .create(true)
@@ -451,7 +457,7 @@ fn main0() -> anyhow::Result<()> {
             writer.flush()?;
             writer.into_inner()?.finish()?;
 
-            let latest_filename = "webapp/public/latest_data.jsonl.gz";
+            let latest_filename = format!("webapp/public/{}/latest_data.jsonl.gz", os);
             std::fs::copy(&filename, latest_filename)?;
 
             Ok(())
@@ -462,11 +468,4 @@ fn main0() -> anyhow::Result<()> {
 
 fn main() -> anyhow::Result<()> {
     main0()
-}
-
-#[test]
-fn test_main() {
-    use chrono::Local;
-    let date = Local::now().format("%Y-%m-%d");
-    println!("{}", date);
 }
