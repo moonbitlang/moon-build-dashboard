@@ -62,7 +62,7 @@ pub fn get_moonc_version() -> Result<String, MoonOpsError> {
     Ok(version.trim().to_string())
 }
 
-fn install_release(args: &[&str]) -> Result<(), MoonOpsError> {
+fn install_unix_release(args: &[&str]) -> Result<(), MoonOpsError> {
     let curl_cmd = "curl -fsSL https://cli.moonbitlang.com/install/unix.sh";
     let output = std::process::Command::new("curl")
         .args(["-fsSL", "https://cli.moonbitlang.com/install/unix.sh"])
@@ -109,12 +109,49 @@ fn install_release(args: &[&str]) -> Result<(), MoonOpsError> {
     Ok(())
 }
 
+fn install_windows_release(is_bleeding: bool) -> Result<(), MoonOpsError> {
+    let cmd_str = "Set-ExecutionPolicy RemoteSigned -Scope CurrentUser; irm https://cli.moonbitlang.cn/install/powershell.ps1 | iex";
+    let mut cmd = std::process::Command::new("powershell");
+    cmd.args(["-Command", cmd_str]);
+    
+    if is_bleeding {
+        cmd.env("MOONBIT_INSTALL_VERSION", "nightly");
+    }
+
+    let output = cmd.output().map_err(|e| MoonOpsError {
+        cmd: cmd_str.to_string(),
+        kind: MoonOpsErrorKind::IOError(e),
+    })?;
+
+    if !output.status.success() {
+        return Err(MoonOpsError {
+            cmd: cmd_str.to_string(),
+            kind: MoonOpsErrorKind::ReturnNonZero(output.status),
+        });
+    }
+
+    Ok(())
+}
+
+
 pub fn install_stable_release() -> Result<(), MoonOpsError> {
-    install_release(&["-s"])
+    #[cfg(unix)]
+    let res = install_unix_release(&["-s"]);
+
+    #[cfg(target_os = "windows")]
+    let res = install_windows_release(false);
+
+    res
 }
 
 pub fn install_bleeding_release() -> Result<(), MoonOpsError> {
-    install_release(&["-s", "bleeding"])
+    #[cfg(unix)]
+    let res = install_unix_release(&["-s", "bleeding"]);
+
+    #[cfg(target_os = "windows")]
+    let res = install_windows_release(true);
+
+    res
 }
 
 pub fn moon_update() -> Result<(), MoonOpsError> {
