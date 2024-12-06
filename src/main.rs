@@ -149,6 +149,8 @@ fn get_mooncake_sources(
                 // moonbitlang/core 0.1.0 0.2.0
                 let parts: Vec<&str> = s.split(' ').collect();
                 let name = parts[0].to_string();
+                #[cfg(target_os = "windows")]
+                let name = name.replace('/', "\\");
                 let mut xs: Vec<String> =
                     parts[1..].iter().copied().map(|s| s.to_string()).collect();
                 if xs.is_empty() {
