@@ -135,14 +135,14 @@ tiye/cirru-edn 0.0.3
 tiye/cirru-parser 0.0.9
 tiye/dom-ffi 0.0.6
 tiye/lexicon-fractional-index 0.0.2
-tiye/respo 0.0.18
+tiye/respo 0.0.19
 tmkx/hello 0.0.0
 tonyfettes/memory 0.1.5
 tonyfettes/narray 0.1.0
 tonyfettes/torch 0.2.5
 wangziling/hello 0.0.1
 wstreet/moontest 0.1.0
-xunyoyo/linalg 0.2.4
+xunyoyo/linalg 0.2.5
 xunyoyo/permutation 0.1.3
 yamajik/dapr 0.1.5
 yamajik/wasi 0.1.22
