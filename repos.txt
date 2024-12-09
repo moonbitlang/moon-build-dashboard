@@ -105,7 +105,7 @@ mizchi/protocol 0.0.5
 moonbit-courses/minimoonbit-courses 0.1.0
 moonbit-js-ffi/js 0.2.0
 moonbitlang/arduino 0.0.1
-moonbitlang/core 0.1.20241204+f941da9e9
+moonbitlang/core 0.1.20241209+f9fa7f5b2
 moonbitlang/quickcheck 0.6.9
 moonbitlang/std 0.1.0
 moonbitlang/wasm4 0.2.4
@@ -144,8 +144,8 @@ wangziling/hello 0.0.1
 wstreet/moontest 0.1.0
 xunyoyo/linalg 0.2.5
 xunyoyo/permutation 0.1.3
-yamajik/dapr 0.1.5
-yamajik/wasi 0.1.22
+yamajik/dapr 0.1.9
+yamajik/wasi 0.1.23
 yamajik/wasi-bindings 0.2.1
 yangqing/hello 0.2.2
 yj-qin/regexp 0.3.2
