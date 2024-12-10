@@ -71,45 +71,45 @@ jobs:
       - name: Push changes
         run: git fetch && git pull --rebase && git push
 
-  deploy:
-    needs: collect-data
-    runs-on: macos-latest
-    steps:
-      - uses: actions/checkout@v4
+  # deploy:
+  #   needs: collect-data
+  #   runs-on: macos-latest
+  #   steps:
+  #     - uses: actions/checkout@v4
 
-      - name: Pull latest
-        run: git fetch && git pull --rebase
+  #     - name: Pull latest
+  #       run: git fetch && git pull --rebase
 
-      - name: Check commit
-        run: git log -5
+  #     - name: Check commit
+  #       run: git log -5
 
-      - name: Setup Node.js 22
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
+  #     - name: Setup Node.js 22
+  #       uses: actions/setup-node@v4
+  #       with:
+  #         node-version: '22'
 
-      - name: Install pnpm
-        run: npm install -g pnpm
+  #     - name: Install pnpm
+  #       run: npm install -g pnpm
 
-      - name: pnpm install
-        run: pnpm install
-        working-directory: ./webapp
+  #     - name: pnpm install
+  #       run: pnpm install
+  #       working-directory: ./webapp
 
-      - name: pnpm run build
-        run: |
-          pnpm run build
-          sed -i '' 's|="/assets|="/moon-build-dashboard/assets|g' ./dist/index.html
-          sed -i '' 's|"/linux/latest_data.jsonl.gz"|"/moon-build-dashboard/linux/latest_data.jsonl.gz"|g' ./dist/assets/*.js
-          sed -i '' 's|"/windows/latest_data.jsonl.gz"|"/moon-build-dashboard/windows/latest_data.jsonl.gz"|g' ./dist/assets/*.js
-          sed -i '' 's|"/mac/latest_data.jsonl.gz"|"/moon-build-dashboard/mac/latest_data.jsonl.gz"|g' ./dist/assets/*.js
-        working-directory: ./webapp
+  #     - name: pnpm run build
+  #       run: |
+  #         pnpm run build
+  #         sed -i '' 's|="/assets|="/moon-build-dashboard/assets|g' ./dist/index.html
+  #         sed -i '' 's|"/linux/latest_data.jsonl.gz"|"/moon-build-dashboard/linux/latest_data.jsonl.gz"|g' ./dist/assets/*.js
+  #         sed -i '' 's|"/windows/latest_data.jsonl.gz"|"/moon-build-dashboard/windows/latest_data.jsonl.gz"|g' ./dist/assets/*.js
+  #         sed -i '' 's|"/mac/latest_data.jsonl.gz"|"/moon-build-dashboard/mac/latest_data.jsonl.gz"|g' ./dist/assets/*.js
+  #       working-directory: ./webapp
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: ./webapp/dist
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
-          force_orphan: true
+  #     - name: Deploy to GitHub Pages
+  #       uses: peaceiris/actions-gh-pages@v4
+  #       with:
+  #         github_token: ${{ secrets.GITHUB_TOKEN }}
+  #         publish_branch: gh-pages
+  #         publish_dir: ./webapp/dist
+  #         user_name: 'github-actions[bot]'
+  #         user_email: 'github-actions[bot]@users.noreply.github.com'
+  #         force_orphan: true
