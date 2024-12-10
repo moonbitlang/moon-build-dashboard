@@ -13,6 +13,11 @@ env:
   GITHUB_ACTION_RUN_ID: ${{ github.run_id }}
   GITHUB_ACTION_RUN_NUMBER: ${{ github.run_number }}
 
+permissions:
+  contents: write
+  pull-requests: write
+  actions: write    # 用于上传/下载 artifacts
+
 jobs:
   collect-data:
     strategy:
@@ -60,56 +65,14 @@ jobs:
           env UPDATE_EXPECT=1 cargo test
           ./target/release/moon_dashboard stat --file repos.txt
 
-      - name: Commit
-        run: |
-          git config --local user.name "github-actions[bot]"
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git add ./webapp/public/*
-          git add ./repos.txt
-          git commit -m "Update data for ${{ matrix.os }} at $(date '+%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
+      - name: Upload data
+        uses: actions/upload-artifact@v4
+        with:
+          name: data-${{ matrix.os }}
+          path: |
+            ${{ matrix.os == 'macos-latest' && './webapp/public/mac/latest_data.jsonl.gz' || 
+                matrix.os == 'windows-latest' && './webapp/public/windows/latest_data.jsonl.gz' || 
+                './webapp/public/linux/latest_data.jsonl.gz' }}
+          if-no-files-found: error
 
-      - name: Push changes
-        run: git fetch && git pull origin wip --rebase && git push origin wip
 
-  # deploy:
-  #   needs: collect-data
-  #   runs-on: macos-latest
-  #   steps:
-  #     - uses: actions/checkout@v4
-
-  #     - name: Pull latest
-  #       run: git fetch && git pull --rebase
-
-  #     - name: Check commit
-  #       run: git log -5
-
-  #     - name: Setup Node.js 22
-  #       uses: actions/setup-node@v4
-  #       with:
-  #         node-version: '22'
-
-  #     - name: Install pnpm
-  #       run: npm install -g pnpm
-
-  #     - name: pnpm install
-  #       run: pnpm install
-  #       working-directory: ./webapp
-
-  #     - name: pnpm run build
-  #       run: |
-  #         pnpm run build
-  #         sed -i '' 's|="/assets|="/moon-build-dashboard/assets|g' ./dist/index.html
-  #         sed -i '' 's|"/linux/latest_data.jsonl.gz"|"/moon-build-dashboard/linux/latest_data.jsonl.gz"|g' ./dist/assets/*.js
-  #         sed -i '' 's|"/windows/latest_data.jsonl.gz"|"/moon-build-dashboard/windows/latest_data.jsonl.gz"|g' ./dist/assets/*.js
-  #         sed -i '' 's|"/mac/latest_data.jsonl.gz"|"/moon-build-dashboard/mac/latest_data.jsonl.gz"|g' ./dist/assets/*.js
-  #       working-directory: ./webapp
-
-  #     - name: Deploy to GitHub Pages
-  #       uses: peaceiris/actions-gh-pages@v4
-  #       with:
-  #         github_token: ${{ secrets.GITHUB_TOKEN }}
-  #         publish_branch: gh-pages
-  #         publish_dir: ./webapp/dist
-  #         user_name: 'github-actions[bot]'
-  #         user_email: 'github-actions[bot]@users.noreply.github.com'
-  #         force_orphan: true
