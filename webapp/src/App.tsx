@@ -59,29 +59,29 @@ interface PlatformData {
 }
 
 async function get_data(platform: Platform): Promise<MoonBuildDashboard> {
-  // const url = `${platform}/latest_data.jsonl.gz`;
-  // const response = await fetch(url, {
-  //   headers: {
-  //     'Accept-Encoding': 'gzip'
-  //   }
-  // });
-  // if (!response.ok) {
-  //   throw new Error(`HTTP error! status: ${response.status}`);
-  // }
-  // const blob = await response.blob();
-  // const ds = new DecompressionStream('gzip');
-  // const decompressedStream = blob.stream().pipeThrough(ds);
-  // const decompressedBlob = await new Response(decompressedStream).blob();
-  // const text = await decompressedBlob.text();
-  // return JSON.parse(text);
-
-  const url = `${platform}/latest_data.json`;
-  const response = await fetch(url);
+  const url = `${platform}/latest_data.jsonl.gz`;
+  const response = await fetch(url, {
+    headers: {
+      'Accept-Encoding': 'gzip'
+    }
+  });
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
   }
-  const text = await response.text();
+  const blob = await response.blob();
+  const ds = new DecompressionStream('gzip');
+  const decompressedStream = blob.stream().pipeThrough(ds);
+  const decompressedBlob = await new Response(decompressedStream).blob();
+  const text = await decompressedBlob.text();
   return JSON.parse(text);
+
+  // const url = `${platform}/latest_data.json`;
+  // const response = await fetch(url);
+  // if (!response.ok) {
+  //   throw new Error(`HTTP error! status: ${response.status}`);
+  // }
+  // const text = await response.text();
+  // return JSON.parse(text);
 }
 
 interface ModalProps {
