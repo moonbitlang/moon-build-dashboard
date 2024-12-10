@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, Fragment } from "react";
 
 type MooncakeSource = 
   | { MooncakesIO: { name: string; version: string[]; index: number } }
@@ -50,8 +50,17 @@ interface BuildState {
   cbts: (CBT | null)[];
 }
 
-async function get_data(): Promise<MoonBuildDashboard> {
-  const response = await fetch('/latest_data.jsonl.gz', {
+type Platform = "mac" | "windows" | "linux";
+
+interface PlatformData {
+  mac: MoonBuildDashboard | null;
+  windows: MoonBuildDashboard | null;
+  linux: MoonBuildDashboard | null;
+}
+
+async function get_data(platform: Platform): Promise<MoonBuildDashboard> {
+  const url = `${platform}/latest_data.jsonl.gz`;
+  const response = await fetch(url, {
     headers: {
       'Accept-Encoding': 'gzip'
     }
@@ -140,16 +149,29 @@ const DetailModal: React.FC<ModalProps> = ({ isOpen, onClose, data, title }) => 
 };
 
 const App = () => {
-  const [data, setData] = useState<MoonBuildDashboard | null>(null);
+  const [platformData, setPlatformData] = useState<PlatformData>({
+    mac: null,
+    windows: null,
+    linux: null
+  });
   const [error, setError] = useState<string | null>(null);
   const [selectedData, setSelectedData] = useState<ExecuteResult | null>(null);
   const [modalTitle, setModalTitle] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [expandedItems, setExpandedItems] = useState<Set<number>>(new Set());
 
   const fetchData = async () => {
     try {
-      const parsedData = await get_data();
-      setData(parsedData);
+      const [macData, windowsData, linuxData] = await Promise.all([
+        get_data("mac"),
+        get_data("windows"),
+        get_data("linux")
+      ]);
+      setPlatformData({
+        mac: macData,
+        windows: windowsData,
+        linux: linuxData
+      });
     } catch (err) {
       if (err instanceof Error) {
         setError(err.message);
@@ -167,6 +189,22 @@ const App = () => {
     setSelectedData(result);
     setModalTitle(title);
     setIsModalOpen(true);
+  };
+
+  const handleExpandToggle = (index: number) => {
+    const newExpandedItems = new Set(expandedItems);
+    if (expandedItems.has(index)) {
+      newExpandedItems.delete(index);
+    } else {
+      newExpandedItems.add(index);
+    }
+    setExpandedItems(newExpandedItems);
+  };
+
+  const handleExpandAll = () => {
+    if (!platformData.mac) return;
+    const allIndices = new Set(platformData.mac.stable_release_data.map((_, index) => index));
+    setExpandedItems(expandedItems.size === allIndices.size ? new Set() : allIndices);
   };
 
   const renderBackendState = (
@@ -215,131 +253,163 @@ const App = () => {
     );
   };
 
-  const renderTableRows = (
-    stableData: BuildState[],
-    bleedingData: BuildState[],
-    sources: MooncakeSource[]
-  ) => {
-    return stableData.map((stableEntry, index) => {
-      const source = sources[stableEntry.source];
-      const isGit = "Git" in source;
-      const versions = isGit ? source.Git.rev : source.MooncakesIO.version;
-      const rowSpan = versions.length; // Number of versions determines the row span
-  
-      return versions.map((_, versionIndex) => {
-        const bleedingEntry = bleedingData[index];
-        const stableCBT = stableEntry.cbts[versionIndex];
-        const bleedingCBT = bleedingEntry?.cbts[versionIndex];
-  
-        return (
-          <tr
-            key={`${index}-${versionIndex}`}
-            className="border-b hover:bg-gray-50 text-sm"
-          >
-            {/* Only display the source name in the first row */}
-            {versionIndex === 0 && (
-              <td className="py-2 px-4" rowSpan={rowSpan}>
-                {isGit ? (
-                  <>
-                    <i className="fab fa-github text-gray-700 mr-2"></i>
-                    <a
-                      href={source.Git.url}
-                      className="text-blue-600 hover:text-blue-800"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {source.Git.url.replace("https://github.com/", "")}
-                    </a>
-                  </>
-                ) : (
-                  <a
-                    href={`https://mooncakes.io/docs/#/${source.MooncakesIO.name}/`}
-                    className="text-blue-600 hover:text-blue-800"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {source.MooncakesIO.name}
-                  </a>
-                )}
-              </td>
-            )}
-            {/* Display the version without a link if it is MooncakesIO */}
-            <td className="py-2 px-4 text-gray-500">
-              {isGit ? (
-                <a
-                  href={`${source.Git.url}/tree/${versions[versionIndex]}`}
-                  className="text-blue-600 hover:text-blue-800"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {versions[versionIndex]}
-                </a>
-              ) : (
-                versions[versionIndex]
+  const renderAllPlatformsData = () => {
+    if (!platformData.mac || !platformData.windows || !platformData.linux) {
+      return null;
+    }
+
+    return platformData.mac.stable_release_data.map((_, index) => {
+      const platforms: Platform[] = ["mac", "windows", "linux"];
+      
+      return platforms.map(platform => {
+        const data = platformData[platform];
+        if (!data) return null;
+
+        if (platform !== "mac" && !expandedItems.has(index)) {
+          return null;
+        }
+
+        const stableEntry = data.stable_release_data[index];
+        const bleedingEntry = data.bleeding_release_data[index];
+        if (!stableEntry) return null;
+
+        const source = data.sources[stableEntry.source];
+        const isGit = "Git" in source;
+        const versions = isGit ? source.Git.rev : source.MooncakesIO.version;
+
+        return versions.map((version, versionIndex) => {
+          const stableCBT = stableEntry.cbts[versionIndex];
+          const bleedingCBT = bleedingEntry?.cbts[versionIndex];
+
+          const rowSpan = expandedItems.has(index) ? versions.length * 3 : versions.length;
+
+          return (
+            <tr 
+              key={`${platform}-${index}-${versionIndex}`} 
+              className={`border-b hover:bg-gray-50 text-sm ${
+                platform === "windows" ? "bg-gray-50" : 
+                platform === "linux" ? "bg-blue-50" : ""
+              }`}
+            >
+              {versionIndex === 0 && platform === "mac" && (
+                <Fragment>
+                  <td className="py-2 px-4" rowSpan={rowSpan}>
+                    <div className="flex items-center">
+                      <button
+                        onClick={() => handleExpandToggle(index)}
+                        className="mr-2 text-gray-500 hover:text-gray-700 focus:outline-none"
+                      >
+                        {expandedItems.has(index) ? "▼" : "▶"}
+                      </button>
+                      {isGit ? (
+                        <Fragment>
+                          <i className="fab fa-github text-gray-700 mr-2"></i>
+                          <a
+                            href={source.Git.url}
+                            className="text-blue-600 hover:text-blue-800"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {source.Git.url.replace("https://github.com/", "")}
+                          </a>
+                        </Fragment>
+                      ) : (
+                        <a
+                          href={`https://mooncakes.io/docs/#/${source.MooncakesIO.name}/`}
+                          className="text-blue-600 hover:text-blue-800"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {source.MooncakesIO.name}
+                        </a>
+                      )}
+                    </div>
+                  </td>
+                  <td className="py-2 px-4 text-gray-500" rowSpan={rowSpan}>
+                    {isGit ? (
+                      <a
+                        href={`${source.Git.url}/tree/${version}`}
+                        className="text-blue-600 hover:text-blue-800"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {version}
+                      </a>
+                    ) : (
+                      version
+                    )}
+                  </td>
+                </Fragment>
               )}
-            </td>
-  
-            {/* Stable Data */}
-            {stableCBT ? (
-              <>
-                {renderBackendState(stableCBT.check, "Check", 'stable')}
-                {renderBackendState(stableCBT.build, "Build", 'stable')}
-                {renderBackendState(stableCBT.test, "Test", 'stable')}
-              </>
-            ) : (
-              <td colSpan={9} className="py-2 px-4 text-center text-gray-500">
-                No stable data available
+              <td className="py-2 px-4 w-24 border-r">
+                <div className="text-gray-500 font-medium">
+                  {platform.charAt(0).toUpperCase() + platform.slice(1)}
+                </div>
               </td>
-            )}
-  
-            {/* Bleeding Data */}
-            {bleedingCBT ? (
-              <>
-                {renderBackendState(bleedingCBT.check, "Check", 'bleeding', stableCBT)}
-                {renderBackendState(bleedingCBT.build, "Build", 'bleeding', stableCBT)}
-                {renderBackendState(bleedingCBT.test, "Test", 'bleeding', stableCBT)}
-              </>
-            ) : (
-              <td colSpan={9} className="py-2 px-4 text-center text-gray-500">
-                No bleeding data available
-              </td>
-            )}
-          </tr>
-        );
+
+              {stableCBT ? (
+                <Fragment>
+                  {renderBackendState(stableCBT.check, "Check", 'stable')}
+                  {renderBackendState(stableCBT.build, "Build", 'stable')}
+                  {renderBackendState(stableCBT.test, "Test", 'stable')}
+                </Fragment>
+              ) : (
+                <td colSpan={9} className="py-2 px-4 text-center text-gray-500">
+                  No stable data available
+                </td>
+              )}
+
+              {bleedingCBT ? (
+                <Fragment>
+                  {renderBackendState(bleedingCBT.check, "Check", 'bleeding', stableCBT)}
+                  {renderBackendState(bleedingCBT.build, "Build", 'bleeding', stableCBT)}
+                  {renderBackendState(bleedingCBT.test, "Test", 'bleeding', stableCBT)}
+                </Fragment>
+              ) : (
+                <td colSpan={9} className="py-2 px-4 text-center text-gray-500">
+                  No bleeding data available
+                </td>
+              )}
+            </tr>
+          );
+        });
       });
-    });
+    }).flat(3).filter(Boolean);
   };
-  
+
   return (
     <div className="p-4 bg-gray-100 min-h-screen flex justify-center">
       <div className="w-full">
-        <h1 className="text-2xl font-bold mb-4">Moon Build Dashboard</h1>
-  
+        <div className="flex justify-between items-center mb-4">
+          <h1 className="text-2xl font-bold">Moon Build Dashboard</h1>
+          <button
+            onClick={handleExpandAll}
+            className="px-4 py-2 text-sm bg-white border rounded-lg shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            {expandedItems.size > 0 ? "Collapse All" : "Expand All"}
+          </button>
+        </div>
         {error ? (
           <p className="text-red-500 text-center">{error}</p>
-        ) : data ? (
+        ) : platformData.linux ? (
           <div className="overflow-x-auto">
             <table className="min-w-full table-auto bg-white shadow-md rounded-lg overflow-hidden">
               <thead>
                 <tr className="bg-gray-200">
                   <th rowSpan={3} className="py-2 px-4 text-left w-1/4 border-r">Repository</th>
                   <th rowSpan={3} className="py-2 px-4 text-left w-1/4 border-r">Version</th>
+                  <th rowSpan={3} className="py-2 px-4 w-24 border-r">Platform</th>
                   <th colSpan={9} className="py-2 px-4 text-center bg-green-500 text-white border-r">
                     Stable Release
                     <div className="text-xs mt-1 font-normal">
-                      {data.stable_toolchain_version.moon_version} / moonc {data.stable_toolchain_version.moonc_version}
+                      {platformData.linux.stable_toolchain_version.moon_version} / moonc {platformData.linux.stable_toolchain_version.moonc_version}
                     </div>
                   </th>
-                  <th
-                    colSpan={9}
-                    className="py-2 px-4 text-center bg-red-600 text-white relative overflow-hidden"
-                  >
-                    <span className="absolute inset-0 flex items-center justify-left text-6xl text-yellow-900 opacity-40">
-                      ⚡️
-                    </span>
+                  <th colSpan={9} className="py-2 px-4 text-center bg-red-600 text-white relative overflow-hidden">
+                    <span className="absolute inset-0 flex items-center justify-left text-6xl text-yellow-900 opacity-40">⚡️</span>
                     Bleeding Edge Release
                     <div className="text-xs mt-1 font-normal">
-                      {data.bleeding_toolchain_version.moon_version} / moonc {data.bleeding_toolchain_version.moonc_version}
+                      {platformData.linux.bleeding_toolchain_version.moon_version} / moonc {platformData.linux.bleeding_toolchain_version.moonc_version}
                     </div>
                   </th>
                 </tr>
@@ -373,7 +443,7 @@ const App = () => {
                 </tr>
               </thead>
               <tbody>
-                {renderTableRows(data.stable_release_data, data.bleeding_release_data, data.sources)}
+                {renderAllPlatformsData()}
               </tbody>
             </table>
           </div>

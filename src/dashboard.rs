@@ -53,7 +53,7 @@ impl MoonCommand {
             MoonCommand::Check(backend) => vec!["check", "-q", "--target", backend.to_flag()],
             MoonCommand::Build(backend) => vec!["build", "-q", "--target", backend.to_flag()],
             MoonCommand::Test(backend) => {
-                vec!["test", "-q", "--build-only", "--target", backend.to_flag()]
+                vec!["test", "-q", "--target", backend.to_flag()]
             }
         }
     }

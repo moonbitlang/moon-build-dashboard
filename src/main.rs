@@ -70,9 +70,10 @@ fn run_moon(
     eprintln!(
         "{}",
         format!(
-            "moon {}, elapsed: {}ms",
+            "moon {}, elapsed: {}ms, {}",
             args.join(" ").blue().bold(),
-            elapsed.as_millis()
+            elapsed.as_millis(),
+            if output.status.success() { "success" } else { "failed" }
         )
         .green()
         .bold()
@@ -149,6 +150,8 @@ fn get_mooncake_sources(
                 // moonbitlang/core 0.1.0 0.2.0
                 let parts: Vec<&str> = s.split(' ').collect();
                 let name = parts[0].to_string();
+                #[cfg(target_os = "windows")]
+                let name = name.replace('/', "\\");
                 let mut xs: Vec<String> =
                     parts[1..].iter().copied().map(|s| s.to_string()).collect();
                 if xs.is_empty() {
@@ -435,10 +438,16 @@ fn main0() -> anyhow::Result<()> {
     let res = match cli.subcommand {
         cli::MoonBuildDashBoardSubcommands::Stat(cmd) => stat(cmd),
     };
+    #[cfg(target_os = "windows")]
+    let os = "windows";
+    #[cfg(target_os = "linux")]
+    let os = "linux";
+    #[cfg(target_os = "macos")]
+    let os = "mac";
     match res {
         Ok(dashboard) => {
             let date = Local::now().format("%Y-%m-%d");
-            let filename = format!("webapp/public/{}_data.jsonl.gz", date);
+            let filename = format!("webapp/public/{}/{}_data.jsonl.gz", os, date);
 
             let fp = std::fs::OpenOptions::new()
                 .create(true)
@@ -451,7 +460,7 @@ fn main0() -> anyhow::Result<()> {
             writer.flush()?;
             writer.into_inner()?.finish()?;
 
-            let latest_filename = "webapp/public/latest_data.jsonl.gz";
+            let latest_filename = format!("webapp/public/{}/latest_data.jsonl.gz", os);
             std::fs::copy(&filename, latest_filename)?;
 
             Ok(())
@@ -462,11 +471,4 @@ fn main0() -> anyhow::Result<()> {
 
 fn main() -> anyhow::Result<()> {
     main0()
-}
-
-#[test]
-fn test_main() {
-    use chrono::Local;
-    let date = Local::now().format("%Y-%m-%d");
-    println!("{}", date);
 }
