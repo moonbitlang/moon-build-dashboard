@@ -590,80 +590,99 @@ const App = () => {
   };
 
   return (
-    <div className="p-4 bg-gray-100 min-h-screen flex justify-center">
-      <div className="w-full">
-        <div className="flex justify-between items-center mb-4">
+    <div className="flex flex-col h-screen bg-gray-100">
+      <div className="flex-none px-8 py-4">
+        <div className="flex justify-between items-center">
           <h1 className="text-2xl font-bold">Moon Build Dashboard</h1>
-          <button
-            onClick={handleExpandAll}
-            className="px-4 py-2 text-sm bg-white border rounded-lg shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          >
+          <button onClick={handleExpandAll} className="px-4 py-2 text-sm bg-white border rounded-lg shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500">
             {expandedItems.size > 0 ? "Collapse All" : "Expand All"}
           </button>
         </div>
-        {error ? (
-          <p className="text-red-500 text-center">{error}</p>
-        ) : platformData.mac ? (
-          <div className="overflow-x-auto">
-            <table className="min-w-full table-auto bg-white shadow-md rounded-lg overflow-hidden">
-              <thead>
-                <tr className="bg-gray-200">
-                  <th rowSpan={3} className="py-2 px-4 text-left w-1/4 border-r">Repository</th>
-                  <th rowSpan={3} className="py-2 px-4 text-left w-1/4 border-r">Version</th>
-                  <th colSpan={9} className="py-2 px-4 text-center bg-green-500 text-white border-r">
-                    Stable Release
-                    <div className="text-xs mt-1 font-normal">
-                      {platformData.mac.stable_toolchain_version.moon_version} / moonc {platformData.mac.stable_toolchain_version.moonc_version}
-                    </div>
-                  </th>
-                  <th colSpan={9} className="py-2 px-4 text-center bg-red-600 text-white relative overflow-hidden">
-                    <span className="absolute inset-0 flex items-center justify-left text-6xl text-yellow-900 opacity-40">⚡️</span>
-                    <div className="relative">
-                      Bleeding Edge Release
-                      <div className="text-xs mt-1 font-normal">
-                        {platformData.mac.bleeding_toolchain_version.moon_version} / moonc {platformData.mac.bleeding_toolchain_version.moonc_version}
-                      </div>
-                    </div>
-                  </th>
-                </tr>
-                <tr className="bg-gray-100">
-                  <th colSpan={3} className="py-1 px-4 text-center text-sm border-r">Check(ms)</th>
-                  <th colSpan={3} className="py-1 px-4 text-center text-sm border-r">Build(ms)</th>
-                  <th colSpan={3} className="py-1 px-4 text-center text-sm border-r">Test(ms)</th>
-                  <th colSpan={3} className="py-1 px-4 text-center text-sm border-r">Check(ms)</th>
-                  <th colSpan={3} className="py-1 px-4 text-center text-sm border-r">Build(ms)</th>
-                  <th colSpan={3} className="py-1 px-4 text-center text-sm">Test(ms)</th>
-                </tr>
-                <tr className="bg-gray-100">
-                  <th className="py-1 px-4 text-center text-xs border-r">wasm</th>
-                  <th className="py-1 px-4 text-center text-xs border-r">wasm gc</th>
-                  <th className="py-1 px-4 text-center text-xs border-r">js</th>
-                  <th className="py-1 px-4 text-center text-xs border-r">wasm</th>
-                  <th className="py-1 px-4 text-center text-xs border-r">wasm gc</th>
-                  <th className="py-1 px-4 text-center text-xs border-r">js</th>
-                  <th className="py-1 px-4 text-center text-xs border-r">wasm</th>
-                  <th className="py-1 px-4 text-center text-xs border-r">wasm gc</th>
-                  <th className="py-1 px-4 text-center text-xs border-r">js</th>
-                  <th className="py-1 px-4 text-center text-xs border-r">wasm</th>
-                  <th className="py-1 px-4 text-center text-xs border-r">wasm gc</th>
-                  <th className="py-1 px-4 text-center text-xs border-r">js</th>
-                  <th className="py-1 px-4 text-center text-xs border-r">wasm</th>
-                  <th className="py-1 px-4 text-center text-xs border-r">wasm gc</th>
-                  <th className="py-1 px-4 text-center text-xs border-r">js</th>
-                  <th className="py-1 px-4 text-center text-xs border-r">wasm</th>
-                  <th className="py-1 px-4 text-center text-xs border-r">wasm gc</th>
-                  <th className="py-1 px-4 text-center text-xs">js</th>
-                </tr>
-              </thead>
-              <tbody>
-                {renderAllPlatformsData()}
-              </tbody>
-            </table>
-          </div>
-        ) : (
-          <p>Loading...</p>
-        )}
       </div>
+
+      {error ? (
+        <div className="flex-none px-8 py-4">
+          <p className="text-red-500 text-center">{error}</p>
+        </div>
+      ) : platformData.mac ? (
+        <div className="flex-1 flex flex-col min-h-0 px-4">
+          <div className="relative rounded-lg overflow-hidden bg-white shadow-lg h-full">
+            <div className="sticky top-0 z-10 bg-white">
+              <table className="w-full table-fixed">
+                <colgroup>
+                  <col className="w-[15%]" />
+                  <col className="w-[15%]" />
+                  {Array(18).fill(null).map((_, i) => (
+                    <col key={i} className="w-[3.888888%]" />
+                  ))}
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th rowSpan={3} className="py-2 px-4 text-left border-r bg-gray-200">Repository</th>
+                    <th rowSpan={3} className="py-2 px-4 text-left border-r bg-gray-200">Version</th>
+                    <th colSpan={9} className="py-2 px-4 text-center bg-green-500 text-white border-r">
+                      Stable Release
+                      <div className="text-xs mt-1 font-normal">
+                        {platformData.mac.stable_toolchain_version.moon_version} / moonc {platformData.mac.stable_toolchain_version.moonc_version}
+                      </div>
+                    </th>
+                    <th colSpan={9} className="py-2 px-4 text-center bg-red-600 text-white relative overflow-hidden">
+                      <span className="absolute inset-0 flex items-center justify-left text-6xl text-yellow-900 opacity-40">⚡️</span>
+                      <div className="relative">
+                        Bleeding Edge Release
+                        <div className="text-xs mt-1 font-normal">
+                          {platformData.mac.bleeding_toolchain_version.moon_version} / moonc {platformData.mac.bleeding_toolchain_version.moonc_version}
+                        </div>
+                      </div>
+                    </th>
+                  </tr>
+                  <tr>
+                    {['Check(ms)', 'Build(ms)', 'Test(ms)', 'Check(ms)', 'Build(ms)', 'Test(ms)'].map((text, i) => (
+                      <th 
+                        key={i} 
+                        colSpan={3} 
+                        className={`py-1 px-4 text-center text-sm bg-gray-100 border-b border-gray-200 ${i < 5 ? 'border-r' : ''}`}
+                      >
+                        {text}
+                      </th>
+                    ))}
+                  </tr>
+                  <tr>
+                    {Array(18).fill(null).map((_, i) => (
+                      <th 
+                        key={i}
+                        className={`py-1 px-4 text-center text-xs bg-gray-100 border-b border-gray-200 ${i < 17 ? 'border-r' : ''}`}
+                      >
+                        {['wasm', 'wasm gc', 'js'][i % 3]}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+              </table>
+            </div>
+            
+            <div className="overflow-auto h-full">
+              <table className="w-full table-fixed">
+                <colgroup>
+                  <col className="w-[15%]" />
+                  <col className="w-[15%]" />
+                  {Array(18).fill(null).map((_, i) => (
+                    <col key={i} className="w-[3.888888%]" />
+                  ))}
+                </colgroup>
+                <tbody className="bg-white divide-y divide-gray-200">
+                  {renderAllPlatformsData()}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <div className="flex-none px-8 py-4">
+          <p>Loading...</p>
+        </div>
+      )}
+
       {selectedData && (
         <DetailModal
           isOpen={isModalOpen}
