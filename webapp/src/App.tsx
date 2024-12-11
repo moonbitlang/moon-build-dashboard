@@ -215,50 +215,178 @@ const App = () => {
     setExpandedItems(expandedItems.size === allIndices.size ? new Set() : allIndices);
   };
 
-  const renderBackendState = (
-    backendState: BackendState, 
-    phase: string, 
-    variant: 'stable' | 'bleeding',
-    stableCBT?: CBT | null
-  ) => {
-    const highlightDifference = (
-      stable: ExecuteResult,
-      bleeding: ExecuteResult
-    ) => stable.status !== bleeding.status ? "bg-yellow-100" : "";
+  const getStatusStyle = (status: Status): string => {
+    return status === "Success"
+      ? "bg-green-200 text-green-800"
+      : "bg-red-200 text-red-800";
+  };
+  
+  const getStatusText = (status: Status, elapsed: number | null): string => {
+    return status === "Success" ? `${elapsed ?? '-'}` : "x";
+  };
 
-    const getStatusStyle = (status: Status): string => {
-      return status === "Success"
-        ? "bg-green-200 text-green-800"
-        : "bg-red-200 text-red-800";
-    };
-    
-    const getStatusText = (status: Status, elapsed: number | null): string => {
-      return status === "Success" ? `${elapsed ?? '-'}` : "x";
-    };
+  const renderAllPlatformsData = () => {
+    if (!platformData.mac || !platformData.windows || !platformData.linux) {
+      return null;
+    }
 
-    return (
-      <>
-        {["wasm", "wasm_gc", "js"].map((key) => {
-          const result = backendState[key as keyof BackendState];
-          const stableResult = stableCBT?.[phase.toLowerCase() as keyof CBT]?.[key as keyof BackendState];
-          
-          return (
-            <td
-              key={`${variant}-${phase.toLowerCase()}-${key}`}
-              className={`py-2 px-4 border-r cursor-pointer hover:opacity-80 
-                ${getStatusStyle(result.status)}
-                ${variant === 'bleeding' && stableResult ? highlightDifference(stableResult, result) : ''}`}
-              onClick={() => handleResultClick(
-                result,
-                `${variant} - ${phase.toLowerCase()} - ${key}`
+    return platformData.mac.stable_release_data.map((_, index) => {
+      const macData = platformData.mac!;
+      const stableEntry = macData.stable_release_data[index];
+      if (!stableEntry) return null;
+
+      const source = macData.sources[stableEntry.source];
+      const isGit = "Git" in source;
+      const versions = isGit ? source.Git.rev : source.MooncakesIO.version;
+      const summary = generateSummary(index, platformData);
+
+      // 渲染主行（包含摘要）
+      const mainRow = (
+        <tr key={`summary-${index}`} className="border-b hover:bg-gray-50 text-sm">
+          <td className="py-2 px-4">
+            <div className="flex items-center">
+              <button
+                onClick={() => handleExpandToggle(index)}
+                className="mr-2 text-gray-500 hover:text-gray-700 focus:outline-none"
+              >
+                {expandedItems.has(index) ? "▼" : "▶"}
+              </button>
+              {isGit ? (
+                <Fragment>
+                  <i className="fab fa-github text-gray-700 mr-2"></i>
+                  <a
+                    href={source.Git.url}
+                    className="text-blue-600 hover:text-blue-800"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {source.Git.url.replace("https://github.com/", "")}
+                  </a>
+                </Fragment>
+              ) : (
+                <a
+                  href={`https://mooncakes.io/docs/#/${source.MooncakesIO.name}/`}
+                  className="text-blue-600 hover:text-blue-800"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {source.MooncakesIO.name}
+                </a>
               )}
+            </div>
+          </td>
+          <td className="py-2 px-4 text-gray-500">
+            {isGit ? (
+              <a
+                href={`${source.Git.url}/tree/${versions[0]}`}
+                className="text-blue-600 hover:text-blue-800"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {versions[0]}
+              </a>
+            ) : (
+              versions[0]
+            )}
+          </td>
+          <td 
+            colSpan={18}
+            className={`py-2 px-4 ${
+              summary.status === 'success' ? 'text-green-600 bg-green-50' :
+              summary.status === 'warning' ? 'text-yellow-600 bg-yellow-50' :
+              'text-red-600 bg-red-50'
+            }`}
+          >
+            {summary.text}
+          </td>
+        </tr>
+      );
+
+      // 详细数据行添加 hover 效果
+      const detailRows = expandedItems.has(index) ? (
+        ["mac", "windows", "linux"].map(platform => {
+          const data = platformData[platform as Platform];
+          if (!data) return null;
+
+          const stableEntry = data.stable_release_data[index];
+          const bleedingEntry = data.bleeding_release_data[index];
+          if (!stableEntry) return null;
+
+          return (
+            <tr 
+              key={`${platform}-${index}`} 
+              className={`border-b text-sm transform transition-transform hover:scale-[1.01] hover:shadow-md ${
+                platform === "windows" ? "bg-gray-50" : 
+                platform === "linux" ? "bg-blue-50/20" : ""
+              }`}
             >
-              {getStatusText(result.status, result.elapsed)}
-            </td>
+              <td className="py-2 px-4 pl-10 text-gray-500">
+                {platform.charAt(0).toUpperCase() + platform.slice(1)}
+              </td>
+              <td className="py-2 px-4 text-gray-500">
+                {/* 空单元格，保持布局一致 */}
+              </td>
+              
+              {stableEntry.cbts[0] ? (
+                <>
+                  {['check', 'build', 'test'].map(phase => (
+                    ['wasm', 'wasm_gc', 'js'].map(backend => {
+                      const result = stableEntry.cbts[0]?.[phase as keyof CBT]?.[backend as keyof BackendState];
+                      if (!result) return null;
+                      
+                      return (
+                        <td
+                          key={`${phase}-${backend}`}
+                          className={`py-2 px-4 border-r cursor-pointer hover:opacity-80 ${
+                            getStatusStyle(result.status)
+                          }`}
+                          onClick={() => handleResultClick(result, `stable - ${phase} - ${backend}`)}
+                        >
+                          {getStatusText(result.status, result.elapsed)}
+                        </td>
+                      );
+                    })
+                  ))}
+                </>
+              ) : (
+                <td colSpan={9} className="py-2 px-4 text-center text-gray-500">
+                  No stable data available
+                </td>
+              )}
+              
+              {bleedingEntry?.cbts[0] ? (
+                <>
+                  {['check', 'build', 'test'].map(phase => (
+                    ['wasm', 'wasm_gc', 'js'].map(backend => {
+                      const result = bleedingEntry.cbts[0]?.[phase as keyof CBT]?.[backend as keyof BackendState];
+                      if (!result) return null;
+                      
+                      return (
+                        <td
+                          key={`bleeding-${phase}-${backend}`}
+                          className={`py-2 px-4 border-r cursor-pointer hover:opacity-80 ${
+                            getStatusStyle(result.status)
+                          }`}
+                          onClick={() => handleResultClick(result, `bleeding - ${phase} - ${backend}`)}
+                        >
+                          {getStatusText(result.status, result.elapsed)}
+                        </td>
+                      );
+                    })
+                  ))}
+                </>
+              ) : (
+                <td colSpan={9} className="py-2 px-4 text-center text-gray-500">
+                  No bleeding data available
+                </td>
+              )}
+            </tr>
           );
-        })}
-      </>
-    );
+        })
+      ) : null;
+
+      return [mainRow, detailRows];
+    }).flat(2).filter(Boolean);
   };
 
   // 检查某个 CBT 是否全部成功
@@ -458,135 +586,6 @@ const App = () => {
     }
 
     return { text: "No data available", status: 'error' };
-  };
-
-  const renderAllPlatformsData = () => {
-    if (!platformData.mac || !platformData.windows || !platformData.linux) {
-      return null;
-    }
-
-    return platformData.mac.stable_release_data.map((_, index) => {
-      const macData = platformData.mac!;
-      const stableEntry = macData.stable_release_data[index];
-      if (!stableEntry) return null;
-
-      const source = macData.sources[stableEntry.source];
-      const isGit = "Git" in source;
-      const versions = isGit ? source.Git.rev : source.MooncakesIO.version;
-      const summary = generateSummary(index, platformData);
-
-      // 渲染主行（包含摘要）
-      const mainRow = (
-        <tr key={`summary-${index}`} className="border-b hover:bg-gray-50 text-sm">
-          <td className="py-2 px-4">
-            <div className="flex items-center">
-              <button
-                onClick={() => handleExpandToggle(index)}
-                className="mr-2 text-gray-500 hover:text-gray-700 focus:outline-none"
-              >
-                {expandedItems.has(index) ? "▼" : "▶"}
-              </button>
-              {isGit ? (
-                <Fragment>
-                  <i className="fab fa-github text-gray-700 mr-2"></i>
-                  <a
-                    href={source.Git.url}
-                    className="text-blue-600 hover:text-blue-800"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {source.Git.url.replace("https://github.com/", "")}
-                  </a>
-                </Fragment>
-              ) : (
-                <a
-                  href={`https://mooncakes.io/docs/#/${source.MooncakesIO.name}/`}
-                  className="text-blue-600 hover:text-blue-800"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {source.MooncakesIO.name}
-                </a>
-              )}
-            </div>
-          </td>
-          <td className="py-2 px-4 text-gray-500">
-            {isGit ? (
-              <a
-                href={`${source.Git.url}/tree/${versions[0]}`}
-                className="text-blue-600 hover:text-blue-800"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {versions[0]}
-              </a>
-            ) : (
-              versions[0]
-            )}
-          </td>
-          <td 
-            colSpan={18}
-            className={`py-2 px-4 ${
-              summary.status === 'success' ? 'text-green-600 bg-green-50' :
-              summary.status === 'warning' ? 'text-yellow-600 bg-yellow-50' :
-              'text-red-600 bg-red-50'
-            }`}
-          >
-            {summary.text}
-          </td>
-        </tr>
-      );
-
-      // 如果展开，渲染详细信息
-      const detailRows = expandedItems.has(index) ? (
-        ["mac", "windows", "linux"].map(platform => {
-          const data = platformData[platform as Platform];
-          if (!data) return null;
-
-          const stableEntry = data.stable_release_data[index];
-          const bleedingEntry = data.bleeding_release_data[index];
-          if (!stableEntry) return null;
-
-          return (
-            <tr 
-              key={`${platform}-${index}`} 
-              className={`border-b text-sm ${
-                platform === "windows" ? "bg-gray-50" : 
-                platform === "linux" ? "bg-blue-50" : ""
-              }`}
-            >
-              <td colSpan={2} className="py-2 px-4 pl-10 text-gray-500">
-                {platform.charAt(0).toUpperCase() + platform.slice(1)}
-              </td>
-              {stableEntry.cbts[0] ? (
-                <Fragment>
-                  {renderBackendState(stableEntry.cbts[0].check, "Check", 'stable')}
-                  {renderBackendState(stableEntry.cbts[0].build, "Build", 'stable')}
-                  {renderBackendState(stableEntry.cbts[0].test, "Test", 'stable')}
-                </Fragment>
-              ) : (
-                <td colSpan={9} className="py-2 px-4 text-center text-gray-500">
-                  No stable data available
-                </td>
-              )}
-              {bleedingEntry?.cbts[0] ? (
-                <Fragment>
-                  {renderBackendState(bleedingEntry.cbts[0].check, "Check", 'bleeding', stableEntry.cbts[0])}
-                  {renderBackendState(bleedingEntry.cbts[0].build, "Build", 'bleeding', stableEntry.cbts[0])}
-                  {renderBackendState(bleedingEntry.cbts[0].test, "Test", 'bleeding', stableEntry.cbts[0])}
-                </Fragment>
-              ) : (
-                <td colSpan={9} className="py-2 px-4 text-center text-gray-500">
-                  No bleeding data available
-                </td>
-              )}
-            </tr>
-          );
-        })
-      ) : null;
-
-      return [mainRow, detailRows];
-    }).flat(2).filter(Boolean);
   };
 
   return (
