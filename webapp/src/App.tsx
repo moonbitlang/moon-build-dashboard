@@ -660,7 +660,7 @@ const App = () => {
               </table>
             </div>
             
-            <div className="overflow-auto h-full">
+            <div className="overflow-auto" style={{ height: '84%' }}>
               <table className="w-full table-fixed">
                 <colgroup>
                   <col className="w-[15%]" />
