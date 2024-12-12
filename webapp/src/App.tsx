@@ -337,7 +337,7 @@ const App = () => {
                       return (
                         <td
                           key={`${phase}-${backend}`}
-                          className={`py-2 px-4 border-r cursor-pointer hover:opacity-80 ${
+                          className={`py-2 px-4 border-r border-b text-center cursor-pointer hover:opacity-80 ${
                             getStatusStyle(result.status)
                           }`}
                           onClick={() => handleResultClick(result, `stable - ${phase} - ${backend}`)}
@@ -364,7 +364,7 @@ const App = () => {
                       return (
                         <td
                           key={`bleeding-${phase}-${backend}`}
-                          className={`py-2 px-4 border-r cursor-pointer hover:opacity-80 ${
+                          className={`py-2 px-4 border-r border-b text-center cursor-pointer hover:opacity-80 ${
                             getStatusStyle(result.status)
                           }`}
                           onClick={() => handleResultClick(result, `bleeding - ${phase} - ${backend}`)}
@@ -604,8 +604,8 @@ const App = () => {
           <p className="text-red-500 text-center">{error}</p>
         </div>
       ) : platformData.mac ? (
-        <div className="flex-1 flex flex-col min-h-0 px-4">
-          <div className="relative rounded-lg overflow-hidden bg-white shadow-lg h-full">
+        <div className="flex-1 flex flex-col min-h-0 px-4 overflow-auto">
+          <div className="relative rounded-lg bg-white shadow-lg">
             <div className="sticky top-0 z-10 bg-white">
               <table className="w-full table-fixed">
                 <colgroup>
@@ -660,7 +660,7 @@ const App = () => {
               </table>
             </div>
             
-            <div className="overflow-auto" style={{ height: '84%' }}>
+            <div>
               <table className="w-full table-fixed">
                 <colgroup>
                   <col className="w-[15%]" />
