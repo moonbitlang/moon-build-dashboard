@@ -27,24 +27,56 @@ pub fn download_to(name: &str, version: &str, dst: &Path) -> Result<(), Mooncake
         .finish();
     let url = format!("{}/{}/{}.zip", BASE_URL, name, version_enc);
     let output_zip = format!("{}.zip", dst.join(version).display());
-    let output = std::process::Command::new("curl")
-        .arg("-o")
-        .arg(&output_zip)
-        .arg(&url)
-        .output()
-        .map_err(|e| MooncakesIOError::IOError(e))?;
-    if !output.status.success() {
-        return Err(MooncakesIOError::ReturnNonZero(output.status));
+
+    #[cfg(target_os = "windows")]
+    {
+        let output = std::process::Command::new("powershell")
+            .args([
+                "-Command",
+                &format!("Invoke-WebRequest -Uri '{}' -OutFile '{}'", url, output_zip),
+            ])
+            .output()
+            .map_err(|e| MooncakesIOError::IOError(e))?;
+        if !output.status.success() {
+            return Err(MooncakesIOError::ReturnNonZero(output.status));
+        }
+
+        let output = std::process::Command::new("powershell")
+            .args([
+                "-Command", 
+                &format!("Expand-Archive -Path '{}' -DestinationPath '{}'", 
+                    output_zip,
+                    dst.join(version).display()
+                ),
+            ])
+            .output()
+            .map_err(|e| MooncakesIOError::IOError(e))?;
+        if !output.status.success() {
+            return Err(MooncakesIOError::ReturnNonZero(output.status));
+        }
     }
 
-    let output = std::process::Command::new("unzip")
-        .arg(&output_zip)
-        .arg("-d")
-        .arg(dst.join(version))
-        .output()
-        .map_err(|e| MooncakesIOError::IOError(e))?;
-    if !output.status.success() {
-        return Err(MooncakesIOError::ReturnNonZero(output.status));
+    #[cfg(unix)]
+    {
+        let output = std::process::Command::new("curl")
+            .arg("-o")
+            .arg(&output_zip)
+            .arg(&url)
+            .output()
+            .map_err(|e| MooncakesIOError::IOError(e))?;
+        if !output.status.success() {
+            return Err(MooncakesIOError::ReturnNonZero(output.status));
+        }
+
+        let output = std::process::Command::new("unzip")
+            .arg(&output_zip)
+            .arg("-d")
+            .arg(dst.join(version))
+            .output()
+            .map_err(|e| MooncakesIOError::IOError(e))?;
+        if !output.status.success() {
+            return Err(MooncakesIOError::ReturnNonZero(output.status));
+        }
     }
 
     Ok(())

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, Fragment } from "react";
 
 type MooncakeSource = 
   | { MooncakesIO: { name: string; version: string[]; index: number } }
@@ -50,8 +50,17 @@ interface BuildState {
   cbts: (CBT | null)[];
 }
 
-async function get_data(): Promise<MoonBuildDashboard> {
-  const response = await fetch('/latest_data.jsonl.gz', {
+type Platform = "mac" | "windows" | "linux";
+
+interface PlatformData {
+  mac: MoonBuildDashboard | null;
+  windows: MoonBuildDashboard | null;
+  linux: MoonBuildDashboard | null;
+}
+
+async function get_data(platform: Platform): Promise<MoonBuildDashboard> {
+  const url = `${platform}/latest_data.jsonl.gz`;
+  const response = await fetch(url, {
     headers: {
       'Accept-Encoding': 'gzip'
     }
@@ -65,6 +74,14 @@ async function get_data(): Promise<MoonBuildDashboard> {
   const decompressedBlob = await new Response(decompressedStream).blob();
   const text = await decompressedBlob.text();
   return JSON.parse(text);
+
+  // const url = `${platform}/latest_data.json`;
+  // const response = await fetch(url);
+  // if (!response.ok) {
+  //   throw new Error(`HTTP error! status: ${response.status}`);
+  // }
+  // const text = await response.text();
+  // return JSON.parse(text);
 }
 
 interface ModalProps {
@@ -140,16 +157,29 @@ const DetailModal: React.FC<ModalProps> = ({ isOpen, onClose, data, title }) => 
 };
 
 const App = () => {
-  const [data, setData] = useState<MoonBuildDashboard | null>(null);
+  const [platformData, setPlatformData] = useState<PlatformData>({
+    mac: null,
+    windows: null,
+    linux: null
+  });
   const [error, setError] = useState<string | null>(null);
   const [selectedData, setSelectedData] = useState<ExecuteResult | null>(null);
   const [modalTitle, setModalTitle] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [expandedItems, setExpandedItems] = useState<Set<number>>(new Set());
 
   const fetchData = async () => {
     try {
-      const parsedData = await get_data();
-      setData(parsedData);
+      const [macData, windowsData, linuxData] = await Promise.all([
+        get_data("mac"),
+        get_data("windows"),
+        get_data("linux")
+      ]);
+      setPlatformData({
+        mac: macData,
+        windows: windowsData,
+        linux: linuxData
+      });
     } catch (err) {
       if (err instanceof Error) {
         setError(err.message);
@@ -169,218 +199,489 @@ const App = () => {
     setIsModalOpen(true);
   };
 
-  const renderBackendState = (
-    backendState: BackendState, 
-    phase: string, 
-    variant: 'stable' | 'bleeding',
-    stableCBT?: CBT | null
-  ) => {
-    const highlightDifference = (
-      stable: ExecuteResult,
-      bleeding: ExecuteResult
-    ) => stable.status !== bleeding.status ? "bg-yellow-100" : "";
-
-    const getStatusStyle = (status: Status): string => {
-      return status === "Success"
-        ? "bg-green-200 text-green-800"
-        : "bg-red-200 text-red-800";
-    };
-    
-    const getStatusText = (status: Status, elapsed: number | null): string => {
-      return status === "Success" ? `${elapsed ?? '-'}` : "x";
-    };
-
-    return (
-      <>
-        {["wasm", "wasm_gc", "js"].map((key) => {
-          const result = backendState[key as keyof BackendState];
-          const stableResult = stableCBT?.[phase.toLowerCase() as keyof CBT]?.[key as keyof BackendState];
-          
-          return (
-            <td
-              key={`${variant}-${phase.toLowerCase()}-${key}`}
-              className={`py-2 px-4 border-r cursor-pointer hover:opacity-80 
-                ${getStatusStyle(result.status)}
-                ${variant === 'bleeding' && stableResult ? highlightDifference(stableResult, result) : ''}`}
-              onClick={() => handleResultClick(
-                result,
-                `${variant} - ${phase.toLowerCase()} - ${key}`
-              )}
-            >
-              {getStatusText(result.status, result.elapsed)}
-            </td>
-          );
-        })}
-      </>
-    );
+  const handleExpandToggle = (index: number) => {
+    const newExpandedItems = new Set(expandedItems);
+    if (expandedItems.has(index)) {
+      newExpandedItems.delete(index);
+    } else {
+      newExpandedItems.add(index);
+    }
+    setExpandedItems(newExpandedItems);
   };
 
-  const renderTableRows = (
-    stableData: BuildState[],
-    bleedingData: BuildState[],
-    sources: MooncakeSource[]
-  ) => {
-    return stableData.map((stableEntry, index) => {
-      const source = sources[stableEntry.source];
+  const handleExpandAll = () => {
+    if (!platformData.mac) return;
+    const allIndices = new Set(platformData.mac.stable_release_data.map((_, index) => index));
+    setExpandedItems(expandedItems.size === allIndices.size ? new Set() : allIndices);
+  };
+
+  const getStatusStyle = (status: Status): string => {
+    return status === "Success"
+      ? "bg-green-200 text-green-800"
+      : "bg-red-200 text-red-800";
+  };
+  
+  const getStatusText = (status: Status, elapsed: number | null): string => {
+    return status === "Success" ? `${elapsed ?? '-'}` : "x";
+  };
+
+  const renderAllPlatformsData = () => {
+    if (!platformData.mac || !platformData.windows || !platformData.linux) {
+      return null;
+    }
+
+    return platformData.mac.stable_release_data.map((_, index) => {
+      const macData = platformData.mac!;
+      const stableEntry = macData.stable_release_data[index];
+      if (!stableEntry) return null;
+
+      const source = macData.sources[stableEntry.source];
       const isGit = "Git" in source;
       const versions = isGit ? source.Git.rev : source.MooncakesIO.version;
-      const rowSpan = versions.length; // Number of versions determines the row span
-  
-      return versions.map((_, versionIndex) => {
-        const bleedingEntry = bleedingData[index];
-        const stableCBT = stableEntry.cbts[versionIndex];
-        const bleedingCBT = bleedingEntry?.cbts[versionIndex];
-  
-        return (
-          <tr
-            key={`${index}-${versionIndex}`}
-            className="border-b hover:bg-gray-50 text-sm"
-          >
-            {/* Only display the source name in the first row */}
-            {versionIndex === 0 && (
-              <td className="py-2 px-4" rowSpan={rowSpan}>
-                {isGit ? (
-                  <>
-                    <i className="fab fa-github text-gray-700 mr-2"></i>
-                    <a
-                      href={source.Git.url}
-                      className="text-blue-600 hover:text-blue-800"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {source.Git.url.replace("https://github.com/", "")}
-                    </a>
-                  </>
-                ) : (
+      const summary = generateSummary(index, platformData);
+
+      // 渲染主行（包含摘要）
+      const mainRow = (
+        <tr key={`summary-${index}`} className="border-b hover:bg-gray-50 text-sm">
+          <td className="py-2 px-4">
+            <div className="flex items-center">
+              <button
+                onClick={() => handleExpandToggle(index)}
+                className="mr-2 text-gray-500 hover:text-gray-700 focus:outline-none"
+              >
+                {expandedItems.has(index) ? "▼" : "▶"}
+              </button>
+              {isGit ? (
+                <Fragment>
+                  <i className="fab fa-github text-gray-700 mr-2"></i>
                   <a
-                    href={`https://mooncakes.io/docs/#/${source.MooncakesIO.name}/`}
+                    href={source.Git.url}
                     className="text-blue-600 hover:text-blue-800"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {source.MooncakesIO.name}
+                    {source.Git.url.replace("https://github.com/", "")}
                   </a>
-                )}
-              </td>
-            )}
-            {/* Display the version without a link if it is MooncakesIO */}
-            <td className="py-2 px-4 text-gray-500">
-              {isGit ? (
+                </Fragment>
+              ) : (
                 <a
-                  href={`${source.Git.url}/tree/${versions[versionIndex]}`}
+                  href={`https://mooncakes.io/docs/#/${source.MooncakesIO.name}/`}
                   className="text-blue-600 hover:text-blue-800"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {versions[versionIndex]}
+                  {source.MooncakesIO.name}
                 </a>
-              ) : (
-                versions[versionIndex]
               )}
-            </td>
-  
-            {/* Stable Data */}
-            {stableCBT ? (
-              <>
-                {renderBackendState(stableCBT.check, "Check", 'stable')}
-                {renderBackendState(stableCBT.build, "Build", 'stable')}
-                {renderBackendState(stableCBT.test, "Test", 'stable')}
-              </>
+            </div>
+          </td>
+          <td className="py-2 px-4 text-gray-500">
+            {isGit ? (
+              <a
+                href={`${source.Git.url}/tree/${versions[0]}`}
+                className="text-blue-600 hover:text-blue-800"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {versions[0]}
+              </a>
             ) : (
-              <td colSpan={9} className="py-2 px-4 text-center text-gray-500">
-                No stable data available
-              </td>
+              versions[0]
             )}
-  
-            {/* Bleeding Data */}
-            {bleedingCBT ? (
-              <>
-                {renderBackendState(bleedingCBT.check, "Check", 'bleeding', stableCBT)}
-                {renderBackendState(bleedingCBT.build, "Build", 'bleeding', stableCBT)}
-                {renderBackendState(bleedingCBT.test, "Test", 'bleeding', stableCBT)}
-              </>
-            ) : (
-              <td colSpan={9} className="py-2 px-4 text-center text-gray-500">
-                No bleeding data available
+          </td>
+          <td 
+            colSpan={18}
+            className={`py-2 px-4 ${
+              summary.status === 'success' ? 'text-green-600 bg-green-50' :
+              summary.status === 'warning' ? 'text-yellow-600 bg-yellow-50' :
+              'text-red-600 bg-red-50'
+            }`}
+          >
+            {summary.text}
+          </td>
+        </tr>
+      );
+
+      // 详细数据行添加 hover 效果
+      const detailRows = expandedItems.has(index) ? (
+        ["mac", "windows", "linux"].map(platform => {
+          const data = platformData[platform as Platform];
+          if (!data) return null;
+
+          const stableEntry = data.stable_release_data[index];
+          const bleedingEntry = data.bleeding_release_data[index];
+          if (!stableEntry) return null;
+
+          return (
+            <tr 
+              key={`${platform}-${index}`} 
+              className={`border-b text-sm transform transition-transform hover:scale-[1.01] hover:shadow-md ${
+                platform === "windows" ? "bg-gray-50" : 
+                platform === "linux" ? "bg-blue-50/20" : ""
+              }`}
+            >
+              <td className="py-2 px-4 pl-10 text-gray-500">
+                {platform.charAt(0).toUpperCase() + platform.slice(1)}
               </td>
-            )}
-          </tr>
+              <td className="py-2 px-4 text-gray-500">
+                {/* 空单元格，保持布局一致 */}
+              </td>
+              
+              {stableEntry.cbts[0] ? (
+                <>
+                  {['check', 'build', 'test'].map(phase => (
+                    ['wasm', 'wasm_gc', 'js'].map(backend => {
+                      const result = stableEntry.cbts[0]?.[phase as keyof CBT]?.[backend as keyof BackendState];
+                      if (!result) return null;
+                      
+                      return (
+                        <td
+                          key={`${phase}-${backend}`}
+                          className={`py-2 px-4 border-r border-b text-center cursor-pointer hover:opacity-80 ${
+                            getStatusStyle(result.status)
+                          }`}
+                          onClick={() => handleResultClick(result, `stable - ${phase} - ${backend}`)}
+                        >
+                          {getStatusText(result.status, result.elapsed)}
+                        </td>
+                      );
+                    })
+                  ))}
+                </>
+              ) : (
+                <td colSpan={9} className="py-2 px-4 text-center text-gray-500">
+                  No stable data available
+                </td>
+              )}
+              
+              {bleedingEntry?.cbts[0] ? (
+                <>
+                  {['check', 'build', 'test'].map(phase => (
+                    ['wasm', 'wasm_gc', 'js'].map(backend => {
+                      const result = bleedingEntry.cbts[0]?.[phase as keyof CBT]?.[backend as keyof BackendState];
+                      if (!result) return null;
+                      
+                      return (
+                        <td
+                          key={`bleeding-${phase}-${backend}`}
+                          className={`py-2 px-4 border-r border-b text-center cursor-pointer hover:opacity-80 ${
+                            getStatusStyle(result.status)
+                          }`}
+                          onClick={() => handleResultClick(result, `bleeding - ${phase} - ${backend}`)}
+                        >
+                          {getStatusText(result.status, result.elapsed)}
+                        </td>
+                      );
+                    })
+                  ))}
+                </>
+              ) : (
+                <td colSpan={9} className="py-2 px-4 text-center text-gray-500">
+                  No bleeding data available
+                </td>
+              )}
+            </tr>
+          );
+        })
+      ) : null;
+
+      return [mainRow, detailRows];
+    }).flat(2).filter(Boolean);
+  };
+
+  // 检查某个 CBT 是否全部成功
+  const isAllSuccess = (index: number, data: PlatformData, useBleedingEdge: boolean = false) => {
+    const platforms: Platform[] = ["mac", "windows", "linux"];
+    return platforms.every(platform => {
+      const platformData = data[platform];
+      if (!platformData) return false;
+      
+      const entry = useBleedingEdge ? 
+        platformData.bleeding_release_data[index] : 
+        platformData.stable_release_data[index];
+      if (!entry) return false;
+      
+      return entry.cbts.every(cbt => {
+        if (!cbt) return false;
+        return ['check', 'build', 'test'].every(phase => 
+          ['wasm', 'wasm_gc', 'js'].every(backend => 
+            cbt[phase as keyof CBT][backend as keyof BackendState].status === "Success"
+          )
         );
       });
     });
   };
-  
+
+  // 检查单个项目的状态
+  const checkItemStatus = (cbt: CBT | null, phase: string, backend: string) => {
+    if (!cbt) return false;
+    return cbt[phase as keyof CBT][backend as keyof BackendState].status === "Success";
+  };
+
+  // 检查工具链版本之间的差异（重点一）
+  const checkToolchainDifference = (index: number, data: PlatformData) => {
+    const platforms: Platform[] = ["mac", "windows", "linux"];
+    const phases = ['check', 'build', 'test'];
+    const backends = ['wasm', 'wasm_gc', 'js'];
+
+    for (const platform of platforms) {
+      const platformData = data[platform];
+      if (!platformData) continue;
+
+      const stableEntry = platformData.stable_release_data[index];
+      const bleedingEntry = platformData.bleeding_release_data[index];
+      if (!stableEntry || !bleedingEntry) continue;
+
+      for (const phase of phases) {
+        for (const backend of backends) {
+          const stableSuccess = stableEntry.cbts.some(cbt => checkItemStatus(cbt, phase, backend));
+          const bleedingSuccess = bleedingEntry.cbts.some(cbt => checkItemStatus(cbt, phase, backend));
+          
+          if (stableSuccess && !bleedingSuccess) {
+            return `Regression detected: ${platform}'s ${backend} ${phase} passed in stable but failed in bleeding-edge`;
+          }
+        }
+      }
+    }
+    return null;
+  };
+
+  // 检查操作系统之间的差异（重点二）
+  const checkPlatformDifference = (index: number, data: PlatformData, useBleedingEdge: boolean = false) => {
+    const platforms: Platform[] = ["mac", "windows", "linux"];
+    const phases = ['check', 'build', 'test'];
+    const backends = ['wasm', 'wasm_gc', 'js'];
+
+    for (const phase of phases) {
+      for (const backend of backends) {
+        const results = new Map<Platform, boolean>();
+        
+        for (const platform of platforms) {
+          const platformData = data[platform];
+          if (!platformData) continue;
+          
+          const entry = useBleedingEdge ? 
+            platformData.bleeding_release_data[index] : 
+            platformData.stable_release_data[index];
+          if (!entry) continue;
+          
+          results.set(platform, entry.cbts.some(cbt => checkItemStatus(cbt, phase, backend)));
+        }
+
+        const successPlatforms = Array.from(results.entries()).filter(([_, success]) => success).map(([platform]) => platform);
+        const failurePlatforms = Array.from(results.entries()).filter(([_, success]) => !success).map(([platform]) => platform);
+
+        if (successPlatforms.length > 0 && failurePlatforms.length > 0) {
+          const version = useBleedingEdge ? "bleeding-edge" : "stable";
+          return `Platform inconsistency in ${version}: ${backend} ${phase} passed on ${successPlatforms.join(', ')} but failed on ${failurePlatforms.join(', ')}`;
+        }
+      }
+    }
+    return null;
+  };
+
+  // 检查后端之间的差异（重点三）
+  const checkBackendDifference = (index: number, data: PlatformData, useBleedingEdge: boolean = false) => {
+    const platforms: Platform[] = ["mac", "windows", "linux"];
+    const phases = ['check', 'build', 'test'];
+    const backends = ['wasm', 'wasm_gc', 'js'];
+
+    for (const platform of platforms) {
+      const platformData = data[platform];
+      if (!platformData) continue;
+
+      const entry = useBleedingEdge ? 
+        platformData.bleeding_release_data[index] : 
+        platformData.stable_release_data[index];
+      if (!entry) continue;
+
+      for (const phase of phases) {
+        const backendResults = backends.map(backend => ({
+          backend,
+          success: entry.cbts.some(cbt => checkItemStatus(cbt, phase, backend))
+        }));
+
+        const successBackends = backendResults.filter(r => r.success).map(r => r.backend);
+        const failureBackends = backendResults.filter(r => !r.success).map(r => r.backend);
+
+        if (successBackends.length > 0 && failureBackends.length > 0) {
+          const version = useBleedingEdge ? "bleeding-edge" : "stable";
+          return `Backend inconsistency in ${version} on ${platform}: ${phase} passed on ${successBackends.join(', ')} but failed on ${failureBackends.join(', ')}`;
+        }
+      }
+    }
+    return null;
+  };
+
+  // 检查构建阶段之间的差异（重点四）
+  const checkPhasesDifference = (index: number, data: PlatformData, useBleedingEdge: boolean = false) => {
+    const platforms: Platform[] = ["mac", "windows", "linux"];
+    const phases = ['check', 'build', 'test'];
+    const backends = ['wasm', 'wasm_gc', 'js'];
+
+    for (const platform of platforms) {
+      const platformData = data[platform];
+      if (!platformData) continue;
+
+      const entry = useBleedingEdge ? 
+        platformData.bleeding_release_data[index] : 
+        platformData.stable_release_data[index];
+      if (!entry) continue;
+
+      for (const backend of backends) {
+        const phaseResults = phases.map(phase => ({
+          phase,
+          success: entry.cbts.some(cbt => checkItemStatus(cbt, phase, backend))
+        }));
+
+        const successPhases = phaseResults.filter(r => r.success).map(r => r.phase);
+        const failurePhases = phaseResults.filter(r => !r.success).map(r => r.phase);
+
+        if (successPhases.length > 0 && failurePhases.length > 0) {
+          const version = useBleedingEdge ? "bleeding-edge" : "stable";
+          return `Phase inconsistency in ${version} on ${platform}'s ${backend}: passed ${successPhases.join(', ')} but failed ${failurePhases.join(', ')}`;
+        }
+      }
+    }
+    return null;
+  };
+
+  // 生成项目状态摘要
+  const generateSummary = (index: number, data: PlatformData): { text: string; status: 'success' | 'warning' | 'error' } => {
+    // 首先检查是否所有测试都通过
+    const stableSuccess = isAllSuccess(index, data);
+    const bleedingSuccess = isAllSuccess(index, data, true);
+
+    if (stableSuccess && bleedingSuccess) {
+      return { text: "All tests passed in both stable and bleeding-edge on all platforms", status: 'success' };
+    }
+
+    // 按优先级检查各种差异
+    const toolchainDiff = checkToolchainDifference(index, data);
+    if (toolchainDiff) {
+      return { text: toolchainDiff, status: 'error' };
+    }
+
+    const platformDiffStable = checkPlatformDifference(index, data);
+    const platformDiffBleeding = checkPlatformDifference(index, data, true);
+    if (platformDiffStable || platformDiffBleeding) {
+      return { text: platformDiffStable || platformDiffBleeding!, status: 'error' };
+    }
+
+    const backendDiffStable = checkBackendDifference(index, data);
+    const backendDiffBleeding = checkBackendDifference(index, data, true);
+    if (backendDiffStable || backendDiffBleeding) {
+      return { text: backendDiffStable || backendDiffBleeding!, status: 'error' };
+    }
+
+    const phaseDiffStable = checkPhasesDifference(index, data);
+    const phaseDiffBleeding = checkPhasesDifference(index, data, true);
+    if (phaseDiffStable || phaseDiffBleeding) {
+      return { text: phaseDiffStable || phaseDiffBleeding!, status: 'error' };
+    }
+
+    // 如果没有发现具体的差异模式，返回一般性的失败信息
+    if (!stableSuccess || !bleedingSuccess) {
+      return { text: `Other failure`, status: 'error' };
+    }
+
+    return { text: "No data available", status: 'error' };
+  };
+
   return (
-    <div className="p-4 bg-gray-100 min-h-screen flex justify-center">
-      <div className="w-full">
-        <h1 className="text-2xl font-bold mb-4">Moon Build Dashboard</h1>
-  
-        {error ? (
-          <p className="text-red-500 text-center">{error}</p>
-        ) : data ? (
-          <div className="overflow-x-auto">
-            <table className="min-w-full table-auto bg-white shadow-md rounded-lg overflow-hidden">
-              <thead>
-                <tr className="bg-gray-200">
-                  <th rowSpan={3} className="py-2 px-4 text-left w-1/4 border-r">Repository</th>
-                  <th rowSpan={3} className="py-2 px-4 text-left w-1/4 border-r">Version</th>
-                  <th colSpan={9} className="py-2 px-4 text-center bg-green-500 text-white border-r">
-                    Stable Release
-                    <div className="text-xs mt-1 font-normal">
-                      {data.stable_toolchain_version.moon_version} / moonc {data.stable_toolchain_version.moonc_version}
-                    </div>
-                  </th>
-                  <th
-                    colSpan={9}
-                    className="py-2 px-4 text-center bg-red-600 text-white relative overflow-hidden"
-                  >
-                    <span className="absolute inset-0 flex items-center justify-left text-6xl text-yellow-900 opacity-40">
-                      ⚡️
-                    </span>
-                    Bleeding Edge Release
-                    <div className="text-xs mt-1 font-normal">
-                      {data.bleeding_toolchain_version.moon_version} / moonc {data.bleeding_toolchain_version.moonc_version}
-                    </div>
-                  </th>
-                </tr>
-                <tr className="bg-gray-100">
-                  <th colSpan={3} className="py-1 px-4 text-center text-sm border-r">Check(ms)</th>
-                  <th colSpan={3} className="py-1 px-4 text-center text-sm border-r">Build(ms)</th>
-                  <th colSpan={3} className="py-1 px-4 text-center text-sm">Test(ms)</th>
-                  <th colSpan={3} className="py-1 px-4 text-center text-sm border-r">Check(ms)</th>
-                  <th colSpan={3} className="py-1 px-4 text-center text-sm border-r">Build(ms)</th>
-                  <th colSpan={3} className="py-1 px-4 text-center text-sm">Test(ms)</th>
-                </tr>
-                <tr className="bg-gray-100">
-                  <th className="py-1 px-4 text-center text-xs border-r">wasm</th>
-                  <th className="py-1 px-4 text-center text-xs border-r">wasm gc</th>
-                  <th className="py-1 px-4 text-center text-xs border-r">js</th>
-                  <th className="py-1 px-4 text-center text-xs border-r">wasm</th>
-                  <th className="py-1 px-4 text-center text-xs border-r">wasm gc</th>
-                  <th className="py-1 px-4 text-center text-xs border-r">js</th>
-                  <th className="py-1 px-4 text-center text-xs border-r">wasm</th>
-                  <th className="py-1 px-4 text-center text-xs border-r">wasm gc</th>
-                  <th className="py-1 px-4 text-center text-xs border-r">js</th>
-                  <th className="py-1 px-4 text-center text-xs border-r">wasm</th>
-                  <th className="py-1 px-4 text-center text-xs border-r">wasm gc</th>
-                  <th className="py-1 px-4 text-center text-xs border-r">js</th>
-                  <th className="py-1 px-4 text-center text-xs border-r">wasm</th>
-                  <th className="py-1 px-4 text-center text-xs border-r">wasm gc</th>
-                  <th className="py-1 px-4 text-center text-xs border-r">js</th>
-                  <th className="py-1 px-4 text-center text-xs border-r">wasm</th>
-                  <th className="py-1 px-4 text-center text-xs border-r">wasm gc</th>
-                  <th className="py-1 px-4 text-center text-xs border-r">js</th>
-                </tr>
-              </thead>
-              <tbody>
-                {renderTableRows(data.stable_release_data, data.bleeding_release_data, data.sources)}
-              </tbody>
-            </table>
-          </div>
-        ) : (
-          <p>Loading...</p>
-        )}
+    <div className="flex flex-col h-screen bg-gray-100">
+      <div className="flex-none px-8 py-4">
+        <div className="flex justify-between items-center">
+          <h1 className="text-2xl font-bold">Moon Build Dashboard</h1>
+          <button onClick={handleExpandAll} className="px-4 py-2 text-sm bg-white border rounded-lg shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            {expandedItems.size > 0 ? "Collapse All" : "Expand All"}
+          </button>
+        </div>
       </div>
+
+      {error ? (
+        <div className="flex-none px-8 py-4">
+          <p className="text-red-500 text-center">{error}</p>
+        </div>
+      ) : platformData.mac ? (
+        <div className="flex-1 flex flex-col min-h-0 px-4 overflow-auto">
+          <div className="relative rounded-lg bg-white shadow-lg">
+            <div className="sticky top-0 z-10 bg-white">
+              <table className="w-full table-fixed">
+                <colgroup>
+                  <col className="w-[15%]" />
+                  <col className="w-[15%]" />
+                  {Array(18).fill(null).map((_, i) => (
+                    <col key={i} className="w-[3.888888%]" />
+                  ))}
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th rowSpan={3} className="py-2 px-4 text-left border-r bg-gray-200">Repository</th>
+                    <th rowSpan={3} className="py-2 px-4 text-left border-r bg-gray-200">Version</th>
+                    <th colSpan={9} className="py-2 px-4 text-center bg-green-500 text-white border-r">
+                      Stable Release
+                      <div className="text-xs mt-1 font-normal">
+                        {platformData.mac.stable_toolchain_version.moon_version} / moonc {platformData.mac.stable_toolchain_version.moonc_version}
+                      </div>
+                    </th>
+                    <th colSpan={9} className="py-2 px-4 text-center bg-red-600 text-white relative overflow-hidden">
+                      <span className="absolute inset-0 flex items-center justify-left text-6xl text-yellow-900 opacity-40">⚡️</span>
+                      <div className="relative">
+                        Bleeding Edge Release
+                        <div className="text-xs mt-1 font-normal">
+                          {platformData.mac.bleeding_toolchain_version.moon_version} / moonc {platformData.mac.bleeding_toolchain_version.moonc_version}
+                        </div>
+                      </div>
+                    </th>
+                  </tr>
+                  <tr>
+                    {['Check(ms)', 'Build(ms)', 'Test(ms)', 'Check(ms)', 'Build(ms)', 'Test(ms)'].map((text, i) => (
+                      <th 
+                        key={i} 
+                        colSpan={3} 
+                        className={`py-1 px-4 text-center text-sm bg-gray-100 border-b border-gray-200 ${i < 5 ? 'border-r' : ''}`}
+                      >
+                        {text}
+                      </th>
+                    ))}
+                  </tr>
+                  <tr>
+                    {Array(18).fill(null).map((_, i) => (
+                      <th 
+                        key={i}
+                        className={`py-1 px-4 text-center text-xs bg-gray-100 border-b border-gray-200 ${i < 17 ? 'border-r' : ''}`}
+                      >
+                        {['wasm', 'wasm gc', 'js'][i % 3]}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+              </table>
+            </div>
+            
+            <div>
+              <table className="w-full table-fixed">
+                <colgroup>
+                  <col className="w-[15%]" />
+                  <col className="w-[15%]" />
+                  {Array(18).fill(null).map((_, i) => (
+                    <col key={i} className="w-[3.888888%]" />
+                  ))}
+                </colgroup>
+                <tbody className="bg-white divide-y divide-gray-200">
+                  {renderAllPlatformsData()}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <div className="flex-none px-8 py-4">
+          <p>Loading...</p>
+        </div>
+      )}
+
       {selectedData && (
         <DetailModal
           isOpen={isModalOpen}
