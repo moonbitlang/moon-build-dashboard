@@ -438,7 +438,7 @@ const App = () => {
           const bleedingSuccess = bleedingEntry.cbts.some(cbt => checkItemStatus(cbt, phase, backend));
           
           if (stableSuccess && !bleedingSuccess) {
-            return `Regression detected: ${platform}'s ${backend} ${phase} passed in stable but failed in bleeding-edge`;
+            return `Regression detected: ${backend} ${phase} passed in stable but failed in bleeding`;
           }
         }
       }
@@ -472,8 +472,7 @@ const App = () => {
         const failurePlatforms = Array.from(results.entries()).filter(([_, success]) => !success).map(([platform]) => platform);
 
         if (successPlatforms.length > 0 && failurePlatforms.length > 0) {
-          const version = useBleedingEdge ? "bleeding-edge" : "stable";
-          return `Platform inconsistency in ${version}: ${backend} ${phase} passed on ${successPlatforms.join(', ')} but failed on ${failurePlatforms.join(', ')}`;
+          return `Platform inconsistency: ${backend} ${phase} passed on ${successPlatforms.join(', ')} but failed on ${failurePlatforms.join(', ')}`;
         }
       }
     }
@@ -505,8 +504,7 @@ const App = () => {
         const failureBackends = backendResults.filter(r => !r.success).map(r => r.backend);
 
         if (successBackends.length > 0 && failureBackends.length > 0) {
-          const version = useBleedingEdge ? "bleeding-edge" : "stable";
-          return `Backend inconsistency in ${version} on ${platform}: ${phase} passed on ${successBackends.join(', ')} but failed on ${failureBackends.join(', ')}`;
+          return `Backend inconsistency: ${phase} passed on ${successBackends.join(', ')} but failed on ${failureBackends.join(', ')}`;
         }
       }
     }
@@ -538,8 +536,7 @@ const App = () => {
         const failurePhases = phaseResults.filter(r => !r.success).map(r => r.phase);
 
         if (successPhases.length > 0 && failurePhases.length > 0) {
-          const version = useBleedingEdge ? "bleeding-edge" : "stable";
-          return `Phase inconsistency in ${version} on ${platform}'s ${backend}: passed ${successPhases.join(', ')} but failed ${failurePhases.join(', ')}`;
+          return `Phase inconsistency: passed ${successPhases.join(', ')} but failed ${failurePhases.join(', ')}`;
         }
       }
     }
@@ -553,7 +550,7 @@ const App = () => {
     const bleedingSuccess = isAllSuccess(index, data, true);
 
     if (stableSuccess && bleedingSuccess) {
-      return { text: "All tests passed in both stable and bleeding-edge on all platforms", status: 'success' };
+      return { text: "All passed", status: 'success' };
     }
 
     // 按优先级检查各种差异

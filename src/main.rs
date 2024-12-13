@@ -200,7 +200,12 @@ fn stat_mooncake(
 ) -> Result<ExecuteResult, StatMooncakeError> {
     let _ = run_moon(workdir, source, &["clean"]);
 
-    let r = run_moon(workdir, source, &cmd.args()).map_err(|e| StatMooncakeError::RunMoon(e));
+    let is_moonbit_community = match source {
+        MooncakeSource::MooncakesIO { name, .. } => name.contains("moonbitlang"),
+        MooncakeSource::Git { url, .. } => url.contains("moonbitlang") || url.contains("moonbit-community"),
+    };
+
+    let r = run_moon(workdir, source, &cmd.args(is_moonbit_community)).map_err(|e| StatMooncakeError::RunMoon(e));
     let status = match r.as_ref() {
         Ok(output) if output.success => Status::Success,
         _ => Status::Failure,

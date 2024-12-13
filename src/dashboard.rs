@@ -48,12 +48,17 @@ pub enum MoonCommand {
 }
 
 impl MoonCommand {
-    pub fn args(&self) -> Vec<&str> {
+    pub fn args(&self, is_moonbit_community: bool) -> Vec<&str> {
         match self {
             MoonCommand::Check(backend) => vec!["check", "-q", "--target", backend.to_flag()],
             MoonCommand::Build(backend) => vec!["build", "-q", "--target", backend.to_flag()],
             MoonCommand::Test(backend) => {
-                vec!["test", "-q", "--target", backend.to_flag()]
+                // only run test for moonbit community project
+                if is_moonbit_community {
+                    vec!["test", "-q", "--target", backend.to_flag()]
+                } else {
+                    vec!["test", "-q", "--build-only", "--target", backend.to_flag()]
+                }
             }
         }
     }
