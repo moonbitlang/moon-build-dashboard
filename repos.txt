@@ -19,6 +19,7 @@ Guest0x0/dregex 0.2.5
 Howardzhangdqs/md5 0.9.3
 Kaida-Amethyst/math 0.1.6
 Kaida-Amethyst/moonbit-math 0.1.7
+Kaida-Amethyst/moonbit-math 0.1.7
 Lampese/moonbit-chalk 0.3.2
 PerfectPan/base64 0.1.1
 SyoujyoujiNaiki/chungshan 0.2.0
@@ -133,6 +134,7 @@ tiye/respo 0.0.20
 tonyfettes/memory 0.1.5
 tonyfettes/narray 0.1.0
 tonyfettes/torch 0.2.7
+wangziling/hello 0.0.1
 wstreet/moontest 0.1.0
 xunyoyo/linalg 0.2.5
 xunyoyo/permutation 0.1.3
