@@ -126,12 +126,12 @@ fn install_unix_release(args: &[&str]) -> Result<(), MoonOpsError> {
 }
 
 fn install_windows_release(is_bleeding: bool) -> Result<(), MoonOpsError> {
-    let cmd_str = "Set-ExecutionPolicy RemoteSigned -Scope CurrentUser; irm https://cli.moonbitlang.cn/install/powershell.ps1 | iex";
+    let cmd_str = "Set-ExecutionPolicy RemoteSigned -Scope CurrentUser; irm https://cli.moonbitlang.com/install/powershell.ps1 | iex";
     let mut cmd = std::process::Command::new("powershell");
     cmd.args(["-Command", cmd_str]);
     
     if is_bleeding {
-        cmd.env("MOONBIT_INSTALL_VERSION", "nightly");
+        cmd.env("MOONBIT_INSTALL_VERSION", "bleeding");
     }
 
     let output = cmd.output().map_err(|e| MoonOpsError {
