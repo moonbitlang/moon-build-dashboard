@@ -13,8 +13,10 @@ CAIMEOX/quickcheck 0.6.9
 CAIMEOX/state 0.1.0
 CAIMEOX/t 0.1.0
 CMoonBack/Binary-Exponentiation 0.1.0
-CMoonBack/computational-geometry 0.1.0
+CMoonBack/computational-geometry 0.1.1
 CMoonBack/string-Algorithm 0.1.0
+FlyCloudC/miniKanren 0.1.0
+Guest0x0/HAMT 0.2.1
 Guest0x0/dregex 0.2.5
 Howardzhangdqs/md5 0.9.3
 Kaida-Amethyst/math 0.1.6
