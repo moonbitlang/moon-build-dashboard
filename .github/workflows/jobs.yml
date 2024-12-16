@@ -62,7 +62,7 @@ jobs:
       - name: Build
         run: |
           cargo build --release
-          # env UPDATE_EXPECT=1 cargo test
+          env UPDATE_EXPECT=1 cargo test
           ./target/release/moon_dashboard stat --file repos.txt
 
       - name: Upload data
