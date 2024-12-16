@@ -95,7 +95,28 @@ jobs:
           git stash
 
       - name: Push changes
-        run: git fetch && git pull --rebase && git push
+        shell: bash
+        run: |
+          max_attempts=3
+          attempt=1
+          
+          while [ $attempt -le $max_attempts ]; do
+            echo "Attempt $attempt of $max_attempts"
+            if git fetch && git pull --rebase && git push; then
+              echo "Push successful on attempt $attempt"
+              exit 0
+            else
+              echo "Push failed on attempt $attempt"
+              if [ $attempt -lt $max_attempts ]; then
+                echo "Retrying in 5 seconds..."
+                sleep 5
+              fi
+            fi
+            attempt=$((attempt + 1))
+          done
+          
+          echo "Failed after $max_attempts attempts"
+          exit 1
 
   deploy:
     needs: collect-data
