@@ -230,7 +230,26 @@ const App = () => {
       return null;
     }
 
-    return platformData.mac.stable_release_data.map((_, index) => {
+    // 先获取所有数据项并添加排序权重
+    const items = platformData.mac.stable_release_data.map((_, index) => {
+      const summary = generateSummary(index, platformData);
+      const weight = (() => {
+        if (summary.text.startsWith('Regression detected')) return 1;
+        if (summary.text.startsWith('Platform inconsistency')) return 2;
+        if (summary.text.startsWith('Backend inconsistency')) return 3;
+        if (summary.text.startsWith('Phase inconsistency')) return 4;
+        if (summary.text === 'Other failure') return 5;
+        if (summary.text === 'No data available') return 6;
+        return 7; // All passed
+      })();
+      return { index, summary, weight };
+    });
+
+    // 按权重排序
+    items.sort((a, b) => a.weight - b.weight);
+
+    // 渲染排序后的数据
+    return items.map(({ index }) => {
       const macData = platformData.mac!;
       const stableEntry = macData.stable_release_data[index];
       if (!stableEntry) return null;
@@ -302,7 +321,6 @@ const App = () => {
         </tr>
       );
 
-      // 详细数据行添加 hover 效果
       const detailRows = expandedItems.has(index) ? (
         ["mac", "windows", "linux"].map(platform => {
           const data = platformData[platform as Platform];
@@ -546,44 +564,48 @@ const App = () => {
 
   // 生成项目状态摘要
   const generateSummary = (index: number, data: PlatformData): { text: string; status: 'success' | 'warning' | 'error' } => {
-    // 首先检查是否所有测试都通过
-    const stableSuccess = isAllSuccess(index, data);
-    const bleedingSuccess = isAllSuccess(index, data, true);
-
-    if (stableSuccess && bleedingSuccess) {
-      return { text: "All passed", status: 'success' };
-    }
-
-    // 按优先级检查各种差异
+    // 重点一：工具链版本差异
     const toolchainDiff = checkToolchainDifference(index, data);
     if (toolchainDiff) {
       return { text: toolchainDiff, status: 'error' };
     }
 
+    // 重点二：操作系统差异
     const platformDiffStable = checkPlatformDifference(index, data);
     const platformDiffBleeding = checkPlatformDifference(index, data, true);
     if (platformDiffStable || platformDiffBleeding) {
       return { text: platformDiffStable || platformDiffBleeding!, status: 'error' };
     }
 
+    // 重点三：后端差异
     const backendDiffStable = checkBackendDifference(index, data);
     const backendDiffBleeding = checkBackendDifference(index, data, true);
     if (backendDiffStable || backendDiffBleeding) {
       return { text: backendDiffStable || backendDiffBleeding!, status: 'error' };
     }
 
+    // 重点四：构建阶段差异
     const phaseDiffStable = checkPhasesDifference(index, data);
     const phaseDiffBleeding = checkPhasesDifference(index, data, true);
     if (phaseDiffStable || phaseDiffBleeding) {
       return { text: phaseDiffStable || phaseDiffBleeding!, status: 'error' };
     }
 
-    // 如果没有发现具体的差异模式，返回一般性的失败信息
+    const stableSuccess = isAllSuccess(index, data);
+    const bleedingSuccess = isAllSuccess(index, data, true);
+
+    // 其他失败情况
     if (!stableSuccess || !bleedingSuccess) {
       return { text: `Other failure`, status: 'error' };
     }
 
-    return { text: "No data available", status: 'error' };
+    // 数据缺失
+    if (!data) {
+      return { text: "No data available", status: 'error' };
+    }
+
+    // 全部通过的情况放在最后
+    return { text: "All passed", status: 'success' };
   };
 
   return (
