@@ -109,7 +109,7 @@ mizchi/protocol 0.0.5
 moonbit-courses/minimoonbit-courses 0.1.0
 moonbit-js-ffi/js 0.2.0
 moonbitlang/arduino 0.0.4
-moonbitlang/core 0.1.20241216+68e710374
+moonbitlang/core 0.1.20241218+f4a066f5f
 moonbitlang/quickcheck 0.6.9
 moonbitlang/std 0.1.0
 moonbitlang/wasm4 0.2.4
@@ -130,12 +130,13 @@ peter-jerry-ye/parser-combinator 0.9.1
 peter-jerry-ye/utils 0.1.0
 peter-jerry-ye/wasi 0.18.0
 rami3l/cmark 0.1.5
+smallbearrr/pandas 0.1.2
 suiyunonghen/datetime 0.1.4
 suiyunonghen/linklist 0.1.7
 suiyunonghen/moonvalue 0.1.10
 suiyunonghen/wasmMemManager 0.1.2
 summer-boythink/moonorm 0.1.0
-tiye/cirru-edn 0.0.3
+tiye/cirru-edn 0.0.4
 tiye/cirru-parser 0.0.10
 tiye/dom-ffi 0.0.6
 tiye/lexicon-fractional-index 0.0.2
@@ -146,7 +147,6 @@ tonyfettes/narray 0.1.0
 tonyfettes/torch 0.2.7
 wangziling/hello 0.0.1
 wstreet/moontest 0.1.0
-xunyoyo/Permutation 0.1.1
 xunyoyo/linalg 0.2.5
 xunyoyo/permutation 0.1.3
 yamajik/dapr 0.1.11
