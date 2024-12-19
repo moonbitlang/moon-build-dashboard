@@ -98,6 +98,7 @@ jankin_li/Learn_Test1 0.1.0
 jankin_li/new_lib 0.1.0
 jedisct1/aegis 0.2.1
 jumpping/baby 0.2.0
+kesmeey/fmt 0.1.0
 kinoamyfx/moon-axe-tools 0.0.1-SNAPSHOT
 lijunchen/unstable_io 0.1.3
 loneoutpost/core-extra 0.0.6
@@ -108,12 +109,12 @@ mizchi/json 0.4.0
 mizchi/protocol 0.0.5
 moonbit-courses/minimoonbit-courses 0.1.0
 moonbit-js-ffi/js 0.2.0
-moonbitlang/arduino 0.0.4
+moonbitlang/arduino 0.0.5
 moonbitlang/core 0.1.20241218+f4a066f5f
 moonbitlang/quickcheck 0.6.9
 moonbitlang/std 0.1.0
 moonbitlang/wasm4 0.2.4
-moonbitlang/x 0.4.15
+moonbitlang/x 0.4.16
 myfreess/myers-diff 0.1.0
 oboard/mimetype 0.1.4
 oboard/mocket 0.2.0
@@ -131,9 +132,9 @@ peter-jerry-ye/utils 0.1.0
 peter-jerry-ye/wasi 0.18.0
 rami3l/cmark 0.1.5
 smallbearrr/pandas 0.1.2
-suiyunonghen/datetime 0.1.4
+suiyunonghen/datetime 0.1.5
 suiyunonghen/linklist 0.1.7
-suiyunonghen/moonvalue 0.1.10
+suiyunonghen/moonvalue 0.1.12
 suiyunonghen/wasmMemManager 0.1.2
 summer-boythink/moonorm 0.1.0
 tiye/cirru-edn 0.0.4
@@ -147,7 +148,7 @@ tonyfettes/narray 0.1.0
 tonyfettes/torch 0.2.7
 wangziling/hello 0.0.1
 wstreet/moontest 0.1.0
-xunyoyo/linalg 0.2.5
+xunyoyo/linalg 0.2.6
 xunyoyo/permutation 0.1.3
 yamajik/dapr 0.1.11
 yamajik/wasi 0.1.25
