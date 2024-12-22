@@ -13,7 +13,7 @@ CAIMEOX\quickcheck 0.6.9
 CAIMEOX\state 0.1.0
 CAIMEOX\t 0.1.0
 CMoonBack\Binary-Exponentiation 0.1.0
-CMoonBack\computational-geometry 0.1.4
+CMoonBack\computational-geometry 0.1.5
 CMoonBack\string-Algorithm 0.1.0
 FlyCloudC\miniKanren 0.1.0
 Guest0x0\HAMT 0.2.1
@@ -93,7 +93,7 @@ gmlewis\sha256 0.15.0
 gmlewis\spin-moonbit-sdk 0.47.0
 gmlewis\zlib 0.18.0
 hackwaly\common 0.1.24
-hackwaly\moonyacc 0.1.11
+hackwaly\moonyacc 0.2.0
 jankin_li\Learn_Test1 0.1.0
 jankin_li\new_lib 0.1.0
 jedisct1\aegis 0.2.1
