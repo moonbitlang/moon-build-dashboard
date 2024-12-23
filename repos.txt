@@ -13,7 +13,7 @@ CAIMEOX\quickcheck 0.6.9
 CAIMEOX\state 0.1.0
 CAIMEOX\t 0.1.0
 CMoonBack\Binary-Exponentiation 0.1.0
-CMoonBack\computational-geometry 0.1.5
+CMoonBack\computational-geometry 0.2.0
 CMoonBack\string-Algorithm 0.1.0
 FlyCloudC\miniKanren 0.1.0
 Guest0x0\HAMT 0.2.1
@@ -93,7 +93,7 @@ gmlewis\sha256 0.15.0
 gmlewis\spin-moonbit-sdk 0.47.0
 gmlewis\zlib 0.18.0
 hackwaly\common 0.1.24
-hackwaly\moonyacc 0.2.0
+hackwaly\moonyacc 0.3.1
 jankin_li\Learn_Test1 0.1.0
 jankin_li\new_lib 0.1.0
 jedisct1\aegis 0.2.1
@@ -110,8 +110,8 @@ mizchi\protocol 0.0.5
 moonbit-courses\minimoonbit-courses 0.1.0
 moonbit-js-ffi\js 0.2.0
 moonbitlang\arduino 0.0.5
-moonbitlang\core 0.1.20241218+f4a066f5f
-moonbitlang\quickcheck 0.6.9
+moonbitlang\core 0.1.20241223+62b9a1a85
+moonbitlang\quickcheck 0.7.0
 moonbitlang\std 0.1.0
 moonbitlang\wasm4 0.2.4
 moonbitlang\x 0.4.16
@@ -128,7 +128,7 @@ peter-jerry-ye\canvas 0.5.0
 peter-jerry-ye\json 0.4.0
 peter-jerry-ye\memory 0.8.4
 peter-jerry-ye\parser-combinator 0.9.1
-peter-jerry-ye\utils 0.1.0
+peter-jerry-ye\utils 0.2.0
 peter-jerry-ye\wasi 0.18.0
 rami3l\cmark 0.1.5
 smallbearrr\pandas 0.1.2
