@@ -144,6 +144,7 @@ tiye\lexicon-fractional-index 0.0.2
 tiye\quaternion 0.0.1
 tiye\respo 0.0.21
 tmkx\hello 0.0.0
+tonyfettes\atomics 0.1.0
 tonyfettes\memory 0.1.5
 tonyfettes\narray 0.1.0
 tonyfettes\torch 0.2.7
