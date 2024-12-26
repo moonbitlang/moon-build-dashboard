@@ -129,8 +129,9 @@ peter-jerry-ye\json 0.4.0
 peter-jerry-ye\memory 0.8.4
 peter-jerry-ye\parser-combinator 0.9.1
 peter-jerry-ye\utils 0.2.0
-peter-jerry-ye\wasi 0.18.0
+peter-jerry-ye\wasi 0.18.1
 rami3l\cmark 0.1.5
+ruifeng\XMLParser 0.1.0
 smallbearrr\pandas 0.1.2
 suiyunonghen\datetime 0.1.5
 suiyunonghen\linklist 0.1.7
