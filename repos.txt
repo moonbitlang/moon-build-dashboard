@@ -99,6 +99,7 @@ jankin_li\new_lib 0.1.0
 jedisct1\aegis 0.2.1
 jumpping\baby 0.2.0
 kesmeey\fmt 0.1.3
+kesmeey\tools 0.1.1
 kinoamyfx\moon-axe-tools 0.0.1-SNAPSHOT
 ledao\nanoid 0.1.1
 lijunchen\unstable_io 0.1.3
@@ -143,7 +144,7 @@ tiye\cirru-edn 0.0.4
 tiye\cirru-parser 0.0.10
 tiye\dom-ffi 0.0.6
 tiye\lexicon-fractional-index 0.0.2
-tiye\quaternion 0.0.1
+tiye\quaternion 0.0.4
 tiye\respo 0.0.21
 tmkx\hello 0.0.0
 tonyfettes\atomics 0.1.0
