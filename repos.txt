@@ -160,4 +160,5 @@ yamajik\wasi 0.1.25
 yamajik\wasi-bindings 0.2.1
 yangqing\hello 0.2.2
 yj-qin\regexp 0.3.2
+yoshitsugu\parsem 0.0.2
 zxch3n\expect 0.3.1
