@@ -50,7 +50,7 @@ extism\moonbit-pdk 0.45.0
 fantix\mmhttp 0.3.0
 fantix\muts 0.5.4
 five-nuts\coreutils 0.1.3
-gmlewis\b2 0.29.0
+gmlewis\b2 0.30.0
 gmlewis\base64 0.13.0
 gmlewis\crc32 0.8.0
 gmlewis\flate 0.33.0
@@ -90,7 +90,7 @@ gmlewis\md5 0.17.0
 gmlewis\moonbit-pdk 0.46.0
 gmlewis\sha1 0.9.0
 gmlewis\sha256 0.15.0
-gmlewis\spin-moonbit-sdk 0.47.0
+gmlewis\spin-moonbit-sdk 0.48.0
 gmlewis\zlib 0.18.0
 hackwaly\common 0.1.24
 hackwaly\moonyacc 0.3.1
@@ -99,7 +99,7 @@ jankin_li\new_lib 0.1.0
 jedisct1\aegis 0.2.1
 jumpping\baby 0.2.0
 kesmeey\fmt 0.1.3
-kesmeey\tools 0.1.1
+kesmeey\tools 0.1.2
 kinoamyfx\moon-axe-tools 0.0.1-SNAPSHOT
 ledao\nanoid 0.1.1
 lijunchen\unstable_io 0.1.3
@@ -153,12 +153,12 @@ tonyfettes\narray 0.1.0
 tonyfettes\torch 0.2.7
 wangziling\hello 0.0.1
 wstreet\moontest 0.1.0
-xunyoyo\linalg 0.2.6
+xunyoyo\linalg 0.2.7
 xunyoyo\permutation 0.1.3
 yamajik\dapr 0.1.11
 yamajik\wasi 0.1.25
 yamajik\wasi-bindings 0.2.1
 yangqing\hello 0.2.2
 yj-qin\regexp 0.3.2
-yoshitsugu\parsem 0.0.2
+yoshitsugu\parsem 0.0.3
 zxch3n\expect 0.3.1
