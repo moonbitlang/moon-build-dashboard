@@ -50,7 +50,7 @@ extism\moonbit-pdk 0.45.0
 fantix\mmhttp 0.3.0
 fantix\muts 0.5.4
 five-nuts\coreutils 0.1.3
-gmlewis\b2 0.30.0
+gmlewis\b2 0.31.0
 gmlewis\base64 0.13.0
 gmlewis\crc32 0.8.0
 gmlewis\flate 0.33.0
@@ -90,7 +90,7 @@ gmlewis\md5 0.17.0
 gmlewis\moonbit-pdk 0.46.0
 gmlewis\sha1 0.9.0
 gmlewis\sha256 0.15.0
-gmlewis\spin-moonbit-sdk 0.48.0
+gmlewis\spin-moonbit-sdk 0.49.0
 gmlewis\zlib 0.18.0
 hackwaly\common 0.1.24
 hackwaly\moonyacc 0.3.1
@@ -112,7 +112,7 @@ mizchi\protocol 0.0.5
 moonbit-courses\minimoonbit-courses 0.1.0
 moonbit-js-ffi\js 0.2.0
 moonbitlang\arduino 0.0.5
-moonbitlang\core 0.1.20241223+62b9a1a85
+moonbitlang\core 0.1.20241231+ba15a9a4e
 moonbitlang\quickcheck 0.7.0
 moonbitlang\std 0.1.0
 moonbitlang\wasm4 0.2.4
@@ -134,7 +134,7 @@ peter-jerry-ye\utils 0.2.0
 peter-jerry-ye\wasi 0.18.1
 rami3l\cmark 0.1.5
 ruifeng\XMLParser 0.1.0
-smallbearrr\pandas 0.1.2
+smallbearrr\pandas 0.1.4
 suiyunonghen\datetime 0.1.5
 suiyunonghen\linklist 0.1.7
 suiyunonghen\moonvalue 0.1.12
@@ -144,7 +144,7 @@ tiye\cirru-edn 0.0.4
 tiye\cirru-parser 0.0.10
 tiye\dom-ffi 0.0.6
 tiye\lexicon-fractional-index 0.0.2
-tiye\quaternion 0.0.4
+tiye\quaternion 0.1.0
 tiye\respo 0.0.21
 tmkx\hello 0.0.0
 tonyfettes\atomics 0.1.0
