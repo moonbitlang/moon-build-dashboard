@@ -134,7 +134,7 @@ peter-jerry-ye\utils 0.2.0
 peter-jerry-ye\wasi 0.18.1
 rami3l\cmark 0.1.5
 ruifeng\XMLParser 0.1.0
-smallbearrr\pandas 0.1.4
+smallbearrr\pandas 0.1.6
 suiyunonghen\datetime 0.1.5
 suiyunonghen\linklist 0.1.7
 suiyunonghen\moonvalue 0.1.12
