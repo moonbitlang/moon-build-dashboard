@@ -22,7 +22,7 @@ Howardzhangdqs\md5 0.9.3
 Kaida-Amethyst\math 0.1.10
 Kaida-Amethyst\moonbit-math 0.1.10
 Lampese\moonbit-chalk 0.3.2
-Lampese\moondata 0.2.1
+Lampese\moondata 0.2.5
 PegasusPlusUS\hello 0.1.0
 PerfectPan\base64 0.1.1
 SyoujyoujiNaiki\chungshan 0.2.0
@@ -114,7 +114,7 @@ mizchi\protocol 0.0.5
 moonbit-courses\minimoonbit-courses 0.1.0
 moonbit-js-ffi\js 0.2.0
 moonbitlang\arduino 0.0.6
-moonbitlang\core 0.1.20241231+ba15a9a4e
+moonbitlang\core 0.1.20250106+004e23479
 moonbitlang\quickcheck 0.7.0
 moonbitlang\std 0.1.0
 moonbitlang\wasm4 0.2.4
