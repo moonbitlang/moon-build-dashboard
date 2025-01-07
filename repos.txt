@@ -13,7 +13,7 @@ CAIMEOX\quickcheck 0.6.9
 CAIMEOX\state 0.1.0
 CAIMEOX\t 0.1.0
 CMoonBack\Binary-Exponentiation 0.1.0
-CMoonBack\computational-geometry 0.2.0
+CMoonBack\computational-geometry 0.2.3
 CMoonBack\string-Algorithm 0.1.0
 FlyCloudC\miniKanren 0.1.0
 Guest0x0\HAMT 0.2.1
@@ -22,7 +22,7 @@ Howardzhangdqs\md5 0.9.3
 Kaida-Amethyst\math 0.1.10
 Kaida-Amethyst\moonbit-math 0.1.10
 Lampese\moonbit-chalk 0.3.2
-Lampese\moondata 0.2.5
+Lampese\moondata 0.2.6
 PegasusPlusUS\hello 0.1.0
 PerfectPan\base64 0.1.1
 SyoujyoujiNaiki\chungshan 0.2.0
