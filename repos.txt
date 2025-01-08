@@ -31,7 +31,7 @@ Yoorkin\example\list 0.1.4
 Yoorkin\format 0.1.5
 Yoorkin\hello 0.1.3
 Yoorkin\prettyprinter 0.4.0
-Yoorkin\rabbit-tea 0.4.1
+Yoorkin\rabbit-tea 0.4.2
 Yoorkin\stack 0.1.4
 Yoorkin\trie 0.2.2
 Yu-zh\either 0.1.0
@@ -114,7 +114,7 @@ mizchi\protocol 0.0.5
 moonbit-courses\minimoonbit-courses 0.1.0
 moonbit-js-ffi\js 0.2.0
 moonbitlang\arduino 0.0.6
-moonbitlang\core 0.1.20250106+004e23479
+moonbitlang\core 0.1.20250108+7a6b9ab0e
 moonbitlang\quickcheck 0.7.0
 moonbitlang\std 0.1.0
 moonbitlang\wasm4 0.2.4
@@ -134,9 +134,9 @@ peter-jerry-ye\memory 0.8.4
 peter-jerry-ye\parser-combinator 0.9.1
 peter-jerry-ye\utils 0.2.0
 peter-jerry-ye\wasi 0.18.1
-rami3l\cmark 0.1.5
+rami3l\cmark 0.2.0
 ruifeng\XMLParser 0.1.0
-smallbearrr\pandas 0.1.9
+smallbearrr\pandas 0.2.1
 suiyunonghen\datetime 0.1.5
 suiyunonghen\linklist 0.1.7
 suiyunonghen\moonvalue 0.1.12
@@ -150,7 +150,7 @@ tiye\quaternion 0.1.0
 tiye\respo 0.0.21
 tmkx\hello 0.0.0
 tonyfettes\atomics 0.1.0
-tonyfettes\memory 0.1.5
+tonyfettes\memory 0.1.6
 tonyfettes\narray 0.1.0
 tonyfettes\torch 0.2.7
 wangziling\hello 0.0.1
