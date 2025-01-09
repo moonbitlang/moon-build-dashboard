@@ -22,7 +22,7 @@ Howardzhangdqs\md5 0.9.3
 Kaida-Amethyst\math 0.1.10
 Kaida-Amethyst\moonbit-math 0.1.10
 Lampese\moonbit-chalk 0.3.2
-Lampese\moondata 0.2.6
+Lampese\moondata 0.2.8
 PegasusPlusUS\hello 0.1.0
 PerfectPan\base64 0.1.1
 SyoujyoujiNaiki\chungshan 0.2.0
@@ -100,7 +100,7 @@ jankin_li\new_lib 0.1.0
 jedisct1\aegis 0.2.1
 jumpping\baby 0.2.0
 kesmeey\fmt 0.1.3
-kesmeey\tools 0.1.2
+kesmeey\tools 0.1.3
 kinoamyfx\moon-axe-tools 0.0.1-SNAPSHOT
 ledao\nanoid 0.1.1
 lijunchen\unstable_io 0.1.3
@@ -115,7 +115,7 @@ moonbit-courses\minimoonbit-courses 0.1.0
 moonbit-js-ffi\js 0.2.0
 moonbitlang\arduino 0.0.6
 moonbitlang\core 0.1.20250108+7a6b9ab0e
-moonbitlang\quickcheck 0.7.0
+moonbitlang\quickcheck 0.7.1
 moonbitlang\std 0.1.0
 moonbitlang\wasm4 0.2.4
 moonbitlang\x 0.4.16
@@ -142,7 +142,7 @@ suiyunonghen\linklist 0.1.7
 suiyunonghen\moonvalue 0.1.12
 suiyunonghen\wasmMemManager 0.1.2
 summer-boythink\moonorm 0.1.0
-tiye\cirru-edn 0.0.4
+tiye\cirru-edn 0.0.5
 tiye\cirru-parser 0.0.10
 tiye\dom-ffi 0.0.6
 tiye\lexicon-fractional-index 0.0.2
@@ -150,9 +150,11 @@ tiye\quaternion 0.1.0
 tiye\respo 0.0.21
 tmkx\hello 0.0.0
 tonyfettes\atomics 0.1.0
+tonyfettes\js 0.1.0
 tonyfettes\memory 0.1.6
 tonyfettes\narray 0.1.0
 tonyfettes\torch 0.2.7
+tonyfettes\webgpu 0.1.0
 wangziling\hello 0.0.1
 wstreet\moontest 0.1.0
 xunyoyo\linalg 0.2.7
