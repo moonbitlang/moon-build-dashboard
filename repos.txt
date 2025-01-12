@@ -96,6 +96,7 @@ gmlewis\spin-moonbit-sdk 0.49.0
 gmlewis\zlib 0.18.0
 hackwaly\common 0.1.24
 hackwaly\moonyacc 0.3.1
+illusory0x0\fun 0.1.1
 jankin_li\Learn_Test1 0.1.0
 jankin_li\new_lib 0.1.0
 jedisct1\aegis 0.2.1
@@ -123,7 +124,7 @@ moonbitlang\x 0.4.16
 moonbitlang\yacc 0.2.0
 myfreess\myers-diff 0.1.0
 oboard\mimetype 0.1.4
-oboard\mocket 0.2.0
+oboard\mocket 0.2.3
 oboard\moonbit-eval 0.1.5
 oboard\mooncrypto 0.1.8
 oboard\moonetx 0.1.5
@@ -137,7 +138,7 @@ peter-jerry-ye\parser-combinator 0.9.1
 peter-jerry-ye\utils 0.2.0
 peter-jerry-ye\wasi 0.18.1
 rami3l\cmark 0.2.0
-ruifeng\XMLParser 0.1.0
+ruifeng\XMLParser 0.1.1
 smallbearrr\pandas 0.3.1
 suiyunonghen\datetime 0.1.5
 suiyunonghen\linklist 0.1.7
