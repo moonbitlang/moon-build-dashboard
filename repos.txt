@@ -48,6 +48,8 @@ bzy-debug\cowsay 0.1.0
 bzy-debug\cowsay_lib 0.1.0
 bzy-debug\hello 0.1.20240510+81e045f4e
 chawyehsu\punycode 0.0.3
+chhnb\algorithm 0.1.0
+chronostesis\check_prime 0.1.0
 eczn\eczn-utils 0.2.0
 enjoecn\easy 0.1.0
 enjoecn\gb 0.1.1
@@ -92,6 +94,7 @@ gmlewis\io 0.19.0
 gmlewis\json 0.15.0
 gmlewis\jsonutil 0.24.0
 gmlewis\md5 0.17.0
+gmlewis\modus 0.16.5
 gmlewis\moonbit-pdk 0.46.0
 gmlewis\sha1 0.9.0
 gmlewis\sha256 0.15.0
@@ -107,7 +110,7 @@ jankin_li\new_lib 0.1.0
 jedisct1\aegis 0.2.1
 jumpping\baby 0.2.0
 kesmeey\fmt 0.1.3
-kesmeey\tools 0.1.3
+kesmeey\tools 0.1.4
 kinoamyfx\moon-axe-tools 0.0.1-SNAPSHOT
 ledao\nanoid 0.1.1
 lijunchen\unstable_io 0.1.3
