@@ -103,7 +103,7 @@ gmlewis\zlib 0.18.0
 hackwaly\common 0.1.24
 hackwaly\moonyacc 0.3.1
 hanstechnow\ctf_tools 0.1.0
-illusory0x0\base 0.1.0
+illusory0x0\base 0.2.0
 illusory0x0\fun 0.2.0
 jankin_li\Learn_Test1 0.1.0
 jankin_li\new_lib 0.1.0
@@ -155,6 +155,7 @@ suiyunonghen\linklist 0.1.7
 suiyunonghen\moonvalue 0.1.12
 suiyunonghen\wasmMemManager 0.1.2
 summer-boythink\moonorm 0.1.0
+tiye\caterfoil 0.0.2
 tiye\cirru-edn 0.0.5
 tiye\cirru-parser 0.0.11
 tiye\dom-ffi 0.0.8
