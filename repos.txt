@@ -17,11 +17,12 @@ CMoonBack\Binary-Exponentiation 0.1.0
 CMoonBack\computational-geometry 0.2.3
 CMoonBack\string-Algorithm 0.1.0
 Erolaffy\easy-io 0.1.0
+Erolaffy\easyio 0.1.0
 FlyCloudC\miniKanren 0.1.0
 Guest0x0\HAMT 0.2.1
 Guest0x0\dregex 0.2.5
 Howardzhangdqs\md5 0.9.3
-KCN-judu\calculus-numerical 0.1.0
+KCN-judu\calculus-numerical 0.1.1
 Kaida-Amethyst\llvm 0.1.0
 Kaida-Amethyst\math 0.1.13
 Kaida-Amethyst\moonbit-math 0.1.13
@@ -39,7 +40,7 @@ Yoorkin\example\list 0.1.4
 Yoorkin\format 0.1.5
 Yoorkin\hello 0.1.3
 Yoorkin\prettyprinter 0.4.0
-Yoorkin\rabbit-tea 0.5.5
+Yoorkin\rabbit-tea 0.5.7
 Yoorkin\stack 0.1.4
 Yoorkin\trie 0.2.3
 Yu-zh\either 0.1.0
@@ -129,7 +130,7 @@ mizchi\protocol 0.0.5
 moonbit-courses\minimoonbit-courses 0.1.0
 moonbit-js-ffi\js 0.2.0
 moonbitlang\arduino 0.0.6
-moonbitlang\core 0.1.20250116+a5b52078f
+moonbitlang\core 0.1.20250121+7fc3467ab
 moonbitlang\quickcheck 0.7.1
 moonbitlang\std 0.1.0
 moonbitlang\wasm4 0.2.4
@@ -154,7 +155,7 @@ rami3l\cmark 0.2.2
 remain11\i18n 0.1.0
 ruifeng\XMLParser 0.1.2
 shiheat\find_max 0.3.0
-smallbearrr\pandas 0.3.2
+smallbearrr\pandas 0.4.1
 suiyunonghen\datetime 0.1.5
 suiyunonghen\linklist 0.1.7
 suiyunonghen\moonvalue 0.1.12
@@ -176,6 +177,7 @@ tonyfettes\torch 0.2.7
 tonyfettes\webgpu 0.1.0
 wangziling\hello 0.0.1
 wstreet\moontest 0.1.0
+wwj1203\string2int 0.1.0
 xunyoyo\linalg 0.2.7
 xunyoyo\permutation 0.1.3
 yamajik\dapr 0.1.11
