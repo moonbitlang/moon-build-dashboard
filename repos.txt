@@ -17,12 +17,12 @@ CMoonBack\Binary-Exponentiation 0.1.0
 CMoonBack\computational-geometry 0.2.3
 CMoonBack\string-Algorithm 0.1.0
 Erolaffy\easy-io 0.1.0
-Erolaffy\easyio 0.1.0
+Erolaffy\easyio 0.1.1
 FlyCloudC\miniKanren 0.1.0
 Guest0x0\HAMT 0.2.1
 Guest0x0\dregex 0.2.5
 Howardzhangdqs\md5 0.9.3
-KCN-judu\calculus-numerical 0.1.1
+KCN-judu\calculus-numerical 0.2.0
 Kaida-Amethyst\llvm 0.1.0
 Kaida-Amethyst\math 0.1.13
 Kaida-Amethyst\moonbit-math 0.1.13
@@ -135,7 +135,7 @@ moonbitlang\quickcheck 0.7.1
 moonbitlang\std 0.1.0
 moonbitlang\wasm4 0.2.4
 moonbitlang\x 0.4.18
-moonbitlang\yacc 0.2.0
+moonbitlang\yacc 0.2.2
 myfreess\myers-diff 0.1.0
 oboard\mimetype 0.1.4
 oboard\mocket 0.2.3
@@ -188,4 +188,5 @@ yj-qin\moonlox 0.1.0
 yj-qin\regexp 0.3.4
 yoshitsugu\parsem 0.0.3
 yuyi919\shared-lib 0.0.9
+zhuguiyuan\eda-router 0.1.0
 zxch3n\expect 0.3.1
