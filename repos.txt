@@ -179,9 +179,10 @@ tmkx\hello 0.0.0
 tonyfettes\atomics 0.1.0
 tonyfettes\c 0.1.0
 tonyfettes\js 0.1.0
-tonyfettes\memory 0.1.6
+tonyfettes\memory 0.2.1
 tonyfettes\narray 0.1.0
 tonyfettes\torch 0.2.7
+tonyfettes\wasm 0.1.1
 tonyfettes\webgpu 0.1.0
 wangziling\hello 0.0.1
 wstreet\moontest 0.1.0
