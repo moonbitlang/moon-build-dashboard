@@ -24,7 +24,7 @@ Guest0x0\HAMT 0.2.1
 Guest0x0\dregex 0.2.5
 Howardzhangdqs\md5 0.9.3
 KCN-judu\calculus-numerical 0.2.1-alpha-2
-Kaida-Amethyst\llvm 0.1.1
+Kaida-Amethyst\llvm 0.1.2
 Kaida-Amethyst\math 0.1.13
 Kaida-Amethyst\moonbit-math 0.1.13
 Lampese\moonbit-chalk 0.3.2
@@ -119,7 +119,7 @@ jankin_li\Learn_Test1 0.1.0
 jankin_li\new_lib 0.1.0
 jedisct1\aegis 0.2.1
 jumpping\baby 0.2.0
-justjoheinz\complex 0.1.1
+justjoheinz\complex 0.1.2
 kesmeey\fmt 0.1.3
 kesmeey\tools 0.1.5
 kinoamyfx\moon-axe-tools 0.0.1-SNAPSHOT
