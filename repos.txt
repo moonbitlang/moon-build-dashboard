@@ -19,11 +19,12 @@ CMoonBack\string-Algorithm 0.1.0
 Erolaffy\easy-io 0.1.0
 Erolaffy\easyio 0.2.0
 FlyCloudC\miniKanren 0.1.0
+FlyCloudC\scheme 0.1.1
 GMH233\moonpassword 0.1.0
 Guest0x0\HAMT 0.2.1
 Guest0x0\dregex 0.2.5
 Howardzhangdqs\md5 0.9.3
-KCN-judu\calculus-numerical 0.2.1-alpha-3
+KCN-judu\calculus-numerical 0.2.1-alpha-5
 KCN-judu\linear-algebra 0.0.1-alpha-2
 KCN-judu\luna-utils 0.0.1-alpha-2
 Kaida-Amethyst\llvm 0.1.2
