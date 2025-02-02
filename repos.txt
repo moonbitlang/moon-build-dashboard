@@ -166,7 +166,7 @@ ruifeng\XMLParser 0.1.3
 shiheat\find_max 0.3.0
 sjzbxhsj\Calculator 0.1.0
 smallbearrr\pandas 0.4.1
-structuraBlock\MoonStats 0.2.0
+structuraBlock\MoonStats 0.3.0
 suiyunonghen\datetime 0.1.5
 suiyunonghen\linklist 0.1.7
 suiyunonghen\moonvalue 0.1.12
@@ -202,5 +202,6 @@ yj-qin\moonlox 0.1.0
 yj-qin\regexp 0.3.4
 yoshitsugu\parsem 0.0.3
 yuyi919\shared-lib 0.0.9
+zdu881\DataProc 0.1.0
 zhuguiyuan\eda-router 0.1.0
 zxch3n\expect 0.3.1
