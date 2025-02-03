@@ -27,7 +27,7 @@ Howardzhangdqs\md5 0.9.3
 KCN-judu\calculus-numerical 0.2.1-alpha-5
 KCN-judu\linear-algebra 0.0.1-alpha-2
 KCN-judu\luna-utils 0.0.1-alpha-2
-Kaida-Amethyst\llvm 0.1.2
+Kaida-Amethyst\llvm 0.1.3
 Kaida-Amethyst\math 0.1.13
 Kaida-Amethyst\moonbit-math 0.1.13
 Lampese\moonbit-chalk 0.3.2
@@ -51,6 +51,7 @@ Yoorkin\trie 0.2.3
 Yu-zh\either 0.1.0
 YumeCross\schema 0.4.3
 YumeXi\format 0.2.2
+YumeXi\iter 0.2.0
 bob\aegis 0.1.0
 bobzhang\sexp 0.1.1
 bobzhang\testa 0.1.0
