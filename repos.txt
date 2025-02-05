@@ -4,6 +4,7 @@ https://github.com/gmlewis/moonbit-fonts master
 https://github.com/trancee/wasmSID main
 https://github.com/moonbit-community/wasmSID main
 https://github.com/moonbitlang/minimoonbit-public main
+https://github.com/pku-dppl/TAPL-in-MoonBit main
 
 # generated list to test mooncakes on mooncakes.io
 A-23187\encoding 0.1.0
