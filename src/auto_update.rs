@@ -1,3 +1,5 @@
+use std::collections::HashSet;
+
 use crate::mooncakesio::get_all_mooncakes;
 
 #[test]
@@ -7,9 +9,15 @@ fn gen_latest_list_with_version() {
         .splitn(2, "# generated list to test mooncakes on mooncakes.io")
         .collect();
 
+    let exclude = std::fs::read_to_string("exclude.txt").unwrap();
+    let exclude: HashSet<String> = exclude.lines().map(|s| s.to_string()).collect();
+
     let mut mooncakesio = String::new();
     let db = get_all_mooncakes().unwrap();
     for (name, versions) in db.db {
+        if exclude.contains(&name.replace("\\", "/")) {
+            continue;
+        }
         let latest_version = versions.last().unwrap();
         mooncakesio.push_str(&format!("{} {}\n", name, latest_version));
     }
