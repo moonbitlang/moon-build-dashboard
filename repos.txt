@@ -31,6 +31,7 @@ KCN-judu\luna-utils 0.0.1-alpha-5
 Kaida-Amethyst\llvm 0.1.4
 Kaida-Amethyst\math 0.1.13
 Kaida-Amethyst\moonbit-math 0.1.14
+Kaida-Amethyst\python 0.0.2
 Lampese\moonbit-chalk 0.3.2
 Lampese\moondata 0.2.8
 Lampese\moondata2 0.0.2
@@ -43,7 +44,7 @@ WenqiChen3019\sqrt 0.1.4
 Yoorkin\ArgParser 0.1.8
 Yoorkin\format 0.1.5
 Yoorkin\prettyprinter 0.4.0
-Yoorkin\rabbit-tea 0.5.12
+Yoorkin\rabbit-tea 0.6.2
 Yoorkin\stack 0.1.4
 Yoorkin\trie 0.2.3
 Yu-zh\either 0.1.0
@@ -137,12 +138,12 @@ mizchi\protocol 0.0.5
 moonbit-courses\minimoonbit-courses 0.1.0
 moonbit-js-ffi\js 0.2.0
 moonbitlang\arduino 0.0.6
-moonbitlang\core 0.1.20250210+7be093d1f
+moonbitlang\core 0.1.20250213+44ecf4dd9
 moonbitlang\quickcheck 0.8.4
 moonbitlang\std 0.1.0
 moonbitlang\wasm4 0.2.4
 moonbitlang\x 0.4.19
-moonbitlang\yacc 0.2.5
+moonbitlang\yacc 0.2.6
 myfreess\myers-diff 0.1.0
 oboard\mimetype 0.1.4
 oboard\mocket 0.2.3
@@ -201,7 +202,7 @@ yangqing\hello 0.2.2
 yj-qin\moonlox 0.1.0
 yj-qin\regexp 0.3.4
 yoshitsugu\parsem 0.0.3
-yuyi919\shared-lib 0.0.9
+yuyi919\shared-lib 0.1.0
 zdu881\DataProc 0.1.0
 zhuguiyuan\eda-router 0.1.0
 zxch3n\expect 0.6.0
