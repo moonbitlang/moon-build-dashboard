@@ -24,9 +24,9 @@ FlyCloudC\miniKanren 0.1.0
 FlyCloudC\scheme 0.2.0
 GMH233\moonpassword 0.1.0
 Howardzhangdqs\md5 0.9.3
-KCN-judu\calculus-numerical 0.2.1-alpha-5
+KCN-judu\calculus-numerical 0.2.1-alpha-6
 KCN-judu\linear-algebra 0.0.1-alpha-3
-KCN-judu\luna-complex 0.0.1-alpha-3
+KCN-judu\luna-complex 0.0.1-alpha-4
 KCN-judu\luna-utils 0.0.1-alpha-5
 Kaida-Amethyst\llvm 0.1.4
 Kaida-Amethyst\math 0.1.13
@@ -49,7 +49,7 @@ Yoorkin\stack 0.1.4
 Yoorkin\trie 0.2.3
 Yu-zh\either 0.1.0
 YumeCross\schema 0.4.3
-YumeXi\format 0.3.8
+YumeXi\format 0.3.9
 YumeXi\iter 0.2.3
 bob\aegis 0.1.0
 bobzhang\sexp 0.1.1
@@ -117,6 +117,7 @@ illusory0x0\coerce 0.1.0
 illusory0x0\fun 0.2.0
 illusory0x0\moonbit-wasm-nodejs-ts-template 0.1.0
 illusory0x0\moonbit-wasm-vite-ts-template 0.1.0
+illusory0x0\parserc 0.1.1
 jankin_li\Learn_Test1 0.1.0
 jankin_li\new_lib 0.1.0
 jedisct1\aegis 0.2.1
@@ -188,6 +189,7 @@ tonyfettes\narray 0.1.0
 tonyfettes\torch 0.2.7
 tonyfettes\wasm 0.1.1
 tonyfettes\webgpu 0.1.7
+wangjuwudi\line_sort 0.1.0
 wjy030522\compare 0.1.0
 wjy030522\hello 0.1.0
 wstreet\moontest 0.1.0
