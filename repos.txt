@@ -28,7 +28,7 @@ KCN-judu\calculus-numerical 0.2.1-alpha-6
 KCN-judu\linear-algebra 0.0.1-alpha-3
 KCN-judu\luna-complex 0.0.1-alpha-4
 KCN-judu\luna-utils 0.0.1-alpha-5
-Kaida-Amethyst\llvm 0.1.4
+Kaida-Amethyst\llvm 0.1.5
 Kaida-Amethyst\math 0.1.13
 Kaida-Amethyst\moonbit-math 0.1.14
 Kaida-Amethyst\python 0.0.2
@@ -44,7 +44,7 @@ WenqiChen3019\sqrt 0.1.4
 Yoorkin\ArgParser 0.1.8
 Yoorkin\format 0.1.5
 Yoorkin\prettyprinter 0.4.0
-Yoorkin\rabbit-tea 0.6.3
+Yoorkin\rabbit-tea 0.6.4
 Yoorkin\stack 0.1.4
 Yoorkin\trie 0.2.3
 Yu-zh\either 0.1.0
