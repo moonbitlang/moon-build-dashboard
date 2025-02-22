@@ -203,6 +203,7 @@ wjy030522\compare 0.1.0
 wjy030522\hello 0.1.0
 wstreet\moontest 0.1.0
 wwj1203\string2int 0.1.0
+wzzc-dev\teager 0.1.0
 xavier865\hello 0.2.2
 xunyoyo\linalg 0.2.7
 xunyoyo\permutation 0.1.3
@@ -217,4 +218,5 @@ yuyi919\shared-lib 0.1.0
 yyjeqhc\base32 0.1.0
 zdu881\DataProc 0.1.0
 zhuguiyuan\eda-router 0.1.1
+zxch3n\colored 0.1.0
 zxch3n\expect 0.6.1
