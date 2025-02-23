@@ -38,8 +38,8 @@ Lampese\moondata2 0.0.2
 Luna-Flow\calculus-numerical 0.2.1-alpha-6
 Luna-Flow\linear-algebra 0.0.2-alpha-1
 Luna-Flow\luna-complex 0.0.2-alpha-1
-Luna-Flow\luna-generic 0.1.2-alpha-2
-Luna-Flow\luna-utils 0.0.1
+Luna-Flow\luna-generic 0.1.2-alpha-4
+Luna-Flow\luna-utils 0.0.2-alpha-2
 PerfectPan\base64 0.1.1
 Refined_heart\Sort 0.1.0
 SyoujyoujiNaiki\chungshan 0.2.0
@@ -169,13 +169,14 @@ peter-jerry-ye\memory 0.8.4
 peter-jerry-ye\parser-combinator 0.9.1
 peter-jerry-ye\utils 0.3.1
 peter-jerry-ye\wasi 0.19.0
+rabbyte\suffix-array 0.1.0
 rami3l\cmark 0.2.3
 rami3l\js-ffi 0.1.5
 remain11\i18n 0.1.0
 ruifeng\XMLParser 0.1.5
 shiheat\find_max 0.3.0
 sjzbxhsj\Calculator 0.1.0
-smallbearrr\pandas 0.5.0
+smallbearrr\pandas 0.6.0
 structuraBlock\MoonStats 0.3.0
 suiyunonghen\datetime 0.1.5
 suiyunonghen\linklist 0.1.7
