@@ -202,7 +202,7 @@ fn stat_mooncake(
 
     let is_moonbit_community = match source {
         MooncakeSource::MooncakesIO { name, .. } => name.contains("moonbitlang"),
-        MooncakeSource::Git { url, .. } => url.contains("moonbitlang") || url.contains("moonbit-community"),
+        MooncakeSource::Git { url, .. } => url.contains("moonbitlang"),
     };
 
     let r = run_moon(workdir, source, &cmd.args(is_moonbit_community)).map_err(|e| StatMooncakeError::RunMoon(e));
