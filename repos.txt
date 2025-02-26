@@ -64,6 +64,7 @@ bzy-debug\cowsay_lib 0.1.0
 chawyehsu\punycode 0.0.3
 chhnb\algorithm 0.1.0
 chronostesis\check_prime 0.1.0
+cyhforlight\moonbit-hello-card 0.1.0
 eczn\eczn-utils 0.2.0
 enjoecn\easy 0.1.0
 enjoecn\gb 0.1.1
@@ -138,6 +139,7 @@ kinoamyfx\moon-axe-tools 0.0.1-SNAPSHOT
 ledao\nanoid 0.1.1
 liuly0322\lru_cache 0.1.0
 liuly0322\tch_mbt 0.0.1
+locing112\hello 0.1.6
 loneoutpost\core-extra 0.0.6
 lucifer1004\mooncake 0.1.0
 mizchi\js_io 0.1.1
