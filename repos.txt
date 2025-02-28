@@ -9,6 +9,7 @@ https://github.com/pku-dppl/TAPL-in-MoonBit main
 # generated list to test mooncakes on mooncakes.io
 0Ayachi0\math 0.1.0
 A-23187\encoding 0.1.0
+BigThree33\find_min 0.1.0
 CAIMEOX\feat-moon 0.2.0
 CAIMEOX\graph-algebra 0.1.5
 CAIMEOX\list 0.1.0
@@ -18,6 +19,7 @@ CAIMEOX\t 0.1.0
 CMoonBack\Binary-Exponentiation 0.1.0
 CMoonBack\computational-geometry 0.2.3
 CMoonBack\string-Algorithm 0.1.0
+DawnMagnet\sparse-table 0.1.1
 Erolaffy\easy-io 0.1.0
 Erolaffy\easyio 0.2.1
 FlyCloudC\miniKanren 0.1.0
@@ -30,12 +32,13 @@ KCN-judu\linear-algebra 0.0.1-alpha-3
 KCN-judu\luna-complex 0.0.1-alpha-4
 KCN-judu\luna-utils 0.0.1-alpha-5
 Kaida-Amethyst\llvm 0.1.6
-Kaida-Amethyst\math 0.1.13
+Kaida-Amethyst\math 0.1.15
 Kaida-Amethyst\moonbit-math 0.1.14
 Kaida-Amethyst\python 0.0.2
 Lampese\moonbit-chalk 0.3.2
 Lampese\moondata 0.2.8
 Lampese\moondata2 0.0.2
+Ljw030710\find_max 0.1.0
 Luna-Flow\calculus-numerical 0.2.1-alpha-6
 Luna-Flow\linear-algebra 0.0.2-alpha-1
 Luna-Flow\luna-complex 0.0.2-alpha-1
@@ -143,6 +146,7 @@ liuly0322\tch_mbt 0.1.0
 locing112\hello 0.1.6
 loneoutpost\core-extra 0.0.6
 lucifer1004\mooncake 0.1.0
+luolingkan\find_min_num 0.1.0
 lyf597\hello 0.1.0
 mizchi\js_io 0.1.1
 mizchi\js_regexp 0.0.4
@@ -158,6 +162,7 @@ moonbitlang\std 0.1.0
 moonbitlang\wasm4 0.2.6
 moonbitlang\x 0.4.20
 moonbitlang\yacc 0.2.8
+my-xn\hello 0.1.0
 myfreess\myers-diff 0.1.0
 oboard\mimetype 0.1.4
 oboard\mocket 0.2.3
