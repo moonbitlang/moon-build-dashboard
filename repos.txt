@@ -27,6 +27,7 @@ FlyCloudC\scheme 0.2.0
 GMH233\moonpassword 0.1.0
 GreyIcesea\isprime 0.1.0
 Howardzhangdqs\md5 0.9.3
+JPLovever\fkshz 0.1.0
 KCN-judu\calculus-numerical 0.2.1-alpha-6
 KCN-judu\linear-algebra 0.0.1-alpha-3
 KCN-judu\luna-complex 0.0.1-alpha-4
@@ -35,6 +36,7 @@ Kaida-Amethyst\llvm 0.1.6
 Kaida-Amethyst\math 0.1.15
 Kaida-Amethyst\moonbit-math 0.1.14
 Kaida-Amethyst\python 0.0.2
+LI7282\base16 0.1.0
 Lampese\moonbit-chalk 0.3.2
 Lampese\moondata 0.2.8
 Lampese\moondata2 0.0.2
@@ -125,6 +127,7 @@ hanstechnow\ctf_tools 0.1.0
 illusory0x0\base 0.2.0
 illusory0x0\coerce 0.1.0
 illusory0x0\fun 0.2.0
+illusory0x0\fuzzy_match 0.1.0
 illusory0x0\moonbit-wasm-nodejs-ts-template 0.1.0
 illusory0x0\moonbit-wasm-vite-ts-template 0.1.0
 illusory0x0\native 0.1.3
@@ -212,6 +215,9 @@ tonyfettes\narray 0.1.0
 tonyfettes\torch 0.2.7
 tonyfettes\tree-sitter 0.1.0
 tonyfettes\tree-sitter\cli 0.1.0
+tonyfettes\tree_sitter 0.1.6
+tonyfettes\tree_sitter_language 0.1.1
+tonyfettes\tree_sitter_moonbit 0.1.1
 tonyfettes\wasm 0.1.1
 tonyfettes\webgpu 0.1.7
 wangjuwudi\line_sort 0.1.0
