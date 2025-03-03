@@ -8,6 +8,7 @@ https://github.com/pku-dppl/TAPL-in-MoonBit main
 
 # generated list to test mooncakes on mooncakes.io
 0Ayachi0\math 0.1.0
+202306123\lib_mbt 0.1.0
 A-23187\encoding 0.1.0
 BigThree33\find_min 0.1.0
 CAIMEOX\feat-moon 0.2.0
@@ -28,6 +29,7 @@ GMH233\moonpassword 0.1.0
 GreyIcesea\isprime 0.1.0
 Howardzhangdqs\md5 0.9.3
 JPLovever\fkshz 0.1.0
+Jtian-t\Deque 0.1.0
 KCN-judu\calculus-numerical 0.2.1-alpha-6
 KCN-judu\linear-algebra 0.0.1-alpha-3
 KCN-judu\luna-complex 0.0.1-alpha-4
@@ -142,8 +144,10 @@ justjoheinz\complex 0.2.1
 justjoheinz\iso-country 0.1.1
 kesmeey\fmt 0.1.3
 kesmeey\tools 0.1.9
+kesmeey\unicodeUtil 0.1.2
 kinoamyfx\moon-axe-tools 0.0.1-SNAPSHOT
 ledao\nanoid 0.1.1
+littleotherut\digit-insert 0.1.1
 liuly0322\lru_cache 0.1.0
 liuly0322\tch_mbt 0.1.0
 locing112\hello 0.1.6
@@ -167,6 +171,7 @@ moonbitlang\x 0.4.20
 moonbitlang\yacc 0.2.8
 my-xn\hello 0.1.0
 myfreess\myers-diff 0.1.0
+nanlingyin\mbt_LIB 0.1.0
 oboard\mimetype 0.1.4
 oboard\mocket 0.2.3
 oboard\moonbit-eval 0.1.6
@@ -186,7 +191,7 @@ peter-jerry-ye\utils 0.3.2
 peter-jerry-ye\wasi 0.19.0
 peter-jerry-ye\wasi-imports 0.1.0
 rabbyte\suffix-array 0.1.0
-rami3l\cmark 0.2.4
+rami3l\cmark 0.2.5
 rami3l\js-ffi 0.1.6
 remain11\i18n 0.1.0
 ruifeng\XMLParser 0.1.5
@@ -202,10 +207,10 @@ summer-boythink\moonorm 0.1.0
 tiye\caterfoil 0.0.2
 tiye\cirru-edn 0.0.5
 tiye\cirru-parser 0.0.11
-tiye\dom-ffi 0.0.8
+tiye\dom-ffi 0.0.9
 tiye\lexicon-fractional-index 0.0.2
 tiye\quaternion 0.1.0
-tiye\respo 0.0.22
+tiye\respo 0.0.23
 tonyfettes\atomics 0.1.0
 tonyfettes\c 0.1.0
 tonyfettes\js 0.1.4
@@ -234,6 +239,7 @@ yamajik\dapr 0.1.11
 yamajik\wasi 0.1.25
 yamajik\wasi-bindings 0.2.1
 yangqing\hello 0.2.2
+yanyeting\minmax 0.1.0
 yj-qin\moonlox 0.1.0
 yj-qin\regexp 0.3.4
 yoshitsugu\parsem 0.0.3
