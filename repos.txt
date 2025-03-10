@@ -14,6 +14,7 @@ A-23187\encoding 0.1.0
 BigThree33\find_min 0.1.0
 CAIMEOX\feat-moon 0.2.0
 CAIMEOX\graph-algebra 0.1.5
+CAIMEOX\lazy 0.1.0
 CAIMEOX\list 0.1.0
 CAIMEOX\quickcheck 0.6.9
 CAIMEOX\state 0.1.0
@@ -136,6 +137,7 @@ hachi\hello 0.1.0
 hachi\sort 0.1.12
 hackwaly\common 0.1.24
 hackwaly\moonyacc 0.3.1
+hanbings\fluorescence 0.1.0
 hanstechnow\ctf_tools 0.1.0
 illusory0x0\base 0.2.0
 illusory0x0\coerce 0.1.0
@@ -175,14 +177,14 @@ mizchi\protocol 0.0.5
 moonbit-courses\minimoonbit-courses 0.1.0
 moonbit-js-ffi\js 0.2.0
 moonbitlang\arduino 0.0.6
-moonbitlang\core 0.1.20250304+fdfcb3f1f
+moonbitlang\core 0.1.20250310+fdfcb3f1f
 moonbitlang\lex 0.3.0
 moonbitlang\lex-runtime 0.1.3
 moonbitlang\lex\runtime 0.1.1
 moonbitlang\quickcheck 0.8.4
 moonbitlang\std 0.1.0
 moonbitlang\wasm4 0.2.6
-moonbitlang\x 0.4.21
+moonbitlang\x 0.4.22
 moonbitlang\yacc 0.2.9
 my-xn\hello 0.1.0
 myfreess\myers-diff 0.1.0
@@ -209,7 +211,7 @@ peter-jerry-ye\wasi 0.19.0
 peter-jerry-ye\wasi-imports 0.1.1
 rabbyte\suffix-array 0.1.0
 rami3l\cmark 0.2.5
-rami3l\js-ffi 0.2.0
+rami3l\js-ffi 0.2.1
 remain11\i18n 0.1.0
 ruifeng\XMLParser 0.1.5
 shiheat\find_max 0.3.0
