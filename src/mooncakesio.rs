@@ -43,8 +43,9 @@ pub fn download_to(name: &str, version: &str, dst: &Path) -> Result<(), Mooncake
 
         let output = std::process::Command::new("powershell")
             .args([
-                "-Command", 
-                &format!("Expand-Archive -Path '{}' -DestinationPath '{}'", 
+                "-Command",
+                &format!(
+                    "Expand-Archive -Path '{}' -DestinationPath '{}'",
                     output_zip,
                     dst.join(version).display()
                 ),
@@ -63,7 +64,7 @@ pub fn download_to(name: &str, version: &str, dst: &Path) -> Result<(), Mooncake
             .arg(&output_zip)
             .arg(&url)
             .output()
-            .map_err(|e| MooncakesIOError::IOError(e))?;
+            .map_err(MooncakesIOError::IOError)?;
         if !output.status.success() {
             return Err(MooncakesIOError::ReturnNonZero(output.status));
         }
@@ -73,7 +74,7 @@ pub fn download_to(name: &str, version: &str, dst: &Path) -> Result<(), Mooncake
             .arg("-d")
             .arg(dst.join(version))
             .output()
-            .map_err(|e| MooncakesIOError::IOError(e))?;
+            .map_err(MooncakesIOError::IOError)?;
         if !output.status.success() {
             return Err(MooncakesIOError::ReturnNonZero(output.status));
         }
@@ -173,12 +174,12 @@ pub fn get_all_mooncakes() -> Result<MooncakesDB, MooncakesIOError> {
         let name = &name[0..dot_index];
 
         let index_file_content =
-            std::fs::read_to_string(entry.path()).map_err(|e| MooncakesIOError::IOError(e))?;
+            std::fs::read_to_string(entry.path()).map_err(MooncakesIOError::IOError)?;
         let mut is_mooncakes_test = false;
         let mut indexes = vec![];
         for line in index_file_content.lines() {
             let index: MooncakeInfo =
-                serde_json::from_str(line).map_err(|e| MooncakesIOError::Serde(e))?;
+                serde_json::from_str(line).map_err(MooncakesIOError::Serde)?;
             indexes.push(index.version);
             if let Some(keywords) = &index.keywords {
                 if keywords.contains(&"mooncakes-test".to_string()) {

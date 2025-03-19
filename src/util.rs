@@ -1,4 +1,8 @@
-use std::{io::Write, string::FromUtf8Error};
+use std::{io::Write, path::Path, string::FromUtf8Error};
+
+use serde::{Deserialize, Serialize};
+
+use crate::dashboard::{Backend, OS};
 
 #[derive(Debug, thiserror::Error)]
 #[error("moon operations error: {cmd}")]
@@ -120,16 +124,20 @@ fn install_unix_release(args: &[&str]) -> Result<(), MoonOpsError> {
             kind: MoonOpsErrorKind::ReturnNonZero(output.status),
         });
     }
-    println!("Version command output: {}", String::from_utf8_lossy(&output.stdout));
+    println!(
+        "Version command output: {}",
+        String::from_utf8_lossy(&output.stdout)
+    );
 
     Ok(())
 }
 
+#[cfg(target_os = "windows")]
 fn install_windows_release(is_bleeding: bool) -> Result<(), MoonOpsError> {
     let cmd_str = "Set-ExecutionPolicy RemoteSigned -Scope CurrentUser; irm https://cli.moonbitlang.com/install/powershell.ps1 | iex";
     let mut cmd = std::process::Command::new("powershell");
     cmd.args(["-Command", cmd_str]);
-    
+
     if is_bleeding {
         cmd.env("MOONBIT_INSTALL_VERSION", "bleeding");
     }
@@ -160,11 +168,13 @@ fn install_windows_release(is_bleeding: bool) -> Result<(), MoonOpsError> {
             kind: MoonOpsErrorKind::ReturnNonZero(output.status),
         });
     }
-    println!("Version command output: {}", String::from_utf8_lossy(&output.stdout));
+    println!(
+        "Version command output: {}",
+        String::from_utf8_lossy(&output.stdout)
+    );
 
     Ok(())
 }
-
 
 pub fn install_stable_release() -> Result<(), MoonOpsError> {
     #[cfg(unix)]
@@ -202,4 +212,38 @@ pub fn moon_update() -> Result<(), MoonOpsError> {
         });
     }
     Ok(())
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+pub struct ReposConfig {
+    #[serde(rename = "github-repos")]
+    pub github_repos: Vec<GithubRepo>,
+    pub mooncakes: Vec<Mooncake>,
+}
+
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct GithubRepo {
+    pub name: String,
+    pub link: String,
+    pub branch: String,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub running_os: Option<Vec<OS>>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub running_backend: Option<Vec<Backend>>,
+}
+
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct Mooncake {
+    pub name: String,
+    pub version: String,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub running_os: Option<Vec<OS>>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub running_backend: Option<Vec<Backend>>,
+}
+
+pub fn get_repos_config(path: &Path) -> ReposConfig {
+    let repos_content = std::fs::read_to_string(path).unwrap();
+    let repos: ReposConfig = serde_yaml::from_str(&repos_content).unwrap();
+    repos
 }

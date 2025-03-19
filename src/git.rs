@@ -26,9 +26,9 @@ pub fn get_branch_name(workdir: &Path) -> Result<String, GitOpsError> {
         .current_dir(workdir)
         .args(["rev-parse", "--abbrev-ref", "HEAD"])
         .output()
-        .map_err(|e| GitOpsError::IOError(e.into()))?;
+        .map_err(|e| GitOpsError::IOError(e))?;
     let branch_name = String::from_utf8(output.stdout)
-        .map_err(|e| GitOpsError::Utf8Error(e.into()))?
+        .map_err(|e| GitOpsError::Utf8Error(e))?
         .trim()
         .to_string();
     Ok(branch_name)
@@ -39,9 +39,9 @@ pub fn get_git_short_hash(workdir: &Path) -> Result<String, GitOpsError> {
         .current_dir(workdir)
         .args(["rev-parse", "--short", "HEAD"])
         .output()
-        .map_err(|e| GitOpsError::IOError(e.into()))?;
+        .map_err(|e| GitOpsError::IOError(e))?;
     let hash = String::from_utf8(output.stdout)
-        .map_err(|e| GitOpsError::Utf8Error(e.into()))?
+        .map_err(|e| GitOpsError::Utf8Error(e))?
         .trim()
         .to_string();
     Ok(hash)
@@ -52,8 +52,8 @@ pub fn git_clone_to(repo: &str, workdir: &Path, dst: &str) -> Result<(), GitOpsE
         .current_dir(workdir)
         .args(["clone", repo, dst])
         .spawn()
-        .map_err(|e| GitOpsError::IOError(e.into()))?;
-    let result = cmd.wait().map_err(|e| GitOpsError::IOError(e.into()))?;
+        .map_err(|e| GitOpsError::IOError(e))?;
+    let result = cmd.wait().map_err(|e| GitOpsError::IOError(e))?;
     if !result.success() {
         return Err(GitOpsError::ReturnNonZero(result));
     }
@@ -65,8 +65,8 @@ pub fn git_checkout(workdir: &Path, rev: &str) -> Result<(), GitOpsError> {
         .current_dir(workdir)
         .args(["checkout", rev])
         .spawn()
-        .map_err(|e| GitOpsError::IOError(e.into()))?;
-    let result = cmd.wait().map_err(|e| GitOpsError::IOError(e.into()))?;
+        .map_err(|e| GitOpsError::IOError(e))?;
+    let result = cmd.wait().map_err(|e| GitOpsError::IOError(e))?;
     if !result.success() {
         return Err(GitOpsError::ReturnNonZero(result));
     }

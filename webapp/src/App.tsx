@@ -23,7 +23,7 @@ interface MoonBuildDashboard {
   bleeding_release_data: BuildState[];
 }
 
-type Status = "Success" | "Failure";
+type Status = "Success" | "Failure" | "Skipped";
 
 interface ExecuteResult {
   status: Status;
@@ -123,7 +123,9 @@ const DetailModal: React.FC<ModalProps> = ({ isOpen, onClose, data, title }) => 
         <div className="space-y-4">
           <div className="flex space-x-4">
             <p className="font-semibold">Status: 
-              <span className={data.status === "Success" ? "text-green-600" : "text-red-600"}>
+              <span className={
+                (data.status === "Success" || data.status === "Skipped") ? "text-green-600" : "text-red-600"
+              }>
                 {data.status}
               </span>
             </p>
@@ -216,13 +218,15 @@ const App = () => {
   };
 
   const getStatusStyle = (status: Status): string => {
-    return status === "Success"
+    return (status === "Success" || status === "Skipped")
       ? "bg-green-200 text-green-800"
       : "bg-red-200 text-red-800";
   };
   
   const getStatusText = (status: Status, elapsed: number | null): string => {
-    return status === "Success" ? `${elapsed ?? '-'}` : "x";
+    return status === "Success" ? `${elapsed ?? '-'}` : 
+           status === "Skipped" ? "-" : 
+           "x";
   };
 
   const renderAllPlatformsData = () => {
@@ -424,7 +428,8 @@ const App = () => {
         if (!cbt) return false;
         return ['check', 'build', 'test'].every(phase => 
           ['wasm', 'wasm_gc', 'js'].every(backend => 
-            cbt[phase as keyof CBT][backend as keyof BackendState].status === "Success"
+            cbt[phase as keyof CBT][backend as keyof BackendState].status === "Success" ||
+            cbt[phase as keyof CBT][backend as keyof BackendState].status === "Skipped"
           )
         );
       });
@@ -434,7 +439,8 @@ const App = () => {
   // 检查单个项目的状态
   const checkItemStatus = (cbt: CBT | null, phase: string, backend: string) => {
     if (!cbt) return false;
-    return cbt[phase as keyof CBT][backend as keyof BackendState].status === "Success";
+    return cbt[phase as keyof CBT][backend as keyof BackendState].status === "Success" ||
+           cbt[phase as keyof CBT][backend as keyof BackendState].status === "Skipped";
   };
 
   // 检查工具链版本之间的差异（重点一）

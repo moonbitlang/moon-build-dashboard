@@ -5,11 +5,15 @@ pub enum MooncakeSource {
     MooncakesIO {
         name: String,
         version: Vec<String>,
+        running_os: Vec<OS>,
+        running_backend: Vec<Backend>,
         index: usize,
     },
     Git {
         url: String,
         rev: Vec<String>,
+        running_os: Vec<OS>,
+        running_backend: Vec<Backend>,
         index: usize,
     },
 }
@@ -23,10 +27,13 @@ impl MooncakeSource {
     }
 }
 
-#[derive(Debug, Clone, Copy, Serialize, Deserialize)]
+#[derive(Debug, Clone, Copy, Serialize, Deserialize, Hash, Eq, PartialEq)]
 pub enum Backend {
+    #[serde(rename = "wasm")]
     Wasm,
+    #[serde(rename = "wasm-gc")]
     WasmGC,
+    #[serde(rename = "js")]
     Js,
 }
 
@@ -36,6 +43,26 @@ impl Backend {
             Backend::Wasm => "wasm",
             Backend::WasmGC => "wasm-gc",
             Backend::Js => "js",
+        }
+    }
+}
+
+#[derive(Debug, Clone, Copy, Serialize, Deserialize, Hash, Eq, PartialEq)]
+pub enum OS {
+    #[serde(rename = "linux")]
+    Linux,
+    #[serde(rename = "macos")]
+    MacOS,
+    #[serde(rename = "windows")]
+    Windows,
+}
+
+impl OS {
+    pub fn to_flag(&self) -> &str {
+        match self {
+            OS::Linux => "linux",
+            OS::MacOS => "macos",
+            OS::Windows => "windows",
         }
     }
 }
@@ -96,6 +123,7 @@ pub struct MoonBuildDashboard {
 pub enum Status {
     Success,
     Failure,
+    Skipped,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -105,6 +133,18 @@ pub struct ExecuteResult {
     pub elapsed: u64,
     pub stdout: String,
     pub stderr: String,
+}
+
+impl ExecuteResult {
+    pub fn skip_result() -> Self {
+        Self {
+            status: Status::Skipped,
+            start_time: "".to_string(),
+            elapsed: 0,
+            stdout: "".to_string(),
+            stderr: "".to_string(),
+        }
+    }
 }
 
 #[derive(Debug, Serialize, Deserialize)]

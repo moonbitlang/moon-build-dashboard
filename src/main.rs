@@ -13,12 +13,11 @@ use moon_dashboard::{
     cli,
     dashboard::{
         Backend, BackendState, BuildState, ExecuteResult, MoonBuildDashboard, MoonCommand,
-        MooncakeSource, Status, ToolChainLabel, ToolChainVersion, CBT,
+        MooncakeSource, Status, ToolChainLabel, ToolChainVersion, CBT, OS,
     },
     mooncakesio,
     util::{
-        get_moon_version, get_moonc_version, install_bleeding_release, install_stable_release,
-        MoonOpsError,
+        get_moon_version, get_moonc_version, get_repos_config, install_bleeding_release, install_stable_release, MoonOpsError
     },
 };
 use moon_dashboard::{git, util::moon_update};
@@ -60,7 +59,7 @@ fn run_moon(
         .current_dir(workdir)
         .args(args)
         .output()
-        .map_err(|e| RunMoonError::IOError(e))?;
+        .map_err(RunMoonError::IOError)?;
 
     let stdout = String::from_utf8_lossy(&output.stdout).into_owned();
     let stderr = String::from_utf8_lossy(&output.stderr).into_owned();
@@ -73,7 +72,11 @@ fn run_moon(
             "moon {}, elapsed: {}ms, {}",
             args.join(" ").blue().bold(),
             elapsed.as_millis(),
-            if output.status.success() { "success" } else { "failed" }
+            if output.status.success() {
+                "success"
+            } else {
+                "failed"
+            }
         )
         .green()
         .bold()
@@ -108,82 +111,49 @@ enum GetMooncakeSourcesErrorKind {
 fn get_mooncake_sources(
     cmd: &cli::StatSubcommand,
 ) -> Result<Vec<MooncakeSource>, GetMooncakeSourcesError> {
-    let db = mooncakesio::get_all_mooncakes().map_err(|e| GetMooncakeSourcesError {
-        kind: GetMooncakeSourcesErrorKind::MooncakesIO(e),
-    })?;
     let mut repo_list = vec![];
+    let default_running_os = vec![OS::Linux, OS::MacOS, OS::Windows];
+    let default_running_backend = vec![Backend::WasmGC, Backend::Wasm, Backend::Js];
+
     if let Some(r) = &cmd.repo_url {
         repo_list.push(MooncakeSource::Git {
             url: r.clone(),
             rev: vec![],
             index: 0,
+            running_os: default_running_os.clone(),
+            running_backend: default_running_backend.clone(),
         });
     }
 
-    if let Some(file) = &cmd.file {
-        let content = std::fs::read_to_string(file).map_err(|e| GetMooncakeSourcesError {
-            kind: GetMooncakeSourcesErrorKind::IOError(e),
-        })?;
-        for line in content.lines() {
-            let s = line.trim();
-            if s.starts_with("#") || s.trim().is_empty() {
-                continue;
-            } else if s.starts_with("https://") {
-                // https://github.com/moonbitlang/core
-                // https://github.com/moonbitlang/core hash1 hash2 hash3
-                let parts: Vec<&str> = s.split(' ').collect();
-                if parts.len() == 1 {
-                    repo_list.push(MooncakeSource::Git {
-                        url: parts[0].to_string(),
-                        rev: vec!["HEAD".to_string()],
-                        index: repo_list.len(),
-                    });
-                } else {
-                    repo_list.push(MooncakeSource::Git {
-                        url: parts[0].to_string(),
-                        rev: parts[1..].iter().copied().map(|s| s.to_string()).collect(),
-                        index: repo_list.len(),
-                    });
-                }
-            } else {
-                // moonbitlang/core
-                // moonbitlang/core 0.1.0 0.2.0
-                let parts: Vec<&str> = s.split(' ').collect();
-                let name = parts[0].to_string();
-                #[cfg(target_os = "windows")]
-                let name = name.replace('/', "\\");
-                let mut xs: Vec<String> =
-                    parts[1..].iter().copied().map(|s| s.to_string()).collect();
-                if xs.is_empty() {
-                    xs.push("latest".to_string());
-                }
-                if !db.contains_key(&name) {
-                    eprintln!("{} not found", name);
-                    continue;
-                }
-                let mut version: Vec<String> = xs
-                    .iter()
-                    .map(|s| {
-                        if s == "latest" {
-                            db.get_latest_version(&name)
-                                .map_err(|e| GetMooncakeSourcesError {
-                                    kind: GetMooncakeSourcesErrorKind::MooncakesDB(e),
-                                })
-                        } else {
-                            Ok(s.to_string())
-                        }
-                    })
-                    .collect::<Result<Vec<String>, GetMooncakeSourcesError>>()?;
-                version.sort();
-                version.dedup();
-                repo_list.push(MooncakeSource::MooncakesIO {
-                    name,
-                    version,
-                    index: repo_list.len(),
-                });
-            }
+    if let Some(path) = &cmd.file {
+        let repos = get_repos_config(path);
+        let github_repos = repos.github_repos;
+        let mooncakes = repos.mooncakes;
+        for repo in github_repos {
+            repo_list.push(MooncakeSource::Git {
+                url: repo.link,
+                rev: vec![repo.branch],
+                index: repo_list.len(),
+                running_os: repo.running_os.unwrap_or(default_running_os.clone()),
+                running_backend: repo
+                    .running_backend
+                    .unwrap_or(default_running_backend.clone()),
+            });
+        }
+
+        for mooncake in mooncakes {
+            repo_list.push(MooncakeSource::MooncakesIO {
+                name: mooncake.name,
+                version: vec![mooncake.version],
+                running_os: mooncake.running_os.unwrap_or(default_running_os.clone()),
+                running_backend: mooncake
+                    .running_backend
+                    .unwrap_or(default_running_backend.clone()),
+                index: repo_list.len(),
+            });
         }
     }
+
     Ok(repo_list)
 }
 
@@ -205,7 +175,8 @@ fn stat_mooncake(
         MooncakeSource::Git { url, .. } => url.contains("moonbitlang"),
     };
 
-    let r = run_moon(workdir, source, &cmd.args(is_moonbit_community)).map_err(|e| StatMooncakeError::RunMoon(e));
+    let r = run_moon(workdir, source, &cmd.args(is_moonbit_community))
+        .map_err(StatMooncakeError::RunMoon);
     let status = match r.as_ref() {
         Ok(output) if output.success => Status::Success,
         _ => Status::Failure,
@@ -248,12 +219,18 @@ pub enum BuildError {
 }
 
 pub fn build(source: &MooncakeSource) -> Result<BuildState, BuildError> {
-    let tmp = tempfile::tempdir().map_err(|e| BuildError::IOError(e))?;
+    let tmp = tempfile::tempdir().map_err(BuildError::IOError)?;
     let mut cbts = vec![];
 
     match source {
-        MooncakeSource::Git { url, rev, index: _ } => {
-            git::git_clone_to(url, tmp.path(), "test").map_err(|e| BuildError::GitError(e))?;
+        MooncakeSource::Git {
+            url,
+            rev,
+            index: _,
+            running_os,
+            running_backend,
+        } => {
+            git::git_clone_to(url, tmp.path(), "test").map_err(BuildError::GitError)?;
             let workdir = tmp.path().join("test");
             for h in rev {
                 if let Err(e) = git::git_checkout(&workdir, h) {
@@ -261,13 +238,15 @@ pub fn build(source: &MooncakeSource) -> Result<BuildState, BuildError> {
                     cbts.push(None);
                     continue;
                 }
-                cbts.push(run_matrix(&workdir, source).ok());
+                cbts.push(run_matrix(&workdir, source, running_os, running_backend).ok());
             }
         }
         MooncakeSource::MooncakesIO {
             name,
             version,
             index: _,
+            running_os,
+            running_backend,
         } => {
             for v in version {
                 if let Err(e) = mooncakesio::download_to(name, v, tmp.path()) {
@@ -276,7 +255,7 @@ pub fn build(source: &MooncakeSource) -> Result<BuildState, BuildError> {
                     continue;
                 }
                 let workdir = tmp.path().join(v);
-                cbts.push(run_matrix(&workdir, source).ok());
+                cbts.push(run_matrix(&workdir, source, running_os, running_backend).ok());
             }
         }
     }
@@ -293,27 +272,203 @@ enum RunMatrixError {
     StatMooncake(#[from] StatMooncakeError),
 }
 
-fn run_matrix(workdir: &Path, source: &MooncakeSource) -> Result<CBT, RunMatrixError> {
-    let check_wasm = stat_mooncake(workdir, source, MoonCommand::Check(Backend::Wasm))
-        .map_err(|e| RunMatrixError::StatMooncake(e))?;
-    let check_wasm_gc = stat_mooncake(workdir, source, MoonCommand::Check(Backend::WasmGC))
-        .map_err(|e| RunMatrixError::StatMooncake(e))?;
-    let check_js = stat_mooncake(workdir, source, MoonCommand::Check(Backend::Js))
-        .map_err(|e| RunMatrixError::StatMooncake(e))?;
+fn run_matrix(
+    workdir: &Path,
+    source: &MooncakeSource,
+    running_os: &[OS],
+    running_backend: &[Backend],
+) -> Result<CBT, RunMatrixError> {
+    let mut check_wasm = ExecuteResult::skip_result();
+    let mut check_wasm_gc = ExecuteResult::skip_result();
+    let mut check_js = ExecuteResult::skip_result();
+    let mut build_wasm = ExecuteResult::skip_result();
+    let mut build_wasm_gc = ExecuteResult::skip_result();
+    let mut build_js = ExecuteResult::skip_result();
+    let mut test_wasm = ExecuteResult::skip_result();
+    let mut test_wasm_gc = ExecuteResult::skip_result();
+    let mut test_js = ExecuteResult::skip_result();
 
-    let build_wasm = stat_mooncake(workdir, source, MoonCommand::Build(Backend::Wasm))
-        .map_err(|e| RunMatrixError::StatMooncake(e))?;
-    let build_wasm_gc = stat_mooncake(workdir, source, MoonCommand::Build(Backend::WasmGC))
-        .map_err(|e| RunMatrixError::StatMooncake(e))?;
-    let build_js = stat_mooncake(workdir, source, MoonCommand::Build(Backend::Js))
-        .map_err(|e| RunMatrixError::StatMooncake(e))?;
-
-    let test_wasm = stat_mooncake(workdir, source, MoonCommand::Test(Backend::Wasm))
-        .map_err(|e| RunMatrixError::StatMooncake(e))?;
-    let test_wasm_gc = stat_mooncake(workdir, source, MoonCommand::Test(Backend::WasmGC))
-        .map_err(|e| RunMatrixError::StatMooncake(e))?;
-    let test_js = stat_mooncake(workdir, source, MoonCommand::Test(Backend::Js))
-        .map_err(|e| RunMatrixError::StatMooncake(e))?;
+    for os in running_os {
+        match os {
+            OS::Linux => {
+                if cfg!(target_os = "linux") {
+                    for backend in running_backend {
+                        match backend {
+                            Backend::Wasm => {
+                                check_wasm = stat_mooncake(
+                                    workdir,
+                                    source,
+                                    MoonCommand::Check(Backend::Wasm),
+                                )
+                                .map_err(RunMatrixError::StatMooncake)?;
+                                build_wasm = stat_mooncake(
+                                    workdir,
+                                    source,
+                                    MoonCommand::Build(Backend::Wasm),
+                                )
+                                .map_err(RunMatrixError::StatMooncake)?;
+                                test_wasm = stat_mooncake(
+                                    workdir,
+                                    source,
+                                    MoonCommand::Test(Backend::Wasm),
+                                )
+                                .map_err(RunMatrixError::StatMooncake)?;
+                            }
+                            Backend::WasmGC => {
+                                check_wasm_gc = stat_mooncake(
+                                    workdir,
+                                    source,
+                                    MoonCommand::Check(Backend::WasmGC),
+                                )
+                                .map_err(RunMatrixError::StatMooncake)?;
+                                build_wasm_gc = stat_mooncake(
+                                    workdir,
+                                    source,
+                                    MoonCommand::Build(Backend::WasmGC),
+                                )
+                                .map_err(RunMatrixError::StatMooncake)?;
+                                test_wasm_gc = stat_mooncake(
+                                    workdir,
+                                    source,
+                                    MoonCommand::Test(Backend::WasmGC),
+                                )
+                                .map_err(RunMatrixError::StatMooncake)?;
+                            }
+                            Backend::Js => {
+                                check_js =
+                                    stat_mooncake(workdir, source, MoonCommand::Check(Backend::Js))
+                                        .map_err(RunMatrixError::StatMooncake)?;
+                                build_js =
+                                    stat_mooncake(workdir, source, MoonCommand::Build(Backend::Js))
+                                        .map_err(RunMatrixError::StatMooncake)?;
+                                test_js =
+                                    stat_mooncake(workdir, source, MoonCommand::Test(Backend::Js))
+                                        .map_err(RunMatrixError::StatMooncake)?;
+                            }
+                        }
+                    }
+                }
+            }
+            OS::MacOS => {
+                if cfg!(target_os = "macos") {
+                    for backend in running_backend {
+                        match backend {
+                            Backend::Wasm => {
+                                check_wasm = stat_mooncake(
+                                    workdir,
+                                    source,
+                                    MoonCommand::Check(Backend::Wasm),
+                                )
+                                .map_err(RunMatrixError::StatMooncake)?;
+                                build_wasm = stat_mooncake(
+                                    workdir,
+                                    source,
+                                    MoonCommand::Build(Backend::Wasm),
+                                )
+                                .map_err(RunMatrixError::StatMooncake)?;
+                                test_wasm = stat_mooncake(
+                                    workdir,
+                                    source,
+                                    MoonCommand::Test(Backend::Wasm),
+                                )
+                                .map_err(RunMatrixError::StatMooncake)?;
+                            }
+                            Backend::WasmGC => {
+                                check_wasm_gc = stat_mooncake(
+                                    workdir,
+                                    source,
+                                    MoonCommand::Check(Backend::WasmGC),
+                                )
+                                .map_err(RunMatrixError::StatMooncake)?;
+                                build_wasm_gc = stat_mooncake(
+                                    workdir,
+                                    source,
+                                    MoonCommand::Build(Backend::WasmGC),
+                                )
+                                .map_err(RunMatrixError::StatMooncake)?;
+                                test_wasm_gc = stat_mooncake(
+                                    workdir,
+                                    source,
+                                    MoonCommand::Test(Backend::WasmGC),
+                                )
+                                .map_err(RunMatrixError::StatMooncake)?;
+                            }
+                            Backend::Js => {
+                                check_js =
+                                    stat_mooncake(workdir, source, MoonCommand::Check(Backend::Js))
+                                        .map_err(RunMatrixError::StatMooncake)?;
+                                build_js =
+                                    stat_mooncake(workdir, source, MoonCommand::Build(Backend::Js))
+                                        .map_err(RunMatrixError::StatMooncake)?;
+                                test_js =
+                                    stat_mooncake(workdir, source, MoonCommand::Test(Backend::Js))
+                                        .map_err(RunMatrixError::StatMooncake)?;
+                            }
+                        }
+                    }
+                }
+            }
+            OS::Windows => {
+                if cfg!(target_os = "windows") {
+                    for backend in running_backend {
+                        match backend {
+                            Backend::Wasm => {
+                                check_wasm = stat_mooncake(
+                                    workdir,
+                                    source,
+                                    MoonCommand::Check(Backend::Wasm),
+                                )
+                                .map_err(RunMatrixError::StatMooncake)?;
+                                build_wasm = stat_mooncake(
+                                    workdir,
+                                    source,
+                                    MoonCommand::Build(Backend::Wasm),
+                                )
+                                .map_err(RunMatrixError::StatMooncake)?;
+                                test_wasm = stat_mooncake(
+                                    workdir,
+                                    source,
+                                    MoonCommand::Test(Backend::Wasm),
+                                )
+                                .map_err(RunMatrixError::StatMooncake)?;
+                            }
+                            Backend::WasmGC => {
+                                check_wasm_gc = stat_mooncake(
+                                    workdir,
+                                    source,
+                                    MoonCommand::Check(Backend::WasmGC),
+                                )
+                                .map_err(RunMatrixError::StatMooncake)?;
+                                build_wasm_gc = stat_mooncake(
+                                    workdir,
+                                    source,
+                                    MoonCommand::Build(Backend::WasmGC),
+                                )
+                                .map_err(RunMatrixError::StatMooncake)?;
+                                test_wasm_gc = stat_mooncake(
+                                    workdir,
+                                    source,
+                                    MoonCommand::Test(Backend::WasmGC),
+                                )
+                                .map_err(RunMatrixError::StatMooncake)?;
+                            }
+                            Backend::Js => {
+                                check_js =
+                                    stat_mooncake(workdir, source, MoonCommand::Check(Backend::Js))
+                                        .map_err(RunMatrixError::StatMooncake)?;
+                                build_js =
+                                    stat_mooncake(workdir, source, MoonCommand::Build(Backend::Js))
+                                        .map_err(RunMatrixError::StatMooncake)?;
+                                test_js =
+                                    stat_mooncake(workdir, source, MoonCommand::Test(Backend::Js))
+                                        .map_err(RunMatrixError::StatMooncake)?;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     Ok(CBT {
         check: BackendState {
@@ -384,8 +539,8 @@ fn stat(cmd: cli::StatSubcommand) -> Result<MoonBuildDashboard, StatError> {
     })?;
     let mut stable_release_data = vec![];
 
-    for source in mooncake_sources {
-        let build_state = build(&source).map_err(|e| StatError {
+    for source in mooncake_sources.iter() {
+        let build_state = build(source).map_err(|e| StatError {
             kind: StatErrorKind::BuildError(e),
         })?;
         stable_release_data.push(build_state);
@@ -413,9 +568,6 @@ fn stat(cmd: cli::StatSubcommand) -> Result<MoonBuildDashboard, StatError> {
         moonc_version,
     };
 
-    let mooncake_sources = get_mooncake_sources(&cmd).map_err(|e| StatError {
-        kind: StatErrorKind::GetMooncakeSourcesError(e),
-    })?;
     let mut bleeding_release_data = vec![];
 
     for source in mooncake_sources.iter() {

@@ -63,7 +63,7 @@ jobs:
         run: |
           cargo build --release
           env UPDATE_EXPECT=1 cargo test
-          ./target/release/moon_dashboard stat --file repos.txt
+          ./target/release/moon_dashboard stat --file repos.yml
 
       - name: Upload data
         uses: actions/upload-artifact@v4
@@ -91,7 +91,7 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git add ./webapp/public/*
-          git add ./repos.txt
+          git add ./repos.yml
           git commit -m "Update data for ${{ matrix.os }} at $(date '+%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
 
       - name: Push changes
@@ -100,6 +100,7 @@ jobs:
           max_attempts=3
           attempt=1
           
+          git status
           while [ $attempt -le $max_attempts ]; do
             echo "Attempt $attempt of $max_attempts"
             if git fetch && git pull --rebase && git push; then
