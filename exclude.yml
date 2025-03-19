@@ -4,6 +4,21 @@ exclude:
 - lijunchen/unstable_io
 - Guest0x0/dregex
 - A-23187/encoding
+- CAIMEOX/state
+- PerfectPan/base64
+- QZL-max/QZL-max
+- bob/aegis
+- mizchi/js_io
+- mizchi/js_regexp
+- moonbitlang/std
+- CAIMEOX/list
+- CAIMEOX/feat-moon
+- CMoonBack/string-Algorithm
+- moonbit-js-ffi/js
+- enjoecn/easy
+- enjoecn/gb
+- bzy-debug/cowsay
+- bzy-debug/cowsay_lib
 
 # minor
 - bobzhang/testa

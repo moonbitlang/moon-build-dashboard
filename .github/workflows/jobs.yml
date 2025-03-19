@@ -19,7 +19,7 @@ permissions:
   actions: write
 
 jobs:
-  update-repos:
+  update-mooncakes-versions:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -55,7 +55,7 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git add ./repos.yml
-          git commit -m "Update repos" || echo "No changes to commit"
+          git commit -m "Update mooncakes versions" || echo "No changes to commit"
 
       - name: Push changes
         shell: bash
@@ -63,7 +63,7 @@ jobs:
           git push
 
   collect-data:
-    needs: update-repos
+    needs: update-mooncakes-versions
     strategy:
       fail-fast: false
       matrix:
