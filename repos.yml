@@ -23,26 +23,18 @@ mooncakes:
   version: 0.1.0
 - name: BigThree33/find_min
   version: 0.1.0
-- name: CAIMEOX/feat-moon
-  version: 0.2.0
 - name: CAIMEOX/graph-algebra
   version: 0.1.5
 - name: CAIMEOX/lazy
   version: 0.1.0
-- name: CAIMEOX/list
-  version: 0.1.0
 - name: CAIMEOX/quickcheck
   version: 0.6.9
-- name: CAIMEOX/state
-  version: 0.1.0
 - name: CAIMEOX/t
   version: 0.1.0
 - name: CMoonBack/Binary-Exponentiation
   version: 0.1.0
 - name: CMoonBack/computational-geometry
   version: 0.2.3
-- name: CMoonBack/string-Algorithm
-  version: 0.1.0
 - name: DawnMagnet/sparse-table
   version: 0.1.1
 - name: Erolaffy/easy-io
@@ -111,10 +103,6 @@ mooncakes:
   version: 0.1.1
 - name: Nyuudoukumo/uuidv4
   version: 0.1.0
-- name: PerfectPan/base64
-  version: 0.1.1
-- name: QZL-max/QZL-max
-  version: 0.1.0
 - name: Refined_heart/Sort
   version: 0.1.0
 - name: ShellWen/lru_cache
@@ -153,14 +141,8 @@ mooncakes:
   version: 0.3.9
 - name: YumeXi/iter
   version: 0.2.5
-- name: bob/aegis
-  version: 0.1.0
 - name: bobzhang/sexp
   version: 0.1.1
-- name: bzy-debug/cowsay
-  version: 0.1.0
-- name: bzy-debug/cowsay_lib
-  version: 0.1.0
 - name: chawyehsu/punycode
   version: 0.0.3
 - name: chhnb/algorithm
@@ -173,10 +155,6 @@ mooncakes:
   version: 0.1.1
 - name: eczn/eczn-utils
   version: 0.2.0
-- name: enjoecn/easy
-  version: 0.1.0
-- name: enjoecn/gb
-  version: 0.1.1
 - name: extism/moonbit-pdk
   version: 0.47.2
 - name: fantix/mmhttp
@@ -345,18 +323,12 @@ mooncakes:
   version: 0.1.0
 - name: misika727/sqrt
   version: 0.1.0
-- name: mizchi/js_io
-  version: 0.1.1
-- name: mizchi/js_regexp
-  version: 0.0.4
 - name: mizchi/json
   version: 0.4.0
 - name: mizchi/protocol
   version: 0.0.5
 - name: moonbit-courses/minimoonbit-courses
   version: 0.1.0
-- name: moonbit-js-ffi/js
-  version: 0.2.0
 - name: moonbitlang/arduino
   version: 0.0.6
 - name: moonbitlang/core
@@ -369,8 +341,6 @@ mooncakes:
   version: 0.1.1
 - name: moonbitlang/quickcheck
   version: 0.8.5
-- name: moonbitlang/std
-  version: 0.1.0
 - name: moonbitlang/ulex
   version: 0.1.0
 - name: moonbitlang/ulex-runtime
