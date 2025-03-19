@@ -232,7 +232,7 @@ pub struct GithubRepo {
     pub running_backend: Option<Vec<Backend>>,
 }
 
-#[derive(Debug, Serialize, Deserialize, Clone)]
+#[derive(Debug, Serialize, Deserialize, Clone, Eq, PartialEq)]
 pub struct Mooncake {
     pub name: String,
     pub version: String,
@@ -242,8 +242,33 @@ pub struct Mooncake {
     pub running_backend: Option<Vec<Backend>>,
 }
 
+impl Ord for Mooncake {
+    fn cmp(&self, other: &Self) -> std::cmp::Ordering {
+        self.name.cmp(&other.name)
+    }
+}
+
+impl PartialOrd for Mooncake {
+    fn partial_cmp(&self, other: &Self) -> Option<std::cmp::Ordering> {
+        Some(self.cmp(other))
+    }
+}
+
+
+
+#[derive(Debug, Deserialize, Serialize)]
+pub struct ExcludeConfig {
+    pub exclude: Vec<String>,
+}
+
 pub fn get_repos_config(path: &Path) -> ReposConfig {
     let repos_content = std::fs::read_to_string(path).unwrap();
     let repos: ReposConfig = serde_yaml::from_str(&repos_content).unwrap();
     repos
+}
+
+pub fn get_exclude_config(path: &Path) -> ExcludeConfig {
+    let exclude_content = std::fs::read_to_string(path).unwrap();
+    let exclude: ExcludeConfig = serde_yaml::from_str(&exclude_content).unwrap();
+    exclude
 }

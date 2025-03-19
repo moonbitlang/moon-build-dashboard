@@ -1,0 +1,39 @@
+exclude:
+# out of maintenance
+- Guest0x0/HAMT
+- lijunchen/unstable_io
+- Guest0x0/dregex
+- A-23187/encoding
+
+# minor
+- bobzhang/testa
+- bobzhang/testb
+- Yoorkin/hello
+- Yoorkin/example/list
+- PegasusPlusUS/hello
+- Yoorkin/hello
+- bzy-debug/hello
+- tmkx/hello
+- wangziling/hello
+- Young-Flash/try_publish
+- Tianci-King/hello
+- buggg-hfc/hello
+- baobolong/hello
+- SeisanSoda/hello
+- wjy030522/hello
+- buggg-hfc/hello
+- hachi/hello
+- lyf597/hello
+- orangenin/hello
+- my-xn/hello
+- xavier865/hello
+- locing112/hello
+- yangqing/hello
+- Lalenture/hello
+- yxsql74/hello
+- PingGuoMiaoMiao/hello
+- TianZaiShuiZhong/hello
+- Tianci-King/hello
+- SeisanSoda/hello
+- FreeFoots/mooncake_hello
+- cyhforlight/moonbit-hello-card
