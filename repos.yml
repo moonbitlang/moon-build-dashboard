@@ -265,6 +265,8 @@ mooncakes:
   version: 0.2.0
 - name: illusory0x0/coerce
   version: 0.1.0
+- name: illusory0x0/color
+  version: 0.1.0
 - name: illusory0x0/fun
   version: 0.2.0
 - name: illusory0x0/fuzzy_match
@@ -455,7 +457,7 @@ mooncakes:
 - name: tonyfettes/js/test
   version: 0.1.0
 - name: tonyfettes/memory
-  version: 0.2.4
+  version: 0.2.5
 - name: tonyfettes/narray
   version: 0.1.0
 - name: tonyfettes/pcre2
