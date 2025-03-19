@@ -19,7 +19,51 @@ permissions:
   actions: write
 
 jobs:
+  update-repos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: dtolnay/rust-toolchain@1.80.0
+        with:
+          components: rustfmt, clippy
+
+      - name: Cargo cache
+        uses: actions/cache@v4
+        with:
+          key: ${{ runner.os }}-cargo-${{ hashFiles('Cargo.lock') }}
+          path: ~/.cargo/registry
+
+      - name: install MoonBit(Unix)
+        run: |
+          curl -fsSL https://cli.moonbitlang.com/install/unix.sh | bash
+          echo "$HOME/.moon/bin" >> $GITHUB_PATH
+
+      - name: Version
+        run: moon version --all
+
+      - name: moon update
+        run: |
+          moon update
+
+      - name: update repos
+        run: |
+          env UPDATE_EXPECT=1 cargo test
+
+      - name: Commit
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add ./repos.yml
+          git commit -m "Update repos" || echo "No changes to commit"
+
+      - name: Push changes
+        shell: bash
+        run: |
+          git push
+
   collect-data:
+    needs: update-repos
     strategy:
       fail-fast: false
       matrix:
@@ -30,6 +74,10 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      
       - uses: dtolnay/rust-toolchain@1.80.0
         with:
           components: rustfmt, clippy
@@ -62,7 +110,6 @@ jobs:
       - name: Build
         run: |
           cargo build --release
-          env UPDATE_EXPECT=1 cargo test
           ./target/release/moon_dashboard stat --file repos.yml
 
       - name: Upload data
