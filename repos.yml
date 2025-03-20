@@ -1,4 +1,19 @@
 github-repos:
+- name: moonbitlang/core
+  link: https://github.com/moonbitlang/core
+  branch: main
+- name: moonbitlang/x
+  link: https://github.com/moonbitlang/x
+  branch: main
+- name: moonbitlang/quickcheck
+  link: https://github.com/moonbitlang/quickcheck
+  branch: main
+- name: moonbit-community/XMLParser
+  link: https://github.com/moonbit-community/XMLParser
+  branch: main
+- name: moonbit-community/moonbit-arduino
+  link: https://github.com/moonbit-community/moonbit-arduino
+  branch: main
 - name: gmlewis/moonbit-fonts
   link: https://github.com/gmlewis/moonbit-fonts
   branch: master
@@ -8,6 +23,9 @@ github-repos:
   running_os:
   - linux
   - macos
+- name: Kaida-Amethyst/Moonbit-Math
+  link: https://github.com/Kaida-Amethyst/Moonbit-Math
+  branch: main
 - name: moonbit-community/wasmSID
   link: https://github.com/moonbit-community/wasmSID
   branch: main
@@ -442,6 +460,8 @@ mooncakes:
   version: 0.0.12
 - name: tiye/dom-ffi
   version: 0.0.9
+  running_backend:
+  - js
 - name: tiye/lexicon-fractional-index
   version: 0.0.2
 - name: tiye/quaternion

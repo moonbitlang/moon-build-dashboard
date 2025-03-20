@@ -42,6 +42,8 @@ exclude:
 - yamajik/wasi
 - yamajik/wasi-bindings
 - yoshitsugu/parsem
+- Erolaffy/easy-io
+- mizchi/json
 
 # minor
 - bobzhang/testa
@@ -76,3 +78,16 @@ exclude:
 - FreeFoots/mooncake_hello
 - cyhforlight/moonbit-hello-card
 - tonyfettes/js/test
+
+# use github link instead of mooncake
+- moonbitlang/core
+- moonbitlang/x
+- moonbitlang/quickcheck
+- moonbitlang/arduino
+- Kaida-Amethyst/math
+- Kaida-Amethyst/math
+- ruifeng/XMLParser
+
+# can't find github user
+- five-nuts/coreutils
+- eczn/eczn-utils
