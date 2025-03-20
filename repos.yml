@@ -47,16 +47,12 @@ mooncakes:
   version: 0.1.0
 - name: CAIMEOX/quickcheck
   version: 0.6.9
-- name: CAIMEOX/t
-  version: 0.1.0
 - name: CMoonBack/Binary-Exponentiation
   version: 0.1.0
 - name: CMoonBack/computational-geometry
   version: 0.2.3
 - name: DawnMagnet/sparse-table
   version: 0.1.1
-- name: Erolaffy/easy-io
-  version: 0.1.0
 - name: Erolaffy/easyio
   version: 0.2.1
 - name: Eunoiay/Eunoiay
@@ -71,8 +67,6 @@ mooncakes:
   version: 0.1.0
 - name: HeChTo/rope
   version: 0.1.0
-- name: Howardzhangdqs/md5
-  version: 0.9.3
 - name: JPLovever/fkshz
   version: 0.1.0
 - name: Jtian-t/Deque
@@ -87,8 +81,6 @@ mooncakes:
   version: 0.0.1-alpha-5
 - name: Kaida-Amethyst/llvm
   version: 0.1.7
-- name: Kaida-Amethyst/math
-  version: 0.1.15
 - name: Kaida-Amethyst/moonbit-math
   version: 0.1.14
 - name: Kaida-Amethyst/python
@@ -171,16 +163,8 @@ mooncakes:
   version: 0.1.0
 - name: dongyvxuan/dongyx
   version: 0.1.1
-- name: eczn/eczn-utils
-  version: 0.2.0
 - name: extism/moonbit-pdk
   version: 0.47.2
-- name: fantix/mmhttp
-  version: 0.3.0
-- name: fantix/muts
-  version: 0.5.4
-- name: five-nuts/coreutils
-  version: 0.1.3
 - name: furesoft/moos-sdk
   version: 0.1.6
 - name: gmlewis/b2
@@ -251,10 +235,6 @@ mooncakes:
   version: 0.16.5
 - name: gmlewis/io
   version: 0.21.6
-- name: gmlewis/json
-  version: 0.15.0
-- name: gmlewis/jsonutil
-  version: 0.24.0
 - name: gmlewis/md5
   version: 0.19.3
 - name: gmlewis/modus
@@ -286,11 +266,11 @@ mooncakes:
 - name: illusory0x0/color
   version: 0.1.0
 - name: illusory0x0/fun
-  version: 0.2.0
+  version: 0.2.1
 - name: illusory0x0/fuzzy_match
   version: 0.1.0
 - name: illusory0x0/immut_deque
-  version: 0.2.0
+  version: 0.2.1
 - name: illusory0x0/jcore
   version: 0.1.1
 - name: illusory0x0/lazy
@@ -305,16 +285,14 @@ mooncakes:
   version: 0.1.3
 - name: illusory0x0/posix
   version: 0.1.1
+- name: illusory0x0/prettyprinter
+  version: 0.1.0
 - name: jankin_li/Learn_Test1
   version: 0.1.0
 - name: jankin_li/new_lib
   version: 0.1.0
-- name: jedisct1/aegis
-  version: 0.2.1
 - name: jinser/json
   version: 0.0.1
-- name: jumpping/baby
-  version: 0.2.0
 - name: justjoheinz/complex
   version: 0.2.1
 - name: justjoheinz/iso-country
@@ -337,30 +315,16 @@ mooncakes:
   version: 0.1.0
 - name: loneoutpost/core-extra
   version: 0.0.6
-- name: lucifer1004/mooncake
-  version: 0.1.0
 - name: luolingkan/find_min_num
   version: 0.1.0
 - name: misika727/sqrt
   version: 0.1.0
-- name: mizchi/json
-  version: 0.4.0
-- name: mizchi/protocol
-  version: 0.0.5
-- name: moonbit-courses/minimoonbit-courses
-  version: 0.1.0
-- name: moonbitlang/arduino
-  version: 0.0.6
-- name: moonbitlang/core
-  version: 0.1.20250318+35770a65e
 - name: moonbitlang/lex
   version: 0.3.2
 - name: moonbitlang/lex-runtime
   version: 0.1.3
 - name: moonbitlang/lex/runtime
   version: 0.1.1
-- name: moonbitlang/quickcheck
-  version: 0.8.5
 - name: moonbitlang/ulex
   version: 0.1.0
 - name: moonbitlang/ulex-runtime
@@ -370,8 +334,6 @@ mooncakes:
   running_backend:
   - wasm
   - wasm-gc
-- name: moonbitlang/x
-  version: 0.4.22
 - name: moonbitlang/yacc
   version: 0.2.11
 - name: myfreess/myers-diff
@@ -384,10 +346,6 @@ mooncakes:
   version: 0.2.5
 - name: oboard/moonbit-eval
   version: 0.1.8
-- name: oboard/mooncrypto
-  version: 0.1.8
-- name: oboard/moonetx
-  version: 0.1.5
 - name: oboard/numoon
   version: 0.3.4
 - name: pai2shub/alg
@@ -432,8 +390,6 @@ mooncakes:
   - js
 - name: remain11/i18n
   version: 0.1.0
-- name: ruifeng/XMLParser
-  version: 0.2.1
 - name: shiheat/find_max
   version: 0.3.0
 - name: sjzbxhsj/Calculator
@@ -442,16 +398,6 @@ mooncakes:
   version: 0.6.6
 - name: structuraBlock/MoonStats
   version: 0.3.0
-- name: suiyunonghen/datetime
-  version: 0.1.5
-- name: suiyunonghen/linklist
-  version: 0.1.7
-- name: suiyunonghen/moonvalue
-  version: 0.1.12
-- name: suiyunonghen/wasmMemManager
-  version: 0.1.2
-- name: summer-boythink/moonorm
-  version: 0.1.0
 - name: tiye/caterfoil
   version: 0.0.2
 - name: tiye/cirru-edn
@@ -474,8 +420,6 @@ mooncakes:
   version: 0.1.9
 - name: tonyfettes/js
   version: 0.1.6
-- name: tonyfettes/js/test
-  version: 0.1.0
 - name: tonyfettes/memory
   version: 0.2.5
 - name: tonyfettes/narray
@@ -530,26 +474,16 @@ mooncakes:
   version: 0.2.0
 - name: xunyoyo/NyaSearch
   version: 0.1.0
-- name: xunyoyo/Permutation
-  version: 0.1.1
 - name: xunyoyo/linalg
   version: 0.2.7
 - name: xunyoyo/permutation
   version: 0.1.3
-- name: yamajik/dapr
-  version: 0.1.11
-- name: yamajik/wasi
-  version: 0.1.25
-- name: yamajik/wasi-bindings
-  version: 0.2.1
 - name: yanyeting/minmax
   version: 0.1.0
 - name: yj-qin/moonlox
   version: 0.1.0
 - name: yj-qin/regexp
   version: 0.3.4
-- name: yoshitsugu/parsem
-  version: 0.0.3
 - name: yueTc/Binary-Indexed-Tree
   version: 0.1.1
 - name: yuyi919/shared-lib
