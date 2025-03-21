@@ -23,9 +23,15 @@ github-repos:
   running_os:
   - linux
   - macos
+- name: zhuguiyuan/MoonBit-EDA-Router
+  link: https://github.com/zhuguiyuan/MoonBit-EDA-Router
+  branch: main
+- name: moonbit-community/pandas
+  link: https://github.com/moonbit-community/pandas
+  branch: main
 - name: Kaida-Amethyst/Moonbit-Math
   link: https://github.com/Kaida-Amethyst/Moonbit-Math
-  branch: main
+  branch: master
 - name: moonbit-community/wasmSID
   link: https://github.com/moonbit-community/wasmSID
   branch: main
@@ -113,6 +119,8 @@ mooncakes:
   version: 0.1.1
 - name: Nyuudoukumo/uuidv4
   version: 0.1.0
+  running_backend:
+  - js
 - name: Refined_heart/Sort
   version: 0.1.0
 - name: ShellWen/lru_cache
@@ -400,10 +408,14 @@ mooncakes:
   version: 0.3.0
 - name: tiye/caterfoil
   version: 0.0.2
+  running_backend:
+  - js
 - name: tiye/cirru-edn
   version: 0.0.6
 - name: tiye/cirru-parser
   version: 0.0.12
+  running_backend:
+  - js
 - name: tiye/dom-ffi
   version: 0.0.9
   running_backend:
@@ -414,6 +426,8 @@ mooncakes:
   version: 0.1.0
 - name: tiye/respo
   version: 0.0.24
+  running_backend:
+  - js
 - name: tonyfettes/atomics
   version: 0.1.0
 - name: tonyfettes/c

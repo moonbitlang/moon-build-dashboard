@@ -44,6 +44,10 @@ exclude:
 - yoshitsugu/parsem
 - Erolaffy/easy-io
 - mizchi/json
+- gmlewis/modus
+- loneoutpost/core-extra
+- YumeCross/schema
+
 
 # minor
 - bobzhang/testa
@@ -78,6 +82,10 @@ exclude:
 - FreeFoots/mooncake_hello
 - cyhforlight/moonbit-hello-card
 - tonyfettes/js/test
+- wstreet/moontest
+- xing0818/xing0818
+- nanlingyin/mbt_LIB
+- 202306123/lib_mbt
 
 # use github link instead of mooncake
 - moonbitlang/core
@@ -85,9 +93,13 @@ exclude:
 - moonbitlang/quickcheck
 - moonbitlang/arduino
 - Kaida-Amethyst/math
-- Kaida-Amethyst/math
+- Kaida-Amethyst/moonbit-math
 - ruifeng/XMLParser
+- zhuguiyuan/eda-router
+- CAIMEOX/quickcheck
+- smallbearrr/pandas
 
 # can't find github user
 - five-nuts/coreutils
 - eczn/eczn-utils
+- NerdyLee/newcake_ls
