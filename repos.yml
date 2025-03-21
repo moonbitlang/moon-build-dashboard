@@ -41,8 +41,6 @@ github-repos:
 mooncakes:
 - name: 0Ayachi0/math
   version: 0.1.0
-- name: 202306123/lib_mbt
-  version: 0.1.0
 - name: 2459822546/fwshz
   version: 0.1.0
 - name: BigThree33/find_min
@@ -51,8 +49,6 @@ mooncakes:
   version: 0.1.5
 - name: CAIMEOX/lazy
   version: 0.1.0
-- name: CAIMEOX/quickcheck
-  version: 0.6.9
 - name: CMoonBack/Binary-Exponentiation
   version: 0.1.0
 - name: CMoonBack/computational-geometry
@@ -87,8 +83,6 @@ mooncakes:
   version: 0.0.1-alpha-5
 - name: Kaida-Amethyst/llvm
   version: 0.1.7
-- name: Kaida-Amethyst/moonbit-math
-  version: 0.1.14
 - name: Kaida-Amethyst/python
   version: 0.0.2
 - name: Kilig/MATH
@@ -115,8 +109,6 @@ mooncakes:
   version: 0.0.2-alpha-2
 - name: Near-Jungnune/Near-Jungnune
   version: 0.1.0
-- name: NerdyLee/newcake_ls
-  version: 0.1.1
 - name: Nyuudoukumo/uuidv4
   version: 0.1.0
   running_backend:
@@ -153,8 +145,6 @@ mooncakes:
   version: 0.1.0
 - name: Yu-zh/sslist
   version: 0.1.0
-- name: YumeCross/schema
-  version: 0.4.3
 - name: YumeXi/format
   version: 0.3.9
 - name: YumeXi/iter
@@ -245,8 +235,6 @@ mooncakes:
   version: 0.21.6
 - name: gmlewis/md5
   version: 0.19.3
-- name: gmlewis/modus
-  version: 0.16.5
 - name: gmlewis/moonbit-pdk
   version: 0.47.3
 - name: gmlewis/sha1
@@ -267,6 +255,8 @@ mooncakes:
   version: 0.1.1
 - name: hanstechnow/ctf_tools
   version: 0.1.0
+- name: hzqdf/aoko
+  version: 0.0.20250321
 - name: illusory0x0/base
   version: 0.2.0
 - name: illusory0x0/coerce
@@ -321,8 +311,6 @@ mooncakes:
   version: 0.1.0
 - name: liuly0322/tch_mbt
   version: 0.1.0
-- name: loneoutpost/core-extra
-  version: 0.0.6
 - name: luolingkan/find_min_num
   version: 0.1.0
 - name: misika727/sqrt
@@ -345,8 +333,6 @@ mooncakes:
 - name: moonbitlang/yacc
   version: 0.2.11
 - name: myfreess/myers-diff
-  version: 0.1.0
-- name: nanlingyin/mbt_LIB
   version: 0.1.0
 - name: oboard/mimetype
   version: 0.1.5
@@ -402,8 +388,6 @@ mooncakes:
   version: 0.3.0
 - name: sjzbxhsj/Calculator
   version: 0.1.0
-- name: smallbearrr/pandas
-  version: 0.6.6
 - name: structuraBlock/MoonStats
   version: 0.3.0
 - name: tiye/caterfoil
@@ -472,8 +456,6 @@ mooncakes:
   version: 0.1.0
 - name: wjy030522/compare
   version: 0.1.0
-- name: wstreet/moontest
-  version: 0.1.0
 - name: wwj1203/string2int
   version: 0.1.0
 - name: wzzc-dev/teager
@@ -481,8 +463,6 @@ mooncakes:
 - name: wzzc-dev/webview-ffi
   version: 0.1.1
 - name: wzzc-dev/webview-mbt-demo
-  version: 0.1.0
-- name: xing0818/xing0818
   version: 0.1.0
 - name: xunyoyo/NyaCSV
   version: 0.2.0
@@ -508,8 +488,6 @@ mooncakes:
   version: 0.1.0
 - name: zhangshun-123/factorial
   version: 0.1.0
-- name: zhuguiyuan/eda-router
-  version: 0.1.1
 - name: zxch3n/colored
   version: 0.1.0
 - name: zxch3n/expect
