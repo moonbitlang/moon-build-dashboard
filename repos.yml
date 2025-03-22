@@ -23,6 +23,9 @@ github-repos:
   running_os:
   - linux
   - macos
+- name: WebGPU-Art/quaternion
+  link: https://github.com/WebGPU-Art/quaternion
+  branch: main
 - name: zhuguiyuan/MoonBit-EDA-Router
   link: https://github.com/zhuguiyuan/MoonBit-EDA-Router
   branch: main
@@ -462,7 +465,13 @@ mooncakes:
   version: 0.1.0
 - name: wzzc-dev/webview-ffi
   version: 0.1.1
+  running_backend:
+  - js
 - name: wzzc-dev/webview-mbt-demo
+  version: 0.1.0
+  running_backend:
+  - js
+- name: xing0818/xing0818
   version: 0.1.0
 - name: xunyoyo/NyaCSV
   version: 0.2.0

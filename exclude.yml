@@ -47,7 +47,7 @@ exclude:
 - gmlewis/modus
 - loneoutpost/core-extra
 - YumeCross/schema
-
+- CMoonBack/computational-geometry
 
 # minor
 - bobzhang/testa
@@ -87,6 +87,10 @@ exclude:
 - nanlingyin/mbt_LIB
 - 202306123/lib_mbt
 
+# disable for now, need to add native backend run
+- illusory0x0/posix
+- illusory0x0/native
+
 # use github link instead of mooncake
 - moonbitlang/core
 - moonbitlang/x
@@ -98,8 +102,10 @@ exclude:
 - zhuguiyuan/eda-router
 - CAIMEOX/quickcheck
 - smallbearrr/pandas
+- tiye/quaternion
 
 # can't find github user
 - five-nuts/coreutils
 - eczn/eczn-utils
 - NerdyLee/newcake_ls
+- hzqdf/aoko

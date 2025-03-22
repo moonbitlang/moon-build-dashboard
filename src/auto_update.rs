@@ -73,9 +73,3 @@ fn update_mooncakes_list() {
     std::fs::write("repos.yml", updated_content).unwrap();
 }
 
-
-#[test]
-fn update_exclude_list() {
-    let exclude: crate::util::ExcludeConfig = crate::util::get_exclude_config(Path::new("exclude.yml"));
-    println!("exclude: {:?}", exclude);
-}
