@@ -120,6 +120,8 @@ mooncakes:
   version: 0.1.0
 - name: SyoujyoujiNaiki/chungshan
   version: 0.2.0
+- name: TheWaWaR/lunar
+  version: 0.1.0
 - name: Tianci-King/median
   version: 0.3.0
 - name: WenqiChen3019/sqrt
@@ -263,7 +265,7 @@ mooncakes:
 - name: illusory0x0/coerce
   version: 0.1.0
 - name: illusory0x0/color
-  version: 0.1.0
+  version: 0.2.0
 - name: illusory0x0/fun
   version: 0.2.1
 - name: illusory0x0/fuzzy_match
@@ -273,7 +275,7 @@ mooncakes:
 - name: illusory0x0/jcore
   version: 0.1.1
 - name: illusory0x0/lazy
-  version: 0.1.0
+  version: 0.1.1
 - name: illusory0x0/moonbit-wasm-nodejs-ts-template
   version: 0.1.0
 - name: illusory0x0/moonbit-wasm-vite-ts-template
