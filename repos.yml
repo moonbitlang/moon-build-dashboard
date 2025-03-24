@@ -51,8 +51,6 @@ mooncakes:
   version: 0.1.0
 - name: BigThree33/find_min
   version: 0.1.0
-- name: CAIMEOX/graph-algebra
-  version: 0.1.5
 - name: CAIMEOX/lazy
   version: 0.1.0
 - name: CMoonBack/Binary-Exponentiation
@@ -77,18 +75,8 @@ mooncakes:
   version: 0.1.0
 - name: Jtian-t/Deque
   version: 0.1.0
-- name: KCN-judu/calculus-numerical
-  version: 0.2.1-alpha-6
-- name: KCN-judu/linear-algebra
-  version: 0.0.1-alpha-3
-- name: KCN-judu/luna-complex
-  version: 0.0.1-alpha-4
-- name: KCN-judu/luna-utils
-  version: 0.0.1-alpha-5
 - name: Kaida-Amethyst/llvm
   version: 0.1.7
-- name: Kaida-Amethyst/python
-  version: 0.0.2
 - name: Kilig/MATH
   version: 0.1.1
 - name: LI7282/base16
@@ -101,8 +89,6 @@ mooncakes:
   version: 0.0.2
 - name: Ljw030710/find_max
   version: 0.1.0
-- name: Luna-Flow/calculus-numerical
-  version: 0.2.1-alpha-6
 - name: Luna-Flow/linear-algebra
   version: 0.0.2-alpha-1
 - name: Luna-Flow/luna-complex
@@ -123,8 +109,6 @@ mooncakes:
   version: 0.1.0
 - name: SyoujyoujiNaiki/chungshan
   version: 0.2.0
-- name: TheWaWaR/lunar
-  version: 0.1.0
 - name: Tianci-King/median
   version: 0.3.0
 - name: WenqiChen3019/sqrt
@@ -311,8 +295,6 @@ mooncakes:
   version: 0.1.1
 - name: liuly0322/lru_cache
   version: 0.1.0
-- name: liuly0322/tch_mbt
-  version: 0.1.0
 - name: luolingkan/find_min_num
   version: 0.1.0
 - name: misika727/sqrt
@@ -334,8 +316,6 @@ mooncakes:
   - wasm-gc
 - name: moonbitlang/yacc
   version: 0.2.11
-- name: myfreess/myers-diff
-  version: 0.1.0
 - name: oboard/mimetype
   version: 0.1.5
 - name: oboard/mocket
@@ -476,8 +456,6 @@ mooncakes:
   version: 0.3.4
 - name: yueTc/Binary-Indexed-Tree
   version: 0.1.1
-- name: yuyi919/shared-lib
-  version: 0.1.5
 - name: yyjeqhc/base32
   version: 0.1.0
 - name: zdu881/DataProc
