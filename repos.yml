@@ -105,6 +105,8 @@ mooncakes:
   - js
 - name: Refined_heart/Sort
   version: 0.1.0
+- name: Seedking/SemVer
+  version: 0.1.0
 - name: ShellWen/lru_cache
   version: 0.1.0
 - name: SyoujyoujiNaiki/chungshan
@@ -441,7 +443,7 @@ mooncakes:
 - name: wzzc-dev/teager
   version: 0.1.0
 - name: xunyoyo/NyaCSV
-  version: 0.2.0
+  version: 0.3.0
 - name: xunyoyo/NyaSearch
   version: 0.1.0
 - name: xunyoyo/linalg
