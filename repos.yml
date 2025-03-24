@@ -14,6 +14,9 @@ github-repos:
 - name: moonbit-community/moonbit-arduino
   link: https://github.com/moonbit-community/moonbit-arduino
   branch: main
+- name: Luna-Flow/calculus-numerical
+  link: https://github.com/Luna-Flow/calculus-numerical
+  branch: main
 - name: gmlewis/moonbit-fonts
   link: https://github.com/gmlewis/moonbit-fonts
   branch: master
@@ -457,14 +460,6 @@ mooncakes:
   version: 0.1.0
 - name: wzzc-dev/teager
   version: 0.1.0
-- name: wzzc-dev/webview-ffi
-  version: 0.1.1
-  running_backend:
-  - js
-- name: wzzc-dev/webview-mbt-demo
-  version: 0.1.0
-  running_backend:
-  - js
 - name: xunyoyo/NyaCSV
   version: 0.2.0
 - name: xunyoyo/NyaSearch

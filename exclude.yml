@@ -48,6 +48,9 @@ exclude:
 - loneoutpost/core-extra
 - YumeCross/schema
 - CMoonBack/computational-geometry
+- myfreess/myers-diff
+- yuyi919/shared-lib
+- CAIMEOX/graph-algebra
 
 # minor
 - bobzhang/testa
@@ -86,10 +89,19 @@ exclude:
 - xing0818/xing0818
 - nanlingyin/mbt_LIB
 - 202306123/lib_mbt
+# move to luna-flow
+- KCN-judu/calculus-numerical
+- KCN-judu/linear-algebra
+- KCN-judu/luna-utils
+- KCN-judu/luna-complex
 
 # disable for now, need to add native backend run
 - illusory0x0/posix
 - illusory0x0/native
+- wzzc-dev/webview-ffi
+- wzzc-dev/webview-mbt-demo
+- liuly0322/tch_mbt
+- Kaida-Amethyst/python
 
 # use github link instead of mooncake
 - moonbitlang/core
@@ -103,9 +115,11 @@ exclude:
 - CAIMEOX/quickcheck
 - smallbearrr/pandas
 - tiye/quaternion
+- Luna-Flow/calculus-numerical
 
 # can't find github user
 - five-nuts/coreutils
 - eczn/eczn-utils
 - NerdyLee/newcake_ls
 - hzqdf/aoko
+- TheWaWaR/lunar
