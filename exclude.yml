@@ -51,6 +51,19 @@ exclude:
 - myfreess/myers-diff
 - yuyi919/shared-lib
 - CAIMEOX/graph-algebra
+- Lampese/moondata
+- Lampese/moondata2
+- peter-jerry-ye/json
+- peter-jerry-ye/assertion
+- peter-jerry-ye/advent_of_code
+- peter-jerry-ye/parser-combinator
+- tonyfettes/narray
+- moonbitlang/yacc
+- hackwaly/common
+- hackwaly/moonyacc
+- kesmeey/tools
+- Yoorkin/format
+- yj-qin/moonlox
 
 # minor
 - bobzhang/testa
@@ -123,3 +136,6 @@ exclude:
 - NerdyLee/newcake_ls
 - hzqdf/aoko
 - TheWaWaR/lunar
+
+# others
+- Luna-Flow/luna-complex

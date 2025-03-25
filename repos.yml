@@ -14,9 +14,6 @@ github-repos:
 - name: moonbit-community/moonbit-arduino
   link: https://github.com/moonbit-community/moonbit-arduino
   branch: main
-- name: Luna-Flow/calculus-numerical
-  link: https://github.com/Luna-Flow/calculus-numerical
-  branch: main
 - name: gmlewis/moonbit-fonts
   link: https://github.com/gmlewis/moonbit-fonts
   branch: master
@@ -26,9 +23,6 @@ github-repos:
   running_os:
   - linux
   - macos
-- name: WebGPU-Art/quaternion
-  link: https://github.com/WebGPU-Art/quaternion
-  branch: main
 - name: zhuguiyuan/MoonBit-EDA-Router
   link: https://github.com/zhuguiyuan/MoonBit-EDA-Router
   branch: main
