@@ -79,12 +79,18 @@ mooncakes:
   version: 0.4.0
 - name: Ljw030710/find_max
   version: 0.1.0
+- name: Luna-Flow/calculus-numerical
+  version: 0.3.0-alpha-1
 - name: Luna-Flow/linear-algebra
-  version: 0.0.2-alpha-1
+  version: 0.1.0-alpha-1
+- name: Luna-Flow/luna-complex
+  version: 0.1.0-alpha-2
 - name: Luna-Flow/luna-generic
   version: 0.2.0-alpha-1
+- name: Luna-Flow/luna-poly
+  version: 0.1.0-alpha-1
 - name: Luna-Flow/luna-utils
-  version: 0.0.2-alpha-2
+  version: 0.1.0-alpha-1
 - name: MINGtoMING/datetime
   version: 0.1.0
 - name: Near-Jungnune/Near-Jungnune
@@ -154,56 +160,6 @@ mooncakes:
 - name: gmlewis/flate
   version: 0.35.5
 - name: gmlewis/fonts
-  version: 0.15.5
-- name: gmlewis/fonts-a
-  version: 0.15.5
-- name: gmlewis/fonts-b
-  version: 0.15.5
-- name: gmlewis/fonts-c
-  version: 0.15.5
-- name: gmlewis/fonts-d
-  version: 0.15.5
-- name: gmlewis/fonts-e
-  version: 0.15.5
-- name: gmlewis/fonts-f
-  version: 0.15.5
-- name: gmlewis/fonts-g
-  version: 0.15.5
-- name: gmlewis/fonts-h
-  version: 0.15.5
-- name: gmlewis/fonts-i
-  version: 0.15.5
-- name: gmlewis/fonts-j
-  version: 0.15.5
-- name: gmlewis/fonts-k
-  version: 0.15.5
-- name: gmlewis/fonts-l
-  version: 0.15.5
-- name: gmlewis/fonts-m
-  version: 0.15.5
-- name: gmlewis/fonts-n
-  version: 0.15.5
-- name: gmlewis/fonts-o
-  version: 0.15.5
-- name: gmlewis/fonts-p
-  version: 0.15.5
-- name: gmlewis/fonts-q
-  version: 0.15.5
-- name: gmlewis/fonts-r
-  version: 0.15.5
-- name: gmlewis/fonts-s
-  version: 0.15.5
-- name: gmlewis/fonts-t
-  version: 0.15.5
-- name: gmlewis/fonts-u
-  version: 0.15.5
-- name: gmlewis/fonts-v
-  version: 0.15.5
-- name: gmlewis/fonts-w
-  version: 0.15.5
-- name: gmlewis/fonts-y
-  version: 0.15.5
-- name: gmlewis/fonts-z
   version: 0.15.5
 - name: gmlewis/gzip
   version: 0.33.4
@@ -284,13 +240,13 @@ mooncakes:
 - name: misika727/sqrt
   version: 0.1.0
 - name: moonbitlang/lex
-  version: 0.3.2
+  version: 0.3.3
 - name: moonbitlang/lex-runtime
   version: 0.1.3
 - name: moonbitlang/lex/runtime
   version: 0.1.1
 - name: moonbitlang/ulex
-  version: 0.1.0
+  version: 0.1.1
 - name: moonbitlang/ulex-runtime
   version: 0.1.1
 - name: moonbitlang/wasm4
@@ -313,17 +269,15 @@ mooncakes:
 - name: peter-jerry-ye/canvas
   version: 0.7.0
 - name: peter-jerry-ye/io
-  version: 0.2.0
+  version: 0.2.1
   running_backend:
   - wasm
 - name: peter-jerry-ye/mcp-server
-  version: 0.1.2
+  version: 0.1.3
   running_backend:
   - wasm
-- name: peter-jerry-ye/memory
-  version: 0.8.4
 - name: peter-jerry-ye/spin-imports
-  version: 0.1.2
+  version: 0.1.3
   running_backend:
   - wasm
 - name: peter-jerry-ye/utils
@@ -333,7 +287,7 @@ mooncakes:
   running_backend:
   - wasm
 - name: peter-jerry-ye/wasi-imports
-  version: 0.1.3
+  version: 0.1.4
   running_backend:
   - wasm
 - name: rabbyte/suffix-array
@@ -384,10 +338,8 @@ mooncakes:
   version: 0.1.1
 - name: tonyfettes/torch
   version: 0.2.7
-- name: tonyfettes/tree-sitter/cli
-  version: 0.1.0
 - name: tonyfettes/tree_sitter
-  version: 0.1.12
+  version: 0.1.13
 - name: tonyfettes/tree_sitter_c
   version: 0.1.7
 - name: tonyfettes/tree_sitter_javascript
