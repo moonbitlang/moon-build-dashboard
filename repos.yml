@@ -77,20 +77,16 @@ mooncakes:
   version: 0.1.0
 - name: Lampese/moonbit-chalk
   version: 0.4.0
-- name: Lampese/moondata
-  version: 0.2.8
-- name: Lampese/moondata2
-  version: 0.0.2
 - name: Ljw030710/find_max
   version: 0.1.0
 - name: Luna-Flow/linear-algebra
   version: 0.0.2-alpha-1
-- name: Luna-Flow/luna-complex
-  version: 0.0.2-alpha-1
 - name: Luna-Flow/luna-generic
-  version: 0.1.2-alpha-4
+  version: 0.2.0-alpha-1
 - name: Luna-Flow/luna-utils
   version: 0.0.2-alpha-2
+- name: MINGtoMING/datetime
+  version: 0.1.0
 - name: Near-Jungnune/Near-Jungnune
   version: 0.1.0
 - name: Nyuudoukumo/uuidv4
@@ -113,8 +109,6 @@ mooncakes:
   version: 0.1.0
 - name: Yoorkin/ArgParser
   version: 0.1.9
-- name: Yoorkin/format
-  version: 0.1.5
 - name: Yoorkin/prettyprinter
   version: 0.4.2
 - name: Yoorkin/rabbit-tea
@@ -233,10 +227,6 @@ mooncakes:
   version: 0.20.5
 - name: hachi/sort
   version: 0.1.12
-- name: hackwaly/common
-  version: 0.1.24
-- name: hackwaly/moonyacc
-  version: 0.3.1
 - name: hanbings/fluorescence
   version: 0.1.1
 - name: hanstechnow/ctf_tools
@@ -279,8 +269,6 @@ mooncakes:
   version: 0.1.1
 - name: kesmeey/fmt
   version: 0.1.3
-- name: kesmeey/tools
-  version: 0.1.9
 - name: kesmeey/unicodeUtil
   version: 0.2.2
 - name: kinoamyfx/moon-axe-tools
@@ -310,8 +298,6 @@ mooncakes:
   running_backend:
   - wasm
   - wasm-gc
-- name: moonbitlang/yacc
-  version: 0.2.11
 - name: oboard/mimetype
   version: 0.1.5
 - name: oboard/mocket
@@ -322,24 +308,16 @@ mooncakes:
   version: 0.3.4
 - name: pai2shub/alg
   version: 0.1.3
-- name: peter-jerry-ye/advent_of_code
-  version: 0.3.1-fix
-- name: peter-jerry-ye/assertion
-  version: 0.2.1
 - name: peter-jerry-ye/async
   version: 0.1.1
 - name: peter-jerry-ye/canvas
   version: 0.7.0
 - name: peter-jerry-ye/io
   version: 0.2.0
-- name: peter-jerry-ye/json
-  version: 0.4.0
 - name: peter-jerry-ye/mcp-server
   version: 0.1.2
 - name: peter-jerry-ye/memory
   version: 0.8.4
-- name: peter-jerry-ye/parser-combinator
-  version: 0.9.1
 - name: peter-jerry-ye/spin-imports
   version: 0.1.2
 - name: peter-jerry-ye/utils
@@ -396,8 +374,6 @@ mooncakes:
   version: 0.1.6
 - name: tonyfettes/memory
   version: 0.2.5
-- name: tonyfettes/narray
-  version: 0.1.0
 - name: tonyfettes/pcre2
   version: 0.1.1
 - name: tonyfettes/torch
@@ -445,8 +421,6 @@ mooncakes:
 - name: xunyoyo/permutation
   version: 0.1.3
 - name: yanyeting/minmax
-  version: 0.1.0
-- name: yj-qin/moonlox
   version: 0.1.0
 - name: yj-qin/regexp
   version: 0.3.4
