@@ -80,7 +80,7 @@ mooncakes:
 - name: Ljw030710/find_max
   version: 0.1.0
 - name: Luna-Flow/calculus-numerical
-  version: 0.3.0-alpha-1
+  version: 0.3.0-alpha-2
 - name: Luna-Flow/linear-algebra
   version: 0.1.0-alpha-1
 - name: Luna-Flow/luna-complex
@@ -96,7 +96,7 @@ mooncakes:
 - name: Near-Jungnune/Near-Jungnune
   version: 0.1.0
 - name: Nyuudoukumo/uuidv4
-  version: 0.1.0
+  version: 0.2.0
   running_backend:
   - js
 - name: Refined_heart/Sort
@@ -339,7 +339,7 @@ mooncakes:
 - name: tonyfettes/torch
   version: 0.2.7
 - name: tonyfettes/tree_sitter
-  version: 0.1.13
+  version: 0.1.14
 - name: tonyfettes/tree_sitter_c
   version: 0.1.7
 - name: tonyfettes/tree_sitter_javascript
@@ -349,11 +349,11 @@ mooncakes:
 - name: tonyfettes/tree_sitter_language
   version: 0.1.1
 - name: tonyfettes/tree_sitter_markdown
-  version: 0.1.7
+  version: 0.1.8
 - name: tonyfettes/tree_sitter_markdown_inline
-  version: 0.1.7
+  version: 0.1.8
 - name: tonyfettes/tree_sitter_moonbit
-  version: 0.1.7
+  version: 0.1.8
 - name: tonyfettes/tree_sitter_query
   version: 0.1.7
 - name: tonyfettes/tree_sitter_yaml
