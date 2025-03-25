@@ -314,12 +314,18 @@ mooncakes:
   version: 0.7.0
 - name: peter-jerry-ye/io
   version: 0.2.0
+  running_backend:
+  - wasm
 - name: peter-jerry-ye/mcp-server
   version: 0.1.2
+  running_backend:
+  - wasm
 - name: peter-jerry-ye/memory
   version: 0.8.4
 - name: peter-jerry-ye/spin-imports
   version: 0.1.2
+  running_backend:
+  - wasm
 - name: peter-jerry-ye/utils
   version: 0.4.0
 - name: peter-jerry-ye/wasi

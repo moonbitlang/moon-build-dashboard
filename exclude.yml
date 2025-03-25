@@ -64,6 +64,8 @@ exclude:
 - kesmeey/tools
 - Yoorkin/format
 - yj-qin/moonlox
+- tonyfettes/tree-sitter/cli
+- peter-jerry-ye/memory
 
 # minor
 - bobzhang/testa
@@ -128,7 +130,6 @@ exclude:
 - CAIMEOX/quickcheck
 - smallbearrr/pandas
 - tiye/quaternion
-- Luna-Flow/calculus-numerical
 
 # can't find github user
 - five-nuts/coreutils
@@ -138,4 +139,3 @@ exclude:
 - TheWaWaR/lunar
 
 # others
-- Luna-Flow/luna-complex
