@@ -117,6 +117,10 @@ exclude:
 - wzzc-dev/webview-mbt-demo
 - liuly0322/tch_mbt
 - Kaida-Amethyst/python
+- tonyfettes/pcre2
+- tonyfettes/tree_sitter
+- tonyfettes/webgpu
+- tonyfettes/torch
 
 # use github link instead of mooncake
 - moonbitlang/core
@@ -129,7 +133,8 @@ exclude:
 - zhuguiyuan/eda-router
 - CAIMEOX/quickcheck
 - smallbearrr/pandas
-- tiye/quaternion
+- rami3l/cmark
+- ShellWen/dotenv-mbt
 
 # can't find github user
 - five-nuts/coreutils

@@ -14,6 +14,18 @@ github-repos:
 - name: moonbit-community/moonbit-arduino
   link: https://github.com/moonbit-community/moonbit-arduino
   branch: main
+- name: moonbitlang/yacc
+  link: https://github.com/moonbitlang/moonyacc
+  branch: master
+  running_os:
+  - linux
+  - macos
+- name: moonbit-community/dotenv-mbt
+  link: https://github.com/moonbit-community/dotenv-mbt
+  branch: main
+- name: moonbit-community/cmark
+  link: https://github.com/moonbit-community/cmark
+  branch: main
 - name: gmlewis/moonbit-fonts
   link: https://github.com/gmlewis/moonbit-fonts
   branch: master
