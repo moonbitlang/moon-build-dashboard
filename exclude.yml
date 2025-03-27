@@ -121,6 +121,7 @@ exclude:
 - tonyfettes/tree_sitter
 - tonyfettes/webgpu
 - tonyfettes/torch
+- tonyfettes/uv
 
 # use github link instead of mooncake
 - moonbitlang/core
