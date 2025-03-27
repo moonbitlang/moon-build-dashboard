@@ -105,6 +105,8 @@ mooncakes:
   version: 0.1.0-alpha-1
 - name: Luna-Flow/luna-utils
   version: 0.1.0-alpha-1
+- name: Luna-Flow/quaternion
+  version: 0.1.1
 - name: MINGtoMING/datetime
   version: 0.1.0
 - name: Near-Jungnune/Near-Jungnune
@@ -131,10 +133,12 @@ mooncakes:
   version: 0.1.0
 - name: Yoorkin/ArgParser
   version: 0.1.9
+- name: Yoorkin/fuzzy_search
+  version: 0.1.1
 - name: Yoorkin/prettyprinter
   version: 0.4.2
 - name: Yoorkin/rabbit-tea
-  version: 0.6.10
+  version: 0.6.11
   running_backend:
   - js
 - name: Yoorkin/stack
@@ -242,7 +246,7 @@ mooncakes:
 - name: kesmeey/fmt
   version: 0.1.3
 - name: kesmeey/unicodeUtil
-  version: 0.2.2
+  version: 0.2.3
 - name: kinoamyfx/moon-axe-tools
   version: 0.0.1-SNAPSHOT
 - name: ledao/nanoid
@@ -346,8 +350,10 @@ mooncakes:
   version: 0.1.0
 - name: tonyfettes/c
   version: 0.1.9
+- name: tonyfettes/encoding
+  version: 0.1.0
 - name: tonyfettes/js
-  version: 0.1.6
+  version: 0.1.7
 - name: tonyfettes/memory
   version: 0.2.5
 - name: tonyfettes/tree_sitter_c
