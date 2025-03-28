@@ -77,8 +77,6 @@ mooncakes:
   version: 0.1.0
 - name: Jtian-t/Deque
   version: 0.1.0
-- name: Kaida-Amethyst/llvm
-  version: 0.1.7
 - name: Kilig/MATH
   version: 0.1.1
 - name: LI7282/base16
@@ -87,16 +85,10 @@ mooncakes:
   version: 0.4.0
 - name: Ljw030710/find_max
   version: 0.1.0
-- name: Luna-Flow/calculus-numerical
-  version: 0.3.0-alpha-2
 - name: Luna-Flow/linear-algebra
   version: 0.1.0-alpha-1
-- name: Luna-Flow/luna-complex
-  version: 0.1.0-alpha-2
 - name: Luna-Flow/luna-generic
   version: 0.2.0-alpha-1
-- name: Luna-Flow/luna-poly
-  version: 0.1.0-alpha-1
 - name: Luna-Flow/luna-utils
   version: 0.1.0-alpha-1
 - name: Luna-Flow/quaternion
@@ -132,7 +124,7 @@ mooncakes:
 - name: Yoorkin/prettyprinter
   version: 0.4.2
 - name: Yoorkin/rabbit-tea
-  version: 0.6.11
+  version: 0.6.12
   running_backend:
   - js
 - name: Yoorkin/stack
@@ -145,8 +137,6 @@ mooncakes:
   version: 0.1.0
 - name: Yu-zh/sslist
   version: 0.1.0
-- name: YumeXi/format
-  version: 0.3.9
 - name: YumeXi/iter
   version: 0.2.5
 - name: bobzhang/sexp
@@ -352,26 +342,8 @@ mooncakes:
   version: 0.1.7
 - name: tonyfettes/memory
   version: 0.2.5
-- name: tonyfettes/tree_sitter_c
-  version: 0.1.7
-- name: tonyfettes/tree_sitter_go
-  version: 0.1.7
-- name: tonyfettes/tree_sitter_javascript
-  version: 0.1.7
-- name: tonyfettes/tree_sitter_json
-  version: 0.1.7
 - name: tonyfettes/tree_sitter_language
   version: 0.1.1
-- name: tonyfettes/tree_sitter_markdown
-  version: 0.1.8
-- name: tonyfettes/tree_sitter_markdown_inline
-  version: 0.1.8
-- name: tonyfettes/tree_sitter_moonbit
-  version: 0.1.8
-- name: tonyfettes/tree_sitter_query
-  version: 0.1.7
-- name: tonyfettes/tree_sitter_yaml
-  version: 0.1.7
 - name: tonyfettes/wasm
   version: 0.1.3
 - name: wangjuwudi/line_sort
