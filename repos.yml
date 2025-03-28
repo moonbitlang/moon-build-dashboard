@@ -11,9 +11,6 @@ github-repos:
 - name: moonbit-community/XMLParser
   link: https://github.com/moonbit-community/XMLParser
   branch: main
-- name: moonbit-community/moonbit-arduino
-  link: https://github.com/moonbit-community/moonbit-arduino
-  branch: main
 - name: moonbitlang/yacc
   link: https://github.com/moonbitlang/moonyacc
   branch: master
@@ -41,9 +38,6 @@ github-repos:
 - name: moonbit-community/pandas
   link: https://github.com/moonbit-community/pandas
   branch: main
-- name: Kaida-Amethyst/Moonbit-Math
-  link: https://github.com/Kaida-Amethyst/Moonbit-Math
-  branch: master
 - name: moonbit-community/wasmSID
   link: https://github.com/moonbit-community/wasmSID
   branch: main
@@ -330,6 +324,8 @@ mooncakes:
   - js
 - name: tiye/cirru-edn
   version: 0.0.7
+  running_backend:
+  - js
 - name: tiye/cirru-parser
   version: 0.0.12
   running_backend:
@@ -386,6 +382,8 @@ mooncakes:
   version: 0.1.0
 - name: wzzc-dev/teager
   version: 0.1.0
+  running_backend:
+  - js
 - name: xunyoyo/NyaCSV
   version: 0.3.0
 - name: xunyoyo/NyaSearch

@@ -66,6 +66,7 @@ exclude:
 - yj-qin/moonlox
 - tonyfettes/tree-sitter/cli
 - peter-jerry-ye/memory
+- YumeXi/format
 
 # minor
 - bobzhang/testa
@@ -122,6 +123,27 @@ exclude:
 - tonyfettes/webgpu
 - tonyfettes/torch
 - tonyfettes/uv
+- Kaida-Amethyst/llvm
+- Luna-Flow/calculus-numerical
+- Luna-Flow/luna-complex
+- Luna-Flow/luna-poly
+- tonyfettes/tree_sitter_c
+- tonyfettes/tree_sitter_go
+- tonyfettes/tree_sitter_javascript
+- tonyfettes/tree_sitter_json
+- tonyfettes/tree_sitter_markdown
+- tonyfettes/tree_sitter_markdown_inline
+- tonyfettes/tree_sitter_moonbit
+- tonyfettes/tree_sitter_query
+- tonyfettes/tree_sitter_yaml
+
+# no native for now
+# - name: moonbit-community/moonbit-arduino
+#   link: https://github.com/moonbit-community/moonbit-arduino
+#   branch: main
+# - name: Kaida-Amethyst/Moonbit-Math
+#   link: https://github.com/Kaida-Amethyst/Moonbit-Math
+#   branch: master
 
 # use github link instead of mooncake
 - moonbitlang/core
