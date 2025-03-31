@@ -203,6 +203,8 @@ mooncakes:
   version: 0.2.1
 - name: illusory0x0/fuzzy_match
   version: 0.1.0
+- name: illusory0x0/graphviz
+  version: 0.1.0
 - name: illusory0x0/immut_deque
   version: 0.2.1
 - name: illusory0x0/jcore
@@ -249,6 +251,10 @@ mooncakes:
   version: 0.1.3
 - name: moonbitlang/lex/runtime
   version: 0.1.1
+- name: moonbitlang/mbt-lexer
+  version: 0.0.1
+- name: moonbitlang/mbt_lexer
+  version: 0.0.1
 - name: moonbitlang/ulex
   version: 0.1.1
 - name: moonbitlang/ulex-runtime
