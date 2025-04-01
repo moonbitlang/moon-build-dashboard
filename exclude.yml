@@ -158,6 +158,7 @@ exclude:
 - smallbearrr/pandas
 - rami3l/cmark
 - ShellWen/dotenv-mbt
+- oboard/moonbit-eval
 
 # can't find github user
 - five-nuts/coreutils

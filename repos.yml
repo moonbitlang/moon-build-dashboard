@@ -11,6 +11,9 @@ github-repos:
 - name: moonbit-community/XMLParser
   link: https://github.com/moonbit-community/XMLParser
   branch: main
+- name: oboard/moonbit-eval
+  link: https://github.com/oboard/moonbit-eval
+  branch: main
 - name: moonbitlang/yacc
   link: https://github.com/moonbitlang/moonyacc
   branch: master
