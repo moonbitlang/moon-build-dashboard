@@ -104,6 +104,8 @@ mooncakes:
   version: 0.2.0
   running_backend:
   - js
+- name: Penguinsltp/examine
+  version: 0.1.0
 - name: Refined_heart/Sort
   version: 0.1.0
 - name: Seedking/SemVer
@@ -159,35 +161,35 @@ mooncakes:
 - name: furesoft/moos-sdk
   version: 0.1.6
 - name: gmlewis/b2
-  version: 0.34.5
+  version: 0.34.6
 - name: gmlewis/base64
-  version: 0.14.1
+  version: 0.14.2
 - name: gmlewis/crc32
-  version: 0.8.3
+  version: 0.8.4
 - name: gmlewis/flate
-  version: 0.35.5
+  version: 0.35.6
 - name: gmlewis/fonts
-  version: 0.15.6
+  version: 0.15.7
 - name: gmlewis/gzip
-  version: 0.33.5
+  version: 0.33.6
 - name: gmlewis/hash
-  version: 0.19.6
+  version: 0.19.7
 - name: gmlewis/image
-  version: 0.16.5
+  version: 0.16.6
 - name: gmlewis/io
-  version: 0.21.6
+  version: 0.21.7
 - name: gmlewis/md5
-  version: 0.19.3
+  version: 0.19.4
 - name: gmlewis/moonbit-pdk
-  version: 0.47.4
+  version: 0.47.5
 - name: gmlewis/sha1
-  version: 0.11.6
+  version: 0.11.7
 - name: gmlewis/sha256
-  version: 0.17.3
+  version: 0.17.4
 - name: gmlewis/spin-moonbit-sdk
-  version: 0.52.5
+  version: 0.52.6
 - name: gmlewis/zlib
-  version: 0.20.5
+  version: 0.20.6
 - name: hachi/sort
   version: 0.1.12
 - name: hanbings/fluorescence
@@ -294,7 +296,7 @@ mooncakes:
 - name: peter-jerry-ye/utils
   version: 0.4.0
 - name: peter-jerry-ye/wasi
-  version: 0.19.0
+  version: 0.19.1
   running_backend:
   - wasm
 - name: peter-jerry-ye/wasi-imports
@@ -342,13 +344,15 @@ mooncakes:
 - name: tonyfettes/atomics
   version: 0.1.0
 - name: tonyfettes/c
-  version: 0.1.9
+  version: 0.1.11
 - name: tonyfettes/encoding
   version: 0.1.0
 - name: tonyfettes/js
   version: 0.1.7
 - name: tonyfettes/memory
   version: 0.2.5
+- name: tonyfettes/submodule-test
+  version: 0.1.1
 - name: tonyfettes/tree_sitter_language
   version: 0.1.1
 - name: tonyfettes/wasm
