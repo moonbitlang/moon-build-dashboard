@@ -288,7 +288,7 @@ const App = () => {
                 </Fragment>
               ) : (
                 <a
-                  href={`https://mooncakes.io/docs/#/${source.MooncakesIO.name}/`}
+                  href={`https://mooncakes.io/docs/${source.MooncakesIO.name}/`}
                   className="text-blue-600 hover:text-blue-800"
                   target="_blank"
                   rel="noopener noreferrer"
