@@ -89,11 +89,11 @@ mooncakes:
 - name: Ljw030710/find_max
   version: 0.1.0
 - name: Luna-Flow/linear-algebra
-  version: 0.1.0-alpha-1
+  version: 0.1.0
 - name: Luna-Flow/luna-generic
   version: 0.2.0-alpha-1
 - name: Luna-Flow/luna-utils
-  version: 0.1.0-alpha-4
+  version: 0.1.0
 - name: Luna-Flow/quaternion
   version: 0.1.1
 - name: MINGtoMING/datetime
@@ -144,6 +144,8 @@ mooncakes:
   version: 0.1.0
 - name: Yu-zh/sslist
   version: 0.1.0
+- name: Yu-zh/termbit
+  version: 0.1.0
 - name: YumeXi/iter
   version: 0.2.7
 - name: bobzhang/sexp
@@ -169,29 +171,31 @@ mooncakes:
 - name: gmlewis/crc32
   version: 0.8.4
 - name: gmlewis/flate
-  version: 0.35.6
+  version: 0.35.7
 - name: gmlewis/fonts
   version: 0.15.7
 - name: gmlewis/gzip
-  version: 0.33.6
+  version: 0.33.7
 - name: gmlewis/hash
-  version: 0.19.7
+  version: 0.19.8
 - name: gmlewis/image
-  version: 0.16.6
+  version: 0.16.7
 - name: gmlewis/io
-  version: 0.21.7
+  version: 0.22.0
+- name: gmlewis/jsonrpc2
+  version: 0.0.2
 - name: gmlewis/md5
   version: 0.19.4
 - name: gmlewis/moonbit-pdk
   version: 0.47.5
 - name: gmlewis/sha1
-  version: 0.11.7
+  version: 0.11.8
 - name: gmlewis/sha256
   version: 0.17.4
 - name: gmlewis/spin-moonbit-sdk
   version: 0.52.6
 - name: gmlewis/zlib
-  version: 0.20.6
+  version: 0.20.7
 - name: hachi/sort
   version: 0.1.12
 - name: hanbings/fluorescence
