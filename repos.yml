@@ -145,7 +145,7 @@ mooncakes:
 - name: Yu-zh/sslist
   version: 0.1.0
 - name: Yu-zh/termbit
-  version: 0.1.0
+  version: 0.1.1
 - name: YumeXi/iter
   version: 0.2.7
 - name: bobzhang/sexp
@@ -271,9 +271,9 @@ mooncakes:
 - name: moonbitlang/mbt_lexer
   version: 0.1.12
 - name: moonbitlang/ulex
-  version: 0.1.1
+  version: 0.1.2
 - name: moonbitlang/ulex-runtime
-  version: 0.1.1
+  version: 0.2.2
 - name: moonbitlang/wasm4
   version: 0.2.6
   running_backend:
@@ -292,7 +292,7 @@ mooncakes:
 - name: peter-jerry-ye/canvas
   version: 0.7.0
 - name: peter-jerry-ye/io
-  version: 0.2.1
+  version: 0.2.2
   running_backend:
   - wasm
 - name: peter-jerry-ye/mcp-server
