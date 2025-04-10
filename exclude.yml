@@ -67,6 +67,7 @@ exclude:
 - tonyfettes/tree-sitter/cli
 - peter-jerry-ye/memory
 - YumeXi/format
+- oboard/moonbit-eval
 
 # minor
 - bobzhang/testa
@@ -158,7 +159,8 @@ exclude:
 - smallbearrr/pandas
 - rami3l/cmark
 - ShellWen/dotenv-mbt
-- oboard/moonbit-eval
+- ShellWen/dotenv
+- tonyfettes/js
 
 # can't find github user
 - five-nuts/coreutils
