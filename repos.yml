@@ -112,8 +112,6 @@ mooncakes:
   version: 0.1.0
 - name: Seedking/SemVer
   version: 0.1.0
-- name: ShellWen/dotenv
-  version: 0.1.5
 - name: ShellWen/lru_cache
   version: 0.1.0
 - name: ShellWen/sw_router
@@ -133,7 +131,7 @@ mooncakes:
 - name: Yoorkin/prettyprinter
   version: 0.4.2
 - name: Yoorkin/rabbit-tea
-  version: 0.7.0
+  version: 0.7.2
   running_backend:
   - js
 - name: Yoorkin/stack
@@ -275,7 +273,7 @@ mooncakes:
 - name: moonbitlang/ulex
   version: 0.1.2
 - name: moonbitlang/ulex-runtime
-  version: 0.2.2
+  version: 0.2.3
 - name: moonbitlang/wasm4
   version: 0.2.6
   running_backend:
@@ -318,7 +316,7 @@ mooncakes:
 - name: rabbyte/suffix-array
   version: 0.1.0
 - name: rami3l/js-ffi
-  version: 0.2.2
+  version: 0.2.3
   running_backend:
   - js
 - name: remain11/i18n
@@ -361,8 +359,6 @@ mooncakes:
   version: 0.1.12
 - name: tonyfettes/encoding
   version: 0.1.0
-- name: tonyfettes/js
-  version: 0.2.1
 - name: tonyfettes/memory
   version: 0.2.5
 - name: tonyfettes/submodule-test
