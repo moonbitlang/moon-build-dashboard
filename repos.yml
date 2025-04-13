@@ -204,6 +204,8 @@ mooncakes:
   version: 0.1.0
 - name: hzqdf/sum-calc
   version: 0.0.20250321
+- name: illusory0x0/adapton
+  version: 0.1.0
 - name: illusory0x0/base
   version: 0.2.0
 - name: illusory0x0/coerce
