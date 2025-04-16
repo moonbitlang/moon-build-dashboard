@@ -93,8 +93,6 @@ mooncakes:
   version: 0.4.0
 - name: Ljw030710/find_max
   version: 0.1.0
-- name: Luna-Flow/linear-algebra
-  version: 0.1.0
 - name: Luna-Flow/luna-generic
   version: 0.2.0-alpha-1
 - name: Luna-Flow/luna-utils
@@ -149,8 +147,6 @@ mooncakes:
   version: 0.1.0
 - name: Yu-zh/sslist
   version: 0.1.0
-- name: Yu-zh/termbit
-  version: 0.1.1
 - name: YumeXi/iter
   version: 0.2.7
 - name: bobzhang/sexp
@@ -210,7 +206,7 @@ mooncakes:
 - name: hzqdf/sum-calc
   version: 0.0.20250321
 - name: illusory0x0/adapton
-  version: 0.1.0
+  version: 0.1.2
 - name: illusory0x0/base
   version: 0.2.0
 - name: illusory0x0/coerce
@@ -252,7 +248,7 @@ mooncakes:
 - name: kesmeey/IndexSet
   version: 0.1.5
 - name: kesmeey/fmt
-  version: 0.1.3
+  version: 0.1.8
 - name: kesmeey/unicodeUtil
   version: 0.2.3
 - name: kinoamyfx/moon-axe-tools
@@ -267,6 +263,8 @@ mooncakes:
   version: 0.1.0
 - name: misika727/sqrt
   version: 0.1.0
+- name: moonbitlang/esp32
+  version: 0.1.1
 - name: moonbitlang/lex
   version: 0.3.3
 - name: moonbitlang/lex-runtime
@@ -278,9 +276,9 @@ mooncakes:
 - name: moonbitlang/mbt_lexer
   version: 0.1.12
 - name: moonbitlang/ulex
-  version: 0.1.4
+  version: 0.1.12
 - name: moonbitlang/ulex-runtime
-  version: 0.2.4
+  version: 0.2.5
 - name: moonbitlang/wasm4
   version: 0.2.6
   running_backend:
@@ -333,7 +331,7 @@ mooncakes:
 - name: sjzbxhsj/Calculator
   version: 0.1.0
 - name: smallbearrr/NetworkX
-  version: 0.1.1
+  version: 0.1.2
 - name: structuraBlock/MoonStats
   version: 0.3.0
 - name: tiye/caterfoil
