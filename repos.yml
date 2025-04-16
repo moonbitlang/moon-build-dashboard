@@ -17,6 +17,9 @@ github-repos:
   running_os:
   - linux
   - macos
+- name: Luna-Flow/linear-algebra
+  link: https://github.com/Luna-Flow/linear-algebra
+  branch: main
 - name: tonyfettes/js
   link: https://github.com/tonyfettes/js.mbt
   branch: main

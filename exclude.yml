@@ -137,6 +137,7 @@ exclude:
 - tonyfettes/tree_sitter_moonbit
 - tonyfettes/tree_sitter_query
 - tonyfettes/tree_sitter_yaml
+- Yu-zh/termbit
 
 # no native for now
 # - name: moonbit-community/moonbit-arduino
@@ -161,6 +162,7 @@ exclude:
 - ShellWen/dotenv-mbt
 - ShellWen/dotenv
 - tonyfettes/js
+- Luna-Flow/linear-algebra
 
 # can't find github user
 - five-nuts/coreutils
