@@ -173,8 +173,6 @@ mooncakes:
   version: 0.8.4
 - name: gmlewis/flate
   version: 0.35.8
-- name: gmlewis/fonts
-  version: 0.15.8
 - name: gmlewis/gzip
   version: 0.33.8
 - name: gmlewis/hash
@@ -248,7 +246,7 @@ mooncakes:
 - name: kesmeey/IndexSet
   version: 0.1.5
 - name: kesmeey/fmt
-  version: 0.1.8
+  version: 0.1.9
 - name: kesmeey/unicodeUtil
   version: 0.2.3
 - name: kinoamyfx/moon-axe-tools
@@ -293,7 +291,7 @@ mooncakes:
 - name: pai2shub/alg
   version: 0.1.3
 - name: peter-jerry-ye/async
-  version: 0.1.2
+  version: 0.1.3
 - name: peter-jerry-ye/canvas
   version: 0.7.0
 - name: peter-jerry-ye/io
