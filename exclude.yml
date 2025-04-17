@@ -163,6 +163,7 @@ exclude:
 - ShellWen/dotenv
 - tonyfettes/js
 - Luna-Flow/linear-algebra
+- gmlewis/fonts
 
 # can't find github user
 - five-nuts/coreutils
