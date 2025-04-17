@@ -214,7 +214,7 @@ mooncakes:
 - name: illusory0x0/fun
   version: 0.2.1
 - name: illusory0x0/fuzzy_match
-  version: 0.1.0
+  version: 0.2.0
 - name: illusory0x0/graphviz
   version: 0.1.0
 - name: illusory0x0/immut_deque
@@ -295,7 +295,7 @@ mooncakes:
 - name: peter-jerry-ye/canvas
   version: 0.7.0
 - name: peter-jerry-ye/io
-  version: 0.3.0
+  version: 0.3.1
   running_backend:
   - wasm
 - name: peter-jerry-ye/mcp-server
@@ -329,7 +329,7 @@ mooncakes:
 - name: sjzbxhsj/Calculator
   version: 0.1.0
 - name: smallbearrr/NetworkX
-  version: 0.1.2
+  version: 0.1.3
 - name: structuraBlock/MoonStats
   version: 0.3.0
 - name: tiye/caterfoil
