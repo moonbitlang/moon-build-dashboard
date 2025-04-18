@@ -134,7 +134,7 @@ mooncakes:
 - name: Yoorkin/prettyprinter
   version: 0.4.2
 - name: Yoorkin/rabbit-tea
-  version: 0.7.3
+  version: 0.7.4
   running_backend:
   - js
 - name: Yoorkin/stack
@@ -166,7 +166,7 @@ mooncakes:
 - name: furesoft/moos-sdk
   version: 0.1.6
 - name: gmlewis/b2
-  version: 0.34.7
+  version: 0.34.8
 - name: gmlewis/base64
   version: 0.14.3
 - name: gmlewis/crc32
@@ -178,11 +178,11 @@ mooncakes:
 - name: gmlewis/hash
   version: 0.19.9
 - name: gmlewis/image
-  version: 0.16.8
+  version: 0.16.9
 - name: gmlewis/io
   version: 0.22.1
 - name: gmlewis/jsonrpc2
-  version: 0.0.4
+  version: 0.0.5
 - name: gmlewis/md5
   version: 0.19.5
 - name: gmlewis/moonbit-pdk
@@ -192,7 +192,7 @@ mooncakes:
 - name: gmlewis/sha256
   version: 0.17.5
 - name: gmlewis/spin-moonbit-sdk
-  version: 0.52.7
+  version: 0.52.8
 - name: gmlewis/zlib
   version: 0.20.8
 - name: hachi/sort
@@ -274,7 +274,7 @@ mooncakes:
 - name: moonbitlang/mbt_lexer
   version: 0.1.12
 - name: moonbitlang/ulex
-  version: 0.1.12
+  version: 0.1.13
 - name: moonbitlang/ulex-runtime
   version: 0.2.5
 - name: moonbitlang/wasm4
@@ -283,7 +283,7 @@ mooncakes:
   - wasm
   - wasm-gc
 - name: oboard/mimetype
-  version: 0.1.5
+  version: 0.1.6
 - name: oboard/mocket
   version: 0.2.5
 - name: oboard/numoon
