@@ -134,7 +134,7 @@ mooncakes:
 - name: Yoorkin/prettyprinter
   version: 0.4.2
 - name: Yoorkin/rabbit-tea
-  version: 0.7.4
+  version: 0.7.5
   running_backend:
   - js
 - name: Yoorkin/stack
@@ -276,7 +276,7 @@ mooncakes:
 - name: moonbitlang/ulex
   version: 0.1.13
 - name: moonbitlang/ulex-runtime
-  version: 0.2.5
+  version: 0.3.2
 - name: moonbitlang/wasm4
   version: 0.2.6
   running_backend:
