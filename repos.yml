@@ -101,6 +101,8 @@ mooncakes:
   version: 0.1.1
 - name: MINGtoMING/datetime
   version: 0.1.0
+- name: Milky2018/moonchor
+  version: 0.1.0
 - name: Near-Jungnune/Near-Jungnune
   version: 0.1.0
 - name: Nyuudoukumo/uuidv4
