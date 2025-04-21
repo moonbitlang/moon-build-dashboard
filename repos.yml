@@ -54,6 +54,8 @@ mooncakes:
   version: 0.1.0
 - name: BigThree33/find_min
   version: 0.1.0
+- name: CAIMEOX/diet
+  version: 0.1.0
 - name: CAIMEOX/lazy
   version: 0.1.0
 - name: CAIMEOX/lazy-list
@@ -258,8 +260,6 @@ mooncakes:
   version: 0.1.0
 - name: misika727/sqrt
   version: 0.1.0
-- name: moonbitlang/esp32
-  version: 0.1.1
 - name: moonbitlang/lex
   version: 0.3.3
 - name: moonbitlang/lex-runtime
@@ -273,7 +273,7 @@ mooncakes:
 - name: moonbitlang/ulex
   version: 0.1.13
 - name: moonbitlang/ulex-runtime
-  version: 0.3.2
+  version: 0.4.1
 - name: moonbitlang/wasm4
   version: 0.2.6
   running_backend:
