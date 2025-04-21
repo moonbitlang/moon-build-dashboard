@@ -20,11 +20,6 @@ github-repos:
 - name: Luna-Flow/linear-algebra
   link: https://github.com/Luna-Flow/linear-algebra
   branch: main
-- name: tonyfettes/js
-  link: https://github.com/tonyfettes/js.mbt
-  branch: main
-  running_backend:
-  - js
 - name: moonbit-community/dotenv-mbt
   link: https://github.com/moonbit-community/dotenv-mbt
   branch: main

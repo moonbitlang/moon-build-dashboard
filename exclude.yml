@@ -146,6 +146,16 @@ exclude:
 # - name: Kaida-Amethyst/Moonbit-Math
 #   link: https://github.com/Kaida-Amethyst/Moonbit-Math
 #   branch: master
+# - name: moonbitlang/esp32
+#   link: https://github.com/moonbit-community/moonbit-esp32
+#   branch: main
+
+# String conflict with builtin
+# - name: tonyfettes/js
+#   link: https://github.com/tonyfettes/js.mbt
+#   branch: main
+#   running_backend:
+#   - js
 
 # use github link instead of mooncake
 - moonbitlang/core
@@ -164,6 +174,7 @@ exclude:
 - tonyfettes/js
 - Luna-Flow/linear-algebra
 - gmlewis/fonts
+- moonbitlang/esp32
 
 # can't find github user
 - five-nuts/coreutils
