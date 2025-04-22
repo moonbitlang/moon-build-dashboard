@@ -48,6 +48,8 @@ github-repos:
   link: https://github.com/moonbitlang/minimoonbit-public
   branch: main
 mooncakes:
+- name: 0Ayachi0/SwissTable
+  version: 0.1.0
 - name: 0Ayachi0/math
   version: 0.1.0
 - name: 2459822546/fwshz
@@ -99,7 +101,7 @@ mooncakes:
 - name: MINGtoMING/datetime
   version: 0.1.0
 - name: Milky2018/moonchor
-  version: 0.1.0
+  version: 0.5.0
 - name: Near-Jungnune/Near-Jungnune
   version: 0.1.0
 - name: Nyuudoukumo/uuidv4
@@ -115,7 +117,7 @@ mooncakes:
 - name: ShellWen/lru_cache
   version: 0.1.0
 - name: ShellWen/sw_ini
-  version: 0.1.1
+  version: 0.2.0
 - name: ShellWen/sw_router
   version: 0.1.0
 - name: SyoujyoujiNaiki/chungshan
@@ -191,7 +193,7 @@ mooncakes:
 - name: gmlewis/sha256
   version: 0.17.5
 - name: gmlewis/spin-moonbit-sdk
-  version: 0.52.8
+  version: 0.53.0
 - name: gmlewis/zlib
   version: 0.20.8
 - name: hachi/sort
@@ -243,7 +245,9 @@ mooncakes:
 - name: kesmeey/IndexMap
   version: 0.1.9
 - name: kesmeey/IndexSet
-  version: 0.1.5
+  version: 0.1.6
+- name: kesmeey/IntervalTree
+  version: 0.1.3
 - name: kesmeey/fmt
   version: 0.1.9
 - name: kesmeey/unicodeUtil
@@ -320,6 +324,8 @@ mooncakes:
   running_backend:
   - js
 - name: remain11/i18n
+  version: 0.1.0
+- name: ruifeng/diff
   version: 0.1.0
 - name: shiheat/find_max
   version: 0.3.0
