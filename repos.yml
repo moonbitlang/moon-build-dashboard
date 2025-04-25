@@ -47,6 +47,12 @@ github-repos:
 - name: moonbitlang/minimoonbit-public
   link: https://github.com/moonbitlang/minimoonbit-public
   branch: main
+- name: moonbit-community/NyaCSV
+  link: https://github.com/moonbit-community/NyaCSV
+  branch: main
+- name: moonbit-community/NyaSearch
+  link: https://github.com/moonbit-community/NyaSearch
+  branch: main
 mooncakes:
 - name: 0Ayachi0/SwissTable
   version: 0.1.0
