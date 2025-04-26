@@ -267,7 +267,7 @@ mooncakes:
 - name: moonbitlang/mbt_lexer
   version: 0.1.13
 - name: moonbitlang/ulex
-  version: 0.2.3
+  version: 0.2.4
 - name: moonbitlang/ulex-runtime
   version: 0.4.1
 - name: moonbitlang/wasm4
