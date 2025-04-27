@@ -53,6 +53,9 @@ github-repos:
 - name: moonbit-community/NyaSearch
   link: https://github.com/moonbit-community/NyaSearch
   branch: main
+- name: moonbit-community/sw-ini
+  link: https://github.com/moonbit-community/sw-ini
+  branch: main
 mooncakes:
 - name: 0Ayachi0/SwissTable
   version: 0.1.0

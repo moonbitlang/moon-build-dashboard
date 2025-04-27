@@ -76,6 +76,8 @@ exclude:
 - LI7282/base16
 - jinser/json
 - hanstechnow/ctf_tools
+- pai2shub/alg
+- FlyCloudC/scheme
 
 # minor
 - bobzhang/testa
@@ -185,6 +187,7 @@ exclude:
 - moonbitlang/esp32
 - xunyoyo/NyaCSV
 - xunyoyo/NyaSearch
+- ShellWen/sw_ini
 
 # can't find github user
 - five-nuts/coreutils
