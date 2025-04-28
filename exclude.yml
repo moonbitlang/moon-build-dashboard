@@ -78,6 +78,9 @@ exclude:
 - hanstechnow/ctf_tools
 - pai2shub/alg
 - FlyCloudC/scheme
+- oboard/mimetype
+- oboard/mocket
+- illusory0x0/base
 
 # minor
 - bobzhang/testa
@@ -135,6 +138,7 @@ exclude:
 - tonyfettes/torch
 - tonyfettes/uv
 - Kaida-Amethyst/llvm
+- Kaida-Amethyst/matplotlib
 - Luna-Flow/calculus-numerical
 - Luna-Flow/luna-complex
 - Luna-Flow/luna-poly
@@ -148,6 +152,7 @@ exclude:
 - tonyfettes/tree_sitter_query
 - tonyfettes/tree_sitter_yaml
 - Yu-zh/termbit
+- illusory0x0/qpainter
 
 # no native for now
 # - name: moonbit-community/moonbit-arduino
@@ -188,6 +193,10 @@ exclude:
 - xunyoyo/NyaCSV
 - xunyoyo/NyaSearch
 - ShellWen/sw_ini
+
+# unknown failure & can't reproduce
+- smallbearrr/NetworkX
+- illusory0x0/adapton
 
 # can't find github user
 - five-nuts/coreutils
