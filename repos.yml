@@ -253,6 +253,8 @@ mooncakes:
   version: 0.1.0
 - name: misika727/sqrt
   version: 0.1.0
+- name: moonbitlang/dummy_abort
+  version: 0.1.0
 - name: moonbitlang/lex
   version: 0.3.3
 - name: moonbitlang/lex-runtime
@@ -293,7 +295,7 @@ mooncakes:
 - name: peter-jerry-ye/utils
   version: 0.4.1
 - name: peter-jerry-ye/wasi
-  version: 0.19.2
+  version: 0.20.0
   running_backend:
   - wasm
 - name: peter-jerry-ye/wasi-imports
@@ -345,7 +347,7 @@ mooncakes:
 - name: tonyfettes/c
   version: 0.1.13
 - name: tonyfettes/encoding
-  version: 0.1.4
+  version: 0.3.0
 - name: tonyfettes/memory
   version: 0.2.5
 - name: tonyfettes/submodule-test
@@ -389,7 +391,7 @@ mooncakes:
 - name: yanyeting/minmax
   version: 0.1.0
 - name: yj-qin/regexp
-  version: 0.3.4
+  version: 0.3.5
 - name: yueTc/Binary-Indexed-Tree
   version: 0.1.1
 - name: yyjeqhc/base32
