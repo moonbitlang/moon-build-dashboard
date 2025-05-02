@@ -164,7 +164,7 @@ mooncakes:
 - name: extism/moonbit-pdk
   version: 0.47.2
 - name: furesoft/moos-sdk
-  version: 0.1.9
+  version: 0.1.16
 - name: gmlewis/b2
   version: 0.34.9
 - name: gmlewis/base64
@@ -174,7 +174,7 @@ mooncakes:
 - name: gmlewis/flate
   version: 0.35.9
 - name: gmlewis/gzip
-  version: 0.33.9
+  version: 0.33.10
 - name: gmlewis/hash
   version: 0.19.10
 - name: gmlewis/image
@@ -241,6 +241,8 @@ mooncakes:
   version: 0.1.3
 - name: kesmeey/fmt
   version: 0.1.9
+- name: kesmeey/immut_BitVector
+  version: 0.1.2
 - name: kesmeey/unicodeUtil
   version: 0.2.3
 - name: kinoamyfx/moon-axe-tools
