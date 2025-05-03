@@ -157,6 +157,8 @@ mooncakes:
   version: 0.0.3
 - name: chronostesis/check_prime
   version: 0.1.0
+- name: colmugx/reader
+  version: 0.2.1
 - name: djisnj/djisnj
   version: 0.1.0
 - name: dongyvxuan/dongyx
@@ -164,7 +166,7 @@ mooncakes:
 - name: extism/moonbit-pdk
   version: 0.47.2
 - name: furesoft/moos-sdk
-  version: 0.1.16
+  version: 0.1.20
 - name: gmlewis/b2
   version: 0.34.9
 - name: gmlewis/base64
@@ -210,7 +212,7 @@ mooncakes:
 - name: illusory0x0/fuzzy_match
   version: 0.2.1
 - name: illusory0x0/graphviz
-  version: 0.1.0
+  version: 0.1.1
 - name: illusory0x0/immut_deque
   version: 0.2.1
 - name: illusory0x0/jcore
@@ -270,7 +272,7 @@ mooncakes:
 - name: moonbitlang/mbt_lexer
   version: 0.1.13
 - name: moonbitlang/ulex
-  version: 0.2.4
+  version: 0.2.6
 - name: moonbitlang/ulex-runtime
   version: 0.4.1
 - name: moonbitlang/wasm4
