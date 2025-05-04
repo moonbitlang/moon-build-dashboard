@@ -166,7 +166,7 @@ mooncakes:
 - name: extism/moonbit-pdk
   version: 0.47.2
 - name: furesoft/moos-sdk
-  version: 0.1.20
+  version: 0.1.43
 - name: gmlewis/b2
   version: 0.34.9
 - name: gmlewis/base64
