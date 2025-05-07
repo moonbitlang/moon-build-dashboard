@@ -105,6 +105,8 @@ mooncakes:
   version: 0.1.1
 - name: Milky2018/moonchor
   version: 0.7.5
+- name: Milky2018/options
+  version: 0.1.2
 - name: Near-Jungnune/Near-Jungnune
   version: 0.1.0
 - name: Nyuudoukumo/uuidv4
@@ -201,8 +203,6 @@ mooncakes:
   version: 0.1.12
 - name: hanbings/fluorescence
   version: 0.1.1
-- name: hevienz/moonbit_libbpf
-  version: 0.1.0
 - name: hzqdf/sum-calc
   version: 0.0.20250321
 - name: illusory0x0/coerce
@@ -293,7 +293,7 @@ mooncakes:
   running_backend:
   - wasm
 - name: peter-jerry-ye/mcp-server
-  version: 0.3.3
+  version: 0.3.4
   running_backend:
   - wasm
 - name: peter-jerry-ye/spin-imports
