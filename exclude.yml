@@ -153,6 +153,7 @@ exclude:
 - tonyfettes/tree_sitter_yaml
 - Yu-zh/termbit
 - illusory0x0/qpainter
+- hevienz/moonbit_libbpf
 
 # no native for now
 # - name: moonbit-community/moonbit-arduino
