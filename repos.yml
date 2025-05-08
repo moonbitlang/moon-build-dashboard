@@ -104,7 +104,7 @@ mooncakes:
 - name: Luna-Flow/quaternion
   version: 0.1.1
 - name: Milky2018/moonchor
-  version: 0.7.5
+  version: 0.9.0
 - name: Milky2018/options
   version: 0.1.2
 - name: Near-Jungnune/Near-Jungnune
@@ -205,6 +205,8 @@ mooncakes:
   version: 0.1.1
 - name: hzqdf/sum-calc
   version: 0.0.20250321
+- name: illusory0x0/clang
+  version: 0.1.0
 - name: illusory0x0/coerce
   version: 0.1.0
 - name: illusory0x0/color
