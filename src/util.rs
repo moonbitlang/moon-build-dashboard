@@ -139,7 +139,7 @@ fn install_windows_release(is_bleeding: bool) -> Result<(), MoonOpsError> {
     cmd.args(["-Command", cmd_str]);
 
     if is_bleeding {
-        cmd.env("MOONBIT_INSTALL_VERSION", "pre-release");
+        cmd.env("MOONBIT_INSTALL_VERSION", "bleeding");
     }
 
     let output = cmd.output().map_err(|e| MoonOpsError {
@@ -188,7 +188,7 @@ pub fn install_stable_release() -> Result<(), MoonOpsError> {
 
 pub fn install_bleeding_release() -> Result<(), MoonOpsError> {
     #[cfg(unix)]
-    let res = install_unix_release(&["-s", "pre-release"]);
+    let res = install_unix_release(&["-s", "bleeding"]);
 
     #[cfg(target_os = "windows")]
     let res = install_windows_release(true);
@@ -253,8 +253,6 @@ impl PartialOrd for Mooncake {
         Some(self.cmp(other))
     }
 }
-
-
 
 #[derive(Debug, Deserialize, Serialize)]
 pub struct ExcludeConfig {
