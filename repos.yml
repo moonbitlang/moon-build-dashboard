@@ -73,6 +73,8 @@ mooncakes:
   version: 0.1.0
 - name: CAIMEOX/lazy-list
   version: 0.1.1
+- name: CAIMEOX/原来可以发中文包
+  version: 0.1.1
 - name: CMoonBack/Binary-Exponentiation
   version: 0.1.0
 - name: DawnMagnet/sparse-table
@@ -104,8 +106,10 @@ mooncakes:
 - name: Luna-Flow/quaternion
   version: 0.1.1
 - name: Milky2018/moonchor
-  version: 0.9.6
+  version: 0.10.0
 - name: Milky2018/options
+  version: 0.1.2
+- name: Milky2018/toolkit
   version: 0.1.2
 - name: Near-Jungnune/Near-Jungnune
   version: 0.1.0
