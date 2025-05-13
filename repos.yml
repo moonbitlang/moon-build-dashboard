@@ -73,6 +73,8 @@ mooncakes:
   version: 0.1.0
 - name: CAIMEOX/lazy-list
   version: 0.1.1
+- name: CAIMEOX/svg
+  version: 0.1.1
 - name: CAIMEOX/原来可以发中文包
   version: 0.1.1
 - name: CMoonBack/Binary-Exponentiation
@@ -108,11 +110,13 @@ mooncakes:
 - name: MINGtoMING/bzip2
   version: 0.0.0
 - name: Milky2018/moonchor
-  version: 0.10.0
+  version: 0.12.0
+- name: Milky2018/moonlight
+  version: 0.1.0
 - name: Milky2018/options
   version: 0.1.2
 - name: Milky2018/toolkit
-  version: 0.1.2
+  version: 0.1.3
 - name: Near-Jungnune/Near-Jungnune
   version: 0.1.0
 - name: Nyuudoukumo/uuidv4
