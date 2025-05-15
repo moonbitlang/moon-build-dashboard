@@ -81,6 +81,7 @@ exclude:
 - oboard/mimetype
 - oboard/mocket
 - illusory0x0/base
+- moonbitlang/lex
 
 # minor
 - bobzhang/testa
@@ -154,6 +155,7 @@ exclude:
 - Yu-zh/termbit
 - illusory0x0/qpainter
 - hevienz/moonbit_libbpf
+- MINGtoMING/bzip2
 
 # no native for now
 # - name: moonbit-community/moonbit-arduino
