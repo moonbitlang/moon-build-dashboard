@@ -107,8 +107,6 @@ mooncakes:
   version: 0.1.0
 - name: Luna-Flow/quaternion
   version: 0.1.1
-- name: MINGtoMING/bzip2
-  version: 0.0.0
 - name: Milky2018/moonchor
   version: 0.12.0
 - name: Milky2018/moonlight
@@ -275,8 +273,6 @@ mooncakes:
   version: 0.1.0
 - name: moonbitlang/dummy_abort
   version: 0.2.0
-- name: moonbitlang/lex
-  version: 0.3.3
 - name: moonbitlang/lex-runtime
   version: 0.1.3
 - name: moonbitlang/lex/runtime
