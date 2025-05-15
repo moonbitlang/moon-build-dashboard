@@ -82,6 +82,8 @@ exclude:
 - oboard/mocket
 - illusory0x0/base
 - moonbitlang/lex
+- moonbitlang/mbt-lexer
+- moonbitlang/mbt_lexer
 
 # minor
 - bobzhang/testa
