@@ -137,6 +137,8 @@ mooncakes:
   version: 0.1.0
 - name: SyoujyoujiNaiki/chungshan
   version: 0.2.0
+- name: TheWaWaR/clap
+  version: 0.1.0
 - name: Tianci-King/median
   version: 0.3.0
 - name: WenqiChen3019/sqrt
@@ -232,7 +234,7 @@ mooncakes:
 - name: illusory0x0/graphviz
   version: 0.1.1
 - name: illusory0x0/immut_deque
-  version: 0.2.1
+  version: 0.3.1
 - name: illusory0x0/jcore
   version: 0.1.1
 - name: illusory0x0/lazy
