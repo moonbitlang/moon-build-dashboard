@@ -86,6 +86,8 @@ exclude:
 - moonbitlang/mbt_lexer
 
 # minor
+- illusory0x0/🐫
+- sohaha/zls
 - bobzhang/testa
 - bobzhang/testb
 - Yoorkin/hello
@@ -177,6 +179,15 @@ exclude:
 #   running_backend:
 #   - js
 
+
+# out of maintenance
+# - name: TAPL-in-MoonBit
+#   link: https://github.com/pku-dppl/TAPL-in-MoonBit
+#   branch: main
+#   running_os:
+#   - linux
+#   - macos
+
 # use github link instead of mooncake
 - moonbitlang/core
 - moonbitlang/x
@@ -198,6 +209,7 @@ exclude:
 - xunyoyo/NyaCSV
 - xunyoyo/NyaSearch
 - ShellWen/sw_ini
+- FlyCloudC/miniKanren
 
 # unknown failure & can't reproduce
 - smallbearrr/NetworkX

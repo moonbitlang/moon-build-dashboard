@@ -1,4 +1,7 @@
 github-repos:
+- name: FlyCloudC/miniKanren
+  link: https://github.com/FlyCloudC/miniKanren
+  branch: main
 - name: moonbitlang/core
   link: https://github.com/moonbitlang/core
   branch: main
@@ -29,12 +32,6 @@ github-repos:
 - name: gmlewis/moonbit-fonts
   link: https://github.com/gmlewis/moonbit-fonts
   branch: master
-- name: TAPL-in-MoonBit
-  link: https://github.com/pku-dppl/TAPL-in-MoonBit
-  branch: main
-  running_os:
-  - linux
-  - macos
 - name: zhuguiyuan/MoonBit-EDA-Router
   link: https://github.com/zhuguiyuan/MoonBit-EDA-Router
   branch: main
