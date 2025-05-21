@@ -86,8 +86,6 @@ mooncakes:
   version: 0.1.1
 - name: Eunoiay/Eunoiay
   version: 0.1.0
-- name: FlyCloudC/miniKanren
-  version: 0.1.1
 - name: GMH233/moonpassword
   version: 0.1.0
 - name: GreyIcesea/isprime
@@ -110,11 +108,15 @@ mooncakes:
   version: 0.1.0
 - name: Luna-Flow/quaternion
   version: 0.1.1
+- name: MINGtoMING/simdstring
+  version: 0.1.8
 - name: Milky2018/guardch
   version: 0.1.0
 - name: Milky2018/moonchor
   version: 0.14.0
 - name: Milky2018/moonlight
+  version: 0.1.0
+- name: Milky2018/moonplant
   version: 0.1.0
 - name: Milky2018/options
   version: 0.1.2
@@ -246,8 +248,6 @@ mooncakes:
   version: 0.1.5
 - name: illusory0x0/prettyprinter
   version: 0.1.0
-- name: illusory0x0/🐫
-  version: 0.1.0
 - name: jankin_li/Learn_Test1
   version: 0.1.0
 - name: jankin_li/new_lib
@@ -340,8 +340,6 @@ mooncakes:
 - name: shiheat/find_max
   version: 0.3.0
 - name: sjzbxhsj/Calculator
-  version: 0.1.0
-- name: sohaha/zls
   version: 0.1.0
 - name: structuraBlock/MoonStats
   version: 0.3.0
