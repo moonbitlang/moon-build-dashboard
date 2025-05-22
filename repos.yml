@@ -1,4 +1,13 @@
 github-repos:
+- name: WebGPU-Art/quaternion
+  link: https://github.com/WebGPU-Art/quaternion
+  branch: main
+- name: zxch3n/moon-expect
+  link: https://github.com/zxch3n/moon-expect
+  branch: main
+- name: moonbit-community/linalg
+  link: https://github.com/moonbit-community/linalg
+  branch: main
 - name: FlyCloudC/miniKanren
   link: https://github.com/FlyCloudC/miniKanren
   branch: main
@@ -369,6 +378,8 @@ mooncakes:
   - js
 - name: tiye/respo-markdown
   version: 0.0.2
+  running_backend:
+  - js
 - name: tonyfettes/atomics
   version: 0.1.0
 - name: tonyfettes/c

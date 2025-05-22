@@ -1,5 +1,6 @@
 exclude:
 # out of maintenance
+- oboard/numoon
 - Guest0x0/HAMT
 - lijunchen/unstable_io
 - Guest0x0/dregex
@@ -160,6 +161,7 @@ exclude:
 - illusory0x0/qpainter
 - hevienz/moonbit_libbpf
 - MINGtoMING/bzip2
+- MINGtoMING/simdstring
 
 # no native for now
 # - name: moonbit-community/moonbit-arduino
@@ -189,6 +191,9 @@ exclude:
 #   - macos
 
 # use github link instead of mooncake
+- tiye/quaternion
+- zxch3n/expect
+- xunyoyo/linalg
 - moonbitlang/core
 - moonbitlang/x
 - moonbitlang/quickcheck
@@ -215,7 +220,9 @@ exclude:
 - smallbearrr/NetworkX
 - illusory0x0/adapton
 
-# can't find github user
+# can't find github link & no maintenance
+- tiye/caterfoil
+- kesmeey/unicodeUtil
 - five-nuts/coreutils
 - eczn/eczn-utils
 - NerdyLee/newcake_ls
