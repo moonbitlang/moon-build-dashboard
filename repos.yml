@@ -302,9 +302,13 @@ mooncakes:
   running_backend:
   - wasm
   - wasm-gc
+- name: moransky/bloom_filter
+  version: 0.1.0
 - name: myfreess/casefold
   version: 0.1.1
 - name: myfreess/charclass
+  version: 0.1.1
+- name: oboard/mio
   version: 0.1.1
 - name: peter-jerry-ye/async
   version: 0.1.6
@@ -363,11 +367,11 @@ mooncakes:
 - name: tiye/lexicon-fractional-index
   version: 0.0.2
 - name: tiye/respo
-  version: 0.0.32
+  version: 0.0.33
   running_backend:
   - js
 - name: tiye/respo-markdown
-  version: 0.0.2
+  version: 0.0.3
   running_backend:
   - js
 - name: tonyfettes/atomics
