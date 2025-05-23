@@ -188,7 +188,7 @@ pub fn install_stable_release() -> Result<(), MoonOpsError> {
 
 pub fn install_bleeding_release() -> Result<(), MoonOpsError> {
     #[cfg(unix)]
-    let res = install_unix_release(&["-s", "pre-release"]);
+    let res = install_unix_release(&["-s", "bleeding"]);
 
     #[cfg(target_os = "windows")]
     let res = install_windows_release(true);
