@@ -148,7 +148,7 @@ mooncakes:
 - name: SyoujyoujiNaiki/chungshan
   version: 0.2.0
 - name: TheWaWaR/clap
-  version: 0.2.0
+  version: 0.2.2
 - name: Tianci-King/median
   version: 0.3.0
 - name: WenqiChen3019/sqrt
