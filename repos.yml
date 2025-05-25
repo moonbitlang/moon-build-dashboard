@@ -79,7 +79,11 @@ mooncakes:
   version: 0.1.3
 - name: BigThree33/find_min
   version: 0.1.0
+- name: CAIMEOX/alg-pattern
+  version: 0.1.0
 - name: CAIMEOX/diet
+  version: 0.1.0
+- name: CAIMEOX/fenwick
   version: 0.1.0
 - name: CAIMEOX/lazy
   version: 0.1.0
