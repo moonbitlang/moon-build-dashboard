@@ -162,6 +162,7 @@ exclude:
 - hevienz/moonbit_libbpf
 - MINGtoMING/bzip2
 - MINGtoMING/simdstring
+- ShellWen/sw_socket
 
 # no native for now
 # - name: moonbit-community/moonbit-arduino
