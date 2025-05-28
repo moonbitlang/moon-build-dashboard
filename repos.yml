@@ -147,8 +147,6 @@ mooncakes:
   version: 0.1.0
 - name: ShellWen/sw_router
   version: 0.1.0
-- name: ShellWen/sw_socket
-  version: 0.1.0
 - name: SyoujyoujiNaiki/chungshan
   version: 0.2.0
 - name: TheWaWaR/clap
@@ -265,6 +263,8 @@ mooncakes:
   version: 0.1.0
 - name: jankin_li/new_lib
   version: 0.1.0
+- name: justjavac/ffi
+  version: 0.1.2
 - name: justjoheinz/complex
   version: 0.2.1
 - name: justjoheinz/iso-country
@@ -312,6 +312,8 @@ mooncakes:
   version: 0.1.1
 - name: myfreess/charclass
   version: 0.1.1
+- name: myfreess/unicode_data
+  version: 0.1.0
 - name: oboard/mio
   version: 0.1.1
 - name: peter-jerry-ye/async
