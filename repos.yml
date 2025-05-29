@@ -235,6 +235,8 @@ mooncakes:
   version: 0.0.20250321
 - name: illusory0x0/clang
   version: 0.1.0
+- name: illusory0x0/clone
+  version: 0.1.0
 - name: illusory0x0/coerce
   version: 0.1.0
 - name: illusory0x0/color
@@ -266,7 +268,7 @@ mooncakes:
 - name: justjavac/ffi
   version: 0.1.3
 - name: justjavac/webview
-  version: 0.1.0
+  version: 0.1.3
 - name: justjoheinz/complex
   version: 0.2.1
 - name: justjoheinz/iso-country
