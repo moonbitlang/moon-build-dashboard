@@ -198,35 +198,35 @@ mooncakes:
 - name: furesoft/moos-sdk
   version: 0.1.43
 - name: gmlewis/b2
-  version: 0.34.11
+  version: 0.34.12
 - name: gmlewis/base64
   version: 0.14.6
 - name: gmlewis/crc32
   version: 0.8.5
 - name: gmlewis/flate
-  version: 0.35.10
+  version: 0.35.11
 - name: gmlewis/gzip
-  version: 0.33.11
+  version: 0.33.12
 - name: gmlewis/hash
-  version: 0.19.11
+  version: 0.19.12
 - name: gmlewis/image
-  version: 0.16.11
+  version: 0.16.12
 - name: gmlewis/io
   version: 0.22.4
 - name: gmlewis/jsonrpc2
-  version: 0.0.7
+  version: 0.0.8
 - name: gmlewis/md5
   version: 0.19.8
 - name: gmlewis/moonbit-pdk
   version: 0.47.7
 - name: gmlewis/sha1
-  version: 0.11.11
+  version: 0.11.12
 - name: gmlewis/sha256
   version: 0.17.8
 - name: gmlewis/spin-moonbit-sdk
-  version: 0.53.3
+  version: 0.53.4
 - name: gmlewis/zlib
-  version: 0.20.10
+  version: 0.20.11
 - name: hachi/sort
   version: 0.1.12
 - name: hanbings/fluorescence
@@ -319,7 +319,7 @@ mooncakes:
 - name: myfreess/unicode_data
   version: 0.1.0
 - name: oboard/mio
-  version: 0.1.1
+  version: 0.2.0
 - name: peter-jerry-ye/async
   version: 0.1.6
 - name: peter-jerry-ye/canvas
