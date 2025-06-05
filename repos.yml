@@ -1,4 +1,7 @@
 github-repos:
+- name: oboard/mio
+  link: https://github.com/oboard/mio
+  branch: main
 - name: WebGPU-Art/quaternion
   link: https://github.com/WebGPU-Art/quaternion
   branch: main
@@ -388,6 +391,8 @@ mooncakes:
   - js
 - name: tiye/respo-router
   version: 0.0.1
+  running_backend:
+  - js
 - name: tonyfettes/atomics
   version: 0.1.0
 - name: tonyfettes/c
