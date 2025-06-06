@@ -72,6 +72,8 @@ mooncakes:
   version: 0.1.0
 - name: 2459822546/fwshz
   version: 0.1.0
+- name: AdUhTkJm/sat-solver
+  version: 0.1.0
 - name: Bemly/cstdio-ffi
   version: 0.0.0
 - name: BigOrangeQWQ/ImmuntableMultiSet
@@ -80,6 +82,8 @@ mooncakes:
   version: 0.1.2
 - name: BigOrangeQWQ/immut_multiset
   version: 0.1.4
+- name: BigOrangeQWQ/unification_table
+  version: 0.1.0
 - name: BigThree33/find_min
   version: 0.1.0
 - name: CAIMEOX/alg-pattern
@@ -107,8 +111,6 @@ mooncakes:
 - name: GreyIcesea/isprime
   version: 0.1.0
 - name: HeChTo/rope
-  version: 0.1.0
-- name: JPLovever/fkshz
   version: 0.1.0
 - name: Jtian-t/Deque
   version: 0.1.0
@@ -153,7 +155,7 @@ mooncakes:
 - name: SyoujyoujiNaiki/chungshan
   version: 0.2.0
 - name: TheWaWaR/clap
-  version: 0.2.2
+  version: 0.2.3
 - name: Tianci-King/median
   version: 0.3.0
 - name: WenqiChen3019/sqrt
@@ -167,7 +169,7 @@ mooncakes:
 - name: Yoorkin/prettyprinter
   version: 0.4.3
 - name: Yoorkin/rabbit-tea
-  version: 0.7.10
+  version: 0.7.11
   running_backend:
   - js
 - name: Yoorkin/stack
@@ -272,8 +274,6 @@ mooncakes:
   version: 0.1.0
 - name: justjavac/ffi
   version: 0.1.5
-- name: justjavac/webview
-  version: 0.1.5
 - name: justjoheinz/complex
   version: 0.2.1
 - name: justjoheinz/iso-country
@@ -323,8 +323,6 @@ mooncakes:
   version: 0.1.1
 - name: myfreess/unicode_data
   version: 0.1.0
-- name: oboard/mio
-  version: 0.2.0
 - name: peter-jerry-ye/async
   version: 0.1.6
 - name: peter-jerry-ye/canvas
@@ -368,11 +366,11 @@ mooncakes:
 - name: structuraBlock/MoonStats
   version: 0.3.0
 - name: tiye/cirru-edn
-  version: 0.0.8
+  version: 0.1.0
   running_backend:
   - js
 - name: tiye/cirru-parser
-  version: 0.0.13
+  version: 0.1.0
   running_backend:
   - js
 - name: tiye/dom-ffi
@@ -450,6 +448,4 @@ mooncakes:
 - name: zdu881/DataProc
   version: 0.1.0
 - name: zhangshun-123/factorial
-  version: 0.1.0
-- name: zxch3n/colored
   version: 0.1.0
