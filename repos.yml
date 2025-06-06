@@ -2,6 +2,8 @@ github-repos:
 - name: oboard/mio
   link: https://github.com/oboard/mio
   branch: main
+  running_backend:
+  - js
 - name: WebGPU-Art/quaternion
   link: https://github.com/WebGPU-Art/quaternion
   branch: main

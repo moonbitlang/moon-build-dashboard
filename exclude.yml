@@ -1,5 +1,7 @@
 exclude:
 # out of maintenance
+- justjoheinz/complex
+- BigOrangeQWQ/unification_table
 - oboard/numoon
 - Guest0x0/HAMT
 - lijunchen/unstable_io
@@ -132,6 +134,7 @@ exclude:
 - KCN-judu/luna-complex
 
 # disable for now, need to add native backend run
+- AdUhTkJm/sat-solver
 - illusory0x0/posix
 - illusory0x0/native
 - wzzc-dev/webview-ffi
