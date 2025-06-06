@@ -74,18 +74,16 @@ mooncakes:
   version: 0.1.0
 - name: 2459822546/fwshz
   version: 0.1.0
-- name: AdUhTkJm/sat-solver
-  version: 0.1.0
 - name: Bemly/cstdio-ffi
   version: 0.0.0
+- name: BigOrangeQWQ/Bits
+  version: 0.1.0
 - name: BigOrangeQWQ/ImmuntableMultiSet
   version: 0.1.0
 - name: BigOrangeQWQ/immunt_multiset
   version: 0.1.2
 - name: BigOrangeQWQ/immut_multiset
   version: 0.1.4
-- name: BigOrangeQWQ/unification_table
-  version: 0.1.0
 - name: BigThree33/find_min
   version: 0.1.0
 - name: CAIMEOX/alg-pattern
@@ -276,8 +274,6 @@ mooncakes:
   version: 0.1.0
 - name: justjavac/ffi
   version: 0.1.5
-- name: justjoheinz/complex
-  version: 0.2.1
 - name: justjoheinz/iso-country
   version: 0.1.1
 - name: kesmeey/IndexMap
