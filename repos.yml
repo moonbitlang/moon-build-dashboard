@@ -74,11 +74,15 @@ mooncakes:
   version: 0.1.0
 - name: 2459822546/fwshz
   version: 0.1.0
+- name: AdUhTkJm/nummoon
+  version: 0.1.0
 - name: Bemly/cstdio-ffi
   version: 0.0.0
 - name: BigOrangeQWQ/Bits
   version: 0.1.0
 - name: BigOrangeQWQ/ImmuntableMultiSet
+  version: 0.1.0
+- name: BigOrangeQWQ/fmt
   version: 0.1.0
 - name: BigOrangeQWQ/immunt_multiset
   version: 0.1.2
@@ -105,6 +109,8 @@ mooncakes:
 - name: DawnMagnet/sparse-table
   version: 0.1.1
 - name: Eunoiay/Eunoiay
+  version: 0.1.0
+- name: FrenchPicnic/which
   version: 0.1.0
 - name: GMH233/moonpassword
   version: 0.1.0
@@ -247,7 +253,7 @@ mooncakes:
 - name: illusory0x0/coerce
   version: 0.1.0
 - name: illusory0x0/color
-  version: 0.2.2
+  version: 0.2.3
 - name: illusory0x0/fun
   version: 0.2.1
 - name: illusory0x0/fuzzy_match
@@ -255,7 +261,7 @@ mooncakes:
 - name: illusory0x0/graphviz
   version: 0.1.1
 - name: illusory0x0/immut_deque
-  version: 0.3.1
+  version: 0.3.2
 - name: illusory0x0/jcore
   version: 0.1.1
 - name: illusory0x0/lazy
@@ -268,6 +274,8 @@ mooncakes:
   version: 0.1.5
 - name: illusory0x0/prettyprinter
   version: 0.1.0
+- name: illusory0x0/simple_parserc
+  version: 0.1.1
 - name: jankin_li/Learn_Test1
   version: 0.1.0
 - name: jankin_li/new_lib
