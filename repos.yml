@@ -75,7 +75,7 @@ mooncakes:
 - name: 2459822546/fwshz
   version: 0.1.0
 - name: AdUhTkJm/nummoon
-  version: 0.1.0
+  version: 0.1.3
 - name: Bemly/cstdio-ffi
   version: 0.0.0
 - name: BigOrangeQWQ/Bits
@@ -83,11 +83,11 @@ mooncakes:
 - name: BigOrangeQWQ/ImmuntableMultiSet
   version: 0.1.0
 - name: BigOrangeQWQ/fmt
-  version: 0.1.0
+  version: 0.1.5
 - name: BigOrangeQWQ/immunt_multiset
   version: 0.1.2
 - name: BigOrangeQWQ/immut_multiset
-  version: 0.1.4
+  version: 0.1.5
 - name: BigThree33/find_min
   version: 0.1.0
 - name: CAIMEOX/alg-pattern
@@ -281,7 +281,7 @@ mooncakes:
 - name: jankin_li/new_lib
   version: 0.1.0
 - name: justjavac/ffi
-  version: 0.1.5
+  version: 0.1.6
 - name: justjoheinz/iso-country
   version: 0.1.1
 - name: kesmeey/IndexMap
