@@ -217,17 +217,17 @@ mooncakes:
 - name: gmlewis/crc32
   version: 0.8.5
 - name: gmlewis/flate
-  version: 0.35.11
+  version: 0.35.12
 - name: gmlewis/gzip
-  version: 0.33.12
+  version: 0.33.13
 - name: gmlewis/hash
-  version: 0.19.12
+  version: 0.19.13
 - name: gmlewis/image
-  version: 0.16.12
+  version: 0.16.13
 - name: gmlewis/io
   version: 0.22.4
 - name: gmlewis/jsonrpc2
-  version: 0.0.8
+  version: 0.0.9
 - name: gmlewis/md5
   version: 0.19.8
 - name: gmlewis/moonbit-pdk
@@ -239,7 +239,7 @@ mooncakes:
 - name: gmlewis/spin-moonbit-sdk
   version: 0.53.4
 - name: gmlewis/zlib
-  version: 0.20.11
+  version: 0.20.12
 - name: hachi/sort
   version: 0.1.12
 - name: hanbings/fluorescence
@@ -262,8 +262,6 @@ mooncakes:
   version: 0.1.1
 - name: illusory0x0/immut_deque
   version: 0.3.2
-- name: illusory0x0/jcore
-  version: 0.1.1
 - name: illusory0x0/lazy
   version: 0.1.2
 - name: illusory0x0/moonbit-wasm-nodejs-ts-template
@@ -272,8 +270,6 @@ mooncakes:
   version: 0.1.0
 - name: illusory0x0/parserc
   version: 0.1.5
-- name: illusory0x0/prettyprinter
-  version: 0.1.0
 - name: illusory0x0/simple_parserc
   version: 0.1.1
 - name: jankin_li/Learn_Test1
@@ -294,6 +290,8 @@ mooncakes:
   version: 0.1.9
 - name: kesmeey/immut_BitVector
   version: 0.1.2
+- name: kesmeey/immut_IntervalTree
+  version: 0.1.0
 - name: kinoamyfx/moon-axe-tools
   version: 0.0.1-SNAPSHOT
 - name: ledao/nanoid
@@ -403,8 +401,6 @@ mooncakes:
   version: 0.1.13
 - name: tonyfettes/encoding
   version: 0.3.2
-- name: tonyfettes/memory
-  version: 0.2.5
 - name: tonyfettes/submodule-test
   version: 0.1.1
 - name: tonyfettes/tree_sitter_cpp
