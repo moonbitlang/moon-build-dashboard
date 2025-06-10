@@ -1,5 +1,7 @@
 exclude:
 # out of maintenance
+- illusory0x0/jcore
+- illusory0x0/prettyprinter
 - justjoheinz/complex
 - BigOrangeQWQ/unification_table
 - oboard/numoon
@@ -68,6 +70,7 @@ exclude:
 - Yoorkin/format
 - yj-qin/moonlox
 - tonyfettes/tree-sitter/cli
+- tonyfettes/memory
 - peter-jerry-ye/memory
 - YumeXi/format
 - oboard/moonbit-eval
