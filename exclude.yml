@@ -1,5 +1,6 @@
 exclude:
 # out of maintenance
+- Yu-zh/iterator
 - illusory0x0/jcore
 - illusory0x0/prettyprinter
 - justjoheinz/complex
