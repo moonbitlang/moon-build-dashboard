@@ -75,7 +75,7 @@ mooncakes:
 - name: 2459822546/fwshz
   version: 0.1.0
 - name: AdUhTkJm/nummoon
-  version: 0.2.0
+  version: 0.2.1
 - name: Bemly/cstdio-ffi
   version: 0.0.0
 - name: BigOrangeQWQ/Bits
@@ -183,8 +183,6 @@ mooncakes:
 - name: Yoorkin/trie
   version: 0.2.4
 - name: Yu-zh/either
-  version: 0.1.0
-- name: Yu-zh/iterator
   version: 0.1.0
 - name: Yu-zh/sslist
   version: 0.1.0
@@ -311,7 +309,7 @@ mooncakes:
 - name: moonbitlang/lex/runtime
   version: 0.1.1
 - name: moonbitlang/ulex
-  version: 0.2.9
+  version: 0.3.1
 - name: moonbitlang/ulex-runtime
   version: 0.4.1
 - name: moonbitlang/wasm4
@@ -322,7 +320,7 @@ mooncakes:
 - name: moransky/bloom_filter
   version: 0.1.0
 - name: myfreess/casefold
-  version: 0.1.1
+  version: 0.1.2
 - name: myfreess/charclass
   version: 0.1.1
 - name: myfreess/unicode_data
