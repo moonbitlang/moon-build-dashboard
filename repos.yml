@@ -81,7 +81,7 @@ mooncakes:
 - name: 2459822546/fwshz
   version: 0.1.0
 - name: AdUhTkJm/nummoon
-  version: 0.2.1
+  version: 0.2.2
 - name: Bemly/cstdio-ffi
   version: 0.0.0
 - name: BigOrangeQWQ/Bits
@@ -448,7 +448,7 @@ mooncakes:
 - name: yanyeting/minmax
   version: 0.1.0
 - name: yj-qin/regexp
-  version: 0.3.5
+  version: 0.3.6
 - name: yueTc/Binary-Indexed-Tree
   version: 0.1.1
 - name: yyjeqhc/base32
