@@ -1,4 +1,10 @@
 github-repos:
+- name: moonlex-for-TAPL
+  link: https://github.com/moonbitlang/moonlex-old
+  branch: master
+- name: pku-dppl/TAPL-in-MoonBit
+  link: https://github.com/pku-dppl/TAPL-in-MoonBit
+  branch: main
 - name: oboard/mio
   link: https://github.com/oboard/mio
   branch: main
