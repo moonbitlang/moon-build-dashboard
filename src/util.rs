@@ -67,6 +67,22 @@ pub fn get_moonc_version() -> Result<String, MoonOpsError> {
 }
 
 fn install_unix_release(args: &[&str]) -> Result<(), MoonOpsError> {
+    // remove the old moon
+    let remove_cmd = "rm -rf ~/.moon";
+    let output = std::process::Command::new("rm")
+        .args(["-rf", "~/.moon"])
+        .output()
+        .map_err(|e| MoonOpsError {
+            cmd: remove_cmd.to_string(),
+            kind: MoonOpsErrorKind::IOError(e),
+        })?;
+    if !output.status.success() {
+        return Err(MoonOpsError {
+            cmd: remove_cmd.to_string(),
+            kind: MoonOpsErrorKind::ReturnNonZero(output.status),
+        });
+    }
+
     let curl_cmd = "curl -fsSL https://cli.moonbitlang.com/install/unix.sh";
     let output = std::process::Command::new("curl")
         .args(["-fsSL", "https://cli.moonbitlang.com/install/unix.sh"])
@@ -188,7 +204,7 @@ pub fn install_stable_release() -> Result<(), MoonOpsError> {
 
 pub fn install_bleeding_release() -> Result<(), MoonOpsError> {
     #[cfg(unix)]
-    let res = install_unix_release(&["-s", "pre-release"]);
+    let res = install_unix_release(&["-s", "bleeding"]);
 
     #[cfg(target_os = "windows")]
     let res = install_windows_release(true);
