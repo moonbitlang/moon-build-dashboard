@@ -80,6 +80,8 @@ mooncakes:
   version: 0.1.0
 - name: 2459822546/fwshz
   version: 0.1.0
+- name: AdUhTkJm/moonc
+  version: 0.1.6
 - name: AdUhTkJm/nummoon
   version: 0.2.3
 - name: Bemly/cstdio-ffi
