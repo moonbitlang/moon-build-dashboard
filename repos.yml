@@ -81,7 +81,7 @@ mooncakes:
 - name: 2459822546/fwshz
   version: 0.1.0
 - name: AdUhTkJm/moonc
-  version: 0.1.6
+  version: 0.1.11
 - name: AdUhTkJm/nummoon
   version: 0.2.3
 - name: Bemly/cstdio-ffi
@@ -173,7 +173,7 @@ mooncakes:
 - name: SyoujyoujiNaiki/chungshan
   version: 0.2.0
 - name: TheWaWaR/clap
-  version: 0.2.3
+  version: 0.2.4
 - name: Tianci-King/median
   version: 0.3.0
 - name: WenqiChen3019/sqrt
@@ -450,6 +450,8 @@ mooncakes:
 - name: xunyoyo/permutation
   version: 0.1.3
 - name: yanyeting/minmax
+  version: 0.1.0
+- name: yj-qin/llhttp
   version: 0.1.0
 - name: yj-qin/regexp
   version: 0.3.6
