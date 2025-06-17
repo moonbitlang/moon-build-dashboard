@@ -81,7 +81,7 @@ mooncakes:
 - name: 2459822546/fwshz
   version: 0.1.0
 - name: AdUhTkJm/moonc
-  version: 0.1.11
+  version: 0.2.0
 - name: AdUhTkJm/nummoon
   version: 0.2.3
 - name: Bemly/cstdio-ffi
@@ -187,7 +187,7 @@ mooncakes:
 - name: Yoorkin/prettyprinter
   version: 0.4.3
 - name: Yoorkin/rabbit-tea
-  version: 0.8.0
+  version: 0.9.0
   running_backend:
   - js
 - name: Yoorkin/stack
