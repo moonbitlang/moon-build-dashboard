@@ -1,5 +1,26 @@
 exclude:
 # out of maintenance
+- colmugx/reader
+- BigOrangeQWQ/ImmuntableMultiSet
+- BigOrangeQWQ/immunt_multiset
+- BigOrangeQWQ/immut_multiset
+- 0Ayachi0/math
+- peter-jerry-ye/async
+- peter-jerry-ye/canvas
+- peter-jerry-ye/io
+- peter-jerry-ye/mcp-server
+- Yoorkin/stack
+- hanbings/fluorescence
+- kesmeey/IndexMap
+- kesmeey/IndexSet
+- littleotherut/digit-insert
+- zhangshun-123/factorial
+- Milky2018/guardch
+- Milky2018/moonchor
+- Milky2018/toolkit
+- Milky2018/moonlight
+- kesmeey/immut_BitVector
+- SyoujyoujiNaiki/chungshan
 - Yu-zh/iterator
 - illusory0x0/jcore
 - illusory0x0/prettyprinter
@@ -200,6 +221,7 @@ exclude:
 #   - macos
 
 # use github link instead of mooncake
+- AdUhTkJm/moonc
 - tiye/quaternion
 - zxch3n/expect
 - xunyoyo/linalg

@@ -2,14 +2,23 @@ github-repos:
 - name: moonlex-for-TAPL
   link: https://github.com/moonbitlang/moonlex-old
   branch: master
+  running_os:
+  - linux
+  - macos
 - name: pku-dppl/TAPL-in-MoonBit
   link: https://github.com/pku-dppl/TAPL-in-MoonBit
   branch: main
+  running_os:
+  - linux
+  - macos
 - name: oboard/mio
   link: https://github.com/oboard/mio
   branch: main
   running_backend:
   - js
+- name: AdUhTkJm/moonc
+  link: https://github.com/AdUhTkJm/moonc
+  branch: main
 - name: WebGPU-Art/quaternion
   link: https://github.com/WebGPU-Art/quaternion
   branch: main
@@ -100,6 +109,9 @@ mooncakes:
   version: 0.1.1
 - name: BigOrangeQWQ/wit-ffi
   version: 0.1.0
+  running_backend:
+  - wasm
+  - wasm-gc
 - name: BigThree33/find_min
   version: 0.1.0
 - name: CAIMEOX/alg-pattern
