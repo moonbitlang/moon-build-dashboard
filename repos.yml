@@ -104,8 +104,14 @@ mooncakes:
   - wasm-gc
 - name: BigOrangeQWQ/wit-wasi-clocks
   version: 0.2.6
+  running_backend:
+  - wasm
+  - wasm-gc
 - name: BigOrangeQWQ/wit-wasi-io
   version: 0.2.6
+  running_backend:
+  - wasm
+  - wasm-gc
 - name: BigThree33/find_min
   version: 0.1.0
 - name: CAIMEOX/alg-pattern
