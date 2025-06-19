@@ -189,7 +189,7 @@ mooncakes:
 - name: Yoorkin/prettyprinter
   version: 0.4.3
 - name: Yoorkin/rabbit-tea
-  version: 0.9.3
+  version: 0.9.5
   running_backend:
   - js
 - name: Yoorkin/trie
@@ -205,6 +205,8 @@ mooncakes:
 - name: bikallem/reactive
   version: 0.2.0
 - name: bobzhang/sexp
+  version: 0.1.1
+- name: caozhanhao/qrcode
   version: 0.1.1
 - name: chawyehsu/punycode
   version: 0.0.3
@@ -229,9 +231,9 @@ mooncakes:
 - name: gmlewis/gzip
   version: 0.33.15
 - name: gmlewis/hash
-  version: 0.19.15
+  version: 0.19.16
 - name: gmlewis/image
-  version: 0.16.15
+  version: 0.16.16
 - name: gmlewis/io
   version: 0.22.6
 - name: gmlewis/jsonrpc2
@@ -247,7 +249,7 @@ mooncakes:
 - name: gmlewis/spin-moonbit-sdk
   version: 0.53.6
 - name: gmlewis/zlib
-  version: 0.20.14
+  version: 0.20.15
 - name: hachi/sort
   version: 0.1.12
 - name: hzqdf/sum-calc
@@ -309,7 +311,7 @@ mooncakes:
 - name: moonbitlang/lex/runtime
   version: 0.1.1
 - name: moonbitlang/ulex
-  version: 0.3.3
+  version: 0.3.4
 - name: moonbitlang/ulex-runtime
   version: 0.4.1
 - name: moonbitlang/wasm4
