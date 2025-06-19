@@ -183,7 +183,7 @@ mooncakes:
 - name: Yoorkin/prettyprinter
   version: 0.4.3
 - name: Yoorkin/rabbit-tea
-  version: 0.9.1
+  version: 0.9.3
   running_backend:
   - js
 - name: Yoorkin/trie
@@ -336,7 +336,7 @@ mooncakes:
 - name: rabbyte/suffix-array
   version: 0.1.0
 - name: rami3l/js-ffi
-  version: 0.3.0
+  version: 0.3.1
   running_backend:
   - js
 - name: remain11/i18n
@@ -422,7 +422,7 @@ mooncakes:
 - name: yanyeting/minmax
   version: 0.1.0
 - name: yj-qin/llhttp
-  version: 0.1.0
+  version: 0.1.1
 - name: yj-qin/regexp
   version: 0.3.6
 - name: yueTc/Binary-Indexed-Tree
