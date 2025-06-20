@@ -386,7 +386,7 @@ mooncakes:
 - name: tonyfettes/atomics
   version: 0.1.0
 - name: tonyfettes/c
-  version: 0.1.13
+  version: 0.1.14
 - name: tonyfettes/encoding
   version: 0.3.3
 - name: tonyfettes/submodule-test
