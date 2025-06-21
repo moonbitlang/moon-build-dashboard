@@ -97,6 +97,18 @@ mooncakes:
   version: 0.1.7
 - name: BigOrangeQWQ/ryu
   version: 0.1.1
+- name: BigOrangeQWQ/wasi-cli
+  version: 0.2.6
+- name: BigOrangeQWQ/wasi-clocks
+  version: 0.2.6
+- name: BigOrangeQWQ/wasi-filesystem
+  version: 0.2.6
+- name: BigOrangeQWQ/wasi-io
+  version: 0.2.6
+- name: BigOrangeQWQ/wasi-random
+  version: 0.2.6
+- name: BigOrangeQWQ/wasi-sockets
+  version: 0.2.6
 - name: BigOrangeQWQ/wit-ffi
   version: 0.1.0
   running_backend:
@@ -112,6 +124,8 @@ mooncakes:
   running_backend:
   - wasm
   - wasm-gc
+- name: BigOrangeQWQ/wit-wasi-random
+  version: 0.2.6
 - name: BigThree33/find_min
   version: 0.1.0
 - name: CAIMEOX/alg-pattern
