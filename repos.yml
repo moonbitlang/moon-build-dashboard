@@ -94,7 +94,7 @@ mooncakes:
 - name: BigOrangeQWQ/Bits
   version: 0.1.0
 - name: BigOrangeQWQ/fmt
-  version: 0.1.7
+  version: 0.1.11
 - name: BigOrangeQWQ/ryu
   version: 0.1.1
 - name: BigOrangeQWQ/wasi-cli
