@@ -160,6 +160,8 @@ mooncakes:
   version: 0.1.0
 - name: Kilig/MATH
   version: 0.1.1
+- name: KingBes/raylib
+  version: 0.0.2
 - name: Lampese/moonbit-chalk
   version: 0.4.0
 - name: Ljw030710/find_max
@@ -298,6 +300,8 @@ mooncakes:
   version: 0.1.0
 - name: jankin_li/new_lib
   version: 0.1.0
+- name: justjavac/bytesize
+  version: 0.1.0
 - name: justjavac/ffi
   version: 0.1.6
 - name: justjoheinz/iso-country
@@ -364,7 +368,7 @@ mooncakes:
 - name: remain11/i18n
   version: 0.1.0
 - name: ruifeng/diff
-  version: 0.1.1
+  version: 0.1.4
 - name: shiheat/find_max
   version: 0.3.0
 - name: sjzbxhsj/Calculator
