@@ -300,10 +300,14 @@ mooncakes:
   version: 0.1.0
 - name: jankin_li/new_lib
   version: 0.1.0
+- name: justjavac/btoi
+  version: 0.1.1
 - name: justjavac/bytesize
   version: 0.1.0
 - name: justjavac/ffi
   version: 0.1.6
+- name: justjavac/itoa
+  version: 0.1.1
 - name: justjoheinz/iso-country
   version: 0.1.1
 - name: kesmeey/IntervalTree
