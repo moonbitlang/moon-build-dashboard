@@ -161,7 +161,7 @@ mooncakes:
 - name: Kilig/MATH
   version: 0.1.1
 - name: KingBes/raylib
-  version: 0.0.2
+  version: 0.0.3
 - name: Lampese/moonbit-chalk
   version: 0.4.0
 - name: Ljw030710/find_max
