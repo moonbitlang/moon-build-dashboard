@@ -337,8 +337,7 @@ const App = () => {
           return (
             <tr 
               key={`${platform}-${index}`} 
-              // className={`border-b text-sm transform transition-transform hover:scale-[1.01] hover:shadow-md ${
-              className={`border-b text-sm ${
+              className={`border-b text-sm transform transition-transform hover:scale-[1.01] hover:shadow-md ${
                 platform === "windows" ? "bg-gray-50" : 
                 platform === "linux" ? "bg-blue-50/20" : ""
               }`}
@@ -615,8 +614,7 @@ const App = () => {
   };
 
   return (
-    // <div className="flex flex-col h-screen bg-gray-100">
-    <div className="flex-col h-screen bg-gray-100">
+    <div className="flex flex-col h-screen bg-gray-100">
       <div className="flex-none px-8 py-4">
         <div className="flex justify-between items-center">
           <h1 className="text-2xl font-bold">Moon Build Dashboard</h1>
@@ -633,8 +631,7 @@ const App = () => {
       ) : platformData.mac ? (
         <div className="flex-1 flex flex-col min-h-0 px-4 overflow-auto">
           <div className="relative rounded-lg bg-white shadow-lg">
-            {/* <div className="sticky top-0 z-10 bg-white"> */}
-            <div className="bg-white">
+            <div className="sticky top-0 z-10 bg-white">
               <table className="w-full table-fixed">
                 <colgroup>
                   <col className="w-[15%]" />
