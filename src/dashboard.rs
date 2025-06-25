@@ -35,6 +35,8 @@ pub enum Backend {
     WasmGC,
     #[serde(rename = "js")]
     Js,
+    #[serde(rename = "native")]
+    Native,
 }
 
 impl Backend {
@@ -43,6 +45,7 @@ impl Backend {
             Backend::Wasm => "wasm",
             Backend::WasmGC => "wasm-gc",
             Backend::Js => "js",
+            Backend::Native => "native",
         }
     }
 }
@@ -152,6 +155,7 @@ pub struct BackendState {
     pub wasm: ExecuteResult,
     pub wasm_gc: ExecuteResult,
     pub js: ExecuteResult,
+    pub native: ExecuteResult,
 }
 
 #[derive(Debug, Serialize, Deserialize)]

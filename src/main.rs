@@ -17,7 +17,8 @@ use moon_dashboard::{
     },
     mooncakesio,
     util::{
-        get_moon_version, get_moonc_version, get_repos_config, install_bleeding_release, install_stable_release, MoonOpsError
+        get_moon_version, get_moonc_version, get_repos_config, install_bleeding_release,
+        install_stable_release, MoonOpsError,
     },
 };
 use moon_dashboard::{git, util::moon_update};
@@ -113,7 +114,7 @@ fn get_mooncake_sources(
 ) -> Result<Vec<MooncakeSource>, GetMooncakeSourcesError> {
     let mut repo_list = vec![];
     let default_running_os = vec![OS::Linux, OS::MacOS, OS::Windows];
-    let default_running_backend = vec![Backend::WasmGC, Backend::Wasm, Backend::Js];
+    let default_running_backend = vec![Backend::WasmGC, Backend::Wasm, Backend::Js, Backend::Native];
 
     if let Some(r) = &cmd.repo_url {
         repo_list.push(MooncakeSource::Git {
@@ -281,12 +282,17 @@ fn run_matrix(
     let mut check_wasm = ExecuteResult::skip_result();
     let mut check_wasm_gc = ExecuteResult::skip_result();
     let mut check_js = ExecuteResult::skip_result();
+    let mut check_native = ExecuteResult::skip_result();
+
     let mut build_wasm = ExecuteResult::skip_result();
     let mut build_wasm_gc = ExecuteResult::skip_result();
     let mut build_js = ExecuteResult::skip_result();
+    let mut build_native = ExecuteResult::skip_result();
+
     let mut test_wasm = ExecuteResult::skip_result();
     let mut test_wasm_gc = ExecuteResult::skip_result();
     let mut test_js = ExecuteResult::skip_result();
+    let mut test_native = ExecuteResult::skip_result();
 
     for os in running_os {
         match os {
@@ -343,6 +349,17 @@ fn run_matrix(
                                         .map_err(RunMatrixError::StatMooncake)?;
                                 test_js =
                                     stat_mooncake(workdir, source, MoonCommand::Test(Backend::Js))
+                                        .map_err(RunMatrixError::StatMooncake)?;
+                            }
+                            Backend::Native => {
+                                check_native =
+                                    stat_mooncake(workdir, source, MoonCommand::Check(Backend::Native))
+                                        .map_err(RunMatrixError::StatMooncake)?;
+                                build_native =
+                                    stat_mooncake(workdir, source, MoonCommand::Build(Backend::Native))
+                                        .map_err(RunMatrixError::StatMooncake)?;
+                                test_native =
+                                    stat_mooncake(workdir, source, MoonCommand::Test(Backend::Native))
                                         .map_err(RunMatrixError::StatMooncake)?;
                             }
                         }
@@ -404,6 +421,17 @@ fn run_matrix(
                                     stat_mooncake(workdir, source, MoonCommand::Test(Backend::Js))
                                         .map_err(RunMatrixError::StatMooncake)?;
                             }
+                            Backend::Native => {
+                                check_native =
+                                    stat_mooncake(workdir, source, MoonCommand::Check(Backend::Native))
+                                        .map_err(RunMatrixError::StatMooncake)?;
+                                build_native =
+                                    stat_mooncake(workdir, source, MoonCommand::Build(Backend::Native))
+                                        .map_err(RunMatrixError::StatMooncake)?;
+                                test_native =
+                                    stat_mooncake(workdir, source, MoonCommand::Test(Backend::Native))
+                                        .map_err(RunMatrixError::StatMooncake)?;
+                            }
                         }
                     }
                 }
@@ -463,6 +491,17 @@ fn run_matrix(
                                     stat_mooncake(workdir, source, MoonCommand::Test(Backend::Js))
                                         .map_err(RunMatrixError::StatMooncake)?;
                             }
+                            Backend::Native => {
+                                check_native =
+                                    stat_mooncake(workdir, source, MoonCommand::Check(Backend::Native))
+                                        .map_err(RunMatrixError::StatMooncake)?;
+                                build_native =
+                                    stat_mooncake(workdir, source, MoonCommand::Build(Backend::Native))
+                                        .map_err(RunMatrixError::StatMooncake)?;
+                                test_native =
+                                    stat_mooncake(workdir, source, MoonCommand::Test(Backend::Native))
+                                        .map_err(RunMatrixError::StatMooncake)?;
+                            }
                         }
                     }
                 }
@@ -475,16 +514,19 @@ fn run_matrix(
             wasm: check_wasm,
             wasm_gc: check_wasm_gc,
             js: check_js,
+            native: check_native,
         },
         build: BackendState {
             wasm: build_wasm,
             wasm_gc: build_wasm_gc,
             js: build_js,
+            native: build_native,
         },
         test: BackendState {
             wasm: test_wasm,
             wasm_gc: test_wasm_gc,
             js: test_js,
+            native: test_native,
         },
     })
 }

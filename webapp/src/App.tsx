@@ -37,6 +37,7 @@ interface BackendState {
   wasm: ExecuteResult;
   wasm_gc: ExecuteResult;
   js: ExecuteResult;
+  native: ExecuteResult;
 }
 
 interface CBT {
@@ -51,6 +52,8 @@ interface BuildState {
 }
 
 type Platform = "mac" | "windows" | "linux";
+
+let allBackends = ["wasm", "wasm_gc", "js", "native"];
 
 interface PlatformData {
   mac: MoonBuildDashboard | null;
@@ -313,7 +316,7 @@ const App = () => {
             )}
           </td>
           <td 
-            colSpan={18}
+            colSpan={24}
             className={`py-2 px-4 ${
               summary.status === 'success' ? 'text-green-600 bg-green-50' :
               summary.status === 'warning' ? 'text-yellow-600 bg-yellow-50' :
@@ -352,14 +355,14 @@ const App = () => {
               {stableEntry.cbts[0] ? (
                 <>
                   {['check', 'build', 'test'].map(phase => (
-                    ['wasm', 'wasm_gc', 'js'].map(backend => {
+                    allBackends.map(backend => {
                       const result = stableEntry.cbts[0]?.[phase as keyof CBT]?.[backend as keyof BackendState];
                       if (!result) return null;
                       
                       return (
                         <td
                           key={`${phase}-${backend}`}
-                          className={`py-2 px-4 border-r border-b text-center cursor-pointer hover:opacity-80 ${
+                          className={`py-2 border-r border-b text-center cursor-pointer hover:opacity-80 ${
                             getStatusStyle(result.status)
                           }`}
                           onClick={() => handleResultClick(result, `stable - ${phase} - ${backend}`)}
@@ -371,7 +374,7 @@ const App = () => {
                   ))}
                 </>
               ) : (
-                <td colSpan={9} className="py-2 px-4 text-center text-gray-500">
+                <td colSpan={12} className="py-2 px-4 text-center text-gray-500">
                   No stable data available
                 </td>
               )}
@@ -379,14 +382,14 @@ const App = () => {
               {bleedingEntry?.cbts[0] ? (
                 <>
                   {['check', 'build', 'test'].map(phase => (
-                    ['wasm', 'wasm_gc', 'js'].map(backend => {
+                    allBackends.map(backend => {
                       const result = bleedingEntry.cbts[0]?.[phase as keyof CBT]?.[backend as keyof BackendState];
                       if (!result) return null;
                       
                       return (
                         <td
                           key={`bleeding-${phase}-${backend}`}
-                          className={`py-2 px-4 border-r border-b text-center cursor-pointer hover:opacity-80 ${
+                          className={`py-2 border-r border-b text-center cursor-pointer hover:opacity-80 ${
                             getStatusStyle(result.status)
                           }`}
                           onClick={() => handleResultClick(result, `bleeding - ${phase} - ${backend}`)}
@@ -398,7 +401,7 @@ const App = () => {
                   ))}
                 </>
               ) : (
-                <td colSpan={9} className="py-2 px-4 text-center text-gray-500">
+                <td colSpan={12} className="py-2 px-4 text-center text-gray-500">
                   No bleeding data available
                 </td>
               )}
@@ -426,7 +429,7 @@ const App = () => {
       return entry.cbts.every(cbt => {
         if (!cbt) return false;
         return ['check', 'build', 'test'].every(phase => 
-          ['wasm', 'wasm_gc', 'js'].every(backend => 
+          allBackends.every(backend => 
             cbt[phase as keyof CBT][backend as keyof BackendState].status === "Success" ||
             cbt[phase as keyof CBT][backend as keyof BackendState].status === "Skipped"
           )
@@ -446,7 +449,7 @@ const App = () => {
   const checkToolchainDifference = (index: number, data: PlatformData) => {
     const platforms: Platform[] = ["mac", "windows", "linux"];
     const phases = ['check', 'build', 'test'];
-    const backends = ['wasm', 'wasm_gc', 'js'];
+    const backends = allBackends;
 
     for (const platform of platforms) {
       const platformData = data[platform];
@@ -474,7 +477,7 @@ const App = () => {
   const checkPlatformDifference = (index: number, data: PlatformData, useBleedingEdge: boolean = false) => {
     const platforms: Platform[] = ["mac", "windows", "linux"];
     const phases = ['check', 'build', 'test'];
-    const backends = ['wasm', 'wasm_gc', 'js'];
+    const backends = allBackends;
 
     for (const phase of phases) {
       for (const backend of backends) {
@@ -507,7 +510,7 @@ const App = () => {
   const checkBackendDifference = (index: number, data: PlatformData, useBleedingEdge: boolean = false) => {
     const platforms: Platform[] = ["mac", "windows", "linux"];
     const phases = ['check', 'build', 'test'];
-    const backends = ['wasm', 'wasm_gc', 'js'];
+    const backends = allBackends;
 
     for (const platform of platforms) {
       const platformData = data[platform];
@@ -539,7 +542,7 @@ const App = () => {
   const checkPhasesDifference = (index: number, data: PlatformData, useBleedingEdge: boolean = false) => {
     const platforms: Platform[] = ["mac", "windows", "linux"];
     const phases = ['check', 'build', 'test'];
-    const backends = ['wasm', 'wasm_gc', 'js'];
+    const backends = allBackends;
 
     for (const platform of platforms) {
       const platformData = data[platform];
@@ -636,21 +639,21 @@ const App = () => {
                 <colgroup>
                   <col className="w-[15%]" />
                   <col className="w-[15%]" />
-                  {Array(18).fill(null).map((_, i) => (
-                    <col key={i} className="w-[3.888888%]" />
+                  {Array(24).fill(null).map((_, i) => (
+                    <col key={i} className="w-[2.916666%]" />
                   ))}
                 </colgroup>
                 <thead>
                   <tr>
                     <th rowSpan={3} className="py-2 px-4 text-left border-r bg-gray-200">Repository</th>
                     <th rowSpan={3} className="py-2 px-4 text-left border-r bg-gray-200">Version</th>
-                    <th colSpan={9} className="py-2 px-4 text-center bg-green-500 text-white border-r">
+                    <th colSpan={12} className="py-2 px-4 text-center bg-green-500 text-white border-r">
                       Stable Release
                       <div className="text-xs mt-1 font-normal">
                         {platformData.mac.stable_toolchain_version.moon_version} / moonc {platformData.mac.stable_toolchain_version.moonc_version}
                       </div>
                     </th>
-                    <th colSpan={9} className="py-2 px-4 text-center bg-red-600 text-white relative overflow-hidden">
+                    <th colSpan={12} className="py-2 px-4 text-center bg-red-600 text-white relative overflow-hidden">
                       <span className="absolute inset-0 flex items-center justify-left text-6xl text-yellow-900 opacity-40">⚡️</span>
                       <div className="relative">
                         Bleeding Edge Release
@@ -664,7 +667,7 @@ const App = () => {
                     {['Check(ms)', 'Build(ms)', 'Test(ms)', 'Check(ms)', 'Build(ms)', 'Test(ms)'].map((text, i) => (
                       <th 
                         key={i} 
-                        colSpan={3} 
+                        colSpan={4} 
                         className={`py-1 px-4 text-center text-sm bg-gray-100 border-b border-gray-200 ${i < 5 ? 'border-r' : ''}`}
                       >
                         {text}
@@ -672,12 +675,12 @@ const App = () => {
                     ))}
                   </tr>
                   <tr>
-                    {Array(18).fill(null).map((_, i) => (
+                    {Array(24).fill(null).map((_, i) => (
                       <th 
                         key={i}
-                        className={`py-1 px-4 text-center text-xs bg-gray-100 border-b border-gray-200 ${i < 17 ? 'border-r' : ''}`}
+                        className={`py-1 text-center text-xs bg-gray-100 border-b border-gray-200 ${i < 23 ? 'border-r' : ''}`}
                       >
-                        {['wasm', 'wasm gc', 'js'][i % 3]}
+                        {['wasm', 'wasm gc', 'js', 'native'][i % 4]}
                       </th>
                     ))}
                   </tr>
@@ -690,8 +693,8 @@ const App = () => {
                 <colgroup>
                   <col className="w-[15%]" />
                   <col className="w-[15%]" />
-                  {Array(18).fill(null).map((_, i) => (
-                    <col key={i} className="w-[3.888888%]" />
+                  {Array(24).fill(null).map((_, i) => (
+                    <col key={i} className="w-[2.916666%]" />
                   ))}
                 </colgroup>
                 <tbody className="bg-white divide-y divide-gray-200">
