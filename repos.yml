@@ -183,6 +183,8 @@ mooncakes:
   version: 0.1.1
 - name: KingBes/raylib
   version: 0.0.3
+- name: KingBes/webui
+  version: 0.0.4
 - name: Lampese/moonbit-chalk
   version: 0.4.0
 - name: Ljw030710/find_max
@@ -292,7 +294,7 @@ mooncakes:
 - name: hzqdf/sum-calc
   version: 0.0.20250321
 - name: illusory0x0/clang
-  version: 0.1.0
+  version: 0.1.1
 - name: illusory0x0/clone
   version: 0.1.0
 - name: illusory0x0/coerce
@@ -302,11 +304,11 @@ mooncakes:
 - name: illusory0x0/fun
   version: 0.2.1
 - name: illusory0x0/fuzzy_match
-  version: 0.2.2
+  version: 0.2.3
 - name: illusory0x0/graphviz
   version: 0.1.1
 - name: illusory0x0/immut_deque
-  version: 0.3.2
+  version: 0.3.3
 - name: illusory0x0/lazy
   version: 0.1.2
 - name: illusory0x0/moonbit-wasm-nodejs-ts-template
@@ -316,21 +318,25 @@ mooncakes:
 - name: illusory0x0/parserc
   version: 0.1.5
 - name: illusory0x0/simple_parserc
-  version: 0.2.0
+  version: 0.2.1
 - name: jankin_li/Learn_Test1
   version: 0.1.0
 - name: jankin_li/new_lib
   version: 0.1.0
 - name: justjavac/btoi
-  version: 0.1.1
+  version: 0.1.2
 - name: justjavac/bytesize
-  version: 0.1.0
+  version: 0.1.1
 - name: justjavac/ffi
   version: 0.1.6
 - name: justjavac/itoa
   version: 0.1.1
+- name: justjavac/num_cpus
+  version: 0.1.0
 - name: justjoheinz/iso-country
   version: 0.1.1
+- name: kesmeey/BloomierFilter
+  version: 0.1.0
 - name: kesmeey/IntervalTree
   version: 0.1.3
 - name: kesmeey/fmt
