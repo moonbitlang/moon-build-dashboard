@@ -383,7 +383,7 @@ mooncakes:
 - name: peter-jerry-ye/utils
   version: 0.4.1
 - name: peter-jerry-ye/wasi
-  version: 0.20.0
+  version: 0.21.0
   running_backend:
   - wasm
 - name: peter-jerry-ye/wasi-imports
