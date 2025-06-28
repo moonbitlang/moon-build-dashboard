@@ -151,6 +151,8 @@ mooncakes:
   version: 0.1.0
 - name: CAIMEOX/alg-pattern
   version: 0.1.0
+- name: CAIMEOX/box
+  version: 0.1.0
 - name: CAIMEOX/diet
   version: 0.1.0
 - name: CAIMEOX/fenwick
@@ -169,6 +171,10 @@ mooncakes:
   version: 0.1.1
 - name: Eunoiay/Eunoiay
   version: 0.1.0
+- name: FlyCloudC/autodiff
+  version: 0.1.1
+- name: FlyCloudC/mgraph
+  version: 0.1.2
 - name: FrenchPicnic/which
   version: 0.1.3
 - name: GMH233/moonpassword
@@ -178,6 +184,8 @@ mooncakes:
 - name: HeChTo/rope
   version: 0.1.0
 - name: Jtian-t/Deque
+  version: 0.1.0
+- name: KCN-judu/err_marker
   version: 0.1.0
 - name: Kilig/MATH
   version: 0.1.1
@@ -212,6 +220,8 @@ mooncakes:
 - name: ShellWen/lru_cache
   version: 0.1.0
 - name: ShellWen/sw_router
+  version: 0.1.0
+- name: SupremeHuaji/MaxStack
   version: 0.1.0
 - name: TheWaWaR/clap
   version: 0.2.4
@@ -291,6 +301,8 @@ mooncakes:
   version: 0.20.15
 - name: hachi/sort
   version: 0.1.12
+- name: hustcer/nanoid
+  version: 0.1.6
 - name: hzqdf/sum-calc
   version: 0.0.20250321
 - name: illusory0x0/clang
@@ -339,6 +351,8 @@ mooncakes:
   version: 0.1.0
 - name: kesmeey/IntervalTree
   version: 0.1.3
+- name: kesmeey/RoaringBitmap
+  version: 0.1.0
 - name: kesmeey/fmt
   version: 0.1.9
 - name: kesmeey/immut_IntervalTree
