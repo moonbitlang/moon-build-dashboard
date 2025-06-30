@@ -157,12 +157,16 @@ mooncakes:
   version: 0.1.0
 - name: CAIMEOX/fenwick
   version: 0.1.0
+- name: CAIMEOX/functor
+  version: 0.1.1
 - name: CAIMEOX/lazy
   version: 0.1.0
 - name: CAIMEOX/lazy-list
   version: 0.1.1
 - name: CAIMEOX/svg
   version: 0.1.1
+- name: CAIMEOX/vlq
+  version: 0.1.0
 - name: CAIMEOX/原来可以发中文包
   version: 0.1.1
 - name: CMoonBack/Binary-Exponentiation
@@ -186,7 +190,7 @@ mooncakes:
 - name: Jtian-t/Deque
   version: 0.1.0
 - name: KCN-judu/err_marker
-  version: 0.1.0
+  version: 0.1.1
 - name: Kilig/MATH
   version: 0.1.1
 - name: KingBes/raylib
@@ -301,6 +305,8 @@ mooncakes:
   version: 0.20.15
 - name: hachi/sort
   version: 0.1.12
+- name: hbh112233abc/examine
+  version: 0.1.1
 - name: hustcer/nanoid
   version: 0.1.6
 - name: hzqdf/sum-calc
@@ -449,7 +455,7 @@ mooncakes:
 - name: tonyfettes/atomics
   version: 0.1.0
 - name: tonyfettes/c
-  version: 0.1.14
+  version: 0.2.0
 - name: tonyfettes/encoding
   version: 0.3.3
 - name: tonyfettes/submodule-test
