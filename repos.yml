@@ -259,6 +259,8 @@ mooncakes:
   version: 0.2.0
 - name: bobzhang/sexp
   version: 0.1.1
+- name: calacaly/moon_log
+  version: 0.1.11
 - name: caozhanhao/qrcode
   version: 0.1.1
 - name: chawyehsu/punycode
@@ -346,11 +348,11 @@ mooncakes:
 - name: justjavac/bytesize
   version: 0.1.1
 - name: justjavac/ffi
-  version: 0.1.6
+  version: 0.1.7
 - name: justjavac/itoa
   version: 0.1.1
 - name: justjavac/num_cpus
-  version: 0.1.0
+  version: 0.1.2
 - name: justjoheinz/iso-country
   version: 0.1.1
 - name: kesmeey/BloomierFilter
@@ -380,7 +382,7 @@ mooncakes:
 - name: moonbitlang/lex/runtime
   version: 0.1.1
 - name: moonbitlang/ulex
-  version: 0.3.4
+  version: 0.3.5
 - name: moonbitlang/ulex-runtime
   version: 0.4.1
 - name: moonbitlang/wasm4
