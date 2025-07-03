@@ -87,6 +87,8 @@ mooncakes:
   version: 0.1.0
 - name: 2459822546/fwshz
   version: 0.1.0
+- name: AdUhTkJm/assembler
+  version: 0.1.0
 - name: AdUhTkJm/nummoon
   version: 0.2.3
 - name: Bemly/cstdio-ffi
@@ -459,7 +461,7 @@ mooncakes:
 - name: tonyfettes/c
   version: 0.2.0
 - name: tonyfettes/encoding
-  version: 0.3.3
+  version: 0.3.4
 - name: tonyfettes/submodule-test
   version: 0.1.1
 - name: tonyfettes/tree_sitter_cpp
