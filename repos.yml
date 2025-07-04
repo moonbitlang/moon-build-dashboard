@@ -87,8 +87,12 @@ mooncakes:
   version: 0.1.0
 - name: 2459822546/fwshz
   version: 0.1.0
+- name: AXiX-official/binaryPrimitives
+  version: 0.1.1
 - name: AdUhTkJm/assembler
   version: 0.1.0
+- name: AdUhTkJm/bitviewer
+  version: 0.1.1
 - name: AdUhTkJm/nummoon
   version: 0.2.3
 - name: Bemly/cstdio-ffi
@@ -349,6 +353,8 @@ mooncakes:
   version: 0.1.2
 - name: justjavac/bytesize
   version: 0.1.1
+- name: justjavac/case
+  version: 0.1.3
 - name: justjavac/ffi
   version: 0.1.7
 - name: justjavac/itoa
@@ -383,6 +389,8 @@ mooncakes:
   version: 0.1.3
 - name: moonbitlang/lex/runtime
   version: 0.1.1
+- name: moonbitlang/regexp
+  version: 0.2.0
 - name: moonbitlang/ulex
   version: 0.3.5
 - name: moonbitlang/ulex-runtime
@@ -461,7 +469,7 @@ mooncakes:
 - name: tonyfettes/c
   version: 0.2.0
 - name: tonyfettes/encoding
-  version: 0.3.4
+  version: 0.3.6
 - name: tonyfettes/submodule-test
   version: 0.1.1
 - name: tonyfettes/tree_sitter_cpp
