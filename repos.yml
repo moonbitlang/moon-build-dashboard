@@ -90,9 +90,9 @@ mooncakes:
 - name: AXiX-official/binaryPrimitives
   version: 0.1.1
 - name: AdUhTkJm/assembler
-  version: 0.1.0
-- name: AdUhTkJm/bitviewer
   version: 0.1.1
+- name: AdUhTkJm/bitviewer
+  version: 0.1.3
 - name: AdUhTkJm/nummoon
   version: 0.2.3
 - name: Bemly/cstdio-ffi
@@ -261,6 +261,10 @@ mooncakes:
   version: 0.2.7
 - name: ZSeanYves/bufferutils
   version: 0.1.0
+- name: amor2025/convert
+  version: 0.1.1
+- name: amor2025/fraction
+  version: 0.1.0
 - name: amor2025/pad
   version: 0.1.2
 - name: bikallem/reactive
@@ -426,6 +430,8 @@ mooncakes:
   version: 0.1.4
   running_backend:
   - wasm
+- name: pzl-love/Introsort
+  version: 0.1.1
 - name: rabbyte/suffix-array
   version: 0.1.0
 - name: rami3l/js-ffi
