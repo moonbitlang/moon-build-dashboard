@@ -92,11 +92,11 @@ mooncakes:
 - name: AdUhTkJm/assembler
   version: 0.1.1
 - name: AdUhTkJm/bitviewer
-  version: 0.1.8
+  version: 0.1.9
 - name: AdUhTkJm/nummoon
   version: 0.2.3
 - name: AdUhTkJm/u8str
-  version: 0.1.4
+  version: 0.1.5
 - name: Bemly/cstdio-ffi
   version: 0.0.0
 - name: BigOrangeQWQ/Bits
@@ -291,8 +291,10 @@ mooncakes:
   version: 0.1.1
 - name: extism/moonbit-pdk
   version: 0.47.10
-- name: fangyinc/socket
+- name: fangyinc/net
   version: 0.1.0
+- name: fangyinc/socket
+  version: 0.1.1
 - name: furesoft/moos-sdk
   version: 0.1.43
 - name: gmlewis/b2
@@ -410,7 +412,7 @@ mooncakes:
 - name: moonbitlang/lex/runtime
   version: 0.1.1
 - name: moonbitlang/regexp
-  version: 0.2.1
+  version: 0.3.0
 - name: moonbitlang/ulex
   version: 0.3.9
 - name: moonbitlang/ulex-runtime
