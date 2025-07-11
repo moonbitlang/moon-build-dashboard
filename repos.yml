@@ -92,7 +92,7 @@ mooncakes:
 - name: AdUhTkJm/assembler
   version: 0.1.1
 - name: AdUhTkJm/bitviewer
-  version: 0.1.9
+  version: 0.1.10
 - name: AdUhTkJm/nummoon
   version: 0.2.3
 - name: AdUhTkJm/u8str
@@ -219,6 +219,8 @@ mooncakes:
   version: 0.3.1
 - name: Milky2018/options
   version: 0.1.2
+- name: Milky2018/sqlparser
+  version: 0.1.1
 - name: Near-Jungnune/Near-Jungnune
   version: 0.1.0
 - name: Nyuudoukumo/uuidv4
@@ -252,7 +254,7 @@ mooncakes:
 - name: Yoorkin/prettyprinter
   version: 0.4.3
 - name: Yoorkin/rabbit-tea
-  version: 0.9.8
+  version: 0.10.0
   running_backend:
   - js
 - name: Yoorkin/trie
@@ -351,6 +353,8 @@ mooncakes:
   version: 0.1.1
 - name: illusory0x0/immut_deque
   version: 0.3.3
+- name: illusory0x0/intrinsic
+  version: 0.1.0
 - name: illusory0x0/lazy
   version: 0.1.2
 - name: illusory0x0/moonbit-wasm-nodejs-ts-template
@@ -376,7 +380,7 @@ mooncakes:
 - name: justjavac/core_affinity
   version: 0.1.0
 - name: justjavac/ffi
-  version: 0.1.9
+  version: 0.1.10
 - name: justjavac/glob
   version: 0.1.0
 - name: justjavac/itoa
