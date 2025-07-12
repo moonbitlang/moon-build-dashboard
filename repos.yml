@@ -254,7 +254,7 @@ mooncakes:
 - name: Yoorkin/prettyprinter
   version: 0.4.3
 - name: Yoorkin/rabbit-tea
-  version: 0.10.0
+  version: 0.10.1
   running_backend:
   - js
 - name: Yoorkin/trie
