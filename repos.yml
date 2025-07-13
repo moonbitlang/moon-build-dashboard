@@ -97,6 +97,8 @@ mooncakes:
   version: 0.2.3
 - name: AdUhTkJm/u8str
   version: 0.1.5
+- name: AdUhTkJm/wasmtools
+  version: 0.1.0
 - name: Bemly/cstdio-ffi
   version: 0.0.0
 - name: BigOrangeQWQ/Bits
@@ -291,6 +293,8 @@ mooncakes:
   version: 0.1.0
 - name: dongyvxuan/dongyx
   version: 0.1.1
+- name: edragain2nd/unscanny
+  version: 0.1.0
 - name: extism/moonbit-pdk
   version: 0.47.10
 - name: fangyinc/net
@@ -460,6 +464,8 @@ mooncakes:
   version: 0.1.0
 - name: ruifeng/diff
   version: 0.1.4
+- name: ryota0624/mustache
+  version: 0.0.2
 - name: shiheat/find_max
   version: 0.3.0
 - name: sjzbxhsj/Calculator
@@ -539,6 +545,10 @@ mooncakes:
 - name: xunyoyo/permutation
   version: 0.1.3
 - name: yanyeting/minmax
+  version: 0.1.0
+- name: yatsuna827/pk-rng-gen3
+  version: 0.1.0
+- name: yatsuna827/pk-rng-lcg32
   version: 0.1.0
 - name: yj-qin/llhttp
   version: 0.1.1
