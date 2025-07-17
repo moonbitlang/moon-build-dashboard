@@ -224,7 +224,7 @@ mooncakes:
 - name: Milky2018/options
   version: 0.1.2
 - name: Milky2018/sqlparser
-  version: 0.1.12
+  version: 0.1.13
 - name: Near-Jungnune/Near-Jungnune
   version: 0.1.0
 - name: Nyuudoukumo/uuidv4
@@ -274,7 +274,7 @@ mooncakes:
 - name: amor2025/biginteger
   version: 0.1.0
 - name: amor2025/convert
-  version: 0.2.0
+  version: 0.3.2
 - name: amor2025/fraction
   version: 0.1.0
 - name: amor2025/pad
@@ -426,7 +426,7 @@ mooncakes:
 - name: moonbitlang/regexp
   version: 0.3.0
 - name: moonbitlang/ulex
-  version: 0.3.9
+  version: 0.3.10
 - name: moonbitlang/ulex-runtime
   version: 0.4.1
 - name: moonbitlang/wasm4
