@@ -203,6 +203,8 @@ mooncakes:
   version: 0.1.0
 - name: KCN-judu/err_marker
   version: 0.1.1
+- name: Kaida-Amethyst/MoonLLVM
+  version: 0.1.0
 - name: Kilig/MATH
   version: 0.1.1
 - name: KingBes/raylib
@@ -249,6 +251,10 @@ mooncakes:
   version: 0.3.0
 - name: WenqiChen3019/sqrt
   version: 0.1.4
+- name: WilliamZ1008/qt-gui
+  version: 0.1.1
+- name: WilliamZ1008/qtgui
+  version: 0.1.1
 - name: YHSZ-ONEC/yhsz
   version: 0.1.0
 - name: Yoorkin/ArgParser
