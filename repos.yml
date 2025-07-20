@@ -211,6 +211,8 @@ mooncakes:
   version: 0.0.3
 - name: KingBes/webui
   version: 0.0.4
+- name: Lampese/biblatex
+  version: 0.1.0
 - name: Lampese/moonbit-chalk
   version: 0.4.0
 - name: Ljw030710/find_max
@@ -297,10 +299,14 @@ mooncakes:
   version: 0.0.3
 - name: chronostesis/check_prime
   version: 0.1.0
+- name: cou723/html-parser
+  version: 0.1.0
 - name: djisnj/djisnj
   version: 0.1.0
 - name: dongyvxuan/dongyx
   version: 0.1.1
+- name: edragain2nd/compose
+  version: 0.1.0
 - name: edragain2nd/unscanny
   version: 0.1.1
 - name: extism/moonbit-pdk
@@ -477,7 +483,7 @@ mooncakes:
 - name: ruifeng/moondsa
   version: 0.1.2
 - name: ryota0624/mustache
-  version: 0.0.2
+  version: 0.0.3
 - name: shiheat/find_max
   version: 0.3.0
 - name: sjzbxhsj/Calculator
