@@ -197,6 +197,8 @@ mooncakes:
   version: 0.1.0
 - name: GreyIcesea/isprime
   version: 0.1.0
+- name: HCHogan/btree
+  version: 0.2.0
 - name: HeChTo/rope
   version: 0.1.0
 - name: Jtian-t/Deque
@@ -228,7 +230,7 @@ mooncakes:
 - name: Milky2018/options
   version: 0.1.2
 - name: Milky2018/sqlparser
-  version: 0.1.13
+  version: 0.1.16
 - name: Near-Jungnune/Near-Jungnune
   version: 0.1.0
 - name: Nyuudoukumo/uuidv4
@@ -266,7 +268,7 @@ mooncakes:
 - name: Yoorkin/prettyprinter
   version: 0.4.3
 - name: Yoorkin/rabbit-tea
-  version: 0.10.6
+  version: 0.10.7
   running_backend:
   - js
 - name: Yoorkin/trie
