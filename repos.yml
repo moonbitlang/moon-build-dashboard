@@ -99,6 +99,8 @@ mooncakes:
   version: 0.1.5
 - name: AdUhTkJm/wasmtools
   version: 0.1.0
+- name: Asterless/MoonQOI
+  version: 0.1.1
 - name: Bemly/cstdio-ffi
   version: 0.0.0
 - name: BigOrangeQWQ/Bits
