@@ -222,7 +222,7 @@ mooncakes:
 - name: Ljw030710/find_max
   version: 0.1.0
 - name: Luna-Flow/luna-generic
-  version: 0.2.0-alpha-1
+  version: 0.2.0-beta-1
 - name: Luna-Flow/luna-utils
   version: 0.1.0
 - name: Luna-Flow/quaternion
@@ -434,7 +434,7 @@ mooncakes:
 - name: misika727/sqrt
   version: 0.1.0
 - name: moonbitlang/async
-  version: 0.2.1
+  version: 0.2.2
 - name: moonbitlang/dummy_abort
   version: 0.2.0
 - name: moonbitlang/lex-runtime
@@ -528,6 +528,8 @@ mooncakes:
   version: 0.2.0
 - name: tonyfettes/encoding
   version: 0.3.6
+- name: tonyfettes/ssl
+  version: 0.1.1
 - name: tonyfettes/submodule-test
   version: 0.1.1
 - name: tonyfettes/tree_sitter_cpp
