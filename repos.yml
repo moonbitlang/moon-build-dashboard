@@ -281,6 +281,8 @@ mooncakes:
   version: 0.1.0
 - name: YumeXi/iter
   version: 0.2.7
+- name: ZSeanYves/SimplexNoise
+  version: 0.1.0
 - name: ZSeanYves/bufferutils
   version: 0.1.0
 - name: amor2025/biginteger
@@ -288,7 +290,7 @@ mooncakes:
 - name: amor2025/convert
   version: 0.3.2
 - name: amor2025/fraction
-  version: 0.1.0
+  version: 0.2.0
 - name: amor2025/pad
   version: 0.1.3
 - name: bikallem/reactive
