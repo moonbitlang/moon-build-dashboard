@@ -85,6 +85,8 @@ github-repos:
 mooncakes:
 - name: 0Ayachi0/SwissTable
   version: 0.1.0
+- name: 0Ayachi0/elk
+  version: 0.1.0
 - name: 2459822546/fwshz
   version: 0.1.0
 - name: AXiX-official/binaryPrimitives
@@ -208,7 +210,7 @@ mooncakes:
 - name: KCN-judu/err_marker
   version: 0.1.2
 - name: Kaida-Amethyst/MoonLLVM
-  version: 0.1.0
+  version: 0.1.1
 - name: Kilig/MATH
   version: 0.1.1
 - name: KingBes/raylib
@@ -270,7 +272,7 @@ mooncakes:
 - name: Yoorkin/prettyprinter
   version: 0.4.3
 - name: Yoorkin/rabbit-tea
-  version: 0.10.7
+  version: 0.10.9
   running_backend:
   - js
 - name: Yoorkin/trie
