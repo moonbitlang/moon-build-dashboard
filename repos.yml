@@ -452,11 +452,11 @@ mooncakes:
 - name: moonbitlang/regexp
   version: 0.3.0
 - name: moonbitlang/ulex
-  version: 0.3.10
+  version: 0.3.11
 - name: moonbitlang/ulex-runtime
   version: 0.4.1
 - name: moonbitlang/wasm4
-  version: 0.2.6
+  version: 0.2.7
   running_backend:
   - wasm
   - wasm-gc
@@ -497,7 +497,7 @@ mooncakes:
 - name: ruifeng/diff
   version: 0.1.6
 - name: ruifeng/moondsa
-  version: 0.1.3
+  version: 0.2.1
 - name: ryota0624/mustache
   version: 0.0.3
 - name: shiheat/find_max
