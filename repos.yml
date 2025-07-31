@@ -452,7 +452,7 @@ mooncakes:
 - name: moonbitlang/regexp
   version: 0.3.0
 - name: moonbitlang/ulex
-  version: 0.3.11
+  version: 0.3.12
 - name: moonbitlang/ulex-runtime
   version: 0.4.1
 - name: moonbitlang/wasm4
@@ -495,7 +495,7 @@ mooncakes:
 - name: remain11/i18n
   version: 0.1.0
 - name: ruifeng/diff
-  version: 0.1.6
+  version: 0.2.1
 - name: ruifeng/moondsa
   version: 0.2.1
 - name: ryota0624/mustache
