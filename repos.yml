@@ -187,6 +187,8 @@ mooncakes:
   version: 0.1.0
 - name: CAIMEOX/原来可以发中文包
   version: 0.1.1
+- name: CGaaaaaa/reactivex
+  version: 0.1.0
 - name: CMoonBack/Binary-Exponentiation
   version: 0.1.0
 - name: DawnMagnet/sparse-table
@@ -238,7 +240,7 @@ mooncakes:
 - name: Milky2018/options
   version: 0.1.2
 - name: Milky2018/selene
-  version: 0.9.2
+  version: 0.9.3
 - name: Milky2018/sqlparser
   version: 0.1.18
 - name: Near-Jungnune/Near-Jungnune
@@ -268,7 +270,7 @@ mooncakes:
 - name: WilliamZ1008/qt-gui
   version: 0.1.1
 - name: WilliamZ1008/qtgui
-  version: 0.1.1
+  version: 0.1.2
 - name: YHSZ-ONEC/yhsz
   version: 0.1.0
 - name: Yoorkin/ArgParser
