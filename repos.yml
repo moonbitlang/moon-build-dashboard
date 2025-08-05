@@ -187,6 +187,8 @@ mooncakes:
   version: 0.1.0
 - name: CAIMEOX/原来可以发中文包
   version: 0.1.1
+- name: CGaaaaaa/MoonProgress
+  version: 0.1.0
 - name: CGaaaaaa/reactivex
   version: 0.1.0
 - name: CMoonBack/Binary-Exponentiation
@@ -462,7 +464,7 @@ mooncakes:
 - name: moonbitlang/regexp
   version: 0.3.0
 - name: moonbitlang/ulex
-  version: 0.3.13
+  version: 0.3.14
 - name: moonbitlang/ulex-runtime
   version: 0.4.1
 - name: moonbitlang/wasm4
