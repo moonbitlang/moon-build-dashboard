@@ -191,6 +191,8 @@ mooncakes:
   version: 0.1.0
 - name: CGaaaaaa/reactivex
   version: 0.1.0
+- name: CGaaaaaa/signal
+  version: 0.1.2
 - name: CMoonBack/Binary-Exponentiation
   version: 0.1.0
 - name: DawnMagnet/sparse-table
@@ -242,7 +244,9 @@ mooncakes:
 - name: Milky2018/options
   version: 0.1.2
 - name: Milky2018/selene
-  version: 0.9.3
+  version: 0.10.0
+- name: Milky2018/selene-canvas
+  version: 0.10.0
 - name: Milky2018/sqlparser
   version: 0.1.18
 - name: Near-Jungnune/Near-Jungnune
@@ -344,35 +348,35 @@ mooncakes:
 - name: furesoft/moos-sdk
   version: 0.1.43
 - name: gmlewis/b2
-  version: 0.34.17
+  version: 0.34.18
 - name: gmlewis/base64
-  version: 0.14.11
+  version: 0.14.12
 - name: gmlewis/crc32
   version: 0.8.9
 - name: gmlewis/flate
-  version: 0.35.17
+  version: 0.35.18
 - name: gmlewis/gzip
-  version: 0.33.18
+  version: 0.33.19
 - name: gmlewis/hash
-  version: 0.19.19
+  version: 0.19.20
 - name: gmlewis/image
-  version: 0.16.19
+  version: 0.16.20
 - name: gmlewis/io
-  version: 0.22.9
+  version: 0.22.10
 - name: gmlewis/jsonrpc2
-  version: 0.0.14
+  version: 0.0.15
 - name: gmlewis/md5
-  version: 0.19.13
+  version: 0.19.14
 - name: gmlewis/moonbit-pdk
-  version: 0.47.12
+  version: 0.47.13
 - name: gmlewis/sha1
-  version: 0.11.17
+  version: 0.11.18
 - name: gmlewis/sha256
-  version: 0.17.13
+  version: 0.17.14
 - name: gmlewis/spin-moonbit-sdk
-  version: 0.54.1
+  version: 0.54.2
 - name: gmlewis/zlib
-  version: 0.20.18
+  version: 0.20.19
 - name: hachi/sort
   version: 0.1.12
 - name: hbh112233abc/examine
@@ -454,7 +458,7 @@ mooncakes:
 - name: misika727/sqrt
   version: 0.1.0
 - name: moonbitlang/async
-  version: 0.2.2
+  version: 0.2.3
 - name: moonbitlang/dummy_abort
   version: 0.2.0
 - name: moonbitlang/lex-runtime
@@ -550,6 +554,8 @@ mooncakes:
   version: 0.2.0
 - name: tonyfettes/encoding
   version: 0.3.6
+- name: tonyfettes/openssl
+  version: 0.1.0
 - name: tonyfettes/ssl
   version: 0.1.1
 - name: tonyfettes/submodule-test
