@@ -276,7 +276,7 @@ mooncakes:
 - name: WilliamZ1008/qt-gui
   version: 0.1.1
 - name: WilliamZ1008/qtgui
-  version: 0.1.2
+  version: 0.1.6
 - name: YHSZ-ONEC/yhsz
   version: 0.1.0
 - name: Yoorkin/ArgParser
