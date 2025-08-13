@@ -244,9 +244,9 @@ mooncakes:
 - name: Milky2018/options
   version: 0.1.2
 - name: Milky2018/selene
-  version: 0.10.1
+  version: 0.11.4
 - name: Milky2018/selene-canvas
-  version: 0.10.1
+  version: 0.11.4
 - name: Milky2018/sqlparser
   version: 0.1.18
 - name: Near-Jungnune/Near-Jungnune
@@ -314,7 +314,7 @@ mooncakes:
 - name: bikallem/reactive
   version: 0.2.0
 - name: bob/toml
-  version: 0.1.2
+  version: 0.1.3
 - name: bobzhang/sexp
   version: 0.1.1
 - name: calacaly/moon_log
@@ -324,7 +324,7 @@ mooncakes:
 - name: chaijie2018/bloom
   version: 0.1.1
 - name: chawyehsu/punycode
-  version: 0.0.3
+  version: 0.0.4
 - name: chronostesis/check_prime
   version: 0.1.0
 - name: cou723/html-parser
@@ -396,7 +396,7 @@ mooncakes:
 - name: illusory0x0/fun
   version: 0.2.1
 - name: illusory0x0/fuzzy_match
-  version: 0.2.3
+  version: 0.2.4
 - name: illusory0x0/graphviz
   version: 0.1.1
 - name: illusory0x0/immut_deque
@@ -458,7 +458,7 @@ mooncakes:
 - name: misika727/sqrt
   version: 0.1.0
 - name: moonbitlang/async
-  version: 0.2.3
+  version: 0.2.4
 - name: moonbitlang/dummy_abort
   version: 0.2.0
 - name: moonbitlang/lex-runtime
@@ -563,7 +563,7 @@ mooncakes:
 - name: tonyfettes/openai
   version: 0.1.0
 - name: tonyfettes/openssl
-  version: 0.2.1
+  version: 0.2.2
 - name: tonyfettes/ssl
   version: 0.1.1
 - name: tonyfettes/submodule-test
