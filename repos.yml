@@ -202,7 +202,7 @@ mooncakes:
 - name: FlyCloudC/autodiff
   version: 0.1.1
 - name: FlyCloudC/mgraph
-  version: 0.1.2
+  version: 0.1.3
 - name: FrenchPicnic/which
   version: 0.1.3
 - name: GMH233/moonpassword
@@ -267,6 +267,8 @@ mooncakes:
   version: 0.1.0
 - name: SupremeHuaji/VEBTree
   version: 0.1.1
+- name: SupremeHuaji/XorLinkedList
+  version: 0.1.0
 - name: TheWaWaR/clap
   version: 0.2.4
 - name: Tianci-King/median
