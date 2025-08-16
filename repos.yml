@@ -321,8 +321,14 @@ mooncakes:
   version: 0.1.0
 - name: bob/toml
   version: 0.1.4
+- name: bobzhang/qrc
+  version: 0.1.0
 - name: bobzhang/sexp
   version: 0.1.1
+- name: bobzhang/uuidm
+  version: 0.1.0
+- name: bobzhang/vg
+  version: 0.1.0
 - name: calacaly/moon_log
   version: 0.1.11
 - name: caozhanhao/qrcode
@@ -346,7 +352,7 @@ mooncakes:
 - name: edragain2nd/unscanny
   version: 0.1.2
 - name: enanandesu/special-mathematical-functions
-  version: 0.1.0
+  version: 0.1.1
 - name: extism/moonbit-pdk
   version: 0.47.12
 - name: fangyinc/net
@@ -390,7 +396,7 @@ mooncakes:
 - name: hbh112233abc/examine
   version: 0.1.1
 - name: hustcer/nanoid
-  version: 0.1.6
+  version: 0.2.1
 - name: hzqdf/sum-calc
   version: 0.0.20250321
 - name: illusory0x0/clang
