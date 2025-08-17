@@ -246,9 +246,9 @@ mooncakes:
 - name: Milky2018/options
   version: 0.1.2
 - name: Milky2018/selene
-  version: 0.11.6
+  version: 0.12.0
 - name: Milky2018/selene-canvas
-  version: 0.11.6
+  version: 0.12.0
 - name: Milky2018/sqlparser
   version: 0.1.18
 - name: Near-Jungnune/Near-Jungnune
@@ -321,13 +321,21 @@ mooncakes:
   version: 0.1.0
 - name: bob/toml
   version: 0.1.4
+- name: bobzhang/ipaddr
+  version: 0.1.0
 - name: bobzhang/qrc
   version: 0.1.0
 - name: bobzhang/sexp
   version: 0.1.1
+- name: bobzhang/tar
+  version: 0.1.0
+- name: bobzhang/uri
+  version: 0.1.0
 - name: bobzhang/uuidm
   version: 0.1.0
 - name: bobzhang/vg
+  version: 0.1.0
+- name: bobzhang/zipc
   version: 0.1.0
 - name: calacaly/moon_log
   version: 0.1.11
