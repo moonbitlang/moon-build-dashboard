@@ -218,11 +218,13 @@ mooncakes:
 - name: KCN-judu/err_marker
   version: 0.1.2
 - name: Kaida-Amethyst/MoonLLVM
-  version: 0.1.1
+  version: 0.1.2
 - name: Kaida-Amethyst/godot
   version: 0.1.0
 - name: Kaida-Amethyst/mbtsmith
   version: 0.1.4
+- name: Kaida-Amethyst/sdl3
+  version: 0.1.0
 - name: Kilig/MATH
   version: 0.1.1
 - name: KingBes/raylib
@@ -264,6 +266,8 @@ mooncakes:
 - name: ShellWen/lru_cache
   version: 0.1.0
 - name: ShellWen/sw_router
+  version: 0.1.0
+- name: SupremeHuaji/FibonacciHeap
   version: 0.1.0
 - name: SupremeHuaji/MaxStack
   version: 0.1.0
@@ -458,7 +462,7 @@ mooncakes:
 - name: justjavac/num_cpus
   version: 0.1.4
 - name: justjoheinz/iso-country
-  version: 0.1.1
+  version: 0.1.2
 - name: kesmeey/BloomierFilter
   version: 0.1.0
 - name: kesmeey/IntervalTree
@@ -473,6 +477,8 @@ mooncakes:
   version: 0.0.1-SNAPSHOT
 - name: ledao/nanoid
   version: 0.1.1
+- name: leopeng1995/examine
+  version: 0.1.0
 - name: liuly0322/lru_cache
   version: 0.1.0
 - name: luolingkan/find_min_num
@@ -488,7 +494,7 @@ mooncakes:
 - name: moonbitlang/lex/runtime
   version: 0.1.1
 - name: moonbitlang/parser
-  version: 0.1.0
+  version: 0.1.1
 - name: moonbitlang/regexp
   version: 0.3.1
 - name: moonbitlang/ulex
@@ -585,7 +591,7 @@ mooncakes:
 - name: tonyfettes/openai
   version: 0.1.0
 - name: tonyfettes/openssl
-  version: 0.2.2
+  version: 0.2.3
 - name: tonyfettes/ssl
   version: 0.1.1
 - name: tonyfettes/submodule-test
