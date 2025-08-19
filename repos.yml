@@ -248,9 +248,9 @@ mooncakes:
 - name: Milky2018/options
   version: 0.1.2
 - name: Milky2018/selene
-  version: 0.12.0
+  version: 0.12.3
 - name: Milky2018/selene-canvas
-  version: 0.12.0
+  version: 0.12.3
 - name: Milky2018/sqlparser
   version: 0.1.18
 - name: Near-Jungnune/Near-Jungnune
@@ -321,6 +321,8 @@ mooncakes:
   version: 0.1.3
 - name: bikallem/reactive
   version: 0.2.0
+- name: bob/hashbrown
+  version: 0.1.0
 - name: bob/lexer
   version: 0.1.0
 - name: bob/toml
@@ -486,7 +488,7 @@ mooncakes:
 - name: misika727/sqrt
   version: 0.1.0
 - name: moonbitlang/async
-  version: 0.2.4
+  version: 0.3.0
 - name: moonbitlang/dummy_abort
   version: 0.2.0
 - name: moonbitlang/lex-runtime
