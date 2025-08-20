@@ -217,12 +217,16 @@ mooncakes:
   version: 0.1.0
 - name: KCN-judu/err_marker
   version: 0.1.2
+- name: KCN-judu/lambda
+  version: 0.1.0
 - name: Kaida-Amethyst/MoonLLVM
   version: 0.1.2
 - name: Kaida-Amethyst/godot
   version: 0.1.0
 - name: Kaida-Amethyst/mbtsmith
   version: 0.1.4
+- name: Kaida-Amethyst/openblas
+  version: 0.1.0
 - name: Kaida-Amethyst/sdl3
   version: 0.1.0
 - name: Kilig/MATH
@@ -291,6 +295,8 @@ mooncakes:
   version: 0.1.9
 - name: Yoorkin/fuzzy_search
   version: 0.1.1
+- name: Yoorkin/jmop
+  version: 0.1.0
 - name: Yoorkin/prettyprinter
   version: 0.4.4
 - name: Yoorkin/rabbit-tea
@@ -326,7 +332,7 @@ mooncakes:
 - name: bob/lexer
   version: 0.1.0
 - name: bob/toml
-  version: 0.1.4
+  version: 0.1.6
 - name: bobzhang/ipaddr
   version: 0.1.0
 - name: bobzhang/qrc
@@ -340,7 +346,7 @@ mooncakes:
 - name: bobzhang/uuidm
   version: 0.1.0
 - name: bobzhang/vg
-  version: 0.1.0
+  version: 0.1.1
 - name: bobzhang/zipc
   version: 0.1.0
 - name: calacaly/moon_log
@@ -496,7 +502,7 @@ mooncakes:
 - name: moonbitlang/lex/runtime
   version: 0.1.1
 - name: moonbitlang/parser
-  version: 0.1.1
+  version: 0.1.2
 - name: moonbitlang/regexp
   version: 0.3.1
 - name: moonbitlang/ulex
