@@ -226,7 +226,7 @@ mooncakes:
 - name: Kaida-Amethyst/mbtsmith
   version: 0.1.4
 - name: Kaida-Amethyst/openblas
-  version: 0.1.0
+  version: 0.1.2
 - name: Kaida-Amethyst/sdl3
   version: 0.1.0
 - name: Kilig/MATH
@@ -280,7 +280,7 @@ mooncakes:
 - name: SupremeHuaji/XorLinkedList
   version: 0.1.0
 - name: TheWaWaR/clap
-  version: 0.2.4
+  version: 0.2.5
 - name: Tianci-King/median
   version: 0.3.0
 - name: WenqiChen3019/sqrt
@@ -334,6 +334,8 @@ mooncakes:
 - name: bob/toml
   version: 0.1.6
 - name: bobzhang/ipaddr
+  version: 0.1.0
+- name: bobzhang/liquid
   version: 0.1.0
 - name: bobzhang/qrc
   version: 0.1.0
@@ -494,7 +496,7 @@ mooncakes:
 - name: misika727/sqrt
   version: 0.1.0
 - name: moonbitlang/async
-  version: 0.3.0
+  version: 0.3.1
 - name: moonbitlang/dummy_abort
   version: 0.2.0
 - name: moonbitlang/lex-runtime
