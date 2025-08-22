@@ -252,9 +252,9 @@ mooncakes:
 - name: Milky2018/options
   version: 0.1.2
 - name: Milky2018/selene
-  version: 0.12.3
+  version: 0.13.0-beta1
 - name: Milky2018/selene-canvas
-  version: 0.12.3
+  version: 0.13.0-beta1
 - name: Milky2018/sqlparser
   version: 0.1.18
 - name: Near-Jungnune/Near-Jungnune
@@ -593,7 +593,7 @@ mooncakes:
 - name: tonyfettes/atomics
   version: 0.1.0
 - name: tonyfettes/c
-  version: 0.2.0
+  version: 0.4.0
 - name: tonyfettes/dotenv
   version: 0.4.1
 - name: tonyfettes/encoding
