@@ -350,7 +350,7 @@ mooncakes:
 - name: bobzhang/vg
   version: 0.1.1
 - name: bobzhang/zipc
-  version: 0.1.0
+  version: 0.1.1
 - name: calacaly/moon_log
   version: 0.1.11
 - name: caozhanhao/qrcode
