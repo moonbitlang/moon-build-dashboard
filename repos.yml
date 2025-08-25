@@ -185,6 +185,8 @@ mooncakes:
   version: 0.1.1
 - name: CAIMEOX/vlq
   version: 0.1.0
+- name: CAIMEOX/zipper
+  version: 0.1.0
 - name: CAIMEOX/原来可以发中文包
   version: 0.1.1
 - name: CGaaaaaa/MoonProgress
@@ -317,6 +319,10 @@ mooncakes:
   version: 0.1.0
 - name: ZSeanYves/bufferutils
   version: 0.2.4
+- name: ZijianFeng33/gs
+  version: 0.1.0
+- name: ZijianFeng33/regexp
+  version: 0.1.0
 - name: amor2025/biginteger
   version: 0.1.0
 - name: amor2025/convert
@@ -333,6 +339,8 @@ mooncakes:
   version: 0.1.0
 - name: bob/toml
   version: 0.1.6
+- name: bobzhang/colors
+  version: 0.1.0
 - name: bobzhang/ipaddr
   version: 0.1.0
 - name: bobzhang/liquid
@@ -593,7 +601,7 @@ mooncakes:
 - name: tonyfettes/atomics
   version: 0.1.0
 - name: tonyfettes/c
-  version: 0.4.0
+  version: 0.5.0
 - name: tonyfettes/dotenv
   version: 0.4.1
 - name: tonyfettes/encoding
