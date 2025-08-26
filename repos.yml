@@ -254,9 +254,9 @@ mooncakes:
 - name: Milky2018/options
   version: 0.1.2
 - name: Milky2018/selene
-  version: 0.13.0
+  version: 0.13.1
 - name: Milky2018/selene-canvas
-  version: 0.13.0
+  version: 0.13.1
 - name: Milky2018/sqlparser
   version: 0.1.18
 - name: Near-Jungnune/Near-Jungnune
@@ -340,7 +340,7 @@ mooncakes:
 - name: bob/toml
   version: 0.1.6
 - name: bobzhang/colors
-  version: 0.1.0
+  version: 0.8.0
 - name: bobzhang/ipaddr
   version: 0.1.0
 - name: bobzhang/liquid
@@ -358,6 +358,8 @@ mooncakes:
 - name: bobzhang/vg
   version: 0.1.1
 - name: bobzhang/zipc
+  version: 0.1.1
+- name: bzy-debug/string_zipper
   version: 0.1.1
 - name: calacaly/moon_log
   version: 0.1.11
@@ -423,6 +425,8 @@ mooncakes:
   version: 0.20.19
 - name: hachi/sort
   version: 0.1.12
+- name: hackwaly/msgpack
+  version: 0.1.0
 - name: hbh112233abc/examine
   version: 0.1.1
 - name: hustcer/nanoid
