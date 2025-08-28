@@ -222,7 +222,7 @@ mooncakes:
 - name: KCN-judu/lambda
   version: 0.1.0
 - name: Kaida-Amethyst/MoonLLVM
-  version: 0.1.2
+  version: 0.1.4
 - name: Kaida-Amethyst/godot
   version: 0.1.0
 - name: Kaida-Amethyst/mbtsmith
@@ -294,10 +294,12 @@ mooncakes:
 - name: YHSZ-ONEC/yhsz
   version: 0.1.0
 - name: Yoorkin/ArgParser
-  version: 0.1.9
+  version: 0.1.10
 - name: Yoorkin/fuzzy_search
   version: 0.1.1
 - name: Yoorkin/jmop
+  version: 0.1.0
+- name: Yoorkin/logr_moonbit
   version: 0.1.0
 - name: Yoorkin/prettyprinter
   version: 0.4.4
@@ -306,7 +308,7 @@ mooncakes:
   running_backend:
   - js
 - name: Yoorkin/trie
-  version: 0.2.4
+  version: 0.2.5
 - name: Yu-zh/either
   version: 0.1.0
 - name: Yu-zh/sslist
@@ -518,7 +520,7 @@ mooncakes:
 - name: moonbitlang/lex/runtime
   version: 0.1.1
 - name: moonbitlang/parser
-  version: 0.1.2
+  version: 0.1.3
 - name: moonbitlang/regexp
   version: 0.3.1
 - name: moonbitlang/ulex
@@ -607,7 +609,7 @@ mooncakes:
 - name: tonyfettes/atomics
   version: 0.1.0
 - name: tonyfettes/c
-  version: 0.5.0
+  version: 0.5.1
 - name: tonyfettes/dotenv
   version: 0.4.1
 - name: tonyfettes/encoding
