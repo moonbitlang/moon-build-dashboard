@@ -398,35 +398,35 @@ mooncakes:
 - name: furesoft/moos-sdk
   version: 0.1.43
 - name: gmlewis/b2
-  version: 0.34.18
+  version: 0.34.19
 - name: gmlewis/base64
-  version: 0.14.12
+  version: 0.14.13
 - name: gmlewis/crc32
-  version: 0.8.9
+  version: 0.8.10
 - name: gmlewis/flate
-  version: 0.35.18
+  version: 0.35.19
 - name: gmlewis/gzip
-  version: 0.33.19
+  version: 0.33.20
 - name: gmlewis/hash
-  version: 0.19.20
+  version: 0.19.21
 - name: gmlewis/image
-  version: 0.16.20
+  version: 0.16.21
 - name: gmlewis/io
-  version: 0.22.10
+  version: 0.22.11
 - name: gmlewis/jsonrpc2
-  version: 0.0.15
+  version: 0.0.16
 - name: gmlewis/md5
-  version: 0.19.14
+  version: 0.19.17
 - name: gmlewis/moonbit-pdk
-  version: 0.47.13
+  version: 0.47.14
 - name: gmlewis/sha1
-  version: 0.11.18
+  version: 0.11.19
 - name: gmlewis/sha256
-  version: 0.17.14
+  version: 0.17.15
 - name: gmlewis/spin-moonbit-sdk
-  version: 0.54.2
+  version: 0.54.3
 - name: gmlewis/zlib
-  version: 0.20.19
+  version: 0.20.20
 - name: hachi/sort
   version: 0.1.12
 - name: hackwaly/msgpack
@@ -463,6 +463,8 @@ mooncakes:
   version: 0.1.0
 - name: illusory0x0/parserc
   version: 0.1.5
+- name: illusory0x0/ryu
+  version: 0.1.1
 - name: illusory0x0/simple_parserc
   version: 0.2.1
 - name: jankin_li/Learn_Test1
@@ -512,7 +514,7 @@ mooncakes:
 - name: misika727/sqrt
   version: 0.1.0
 - name: moonbitlang/async
-  version: 0.4.0
+  version: 0.4.1
 - name: moonbitlang/dummy_abort
   version: 0.2.0
 - name: moonbitlang/lex-runtime
@@ -538,9 +540,17 @@ mooncakes:
   version: 0.1.3
 - name: myfreess/charclass
   version: 0.1.2
+- name: myfreess/rope
+  version: 0.1.0
 - name: myfreess/sqlite3
   version: 0.1.0
+- name: myfreess/text
+  version: 0.1.0
 - name: myfreess/unicode_data
+  version: 0.1.0
+- name: myfreess/yaml
+  version: 0.1.0
+- name: oboard/base16384
   version: 0.1.0
 - name: oboard/readline
   version: 0.1.4
@@ -566,6 +576,8 @@ mooncakes:
   version: 0.3.1
   running_backend:
   - js
+- name: rami3l/unicodewidth
+  version: 0.1.0
 - name: remain11/i18n
   version: 0.1.0
 - name: ruifeng/diff
@@ -609,7 +621,7 @@ mooncakes:
 - name: tonyfettes/atomics
   version: 0.1.0
 - name: tonyfettes/c
-  version: 0.5.1
+  version: 0.5.2
 - name: tonyfettes/dotenv
   version: 0.4.1
 - name: tonyfettes/encoding
