@@ -83,6 +83,8 @@ github-repos:
   link: https://github.com/moonbit-community/sw-ini
   branch: main
 mooncakes:
+- name: 0Ayachi0/GB18030
+  version: 0.1.0
 - name: 0Ayachi0/SwissTable
   version: 0.1.0
 - name: 0Ayachi0/elk
@@ -346,6 +348,8 @@ mooncakes:
 - name: bobzhang/ipaddr
   version: 0.1.0
 - name: bobzhang/liquid
+  version: 0.1.0
+- name: bobzhang/lisp_interpreter
   version: 0.1.0
 - name: bobzhang/qrc
   version: 0.1.0
