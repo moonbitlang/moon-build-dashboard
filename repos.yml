@@ -347,6 +347,8 @@ mooncakes:
   version: 0.1.6
 - name: bobzhang/colors
   version: 0.8.0
+- name: bobzhang/fuzzyscore
+  version: 0.1.0
 - name: bobzhang/ipaddr
   version: 0.1.0
 - name: bobzhang/liquid
@@ -435,6 +437,8 @@ mooncakes:
   version: 0.20.20
 - name: hachi/sort
   version: 0.1.12
+- name: hackwaly/find_cluster_break
+  version: 0.1.2
 - name: hackwaly/msgpack
   version: 0.1.0
 - name: hbh112233abc/examine
@@ -443,6 +447,8 @@ mooncakes:
   version: 0.2.1
 - name: hzqdf/sum-calc
   version: 0.0.20250321
+- name: iceBear67/mnbt
+  version: 0.1.0
 - name: illusory0x0/clang
   version: 0.1.1
 - name: illusory0x0/clone
