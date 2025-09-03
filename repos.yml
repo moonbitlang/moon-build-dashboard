@@ -437,6 +437,8 @@ mooncakes:
   version: 0.20.20
 - name: hachi/sort
   version: 0.1.12
+- name: hackwaly/easing
+  version: 0.1.0
 - name: hackwaly/find_cluster_break
   version: 0.1.2
 - name: hackwaly/msgpack
@@ -448,7 +450,7 @@ mooncakes:
 - name: hzqdf/sum-calc
   version: 0.0.20250321
 - name: iceBear67/mnbt
-  version: 0.1.0
+  version: 0.2.0
 - name: illusory0x0/clang
   version: 0.1.1
 - name: illusory0x0/clone
@@ -528,7 +530,7 @@ mooncakes:
 - name: misika727/sqrt
   version: 0.1.0
 - name: moonbitlang/async
-  version: 0.4.2
+  version: 0.5.1
 - name: moonbitlang/dummy_abort
   version: 0.2.0
 - name: moonbitlang/lex-runtime
