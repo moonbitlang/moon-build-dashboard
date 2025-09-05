@@ -214,7 +214,7 @@ mooncakes:
 - name: GreyIcesea/isprime
   version: 0.1.0
 - name: HCHogan/btree
-  version: 0.2.0
+  version: 0.2.1
 - name: HeChTo/rope
   version: 0.1.0
 - name: Jtian-t/Deque
@@ -452,7 +452,7 @@ mooncakes:
 - name: hzqdf/sum-calc
   version: 0.0.20250321
 - name: iceBear67/mnbt
-  version: 0.2.0
+  version: 0.3.3
 - name: illusory0x0/clang
   version: 0.1.1
 - name: illusory0x0/clone
@@ -532,7 +532,7 @@ mooncakes:
 - name: misika727/sqrt
   version: 0.1.0
 - name: moonbitlang/async
-  version: 0.5.1
+  version: 0.5.2
 - name: moonbitlang/dummy_abort
   version: 0.2.0
 - name: moonbitlang/lex-runtime
@@ -647,14 +647,18 @@ mooncakes:
 - name: tonyfettes/dotenv
   version: 0.4.1
 - name: tonyfettes/encoding
-  version: 0.3.6
+  version: 0.3.7
 - name: tonyfettes/openai
   version: 0.1.0
 - name: tonyfettes/openssl
   version: 0.2.3
+- name: tonyfettes/socket
+  version: 0.1.0
 - name: tonyfettes/ssl
   version: 0.1.1
 - name: tonyfettes/submodule-test
+  version: 0.1.1
+- name: tonyfettes/tiktoken
   version: 0.1.1
 - name: tonyfettes/tree_sitter_cpp
   version: 0.1.16
