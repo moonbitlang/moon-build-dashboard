@@ -343,6 +343,8 @@ mooncakes:
   version: 0.2.0
 - name: amor2025/pad
   version: 0.1.3
+- name: applejag/firefly
+  version: 0.2.0
 - name: bikallem/reactive
   version: 0.2.0
 - name: bob/hashbrown
@@ -384,7 +386,7 @@ mooncakes:
 - name: caozhanhao/qrcode
   version: 0.1.1
 - name: chaijie2018/bloom
-  version: 0.2.0
+  version: 0.2.1
 - name: chawyehsu/punycode
   version: 0.0.4
 - name: chronostesis/check_prime
@@ -472,13 +474,15 @@ mooncakes:
 - name: illusory0x0/fuzzy_match
   version: 0.2.4
 - name: illusory0x0/graphviz
-  version: 0.1.1
+  version: 0.1.2
 - name: illusory0x0/immut_deque
   version: 0.3.3
 - name: illusory0x0/intrinsic
   version: 0.1.0
 - name: illusory0x0/lazy
   version: 0.1.2
+- name: illusory0x0/memory
+  version: 0.1.1
 - name: illusory0x0/moonbit-wasm-nodejs-ts-template
   version: 0.1.0
 - name: illusory0x0/moonbit-wasm-vite-ts-template
@@ -491,6 +495,8 @@ mooncakes:
   version: 0.1.1
 - name: illusory0x0/simple_parserc
   version: 0.2.1
+- name: illusory0x0/string_of_bytes
+  version: 0.1.0
 - name: jankin_li/Learn_Test1
   version: 0.1.0
 - name: jankin_li/new_lib
