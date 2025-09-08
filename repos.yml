@@ -224,7 +224,7 @@ mooncakes:
 - name: KCN-judu/lambda
   version: 0.1.0
 - name: Kaida-Amethyst/MoonLLVM
-  version: 0.1.4
+  version: 0.1.6
 - name: Kaida-Amethyst/either
   version: 0.1.0
 - name: Kaida-Amethyst/godot
@@ -302,7 +302,7 @@ mooncakes:
 - name: YHSZ-ONEC/yhsz
   version: 0.1.0
 - name: Yoorkin/ArgParser
-  version: 0.1.10
+  version: 0.1.11
 - name: Yoorkin/fuzzy_search
   version: 0.1.1
 - name: Yoorkin/jmop
@@ -316,7 +316,7 @@ mooncakes:
   running_backend:
   - js
 - name: Yoorkin/trie
-  version: 0.2.5
+  version: 0.2.6
 - name: Yu-zh/either
   version: 0.1.0
 - name: Yu-zh/sslist
@@ -468,7 +468,7 @@ mooncakes:
 - name: illusory0x0/color
   version: 0.2.3
 - name: illusory0x0/fmt
-  version: 0.3.2
+  version: 0.3.3
 - name: illusory0x0/fun
   version: 0.2.1
 - name: illusory0x0/fuzzy_match
@@ -544,7 +544,7 @@ mooncakes:
 - name: misika727/sqrt
   version: 0.1.0
 - name: moonbitlang/async
-  version: 0.5.2
+  version: 0.5.3
 - name: moonbitlang/dummy_abort
   version: 0.2.0
 - name: moonbitlang/lex-runtime
@@ -556,7 +556,7 @@ mooncakes:
 - name: moonbitlang/regexp
   version: 0.3.1
 - name: moonbitlang/ulex
-  version: 0.3.16
+  version: 0.3.18
 - name: moonbitlang/ulex-runtime
   version: 0.4.2
 - name: moonbitlang/wasm4
