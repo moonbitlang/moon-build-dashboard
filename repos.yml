@@ -556,7 +556,7 @@ mooncakes:
 - name: moonbitlang/lex/runtime
   version: 0.1.1
 - name: moonbitlang/parser
-  version: 0.1.5
+  version: 0.1.6
 - name: moonbitlang/regexp
   version: 0.3.1
 - name: moonbitlang/ulex
@@ -597,7 +597,7 @@ mooncakes:
 - name: peter-jerry-ye/utils
   version: 0.4.1
 - name: peter-jerry-ye/wasi
-  version: 0.22.0
+  version: 0.22.1
   running_backend:
   - wasm
 - name: peter-jerry-ye/wasi-imports
@@ -670,6 +670,8 @@ mooncakes:
   version: 0.2.3
 - name: tonyfettes/path
   version: 0.2.1
+- name: tonyfettes/small
+  version: 0.1.0
 - name: tonyfettes/socket
   version: 0.1.2
 - name: tonyfettes/ssl
