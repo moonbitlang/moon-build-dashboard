@@ -414,35 +414,35 @@ mooncakes:
 - name: furesoft/moos-sdk
   version: 0.1.43
 - name: gmlewis/b2
-  version: 0.34.19
+  version: 0.34.20
 - name: gmlewis/base64
   version: 0.14.13
 - name: gmlewis/crc32
   version: 0.8.10
 - name: gmlewis/flate
-  version: 0.35.19
+  version: 0.35.20
 - name: gmlewis/gzip
-  version: 0.33.20
+  version: 0.33.21
 - name: gmlewis/hash
-  version: 0.19.21
+  version: 0.19.22
 - name: gmlewis/image
-  version: 0.16.21
+  version: 0.16.22
 - name: gmlewis/io
-  version: 0.22.11
+  version: 0.22.12
 - name: gmlewis/jsonrpc2
-  version: 0.0.16
+  version: 0.0.17
 - name: gmlewis/md5
   version: 0.19.17
 - name: gmlewis/moonbit-pdk
   version: 0.47.14
 - name: gmlewis/sha1
-  version: 0.11.19
+  version: 0.11.20
 - name: gmlewis/sha256
   version: 0.17.15
 - name: gmlewis/spin-moonbit-sdk
-  version: 0.54.3
+  version: 0.54.4
 - name: gmlewis/zlib
-  version: 0.20.20
+  version: 0.20.21
 - name: hachi/sort
   version: 0.1.12
 - name: hackwaly/easing
