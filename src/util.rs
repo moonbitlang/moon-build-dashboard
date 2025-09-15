@@ -155,7 +155,7 @@ fn install_windows_release(is_bleeding: bool) -> Result<(), MoonOpsError> {
     cmd.args(["-Command", cmd_str]);
 
     if is_bleeding {
-        cmd.env("MOONBIT_INSTALL_VERSION", "bleeding");
+        cmd.env("MOONBIT_INSTALL_VERSION", "nightly");
     }
 
     let output = cmd.output().map_err(|e| MoonOpsError {
@@ -204,7 +204,7 @@ pub fn install_stable_release() -> Result<(), MoonOpsError> {
 
 pub fn install_bleeding_release() -> Result<(), MoonOpsError> {
     #[cfg(unix)]
-    let res = install_unix_release(&["-s", "bleeding"]);
+    let res = install_unix_release(&["-s", "nightly"]);
 
     #[cfg(target_os = "windows")]
     let res = install_windows_release(true);
