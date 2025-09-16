@@ -226,7 +226,7 @@ mooncakes:
 - name: KCN-judu/lambda
   version: 0.1.0
 - name: Kaida-Amethyst/MoonLLVM
-  version: 0.1.6
+  version: 0.1.7
 - name: Kaida-Amethyst/either
   version: 0.1.0
 - name: Kaida-Amethyst/godot
@@ -236,7 +236,7 @@ mooncakes:
 - name: Kaida-Amethyst/openblas
   version: 0.1.3
 - name: Kaida-Amethyst/path
-  version: 0.1.0
+  version: 0.1.1
 - name: Kaida-Amethyst/sdl3
   version: 0.1.0
 - name: Kilig/MATH
@@ -312,7 +312,7 @@ mooncakes:
 - name: Yoorkin/logr_moonbit
   version: 0.1.0
 - name: Yoorkin/prettyprinter
-  version: 0.4.6
+  version: 0.4.7
 - name: Yoorkin/rabbit-tea
   version: 0.10.10
   running_backend:
@@ -408,7 +408,7 @@ mooncakes:
 - name: edragain2nd/unscanny
   version: 0.1.2
 - name: enanandesu/special-mathematical-functions
-  version: 0.1.1
+  version: 0.1.2
 - name: extism/moonbit-pdk
   version: 0.47.12
 - name: fangyinc/net
@@ -552,7 +552,7 @@ mooncakes:
 - name: misika727/sqrt
   version: 0.1.0
 - name: moonbitlang/async
-  version: 0.6.1
+  version: 0.6.2
 - name: moonbitlang/dummy_abort
   version: 0.2.0
 - name: moonbitlang/lex-runtime
@@ -579,7 +579,7 @@ mooncakes:
 - name: myfreess/charclass
   version: 0.1.2
 - name: myfreess/lums
-  version: 0.1.0
+  version: 0.1.1
 - name: myfreess/rope
   version: 0.1.0
 - name: myfreess/sqlite3
