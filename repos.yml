@@ -207,6 +207,8 @@ mooncakes:
   version: 0.1.1
 - name: FlyCloudC/mgraph
   version: 0.1.3
+- name: Frank-III/onebit-yoga
+  version: 0.1.0
 - name: FrenchPicnic/threejs
   version: 0.0.4
 - name: FrenchPicnic/which
@@ -262,9 +264,9 @@ mooncakes:
 - name: Milky2018/options
   version: 0.1.2
 - name: Milky2018/selene
-  version: 0.13.4
+  version: 0.15.1
 - name: Milky2018/selene-canvas
-  version: 0.13.4
+  version: 0.15.1
 - name: Milky2018/sqlparser
   version: 0.4.1
 - name: Near-Jungnune/Near-Jungnune
@@ -351,6 +353,8 @@ mooncakes:
   version: 0.2.0
 - name: bikallem/reactive
   version: 0.2.0
+- name: bikallem/rsignal
+  version: 0.3.0
 - name: bob/hashbrown
   version: 0.1.0
 - name: bob/lexer
@@ -391,6 +395,8 @@ mooncakes:
   version: 0.1.1
 - name: chaijie2018/bloom
   version: 0.2.1
+- name: chaijie2018/bloom-filter
+  version: 0.1.4
 - name: chawyehsu/punycode
   version: 0.0.4
 - name: chronostesis/check_prime
@@ -510,23 +516,25 @@ mooncakes:
 - name: jankin_li/new_lib
   version: 0.1.0
 - name: justjavac/btoi
-  version: 0.1.2
+  version: 0.1.4
 - name: justjavac/bytesize
   version: 0.1.1
 - name: justjavac/cache_padded
   version: 0.1.0
 - name: justjavac/case
-  version: 0.1.3
+  version: 0.1.4
 - name: justjavac/core_affinity
   version: 0.1.0
 - name: justjavac/ffi
-  version: 0.1.10
+  version: 0.1.11
 - name: justjavac/glob
   version: 0.1.0
 - name: justjavac/itoa
   version: 0.1.1
 - name: justjavac/num_cpus
   version: 0.1.4
+- name: justjavac/win32_messagebox
+  version: 0.1.1
 - name: justjoheinz/iso-country
   version: 0.1.2
 - name: kesmeey/BloomierFilter
@@ -561,6 +569,8 @@ mooncakes:
   version: 0.1.1
 - name: moonbitlang/parser
   version: 0.1.6
+- name: moonbitlang/protobuf
+  version: 0.1.0
 - name: moonbitlang/regexp
   version: 0.3.1
 - name: moonbitlang/ulex
