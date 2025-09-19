@@ -202,7 +202,7 @@ mooncakes:
 - name: DawnMagnet/sparse-table
   version: 0.1.1
 - name: Demonmasterlqx/box2d_ffi
-  version: 0.1.0
+  version: 0.1.1
 - name: Eunoiay/Eunoiay
   version: 0.1.0
 - name: FlyCloudC/autodiff
@@ -266,9 +266,9 @@ mooncakes:
 - name: Milky2018/options
   version: 0.1.2
 - name: Milky2018/selene
-  version: 0.15.1
+  version: 0.16.0
 - name: Milky2018/selene-canvas
-  version: 0.15.1
+  version: 0.16.0
 - name: Milky2018/sqlparser
   version: 0.4.1
 - name: Near-Jungnune/Near-Jungnune
@@ -290,6 +290,8 @@ mooncakes:
 - name: SupremeHuaji/FibonacciHeap
   version: 0.1.0
 - name: SupremeHuaji/MaxStack
+  version: 0.1.0
+- name: SupremeHuaji/Quadtree
   version: 0.1.0
 - name: SupremeHuaji/VEBTree
   version: 0.1.1
@@ -330,7 +332,7 @@ mooncakes:
 - name: Yu-zh/sslist
   version: 0.1.0
 - name: YumeXi/iter
-  version: 0.2.7
+  version: 0.2.8
 - name: ZSeanYves/MoonbitBSON
   version: 0.1.0
 - name: ZSeanYves/SimplexNoise
@@ -623,7 +625,7 @@ mooncakes:
   running_backend:
   - wasm
 - name: peter-jerry-ye/wasi-imports
-  version: 0.1.4
+  version: 0.1.5
   running_backend:
   - wasm
 - name: pzl-love/Introsort
