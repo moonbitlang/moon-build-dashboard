@@ -283,6 +283,8 @@ mooncakes:
   version: 0.1.0
 - name: Refined_heart/Sort
   version: 0.1.0
+- name: Rutubet/moon_rsa
+  version: 0.1.0
 - name: ShellWen/lru_cache
   version: 0.1.0
 - name: ShellWen/sw_router
@@ -489,6 +491,8 @@ mooncakes:
   version: 0.1.0
 - name: illusory0x0/color
   version: 0.2.3
+- name: illusory0x0/conv
+  version: 0.1.1
 - name: illusory0x0/fmt
   version: 0.3.4
 - name: illusory0x0/fun
@@ -511,6 +515,8 @@ mooncakes:
   version: 0.1.0
 - name: illusory0x0/parserc
   version: 0.1.5
+- name: illusory0x0/quote
+  version: 0.1.0
 - name: illusory0x0/rijndael
   version: 0.1.0
 - name: illusory0x0/ryu
@@ -608,6 +614,8 @@ mooncakes:
   version: 0.1.0
 - name: myfreess/yaml
   version: 0.1.0
+- name: nodex/ssmp
+  version: 0.1.1
 - name: oboard/base16384
   version: 0.1.0
 - name: oboard/readline
