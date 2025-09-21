@@ -210,7 +210,7 @@ mooncakes:
 - name: FlyCloudC/mgraph
   version: 0.1.3
 - name: Frank-III/onebit-yoga
-  version: 0.1.0
+  version: 0.1.1
 - name: FrenchPicnic/threejs
   version: 0.0.5
 - name: FrenchPicnic/which
@@ -421,6 +421,8 @@ mooncakes:
   version: 0.1.0
 - name: edragain2nd/unscanny
   version: 0.1.2
+- name: enanandesu/icc
+  version: 0.1.1
 - name: enanandesu/special-mathematical-functions
   version: 0.1.2
 - name: extism/moonbit-pdk
@@ -434,35 +436,35 @@ mooncakes:
 - name: furesoft/moos-sdk
   version: 0.1.43
 - name: gmlewis/b2
-  version: 0.34.20
+  version: 0.34.21
 - name: gmlewis/base64
-  version: 0.14.13
+  version: 0.15.0
 - name: gmlewis/crc32
-  version: 0.8.10
+  version: 0.8.11
 - name: gmlewis/flate
-  version: 0.35.20
+  version: 0.35.21
 - name: gmlewis/gzip
-  version: 0.33.21
+  version: 0.33.22
 - name: gmlewis/hash
-  version: 0.19.22
+  version: 0.19.23
 - name: gmlewis/image
-  version: 0.16.22
+  version: 0.16.23
 - name: gmlewis/io
-  version: 0.22.12
+  version: 0.22.13
 - name: gmlewis/jsonrpc2
-  version: 0.0.17
+  version: 0.0.18
 - name: gmlewis/md5
-  version: 0.19.17
+  version: 0.19.18
 - name: gmlewis/moonbit-pdk
-  version: 0.47.14
+  version: 0.47.15
 - name: gmlewis/sha1
-  version: 0.11.20
+  version: 0.11.21
 - name: gmlewis/sha256
-  version: 0.17.15
+  version: 0.17.16
 - name: gmlewis/spin-moonbit-sdk
-  version: 0.54.4
+  version: 0.54.5
 - name: gmlewis/zlib
-  version: 0.20.21
+  version: 0.20.22
 - name: hachi/sort
   version: 0.1.12
 - name: hackwaly/easing
