@@ -483,6 +483,8 @@ mooncakes:
   version: 0.0.20250321
 - name: iceBear67/bytebuf
   version: 0.2.0
+- name: iceBear67/classfile
+  version: 0.1.0
 - name: iceBear67/mnbt
   version: 0.3.3
 - name: illusory0x0/clang
@@ -490,11 +492,11 @@ mooncakes:
 - name: illusory0x0/clone
   version: 0.1.0
 - name: illusory0x0/coerce
-  version: 0.1.0
+  version: 0.1.1
 - name: illusory0x0/color
   version: 0.2.3
 - name: illusory0x0/conv
-  version: 0.1.1
+  version: 0.1.2
 - name: illusory0x0/fmt
   version: 0.3.4
 - name: illusory0x0/fun
@@ -526,7 +528,7 @@ mooncakes:
 - name: illusory0x0/ryu
   version: 0.1.1
 - name: illusory0x0/simple_parserc
-  version: 0.2.1
+  version: 0.2.2
 - name: illusory0x0/string_of_bytes
   version: 0.1.0
 - name: jankin_li/Learn_Test1
