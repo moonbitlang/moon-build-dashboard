@@ -172,19 +172,19 @@ mooncakes:
 - name: CAIMEOX/alg-pattern
   version: 0.1.0
 - name: CAIMEOX/box
-  version: 0.1.0
+  version: 0.1.2
 - name: CAIMEOX/diet
-  version: 0.1.0
+  version: 0.1.2
 - name: CAIMEOX/fenwick
-  version: 0.1.0
+  version: 0.1.1
 - name: CAIMEOX/functor
   version: 0.1.1
 - name: CAIMEOX/lazy
   version: 0.1.0
 - name: CAIMEOX/lazy-list
-  version: 0.1.1
+  version: 0.1.2
 - name: CAIMEOX/svg
-  version: 0.1.1
+  version: 0.1.2
 - name: CAIMEOX/vlq
   version: 0.1.0
 - name: CAIMEOX/zipper
@@ -254,7 +254,7 @@ mooncakes:
 - name: Lampese/biblatex
   version: 0.1.0
 - name: Lampese/moonbit-chalk
-  version: 0.4.0
+  version: 0.5.0
 - name: Ljw030710/find_max
   version: 0.1.0
 - name: Luna-Flow/luna-generic
@@ -268,9 +268,9 @@ mooncakes:
 - name: Milky2018/options
   version: 0.1.2
 - name: Milky2018/selene
-  version: 0.16.0
+  version: 0.17.0
 - name: Milky2018/selene-canvas
-  version: 0.16.0
+  version: 0.17.0
 - name: Milky2018/sqlparser
   version: 0.4.1
 - name: Near-Jungnune/Near-Jungnune
@@ -302,6 +302,8 @@ mooncakes:
 - name: SupremeHuaji/VEBTree
   version: 0.1.1
 - name: SupremeHuaji/XorLinkedList
+  version: 0.1.0
+- name: SupremeHuaji/ptime
   version: 0.1.0
 - name: TheWaWaR/clap
   version: 0.2.5
@@ -592,7 +594,7 @@ mooncakes:
 - name: mizchi/jsonschema
   version: 0.3.0
 - name: moonbitlang/async
-  version: 0.7.0
+  version: 0.8.0
 - name: moonbitlang/dummy_abort
   version: 0.2.0
 - name: moonbitlang/lex-runtime
