@@ -202,7 +202,7 @@ mooncakes:
 - name: DawnMagnet/sparse-table
   version: 0.1.1
 - name: Demonmasterlqx/box2d_ffi
-  version: 0.1.1
+  version: 0.1.4
 - name: Eunoiay/Eunoiay
   version: 0.1.0
 - name: FlyCloudC/autodiff
@@ -592,7 +592,7 @@ mooncakes:
 - name: misika727/sqrt
   version: 0.1.0
 - name: mizchi/jsonschema
-  version: 0.3.0
+  version: 0.4.0
 - name: moonbitlang/async
   version: 0.8.0
 - name: moonbitlang/dummy_abort
@@ -683,11 +683,11 @@ mooncakes:
 - name: structuraBlock/MoonStats
   version: 0.3.0
 - name: tiye/cirru-edn
-  version: 0.1.0
+  version: 0.1.1
   running_backend:
   - js
 - name: tiye/cirru-parser
-  version: 0.1.0
+  version: 0.1.1
   running_backend:
   - js
 - name: tiye/dom-ffi
@@ -697,7 +697,7 @@ mooncakes:
 - name: tiye/lexicon-fractional-index
   version: 0.0.2
 - name: tiye/respo
-  version: 0.0.35
+  version: 0.0.36
   running_backend:
   - js
 - name: tiye/respo-markdown
@@ -795,6 +795,8 @@ mooncakes:
 - name: yyjeqhc/base32
   version: 0.1.0
 - name: zdu881/DataProc
+  version: 0.1.0
+- name: zdu881/webmocket
   version: 0.1.0
 - name: zhaihaozhen/zero_fill
   version: 0.1.2
