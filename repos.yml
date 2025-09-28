@@ -92,7 +92,7 @@ mooncakes:
 - name: 2459822546/fwshz
   version: 0.1.0
 - name: AXiX-official/binaryPrimitives
-  version: 0.1.1
+  version: 0.1.2
 - name: AXiX-official/xxhash
   version: 0.1.0
 - name: AdUhTkJm/assembler
@@ -594,7 +594,7 @@ mooncakes:
 - name: mizchi/jsonschema
   version: 0.4.0
 - name: moonbitlang/async
-  version: 0.8.0
+  version: 0.8.1
 - name: moonbitlang/dummy_abort
   version: 0.2.0
 - name: moonbitlang/lex-runtime
@@ -708,6 +708,8 @@ mooncakes:
   version: 0.0.1
   running_backend:
   - js
+- name: tiye/respo_css
+  version: 0.1.0
 - name: tonyfettes/atomics
   version: 0.1.0
 - name: tonyfettes/c
