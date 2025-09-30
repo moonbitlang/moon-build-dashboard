@@ -175,6 +175,8 @@ mooncakes:
   version: 0.1.0
 - name: CAIMEOX/box
   version: 0.1.2
+- name: CAIMEOX/color
+  version: 0.1.0
 - name: CAIMEOX/diet
   version: 0.1.2
 - name: CAIMEOX/fenwick
@@ -185,6 +187,8 @@ mooncakes:
   version: 0.1.0
 - name: CAIMEOX/lazy-list
   version: 0.1.2
+- name: CAIMEOX/midi
+  version: 0.1.0
 - name: CAIMEOX/svg
   version: 0.1.2
 - name: CAIMEOX/vlq
@@ -203,8 +207,10 @@ mooncakes:
   version: 0.1.0
 - name: DawnMagnet/sparse-table
   version: 0.1.1
+- name: Demonmasterlqx/MoonP5
+  version: 0.0.2
 - name: Demonmasterlqx/box2d_ffi
-  version: 0.1.4
+  version: 0.2.3
 - name: Eunoiay/Eunoiay
   version: 0.1.0
 - name: FlyCloudC/autodiff
@@ -260,7 +266,7 @@ mooncakes:
 - name: Ljw030710/find_max
   version: 0.1.0
 - name: Luna-Flow/luna-generic
-  version: 0.2.0-beta-1
+  version: 0.2.0-beta-2
 - name: Luna-Flow/luna-utils
   version: 0.1.0
 - name: Luna-Flow/quaternion
@@ -270,9 +276,9 @@ mooncakes:
 - name: Milky2018/options
   version: 0.1.2
 - name: Milky2018/selene
-  version: 0.17.0
+  version: 0.17.1
 - name: Milky2018/selene-canvas
-  version: 0.17.0
+  version: 0.17.1
 - name: Milky2018/sqlparser
   version: 0.4.1
 - name: Near-Jungnune/Near-Jungnune
@@ -703,7 +709,7 @@ mooncakes:
 - name: tiye/lexicon-fractional-index
   version: 0.0.2
 - name: tiye/preact
-  version: 0.0.1-a1
+  version: 0.0.1-a2
 - name: tiye/respo
   version: 0.0.37
   running_backend:
@@ -717,7 +723,7 @@ mooncakes:
   running_backend:
   - js
 - name: tiye/respo_css
-  version: 0.1.0
+  version: 0.1.1
 - name: tonyfettes/atomics
   version: 0.1.0
 - name: tonyfettes/c
