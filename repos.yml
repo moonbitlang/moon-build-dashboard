@@ -518,7 +518,7 @@ mooncakes:
 - name: illusory0x0/conv
   version: 0.1.2
 - name: illusory0x0/fmt
-  version: 0.3.4
+  version: 0.4.0
 - name: illusory0x0/fun
   version: 0.2.1
 - name: illusory0x0/fuzzy_match
@@ -709,7 +709,9 @@ mooncakes:
 - name: tiye/lexicon-fractional-index
   version: 0.0.2
 - name: tiye/preact
-  version: 0.0.1-a2
+  version: 0.0.1-a3
+- name: tiye/react
+  version: 0.0.2-a1
 - name: tiye/respo
   version: 0.0.37
   running_backend:
@@ -723,7 +725,7 @@ mooncakes:
   running_backend:
   - js
 - name: tiye/respo_css
-  version: 0.1.1
+  version: 0.1.2
 - name: tonyfettes/atomics
   version: 0.1.0
 - name: tonyfettes/c
