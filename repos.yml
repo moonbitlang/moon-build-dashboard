@@ -289,6 +289,8 @@ mooncakes:
   - js
 - name: Penguinsltp/examine
   version: 0.1.0
+- name: Penguinsltp/gif_decoder
+  version: 0.1.1
 - name: PingGuoMiaoMiao/mooncove
   version: 0.1.0
 - name: Refined_heart/Sort
@@ -703,7 +705,7 @@ mooncakes:
   running_backend:
   - js
 - name: tiye/dom-ffi
-  version: 0.0.9
+  version: 0.1.1
   running_backend:
   - js
 - name: tiye/lexicon-fractional-index
@@ -711,9 +713,9 @@ mooncakes:
 - name: tiye/preact
   version: 0.0.1-a3
 - name: tiye/react
-  version: 0.0.2-a1
+  version: 0.0.2-a3
 - name: tiye/respo
-  version: 0.0.37
+  version: 0.0.38
   running_backend:
   - js
 - name: tiye/respo-markdown
