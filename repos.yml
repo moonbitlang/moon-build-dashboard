@@ -302,7 +302,7 @@ mooncakes:
 - name: ShellWen/lru_cache
   version: 0.1.0
 - name: ShellWen/sw_router
-  version: 0.1.0
+  version: 0.2.0
 - name: SupremeHuaji/FibonacciHeap
   version: 0.1.0
 - name: SupremeHuaji/MaxStack
@@ -654,6 +654,8 @@ mooncakes:
   version: 0.1.0
 - name: oboard/readline
   version: 0.1.5
+- name: oboard/redis
+  version: 0.1.1
 - name: oboard/stdout
   version: 0.1.1
 - name: peter-jerry-ye/spin-imports
@@ -713,7 +715,7 @@ mooncakes:
 - name: tiye/preact
   version: 0.0.1-a3
 - name: tiye/react
-  version: 0.0.2-a3
+  version: 0.0.2
 - name: tiye/respo
   version: 0.0.38
   running_backend:
