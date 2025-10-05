@@ -220,7 +220,7 @@ mooncakes:
 - name: Frank-III/onebit-tui
   version: 0.1.2
 - name: Frank-III/onebit-yoga
-  version: 0.2.4
+  version: 0.2.5
 - name: FrenchPicnic/threejs
   version: 0.0.5
 - name: FrenchPicnic/which
@@ -707,7 +707,7 @@ mooncakes:
   running_backend:
   - js
 - name: tiye/dom-ffi
-  version: 0.1.1
+  version: 0.1.2
   running_backend:
   - js
 - name: tiye/lexicon-fractional-index
@@ -715,7 +715,7 @@ mooncakes:
 - name: tiye/preact
   version: 0.0.1-a3
 - name: tiye/react
-  version: 0.0.2
+  version: 0.0.3
 - name: tiye/respo
   version: 0.0.38
   running_backend:
