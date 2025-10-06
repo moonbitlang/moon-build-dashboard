@@ -253,6 +253,8 @@ mooncakes:
   version: 0.1.1
 - name: Kaida-Amethyst/sdl3
   version: 0.1.0
+- name: KeqingMoe/unicode_xid
+  version: 0.0.1
 - name: Kilig/MATH
   version: 0.1.1
 - name: KingBes/raylib
@@ -707,7 +709,7 @@ mooncakes:
   running_backend:
   - js
 - name: tiye/dom-ffi
-  version: 0.1.2
+  version: 0.1.3
   running_backend:
   - js
 - name: tiye/lexicon-fractional-index
@@ -800,6 +802,8 @@ mooncakes:
   version: 0.1.0
 - name: wwj1203/string2int
   version: 0.1.0
+- name: xingwangzhe/files_tree
+  version: 0.1.2
 - name: xunyoyo/permutation
   version: 0.1.3
 - name: yanyeting/minmax
