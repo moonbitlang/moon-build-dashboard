@@ -273,6 +273,8 @@ mooncakes:
   version: 0.1.0
 - name: Luna-Flow/quaternion
   version: 0.1.1
+- name: Mepy/Laurus
+  version: 0.1.0
 - name: Milky2018/moonplant
   version: 0.3.1
 - name: Milky2018/options
@@ -719,7 +721,7 @@ mooncakes:
 - name: tiye/react
   version: 0.0.3
 - name: tiye/respo
-  version: 0.0.38
+  version: 0.0.39
   running_backend:
   - js
 - name: tiye/respo-markdown
