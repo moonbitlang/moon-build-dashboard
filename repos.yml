@@ -345,8 +345,14 @@ mooncakes:
   version: 0.10.10
   running_backend:
   - js
+- name: Yoorkin/splice
+  version: 0.1.0
+- name: Yoorkin/trace
+  version: 0.1.0
 - name: Yoorkin/trie
   version: 0.2.9
+- name: Yoorkin/webgen
+  version: 0.1.0
 - name: Yoorkin/webidl
   version: 0.2.0
 - name: Yu-zh/either
@@ -612,7 +618,7 @@ mooncakes:
 - name: mizchi/jsonschema
   version: 0.4.0
 - name: moonbitlang/async
-  version: 0.8.1
+  version: 0.8.3
 - name: moonbitlang/dummy_abort
   version: 0.2.0
 - name: moonbitlang/lex-runtime
@@ -620,7 +626,7 @@ mooncakes:
 - name: moonbitlang/lex/runtime
   version: 0.1.1
 - name: moonbitlang/parser
-  version: 0.1.7
+  version: 0.1.8
 - name: moonbitlang/protobuf
   version: 0.1.0
 - name: moonbitlang/regexp
