@@ -280,9 +280,9 @@ mooncakes:
 - name: Milky2018/options
   version: 0.1.2
 - name: Milky2018/selene
-  version: 0.17.1
+  version: 0.17.2
 - name: Milky2018/selene-canvas
-  version: 0.17.1
+  version: 0.17.2
 - name: Milky2018/sqlparser
   version: 0.4.1
 - name: Near-Jungnune/Near-Jungnune
@@ -423,6 +423,8 @@ mooncakes:
   version: 0.1.0
 - name: bobzhang/vg
   version: 0.1.1
+- name: bobzhang/zip
+  version: 0.1.0
 - name: bobzhang/zipc
   version: 0.1.1
 - name: bzy-debug/string_zipper
@@ -519,6 +521,8 @@ mooncakes:
   version: 0.2.0
 - name: iceBear67/mnbt
   version: 0.3.3
+- name: illusory0x0/case_conv
+  version: 0.1.0
 - name: illusory0x0/clang
   version: 0.1.1
 - name: illusory0x0/clone
@@ -618,7 +622,7 @@ mooncakes:
 - name: mizchi/jsonschema
   version: 0.4.0
 - name: moonbitlang/async
-  version: 0.8.3
+  version: 0.9.0
 - name: moonbitlang/dummy_abort
   version: 0.2.0
 - name: moonbitlang/lex-runtime
