@@ -240,7 +240,7 @@ mooncakes:
 - name: KCN-judu/lambda
   version: 0.1.0
 - name: Kaida-Amethyst/MoonLLVM
-  version: 0.1.7
+  version: 0.1.8
 - name: Kaida-Amethyst/either
   version: 0.1.0
 - name: Kaida-Amethyst/godot
@@ -336,7 +336,7 @@ mooncakes:
 - name: Yoorkin/fuzzy_search
   version: 0.1.1
 - name: Yoorkin/jmop
-  version: 0.1.0
+  version: 0.1.1
 - name: Yoorkin/logr_moonbit
   version: 0.1.0
 - name: Yoorkin/prettyprinter
@@ -346,7 +346,7 @@ mooncakes:
   running_backend:
   - js
 - name: Yoorkin/splice
-  version: 0.1.0
+  version: 0.1.2
 - name: Yoorkin/trace
   version: 0.1.0
 - name: Yoorkin/trie
@@ -560,6 +560,8 @@ mooncakes:
 - name: illusory0x0/parserc
   version: 0.1.5
 - name: illusory0x0/path
+  version: 0.1.0
+- name: illusory0x0/printer
   version: 0.1.0
 - name: illusory0x0/quote
   version: 0.2.0
@@ -809,6 +811,8 @@ mooncakes:
 - name: trash33/sudoku
   version: 0.1.0
 - name: wangjuwudi/line_sort
+  version: 0.1.0
+- name: wangweigang/hello
   version: 0.1.0
 - name: wjy030522/compare
   version: 0.1.0
