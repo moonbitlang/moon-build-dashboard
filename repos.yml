@@ -213,6 +213,8 @@ mooncakes:
   version: 0.2.3
 - name: Eunoiay/Eunoiay
   version: 0.1.0
+- name: FlyCloudC/GJK
+  version: 0.1.0
 - name: FlyCloudC/autodiff
   version: 0.1.1
 - name: FlyCloudC/mgraph
@@ -280,9 +282,9 @@ mooncakes:
 - name: Milky2018/options
   version: 0.1.2
 - name: Milky2018/selene
-  version: 0.17.2
+  version: 0.18.0
 - name: Milky2018/selene-canvas
-  version: 0.17.2
+  version: 0.18.0
 - name: Milky2018/sqlparser
   version: 0.4.1
 - name: Near-Jungnune/Near-Jungnune
@@ -666,6 +668,8 @@ mooncakes:
   version: 0.1.0
 - name: nodex/ssmp
   version: 0.1.1
+- name: oboard/assets
+  version: 0.1.1
 - name: oboard/base16384
   version: 0.1.0
 - name: oboard/readline
@@ -707,7 +711,7 @@ mooncakes:
 - name: ruifeng/moondsa
   version: 0.2.1
 - name: ryota0624/mustache
-  version: 0.0.3
+  version: 0.0.5
 - name: shiheat/find_max
   version: 0.3.0
 - name: sjzbxhsj/Calculator
