@@ -282,9 +282,9 @@ mooncakes:
 - name: Milky2018/options
   version: 0.1.2
 - name: Milky2018/selene
-  version: 0.18.0
+  version: 0.18.2
 - name: Milky2018/selene-canvas
-  version: 0.18.0
+  version: 0.18.2
 - name: Milky2018/sqlparser
   version: 0.4.1
 - name: Near-Jungnune/Near-Jungnune
@@ -653,7 +653,7 @@ mooncakes:
 - name: myfreess/casefold
   version: 0.1.3
 - name: myfreess/charclass
-  version: 0.1.2
+  version: 0.1.3
 - name: myfreess/lums
   version: 0.1.1
 - name: myfreess/rope
