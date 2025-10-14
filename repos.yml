@@ -208,7 +208,7 @@ mooncakes:
 - name: DawnMagnet/sparse-table
   version: 0.1.1
 - name: Demonmasterlqx/MoonP5
-  version: 0.0.2
+  version: 0.0.3
 - name: Demonmasterlqx/box2d_ffi
   version: 0.2.3
 - name: Eunoiay/Eunoiay
@@ -407,6 +407,8 @@ mooncakes:
   version: 0.1.0
 - name: bobzhang/ipaddr
   version: 0.1.0
+- name: bobzhang/lexer
+  version: 0.1.1
 - name: bobzhang/liquid
   version: 0.1.0
 - name: bobzhang/lisp_interpreter
@@ -417,6 +419,8 @@ mooncakes:
   version: 0.1.1
 - name: bobzhang/tar
   version: 0.1.0
+- name: bobzhang/toml
+  version: 0.1.5
 - name: bobzhang/unmarshal
   version: 0.1.1
 - name: bobzhang/uri
@@ -518,7 +522,7 @@ mooncakes:
 - name: hzqdf/sum-calc
   version: 0.0.20250321
 - name: iceBear67/bytebuf
-  version: 0.2.0
+  version: 0.4.0
 - name: iceBear67/classfile
   version: 0.2.0
 - name: iceBear67/mnbt
@@ -564,7 +568,7 @@ mooncakes:
 - name: illusory0x0/path
   version: 0.1.0
 - name: illusory0x0/printer
-  version: 0.1.0
+  version: 0.1.1
 - name: illusory0x0/quote
   version: 0.2.0
 - name: illusory0x0/rijndael
@@ -634,7 +638,7 @@ mooncakes:
 - name: moonbitlang/lex/runtime
   version: 0.1.1
 - name: moonbitlang/parser
-  version: 0.1.8
+  version: 0.1.9
 - name: moonbitlang/protobuf
   version: 0.1.0
 - name: moonbitlang/regexp
@@ -683,7 +687,7 @@ mooncakes:
   running_backend:
   - wasm
 - name: peter-jerry-ye/utils
-  version: 0.4.1
+  version: 0.4.2
 - name: peter-jerry-ye/wasi
   version: 0.22.1
   running_backend:
@@ -757,7 +761,7 @@ mooncakes:
 - name: tonyfettes/dotenv
   version: 0.4.1
 - name: tonyfettes/encoding
-  version: 0.3.7
+  version: 0.3.8
 - name: tonyfettes/openai
   version: 0.1.0
 - name: tonyfettes/openssl
