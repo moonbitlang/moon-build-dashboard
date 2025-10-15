@@ -211,6 +211,8 @@ mooncakes:
   version: 0.0.3
 - name: Demonmasterlqx/box2d_ffi
   version: 0.2.3
+- name: Demonmasterlqx/moonbit_stickman_map_loader
+  version: 0.0.1
 - name: Eunoiay/Eunoiay
   version: 0.1.0
 - name: FlyCloudC/GJK
@@ -319,6 +321,8 @@ mooncakes:
   version: 0.1.1
 - name: SupremeHuaji/XorLinkedList
   version: 0.1.0
+- name: SupremeHuaji/moonsmiles
+  version: 0.1.1
 - name: SupremeHuaji/ptime
   version: 0.1.0
 - name: TheWaWaR/clap
@@ -354,7 +358,7 @@ mooncakes:
 - name: Yoorkin/trie
   version: 0.2.9
 - name: Yoorkin/webgen
-  version: 0.1.0
+  version: 0.1.1
 - name: Yoorkin/webidl
   version: 0.2.0
 - name: Yu-zh/either
@@ -630,7 +634,7 @@ mooncakes:
 - name: mizchi/jsonschema
   version: 0.4.0
 - name: moonbitlang/async
-  version: 0.9.0
+  version: 0.10.0
 - name: moonbitlang/dummy_abort
   version: 0.2.0
 - name: moonbitlang/lex-runtime
@@ -638,7 +642,7 @@ mooncakes:
 - name: moonbitlang/lex/runtime
   version: 0.1.1
 - name: moonbitlang/parser
-  version: 0.1.9
+  version: 0.1.10
 - name: moonbitlang/protobuf
   version: 0.1.0
 - name: moonbitlang/regexp
@@ -731,7 +735,7 @@ mooncakes:
   running_backend:
   - js
 - name: tiye/dom-ffi
-  version: 0.1.3
+  version: 0.2.0
   running_backend:
   - js
 - name: tiye/lexicon-fractional-index
@@ -741,7 +745,7 @@ mooncakes:
 - name: tiye/react
   version: 0.0.3
 - name: tiye/respo
-  version: 0.0.39
+  version: 0.1.0
   running_backend:
   - js
 - name: tiye/respo-markdown
