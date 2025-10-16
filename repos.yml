@@ -212,7 +212,7 @@ mooncakes:
 - name: Demonmasterlqx/box2d_ffi
   version: 0.2.3
 - name: Demonmasterlqx/moonbit_stickman_map_loader
-  version: 0.0.1
+  version: 0.0.2
 - name: Eunoiay/Eunoiay
   version: 0.1.0
 - name: FlyCloudC/GJK
@@ -482,33 +482,33 @@ mooncakes:
 - name: gmlewis/b2
   version: 0.34.21
 - name: gmlewis/base64
-  version: 0.15.0
+  version: 0.15.1
 - name: gmlewis/crc32
-  version: 0.8.11
+  version: 0.8.12
 - name: gmlewis/flate
-  version: 0.35.21
+  version: 0.35.22
 - name: gmlewis/gzip
-  version: 0.33.22
+  version: 0.33.23
 - name: gmlewis/hash
-  version: 0.19.23
+  version: 0.19.24
 - name: gmlewis/image
   version: 0.16.23
 - name: gmlewis/io
-  version: 0.22.13
+  version: 0.22.14
 - name: gmlewis/jsonrpc2
   version: 0.0.18
 - name: gmlewis/md5
-  version: 0.19.18
+  version: 0.19.19
 - name: gmlewis/moonbit-pdk
-  version: 0.47.15
+  version: 0.47.16
 - name: gmlewis/sha1
-  version: 0.11.21
+  version: 0.11.22
 - name: gmlewis/sha256
-  version: 0.17.16
+  version: 0.17.17
 - name: gmlewis/spin-moonbit-sdk
-  version: 0.54.5
+  version: 0.54.6
 - name: gmlewis/zlib
-  version: 0.20.22
+  version: 0.20.23
 - name: hachi/sort
   version: 0.1.12
 - name: hackwaly/easing
@@ -727,11 +727,11 @@ mooncakes:
 - name: structuraBlock/MoonStats
   version: 0.3.0
 - name: tiye/cirru-edn
-  version: 0.1.1
+  version: 0.2.0
   running_backend:
   - js
 - name: tiye/cirru-parser
-  version: 0.1.1
+  version: 0.2.0
   running_backend:
   - js
 - name: tiye/dom-ffi
@@ -745,7 +745,7 @@ mooncakes:
 - name: tiye/react
   version: 0.0.3
 - name: tiye/respo
-  version: 0.1.0
+  version: 0.1.1
   running_backend:
   - js
 - name: tiye/respo-markdown
