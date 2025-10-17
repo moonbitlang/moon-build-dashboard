@@ -637,12 +637,14 @@ mooncakes:
   version: 0.10.0
 - name: moonbitlang/dummy_abort
   version: 0.2.0
+- name: moonbitlang/formatter
+  version: 0.1.0
 - name: moonbitlang/lex-runtime
   version: 0.1.3
 - name: moonbitlang/lex/runtime
   version: 0.1.1
 - name: moonbitlang/parser
-  version: 0.1.10
+  version: 0.1.11
 - name: moonbitlang/protobuf
   version: 0.1.0
 - name: moonbitlang/regexp
