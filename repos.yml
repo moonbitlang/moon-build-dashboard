@@ -244,7 +244,7 @@ mooncakes:
 - name: KCN-judu/lambda
   version: 0.1.0
 - name: Kaida-Amethyst/MoonLLVM
-  version: 0.1.8
+  version: 0.1.9
 - name: Kaida-Amethyst/either
   version: 0.1.0
 - name: Kaida-Amethyst/godot
