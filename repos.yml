@@ -180,7 +180,7 @@ mooncakes:
 - name: CAIMEOX/color
   version: 0.1.0
 - name: CAIMEOX/diet
-  version: 0.1.2
+  version: 0.1.3
 - name: CAIMEOX/fenwick
   version: 0.1.1
 - name: CAIMEOX/functor
@@ -190,6 +190,8 @@ mooncakes:
 - name: CAIMEOX/lazy-list
   version: 0.1.2
 - name: CAIMEOX/midi
+  version: 0.1.0
+- name: CAIMEOX/reed_solomon
   version: 0.1.0
 - name: CAIMEOX/svg
   version: 0.1.2
@@ -218,17 +220,17 @@ mooncakes:
 - name: Eunoiay/Eunoiay
   version: 0.1.0
 - name: FlyCloudC/GJK
-  version: 0.1.0
+  version: 0.1.1
 - name: FlyCloudC/autodiff
   version: 0.1.1
 - name: FlyCloudC/mgraph
-  version: 0.1.3
+  version: 0.1.4
 - name: Frank-III/onebit-tui
   version: 0.1.3
 - name: Frank-III/onebit-yoga
   version: 0.2.6
 - name: FrenchPicnic/threejs
-  version: 0.0.5
+  version: 0.0.6
 - name: FrenchPicnic/which
   version: 0.1.3
 - name: GMH233/moonpassword
@@ -246,7 +248,7 @@ mooncakes:
 - name: KCN-judu/lambda
   version: 0.1.0
 - name: Kaida-Amethyst/MoonLLVM
-  version: 0.1.10
+  version: 0.1.11
 - name: Kaida-Amethyst/either
   version: 0.1.0
 - name: Kaida-Amethyst/godot
@@ -274,13 +276,13 @@ mooncakes:
 - name: Ljw030710/find_max
   version: 0.1.0
 - name: Luna-Flow/luna-generic
-  version: 0.2.0-beta-2
+  version: 0.2.1
 - name: Luna-Flow/luna-utils
-  version: 0.1.0
-- name: Luna-Flow/quaternion
   version: 0.1.1
+- name: Luna-Flow/quaternion
+  version: 0.1.3
 - name: Mepy/Laurus
-  version: 0.1.0
+  version: 0.2.1
 - name: Milky2018/moonplant
   version: 0.3.1
 - name: Milky2018/options
@@ -340,7 +342,7 @@ mooncakes:
 - name: YHSZ-ONEC/yhsz
   version: 0.1.0
 - name: Yoorkin/ArgParser
-  version: 0.1.11
+  version: 0.2.0
 - name: Yoorkin/fuzzy_search
   version: 0.1.1
 - name: Yoorkin/jmop
@@ -488,35 +490,35 @@ mooncakes:
 - name: furesoft/moos-sdk
   version: 0.1.43
 - name: gmlewis/b2
-  version: 0.34.21
+  version: 0.34.23
 - name: gmlewis/base64
-  version: 0.15.1
+  version: 0.15.2
 - name: gmlewis/crc32
-  version: 0.8.12
+  version: 0.8.13
 - name: gmlewis/flate
-  version: 0.35.22
+  version: 0.35.23
 - name: gmlewis/gzip
-  version: 0.33.23
+  version: 0.33.24
 - name: gmlewis/hash
-  version: 0.19.24
+  version: 0.19.25
 - name: gmlewis/image
-  version: 0.16.23
+  version: 0.16.25
 - name: gmlewis/io
-  version: 0.22.14
+  version: 0.22.15
 - name: gmlewis/jsonrpc2
-  version: 0.0.18
+  version: 0.0.19
 - name: gmlewis/md5
-  version: 0.19.19
+  version: 0.19.20
 - name: gmlewis/moonbit-pdk
-  version: 0.47.16
+  version: 0.47.17
 - name: gmlewis/sha1
-  version: 0.11.22
+  version: 0.11.23
 - name: gmlewis/sha256
-  version: 0.17.17
+  version: 0.17.18
 - name: gmlewis/spin-moonbit-sdk
-  version: 0.54.6
+  version: 0.54.7
 - name: gmlewis/zlib
-  version: 0.20.23
+  version: 0.20.24
 - name: hachi/sort
   version: 0.1.12
 - name: hackwaly/easing
@@ -534,7 +536,7 @@ mooncakes:
 - name: hzqdf/sum-calc
   version: 0.0.20250321
 - name: iceBear67/bytebuf
-  version: 0.4.0
+  version: 0.4.1
 - name: iceBear67/classfile
   version: 0.2.0
 - name: iceBear67/mnbt
@@ -642,11 +644,11 @@ mooncakes:
 - name: misika727/sqrt
   version: 0.1.0
 - name: mizchi/js
-  version: 0.0.9
+  version: 0.0.11
 - name: mizchi/jsonschema
   version: 0.4.0
 - name: moonbitlang/async
-  version: 0.10.2
+  version: 0.10.4
 - name: moonbitlang/dummy_abort
   version: 0.2.0
 - name: moonbitlang/formatter
@@ -679,7 +681,7 @@ mooncakes:
 - name: myfreess/lums
   version: 0.1.1
 - name: myfreess/piediff
-  version: 0.0.2
+  version: 0.0.3
 - name: myfreess/rope
   version: 0.1.0
 - name: myfreess/sqlite3
