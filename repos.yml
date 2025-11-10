@@ -214,7 +214,7 @@ mooncakes:
 - name: Demonmasterlqx/MoonP5
   version: 0.0.5
 - name: Demonmasterlqx/box2d_ffi
-  version: 0.2.5
+  version: 0.2.6
 - name: Demonmasterlqx/moonbit_stickman_map_loader
   version: 0.0.5
 - name: Eunoiay/Eunoiay
@@ -305,6 +305,8 @@ mooncakes:
   version: 0.1.0
 - name: Penguinsltp/gif_decoder
   version: 0.1.1
+- name: PingGuoMiaoMiao/Autumn_frame
+  version: 0.1.0
 - name: PingGuoMiaoMiao/mooncove
   version: 0.1.0
 - name: Refined_heart/Sort
@@ -608,19 +610,19 @@ mooncakes:
 - name: jankin_li/new_lib
   version: 0.1.0
 - name: justjavac/btoi
-  version: 0.1.5
+  version: 0.1.6
 - name: justjavac/bytesize
   version: 0.1.1
 - name: justjavac/cache_padded
   version: 0.1.0
 - name: justjavac/case
-  version: 0.1.4
+  version: 0.1.5
 - name: justjavac/core_affinity
   version: 0.1.0
 - name: justjavac/ffi
   version: 0.1.11
 - name: justjavac/glob
-  version: 0.1.1
+  version: 0.1.2
 - name: justjavac/itoa
   version: 0.1.1
 - name: justjavac/num_cpus
@@ -712,6 +714,8 @@ mooncakes:
   version: 0.1.1
 - name: oboard/base16384
   version: 0.1.0
+- name: oboard/morm
+  version: 0.1.2
 - name: oboard/readline
   version: 0.1.5
 - name: oboard/redis
@@ -794,6 +798,8 @@ mooncakes:
   version: 0.1.2
 - name: tonyfettes/atomics
   version: 0.1.0
+- name: tonyfettes/base64
+  version: 0.1.0
 - name: tonyfettes/c
   version: 0.5.4
 - name: tonyfettes/dotenv
@@ -815,7 +821,7 @@ mooncakes:
 - name: tonyfettes/submodule-test
   version: 0.1.1
 - name: tonyfettes/tiktoken
-  version: 0.1.1
+  version: 0.2.0
 - name: tonyfettes/tree_sitter_cpp
   version: 0.1.16
 - name: tonyfettes/tree_sitter_css
